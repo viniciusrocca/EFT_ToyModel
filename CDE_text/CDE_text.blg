@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: CDE_text.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Database file #1: refs.bib
+Warning--empty chapter and pages in Smirnov:2021dkb
+Warning--empty publisher in Smirnov:2021dkb
+Warning--empty school in BenjaminBispinor
+You've used 20 entries,
+            1791 wiz_defined-function locations,
+            572 strings with 6106 characters,
+and the built_in function-call counts, 3575 in all, are:
+= -- 302
+> -- 148
+< -- 0
++ -- 59
+- -- 39
+* -- 225
+:= -- 597
+add.period$ -- 59
+call.type$ -- 20
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 170
+empty$ -- 377
+format.name$ -- 39
+if$ -- 785
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 22
+newline$ -- 101
+num.names$ -- 20
+pop$ -- 63
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 65
+stack$ -- 0
+substring$ -- 141
+swap$ -- 20
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 29
+width$ -- 22
+write$ -- 211
+(There were 3 warnings)
