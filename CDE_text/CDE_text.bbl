@@ -103,4 +103,10 @@ Benjamin Summ.
   effective action}.
 \newblock PhD thesis, 2020.
 
+\bibitem{PackageX}
+Hiren~H. Patel.
+\newblock Package-x: A mathematica package for the analytic calculation of
+  one-loop integrals.
+\newblock {\em Computer Physics Communications}, 197:276--290, 2015.
+
 \end{thebibliography}
