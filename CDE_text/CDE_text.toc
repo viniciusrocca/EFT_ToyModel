@@ -19,4 +19,4 @@
 \contentsline {subsection}{\numberline {1.5.1}Solving the equation of motion of the heavy fields}{28}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Tree-level matching}{28}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}One-loop matching}{29}{subsection.1.5.3}%
-\contentsline {section}{\numberline {1.6}Checking dimensional regularization}{49}{section.1.6}%
+\contentsline {section}{\numberline {1.6}Checking dimensional regularization}{53}{section.1.6}%

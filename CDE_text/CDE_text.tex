@@ -2484,15 +2484,20 @@
 			&= -2q\cdot  P_{\Psi}\slashed{q}+\slashed{P}_{\Psi}q^2 - M_T^2\slashed{P}_{\Psi}
 		\end{align}
 		
-		In the $n=1$ contribution for the effective Lagrangian, the loop momenta appears only in the $l$ summation. Therefore, we can anticipate some steps that are done when using dimensional regularization to compute the loop integral. Due to symmetry, we substitute $q^\mu q^\nu \to \frac{g^{\mu\nu}}{4} q^2$ when computing the loop integral. Then, if we already do this:
+		In the $n=1$ contribution for the effective Lagrangian, the loop momenta appears only in the $l$ summation. Therefore, we can anticipate some steps that are done when using dimensional regularization to compute the loop integral. Due to symmetry, we substitute $q^\mu q^\nu \to \frac{g^{\mu\nu}}{d} q^2$ when computing the loop integral. Then, if we already do this:
 		
 		\begin{align}
 			(-\slashed{q}+M_T)(-\slashed{P}_{\Psi} )(-\slashed{q}+ M_T) 
-			&= -\frac{1}{2}  \slashed{P}_{\Psi}q^2+\slashed{P}_{\Psi}q^2 - M_T^2\slashed{P}_{\Psi}\nonumber\\
-			&=\frac{1}{2}  \slashed{P}_{\Psi}q^2- M_T^2\slashed{P}_{\Psi}\nonumber\\
-			&= \left(\frac{1}{2}q^2- M_T^2\right)\slashed{P}_{\Psi}
+			&= -\frac{2}{d}  \slashed{P}_{\Psi}q^2+\slashed{P}_{\Psi}q^2 - M_T^2\slashed{P}_{\Psi}\nonumber\\
+			&=\frac{(d-2)}{d}  \slashed{P}_{\Psi}q^2- M_T^2\slashed{P}_{\Psi}
 		\end{align}
+		Rewriting $d$ as $4-\epsilon$ and expanding up to order $\mathcal{O}(\epsilon)$:
 		
+		\begin{align}
+			(-\slashed{q}+M_T)(-\slashed{P}_{\Psi} )(-\slashed{q}+ M_T) 
+			&=\frac{(2 - \epsilon)}{4-\epsilon}  \slashed{P}_{\Psi}q^2- M_T^2\slashed{P}_{\Psi}\nonumber\\
+			& = \left(\frac{1}{2} - \frac{\epsilon}{8}\right) \slashed{P}_{\Psi}q^2- M_T^2\slashed{P}_{\Psi}
+		\end{align}
 		Substituting this in the $l=1$ contribution for the summation and using:
 		
 		\begin{align}
@@ -2510,7 +2515,7 @@
 				\bar{t}_R & t_R\ccj^{-1} 
 			\end{pmatrix}  \frac{ (-\slashed{q}+M_T)(-\slashed{P}_{\psi_T} )(-\slashed{q}+ M_T)}{(q^2-M_T^2)^{2}}\begin{pmatrix}
 				t_R\\ \ccj^{-1}\bar{t}_R
-			\end{pmatrix} = \frac{\left(\frac{1}{2}q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\Psi}t_R + t^T_R \ccj^{-1}\slashed{P}_{\psi_T}\ccj^{-1}\bar{t}^T_R \right]
+			\end{pmatrix} = \frac{\left(\left(\frac{1}{2} - \frac{\epsilon}{8}\right) q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\Psi}t_R + t^T_R \ccj^{-1}\slashed{P}_{\psi_T}\ccj^{-1}\bar{t}^T_R \right]
 		\end{align}
 		
 		Rewriting the second term using the same identities of the $l=0$ case:
@@ -2519,8 +2524,8 @@
 				\bar{t}_R & t_R\ccj^{-1} 
 			\end{pmatrix}  \frac{ (-\slashed{q}+M_T)(-\slashed{P}_{\Psi} )(-\slashed{q}+ M_T)}{(q^2-M_T^2)^{2}}\begin{pmatrix}
 				t_R\\ \ccj^{-1}\bar{t}_R
-			\end{pmatrix} &= \frac{\left(\frac{1}{2}q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\psi_T}t_R + t^T_R (\gamma^\mu)^T P_{\psi_T, \mu}\bar{t}^T_R \right]\nonumber\\
-			&= \frac{\left(\frac{1}{2}q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\psi_T}t_R - \bar{t}_R \gamma^\mu P^T_{\psi_T, \mu}t_R \right]
+			\end{pmatrix} &= \frac{\left(\left(\frac{1}{2} - \frac{\epsilon}{8}\right) q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\psi_T}t_R + t^T_R (\gamma^\mu)^T P_{\psi_T, \mu}\bar{t}^T_R \right]\nonumber\\
+			&= \frac{\left(\left(\frac{1}{2} - \frac{\epsilon}{8}\right) q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\psi_T}t_R - \bar{t}_R \gamma^\mu P^T_{\psi_T, \mu}t_R \right]
 		\end{align}
 		
 		Here the transpose in the derivative means that it acts on the left. Therefore, to keep this clear we can introduce an arrow to indicate the action of the covariant derivative:
@@ -2530,7 +2535,7 @@
 				\bar{t}_R & t_R\ccj^{-1} 
 			\end{pmatrix}  \frac{ (-\slashed{q}+M_T)(-\slashed{P}_{\Psi} )(-\slashed{q}+ M_T)}{(q^2-M_T^2)^{2}}\begin{pmatrix}
 				t_R\\ \ccj^{-1}\bar{t}_R
-			\end{pmatrix} &=\frac{\left(\frac{1}{2}q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\psi_T}t_R - \bar{t}_R \overleftarrow{\slashed{P}}_{\psi_T}t_R \right]
+			\end{pmatrix} &=\frac{\left(\left(\frac{1}{2} - \frac{\epsilon}{8}\right) q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}_R\slashed{P}_{\psi_T}t_R - \bar{t}_R \overleftarrow{\slashed{P}}_{\psi_T}t_R \right]
 		\end{align}
 		
 		Using that $P_\mu = i D_\mu$ and keeping the chirality projectors explicitly:
@@ -2540,7 +2545,7 @@
 				\bar{t}_R & t_R\ccj^{-1} 
 			\end{pmatrix}  \frac{ (-\slashed{q}+M_T)(-\slashed{P}_{\Psi} )(-\slashed{q}+ M_T)}{(q^2-M_T^2)^{2}}\begin{pmatrix}
 				t_R\\ \ccj^{-1}\bar{t}_R
-			\end{pmatrix} &=i\frac{\left(\frac{1}{2}q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu \bar{t} \,\gamma^\mu\, P_R \, t \right]\label{eq:l=1}
+			\end{pmatrix} &=i\frac{\left(\left(\frac{1}{2} - \frac{\epsilon}{8}\right) q^2- M_T^2\right)}{(q^2 - M_T^2)^2}\left[\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu \bar{t} \,\gamma^\mu\, P_R \, t \right]\label{eq:l=1}
  		\end{align}
  		
  		\item $l=2$: 
@@ -2625,6 +2630,9 @@
  			\nonumber\\ &- \frac{1}{4}M_\Psi^2\slashed{P}_{\Psi}\gamma^\mu\gamma^\nu\gamma^\rho\gamma_\mu P_{\Psi,\nu} P_{\Psi,\rho}q^2 -\frac{1}{4} M_\Psi^2\slashed{P}_{\Psi}\slashed{P}_{\Psi}\gamma^\mu\gamma^\nu\gamma_\mu P_{\Psi,\nu}q^2 -\frac{1}{4} M_\Psi^2\slashed{P}_{\Psi}\gamma^\mu\gamma^\nu\gamma_\mu P_{\Psi,\nu}\slashed{P}_{\Psi} q^2
  			- M_\Psi^4\slashed{P}_{\Psi}\slashed{P}_{\Psi}\slashed{P}_{\Psi}
  		\end{align}
+ 		
+ 		Notice that the powers of $q$ that appears in this expression are $0$, $2$ and $4$. Recalling that the propagators in $n=1$ and $l=3$ are $(q^2- M_T^2)^4$ and $(q^2 - M_s^2)$, we can anticipate that the loop functions multiplying the operators will be $tilde{\lf}^{4,1,-2}_{T,s}$, $\tilde{\lf}^{4,1,-1}_{T,s}$ and $\tilde{\lf}^{4,1,0}_{T,s}$. Tehrefore, since all this loop functions are finite, we are already setting $d= 4$ once there is pole $\frac{1}{\epsilon}$ to cancel  with terms of $\mathcal{O}(\epsilon)$ and generate finite contributions.
+ 		
  		
  		\begin{align}
  			&(-\slashed{q}+M_\Psi)(-\slashed{P}_{\Psi} )(-\slashed{q}+M_\Psi)(-\slashed{P}_{\Psi} )(-\slashed{q}+M_\Psi)(-\slashed{P}_{\Psi} )(-\slashed{q}+ M_\Psi)\nonumber\\
@@ -2795,12 +2803,35 @@
 	Using this definition, the $n=1$ contribution can be written as:
 	
 	\begin{align}
-		&\mathcal{L}^{\text{1-loop}}_{EFT,SF}[\phi_b,\psi_b] \supset \frac{1}{64\pi^2} y_{Hs} \tilde{\lf}^{1,0}_{s} h^2 -\frac{y_{DM}^2}{16\pi^2} \left(\frac{1}{4}\tilde{\lf}^{2,1,-1}_{T,s} - \frac{1}{2}M_T^2 \tilde{\lf}^{2,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu\bar{t}\, \gamma^\mu\, P_R\,  t\right) \nonumber\\
-		&-\frac{y_{DM}^2}{32\pi^2} \left(\frac{2}{3}\tilde{\lf}^{4,1,-2}_{T,s} - 2M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} + M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\nu D_\mu D_\nu t - D_\nu D_\mu D_\nu\bar{t}\, \gamma^\mu \, P_R \, t\right)
-		\nonumber\\&- \frac{y_{DM}^2}{32\pi^2}\left(-\frac{1}{3}\tilde{\lf}^{4,1,-2}_{T,s}+M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} - M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\mu D^2 t - D_\mu D^2\bar{t}\, \gamma^\mu \, P_R \,  t\right)
-		\nonumber\\&- \frac{y_{DM}^2}{32\pi^2}\left(-\frac{1}{3}\tilde{\lf}^{4,1,-2}_{T,s}+M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} - M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D^2D_\mu t - D^2D_\mu \bar{t}\, \gamma^\mu \, P_R \,  t \right)
-		\nonumber\\ &-\frac{y_{DM}^2}{32\pi^2}\left(M_T^2\tilde{\lf}^{4,1,-1}_{T,s} - M_T^4\tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t} \, \Gamma^{\mu\nu\rho } \, P_R \, D_\mu D_\nu D_\rho t -  D_\mu D_\nu D_\rho\bar{t} \, \Gamma^{\mu\nu\rho } \, P_R \, t \right) 
+		&\mathcal{L}^{\text{1-loop}}_{EFT,SF}[\phi_b,\psi_b] \supset \frac{1}{64\pi^2} y_{Hs} \tilde{\lf}^{1,0}_{s} h^2 -i\frac{y_{DM}^2}{16\pi^2} \left(\left(\frac{1}{4} - \frac{\epsilon}{16}\right)\tilde{\lf}^{2,1,-1}_{T,s} - \frac{1}{2}M_T^2 \tilde{\lf}^{2,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu\bar{t}\, \gamma^\mu\, P_R\,  t\right) \nonumber\\
+		&-i\frac{y_{DM}^2}{32\pi^2} \left(\frac{2}{3}\tilde{\lf}^{4,1,-2}_{T,s} - 2M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} + M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\nu D_\mu D_\nu t - D_\nu D_\mu D_\nu\bar{t}\, \gamma^\mu \, P_R \, t\right)
+		\nonumber\\&-i \frac{y_{DM}^2}{32\pi^2}\left(-\frac{1}{3}\tilde{\lf}^{4,1,-2}_{T,s}+M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} - M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\mu D^2 t - D_\mu D^2\bar{t}\, \gamma^\mu \, P_R \,  t\right)
+		\nonumber\\&- i\frac{y_{DM}^2}{32\pi^2}\left(-\frac{1}{3}\tilde{\lf}^{4,1,-2}_{T,s}+M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} - M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D^2D_\mu t - D^2D_\mu \bar{t}\, \gamma^\mu \, P_R \,  t \right)
+		\nonumber\\ &-i\frac{y_{DM}^2}{32\pi^2}\left(M_T^2\tilde{\lf}^{4,1,-1}_{T,s} - M_T^4\tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t} \, \Gamma^{\mu\nu\rho } \, P_R \, D_\mu D_\nu D_\rho t -  D_\mu D_\nu D_\rho\bar{t} \, \Gamma^{\mu\nu\rho } \, P_R \, t \right) 
 	\end{align}
+	
+	Notice that since:
+	
+	\begin{align}
+		\tilde{\lf}^{2,1,-1}_{T,s} = \frac{2}{\bar{\epsilon}} + \frac{M_S^2}{-M_T^2 + M_s^2} 
+		- \frac{M_T^4 - 2 M_T^2 M_s^2}{(M_T^2 - M_s^2)^2} \ln\left(\frac{M_\Psi^2}{M_s^2}\right) 
+		+ \ln\left(\frac{\mu^2}{M_s^2}\right)
+	\end{align}
+	
+	
+	
+	\noindent the product $\frac{\epsilon}{16}\tilde{\lf}^{2,1,-1}_{T,s}$ generates a finite contribution of $\frac{1}{8}$. Therefore:
+	
+	
+	\begin{align}
+		&\mathcal{L}^{\text{1-loop}}_{EFT,SF}[\phi_b,\psi_b] \supset \frac{1}{64\pi^2} y_{Hs} \tilde{\lf}^{1,0}_{s} h^2 -i\frac{y_{DM}^2}{16\pi^2} \left( - \frac{1}{8} + \frac{1}{4}\tilde{\lf}^{2,1,-1}_{T,s} - \frac{1}{2}M_T^2 \tilde{\lf}^{2,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu\bar{t}\, \gamma^\mu\, P_R\,  t\right) \nonumber\\
+		&-i\frac{y_{DM}^2}{32\pi^2} \left(\frac{2}{3}\tilde{\lf}^{4,1,-2}_{T,s} - 2M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} + M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\nu D_\mu D_\nu t - D_\nu D_\mu D_\nu\bar{t}\, \gamma^\mu \, P_R \, t\right)
+		\nonumber\\&-i \frac{y_{DM}^2}{32\pi^2}\left(-\frac{1}{3}\tilde{\lf}^{4,1,-2}_{T,s}+M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} - M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\mu D^2 t - D_\mu D^2\bar{t}\, \gamma^\mu \, P_R \,  t\right)
+		\nonumber\\&- i\frac{y_{DM}^2}{32\pi^2}\left(-\frac{1}{3}\tilde{\lf}^{4,1,-2}_{T,s}+M_T^2 \tilde{\lf}^{4,1,-1}_{T,s} - M_T^4 \tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D^2D_\mu t - D^2D_\mu \bar{t}\, \gamma^\mu \, P_R \,  t \right)
+		\nonumber\\ &-i\frac{y_{DM}^2}{32\pi^2}\left(M_T^2\tilde{\lf}^{4,1,-1}_{T,s} - M_T^4\tilde{\lf}^{4,1,0}_{T,s}\right)\left(\bar{t} \, \Gamma^{\mu\nu\rho } \, P_R \, D_\mu D_\nu D_\rho t -  D_\mu D_\nu D_\rho\bar{t} \, \Gamma^{\mu\nu\rho } \, P_R \, t \right) 
+	\end{align}
+	
+	
 	
 	In order to simplify this expression, we can use this reduction formula to loop integrals:
 	
@@ -2811,7 +2842,7 @@
 	Using this, we get:
 	
 	\begin{align}
-		&\mathcal{L}^{\text{1-loop}}_{EFT,SF}[\phi_b,\psi_b] \supset \frac{1}{64\pi^2} y_{Hs} \tilde{\lf}^{1,0}_{s} h^2 +i\frac{y_{DM}^2}{16\pi^2} \left(  \frac{1}{2} \tilde{\lf}^{1,1,0}_{T,s}-\frac{1}{4}\tilde{\lf}^{2,1,-1}_{T,s}\right)\left(\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu\bar{t}\, \gamma^\mu\, P_R\,  t\right) \nonumber\\
+		&\mathcal{L}^{\text{1-loop}}_{EFT,SF}[\phi_b,\psi_b] \supset \frac{1}{64\pi^2} y_{Hs} \tilde{\lf}^{1,0}_{s} h^2 +i\frac{y_{DM}^2}{16\pi^2} \left(\frac{1}{8} +  \frac{1}{2} \tilde{\lf}^{1,1,0}_{T,s}-\frac{1}{4}\tilde{\lf}^{2,1,-1}_{T,s}\right)\left(\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu\bar{t}\, \gamma^\mu\, P_R\,  t\right) \nonumber\\
 		&+i\frac{y_{DM}^2}{16\pi^2} \left(\frac{1}{6}\tilde{\lf}^{4,1,-2}_{T,s} - \frac{1}{2} \tilde{\lf}^{2,1,0}_{T,s} \right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\nu D_\mu D_\nu t - D_\nu D_\mu D_\nu\bar{t}\, \gamma^\mu \, P_R \, t\right)
 		\nonumber\\&+ i\frac{y_{DM}^2}{16\pi^2}\left(\frac{1}{6}\tilde{\lf}^{4,1,-2}_{T,s}- \frac{1}{2}\tilde{\lf}^{3,1,-1}_{T,s} +  \frac{1}{2}\tilde{\lf}^{2,1,0}_{T,,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\mu D^2 t - D_\mu D^2\bar{t}\, \gamma^\mu \, P_R \,  t\right)
 		\nonumber\\&+ i\frac{y_{DM}^2}{16\pi^2}\left(\frac{1}{6}\tilde{\lf}^{4,1,-2}_{T,s}- \frac{1}{2}\tilde{\lf}^{3,1,-1}_{T,s} +  \frac{1}{2}\tilde{\lf}^{2,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D^2D_\mu t - D^2D_\mu \bar{t}\, \gamma^\mu \, P_R \,  t \right)
@@ -2958,7 +2989,7 @@
 
 	
 	\begin{align}
-		&\mathcal{L}^{\text{1-loop}}_{EFT}[\phi_b,\psi_b] \supset \frac{1}{64\pi^2} y_{Hs} \tilde{\lf}^{1,0}_{s} h^2 +i\frac{y_{DM}^2}{16\pi^2} \left(  \frac{1}{2} \tilde{\lf}^{1,1,0}_{T,s}-\frac{1}{4}\tilde{\lf}^{2,1,-1}_{T,s}\right)\left(\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu\bar{t}\, \gamma^\mu\, P_R\,  t\right) \nonumber\\
+		&\mathcal{L}^{\text{1-loop}}_{EFT}[\phi_b,\psi_b] \supset \frac{1}{64\pi^2} y_{Hs} \tilde{\lf}^{1,0}_{s} h^2 +i\frac{y_{DM}^2}{16\pi^2} \left( \frac{1}{8} +  \frac{1}{2} \tilde{\lf}^{1,1,0}_{T,s}-\frac{1}{4}\tilde{\lf}^{2,1,-1}_{T,s}\right)\left(\bar{t}\, \gamma^\mu\, P_R\, D_\mu t - D_\mu\bar{t}\, \gamma^\mu\, P_R\,  t\right) \nonumber\\
 		&+i\frac{y_{DM}^2}{16\pi^2} \left(\frac{1}{6}\tilde{\lf}^{4,1,-2}_{T,s} - \frac{1}{2} \tilde{\lf}^{2,1,0}_{T,s} \right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\nu D_\mu D_\nu t - D_\nu D_\mu D_\nu\bar{t}\, \gamma^\mu \, P_R \, t\right)
 		\nonumber\\&+ i\frac{y_{DM}^2}{16\pi^2}\left(\frac{1}{6}\tilde{\lf}^{4,1,-2}_{T,s}- \frac{1}{2}\tilde{\lf}^{3,1,-1}_{T,s} +  \frac{1}{2}\tilde{\lf}^{2,1,0}_{T,,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D_\mu D^2 t - D_\mu D^2\bar{t}\, \gamma^\mu \, P_R \,  t\right)
 		\nonumber\\&+ i\frac{y_{DM}^2}{16\pi^2}\left(\frac{1}{6}\tilde{\lf}^{4,1,-2}_{T,s}- \frac{1}{2}\tilde{\lf}^{3,1,-1}_{T,s} +  \frac{1}{2}\tilde{\lf}^{2,1,0}_{T,s}\right)\left(\bar{t}\, \gamma^\mu \, P_R \, D^2D_\mu t - D^2D_\mu \bar{t}\, \gamma^\mu \, P_R \,  t \right)
@@ -3404,6 +3435,13 @@
 			+ \frac{4}{3} \, g^{\eta\kappa} g^{\theta\lambda} g^{\tau\omega}
 			+ \frac{4}{3} \, g^{\eta\theta} g^{\kappa\lambda} g^{\tau\omega}\bigg)P_\lambda P_\theta P_\omega P_\eta P_\tau P_\kappa
 		\end{align}
+		\begin{align}
+			\tr A_6 = & \frac{4}{3}q^6\bigg(- P^\mu P^\nu P_\nu P^\rho P_\rho P_\mu -  P^\mu P_\mu P^\nu P_\nu P^\rho P_\rho -  P^\mu P^\nu P^\rho P_\mu P_\nu P_\rho +  P^\mu P^\nu P^\rho P_\rho P_\mu P_\nu\nonumber\\
+			&+ P^\mu P^\nu P_\nu P^\rho P_\mu P_\rho - P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho
+			+P^\mu P^\nu P_\mu P^\rho P_\rho P_\nu -  P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho\nonumber\\
+			&+ P^\mu P^\nu P_\mu P_\nu P^\rho P_\rho - P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu
+			+P^\mu P_\mu P^\nu P^\rho P_\nu P_\rho + P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu\bigg)
+		\end{align}
 	
 		
 		\begin{align}
@@ -3422,23 +3460,39 @@
 			& - \frac{20}{3} \, g^{\eta\kappa} g^{\theta\lambda} g^{\tau\omega}
 			- \frac{20}{3} \, g^{\eta\theta} g^{\kappa\lambda} g^{\tau\omega}\bigg)P_\lambda P_\theta P_\omega P_\eta P_\tau P_\kappa
 		\end{align}
+		\begin{align}
+			\tr A_4 = \frac{4}{3}q^4\bigg(& 2 P^\mu P^\nu P^\rho P_\rho P_\nu P_\mu + 3 P^\mu P^\nu P_\nu P^\rho P_\rho P_\mu + 3P^\mu P_\mu P^\nu P_\nu P^\rho P_\rho + 2P^\mu P^\nu P_\nu P_\mu P^\rho P_\rho\nonumber\\
+			& +2 P^\mu P_\mu P^\nu P^\rho P_\rho P_\nu - 5 P^\mu P^\nu P^\rho P_\rho P_\mu P_\nu
+			- 5P^\mu P^\nu P_\nu P^\rho P_\mu P_\rho + 6 P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho\nonumber\\
+			&-5 P^\mu P^\nu P_\mu P^\rho P_\rho P_\nu +6 P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho
+			-5P^\mu P^\nu P_\mu P_\nu P^\rho P_\rho + 6 P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu\nonumber\\
+			& -5 P^\mu P_\mu P^\nu P^\rho P_\nu P_\rho - 5 P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu\bigg)
+		\end{align}
 		
 		\begin{align}
-			\tr A_2= q^2\bigg(& -\frac{3}{8} \, g^{\eta\omega} g^{\theta\tau} g^{\kappa\lambda}
-			- \frac{3}{8} \, g^{\eta\tau} g^{\theta\omega} g^{\kappa\lambda}
-			- \frac{3}{8} \, g^{\eta\omega} g^{\theta\lambda} g^{\kappa\tau}
-			- \frac{3}{8} \, g^{\eta\lambda} g^{\theta\omega} g^{\kappa\tau}
-			- \frac{3}{8} \, g^{\eta\tau} g^{\theta\lambda} g^{\kappa\omega} \nonumber\\
-			& + \frac{3}{8} \, g^{\eta\lambda} g^{\theta\tau} g^{\kappa\omega}
-			+ \frac{5}{8} \, g^{\eta\omega} g^{\theta\kappa} g^{\lambda\tau}
-			+ \frac{5}{8} \, g^{\eta\kappa} g^{\theta\omega} g^{\lambda\tau}
-			- \frac{5}{8} \, g^{\eta\theta} g^{\kappa\omega} g^{\lambda\tau}
-			+ \frac{5}{8} \, g^{\eta\tau} g^{\theta\kappa} g^{\lambda\omega} \nonumber\\
-			& - \frac{5}{8} \, g^{\eta\kappa} g^{\theta\tau} g^{\lambda\omega}
-			+ \frac{5}{8} \, g^{\eta\theta} g^{\kappa\tau} g^{\lambda\omega}
-			- \frac{5}{8} \, g^{\eta\lambda} g^{\theta\kappa} g^{\tau\omega}
-			+ \frac{5}{8} \, g^{\eta\kappa} g^{\theta\lambda} g^{\tau\omega}
-			+ \frac{5}{8} \, g^{\eta\theta} g^{\kappa\lambda} g^{\tau\omega}\bigg)P_\lambda P_\theta P_\omega P_\eta P_\tau P_\kappa
+			\tr A_2= q^2\bigg(&-6\, g^{\eta\omega} g^{\theta\tau} g^{\kappa\lambda}
+			-6\, g^{\eta\tau} g^{\theta\omega} g^{\kappa\lambda}
+			-6\, g^{\eta\omega} g^{\theta\lambda} g^{\kappa\tau}
+			-6\, g^{\eta\lambda} g^{\theta\omega} g^{\kappa\tau}
+			-6\, g^{\eta\tau} g^{\theta\lambda} g^{\kappa\omega}
+			+6\, g^{\eta\lambda} g^{\theta\tau} g^{\kappa\omega} \nonumber\\
+			&+10\, g^{\eta\omega} g^{\theta\kappa} g^{\lambda\tau}
+			+10\, g^{\eta\kappa} g^{\theta\omega} g^{\lambda\tau}
+			-10\, g^{\eta\theta} g^{\kappa\omega} g^{\lambda\tau}
+			+10\, g^{\eta\tau} g^{\theta\kappa} g^{\lambda\omega}
+			-10\, g^{\eta\kappa} g^{\theta\tau} g^{\lambda\omega} \nonumber\\
+			&+10\, g^{\eta\theta} g^{\kappa\tau} g^{\lambda\omega}
+			-10\, g^{\eta\lambda} g^{\theta\kappa} g^{\tau\omega}
+			+10\, g^{\eta\kappa} g^{\theta\lambda} g^{\tau\omega}
+			+10\, g^{\eta\theta} g^{\kappa\lambda} g^{\tau\omega}\bigg)P_\lambda P_\theta P_\omega P_\eta P_\tau P_\kappa
+		\end{align}
+		
+		\begin{align}
+			\tr A_2= q^2\bigg(& -6 P^\mu P^\nu P^\rho P_\rho P_\nu P_\mu - 6 P^\mu P^\nu P_\nu P^\rho P_\rho P_\mu - 6P^\mu P_\mu P^\nu P_\nu P^\rho P_\rho - 6P^\mu P^\nu P_\nu P_\mu P^\rho P_\rho\nonumber\\
+			&-6 P^\mu P_\mu P^\nu P^\rho P_\rho P_\nu + 6 P^\mu P^\nu P^\rho P_\mu P_\nu P_\rho + 10 P^\mu P^\nu P^\rho P_\rho P_\mu P_\nu + 10 P^\mu P^\nu P_\nu P^\rho P_\mu P_\rho\nonumber\\
+			&-10 P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho + 10 P^\mu P^\nu P_\mu P^\rho P_\rho P_\nu
+			-10 P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho + 10P^\mu P^\nu P_\mu P_\nu P^\rho P_\rho\nonumber\\
+			&- 10P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu + 10 P^\mu P_\mu P^\nu P^\rho P_\nu P_\rho + 10 P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu	\bigg)
 		\end{align}
 		
 		\begin{align}
@@ -3446,36 +3500,183 @@
 			+ 4\, g^{\eta\tau} g^{\theta\omega} g^{\kappa\lambda}
 			+ 4\, g^{\eta\omega} g^{\theta\lambda} g^{\kappa\tau}
 			+ 4\, g^{\eta\lambda} g^{\theta\omega} g^{\kappa\tau}
-			+ 4\, g^{\eta\tau} g^{\theta\lambda} g^{\kappa\omega}
-			- 4\, g^{\eta\lambda} g^{\theta\tau} g^{\kappa\omega} \nonumber\\
-			& - 4\, g^{\eta\omega} g^{\theta\kappa} g^{\lambda\tau}
+			+ 4\, g^{\eta\tau} g^{\theta\lambda} g^{\kappa\omega} \nonumber\\
+			& - 4\, g^{\eta\lambda} g^{\theta\tau} g^{\kappa\omega}
+			- 4\, g^{\eta\omega} g^{\theta\kappa} g^{\lambda\tau}
 			- 4\, g^{\eta\kappa} g^{\theta\omega} g^{\lambda\tau}
 			+ 4\, g^{\eta\theta} g^{\kappa\omega} g^{\lambda\tau}
-			- 4\, g^{\eta\tau} g^{\theta\kappa} g^{\lambda\omega}
-			+ 4\, g^{\eta\kappa} g^{\theta\tau} g^{\lambda\omega}
-			- 4\, g^{\eta\theta} g^{\kappa\tau} g^{\lambda\omega} \nonumber\\
-			& + 4\, g^{\eta\lambda} g^{\theta\kappa} g^{\tau\omega}
+			- 4\, g^{\eta\tau} g^{\theta\kappa} g^{\lambda\omega} \nonumber\\
+			& + 4\, g^{\eta\kappa} g^{\theta\tau} g^{\lambda\omega}
+			- 4\, g^{\eta\theta} g^{\kappa\tau} g^{\lambda\omega}
+			+ 4\, g^{\eta\lambda} g^{\theta\kappa} g^{\tau\omega}
 			- 4\, g^{\eta\kappa} g^{\theta\lambda} g^{\tau\omega}
-			- 4\, g^{\eta\theta} g^{\kappa\lambda} g^{\tau\omega}  + 4\, g^{\eta\omega} g^{\theta\tau} g^{\kappa\lambda}
-			+ 4\, g^{\eta\tau} g^{\theta\omega} g^{\kappa\lambda}
-			+ 4\, g^{\eta\omega} g^{\theta\lambda} g^{\kappa\tau}
-			\nonumber\\
-			&+ 4\, g^{\eta\lambda} g^{\theta\omega} g^{\kappa\tau}
-			+ 4\, g^{\eta\tau} g^{\theta\lambda} g^{\kappa\omega}
-			- 4\, g^{\eta\lambda} g^{\theta\tau} g^{\kappa\omega}  - 4\, g^{\eta\omega} g^{\theta\kappa} g^{\lambda\tau}
-			- 4\, g^{\eta\kappa} g^{\theta\omega} g^{\lambda\tau}
-			+ 4\, g^{\eta\theta} g^{\kappa\omega} g^{\lambda\tau}
-			\nonumber\\
-			&- 4\, g^{\eta\tau} g^{\theta\kappa} g^{\lambda\omega}
-			+ 4\, g^{\eta\kappa} g^{\theta\tau} g^{\lambda\omega}
-			- 4\, g^{\eta\theta} g^{\kappa\tau} g^{\lambda\omega}  + 4\, g^{\eta\lambda} g^{\theta\kappa} g^{\tau\omega}
-			- 4\, g^{\eta\kappa} g^{\theta\lambda} g^{\tau\omega}
-			\nonumber\\
-			&- 4\, g^{\eta\theta} g^{\kappa\lambda} g^{\tau\omega}\bigg)P_\lambda P_\theta P_\omega P_\eta P_\tau P_\kappa
+			- 4\, g^{\eta\theta} g^{\kappa\lambda} g^{\tau\omega}\bigg)P_\lambda P_\theta P_\omega P_\eta P_\tau P_\kappa
 		\end{align}
 		
+		\begin{align}
+			\tr A_0 = 4\bigg(& P^\mu P^\nu P^\rho P_\rho P_\nu P_\mu +  P^\mu P^\nu P_\nu P^\rho P_\rho P_\mu +  P^\mu P_\mu P^\nu P_\nu P^\rho P_\rho + P^\mu P^\nu P_\nu P_\mu P^\rho P_\rho\nonumber\\
+			&+  P^\mu P_\mu P^\nu P^\rho P_\rho P_\nu -  P^\mu P^\nu P^\rho P_\mu P_\nu P_\rho
+			- P^\mu P^\nu P^\rho P_\rho P_\mu P_\nu -  P^\mu P^\nu P_\nu P^\rho P_\mu P_\rho\nonumber\\
+			&+ P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho -  P^\mu P^\nu P_\mu P^\rho P_\rho P_\nu
+			+ P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho -  P^\mu P^\nu P_\mu P_\nu P^\rho P_\rho\nonumber\\
+			& +P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu -  P^\mu P_\mu P^\nu P^\rho P_\nu P_\rho
+			 -  P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu\bigg)
+		\end{align}
+		
+		
+		
+		Now we need to organize 
+		
+		
+		
+		
+		\begin{align}
+			\mathcal{L}^{\text{1-loop}}_{EFT,F}[\phi_b,\psi_b] = \frac{i}{16\pi^2}\tr\Bigg\{&\left[-\frac{4}{3} \tilde{\lf}^{6,-3}_T +6 M_T^4\tilde{\lf}^{6,-1}_T - 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P^\rho P_\mu P_\nu P_\rho\nonumber\\
+			&+\left[-\frac{4}{3} \tilde{\lf}^{6,-3}_T + 8 M_T^2 \tilde{\lf}^{6,-2}_T  -10 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu\nonumber\\
+			 &+\left[\frac{4}{3} \tilde{\lf}^{6,-3}_T -\frac{20}{3} M_T^2 \tilde{\lf}^{6,-2}_T  +10 M_T^4\tilde{\lf}^{6,-1}_T - 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P^\rho P_\rho P_\mu P_\nu\nonumber\\
+			 &+\left[-\frac{4}{3} \tilde{\lf}^{6,-3}_T +8 M_T^2 \tilde{\lf}^{6,-2}_T  -10 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho\nonumber\\
+			 &+\left[\frac{4}{3} \tilde{\lf}^{6,-3}_T -\frac{20}{3}M_T^2 \tilde{\lf}^{6,-2}_T  +10 M_T^4\tilde{\lf}^{6,-1}_T - 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu\nonumber\\
+			 &+ \left[ \frac{8}{3} M_T^2 \tilde{\lf}^{6,-2}_T  -6 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P^\rho P_\rho P_\nu P_\mu\nonumber\\
+			 &+ \left[-\frac{4}{3} \tilde{\lf}^{6,-3}_T +8 M_T^2 \tilde{\lf}^{6,-2}_T  -10 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho\nonumber\\
+			 &+ \left[-\frac{4}{3} \tilde{\lf}^{6,-3}_T +4 M_T^2 \tilde{\lf}^{6,-2}_T  -6 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P_\nu P^\rho P_\rho P_\mu\nonumber\\
+			 &+ \left[-\frac{4}{3} \tilde{\lf}^{6,-3}_T +4 M_T^2 \tilde{\lf}^{6,-2}_T  -6 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P_\mu P^\nu P_\nu P^\rho P_\rho\nonumber\\
+			 &+\left[ \frac{8}{3} M_T^2 \tilde{\lf}^{6,-2}_T  -6 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right] P^\mu P^\nu P_\nu P_\mu P^\rho P_\rho\nonumber\\
+			 & +\left[ \frac{8}{3} M_T^2 \tilde{\lf}^{6,-2}_T  -6 M_T^4\tilde{\lf}^{6,-1}_T + 4 M_T^6 \tilde{\lf}^{6,0}_T\right] P^\mu P_\mu P^\nu P^\rho P_\rho P_\nu\nonumber\\
+			 &+ \left[\frac{4}{3} \tilde{\lf}^{6,-3}_T -\frac{20}{3} M_T^2 \tilde{\lf}^{6,-2}_T  +10 M_T^4\tilde{\lf}^{6,-1}_T - 4 M_T^6 \tilde{\lf}^{6,0}_T\right] P^\mu P^\nu P_\nu P^\rho P_\mu P_\rho\nonumber\\
+			 &+ \left[\frac{4}{3} \tilde{\lf}^{6,-3}_T -\frac{20}{3} M_T^2 \tilde{\lf}^{6,-2}_T  +10 M_T^4\tilde{\lf}^{6,-1}_T - 4 M_T^6 \tilde{\lf}^{6,0}_T\right] P^\mu P^\nu P_\mu P^\rho P_\rho P_\nu\nonumber\\
+			 & + \left[\frac{4}{3} \tilde{\lf}^{6,-3}_T -\frac{20}{3} M_T^2 \tilde{\lf}^{6,-2}_T  +10 M_T^4\tilde{\lf}^{6,-1}_T - 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P_\mu P^\nu P^\rho P_\nu P_\rho\nonumber\\
+			 &+ \left[\frac{4}{3} \tilde{\lf}^{6,-3}_T -\frac{20}{3} M_T^2 \tilde{\lf}^{6,-2}_T  +10 M_T^4\tilde{\lf}^{6,-1}_T - 4 M_T^6 \tilde{\lf}^{6,0}_T\right]P^\mu P^\nu P_\mu P_\nu P^\rho P_\rho
+			\Bigg\}
+		\end{align}
+		
+		
+		
+		
+			\begin{align}
+			\mathcal{L}^{\text{1-loop}}_{EFT,F}[\phi_b,\psi_b] \supset \frac{i}{16\pi^2}\frac{1}{M_T^2}\tr\Bigg\{&-\frac{2}{15}P^\mu P^\nu P^\rho P_\mu P_\nu P_\rho
+			+\frac{6}{5}P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu
+			-\frac{17}{15}P^\mu P^\nu P^2 P_\mu P_\nu\nonumber\\
+			&-\frac{2}{15}P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho
+			-\frac{17}{15}P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu
+			+ \frac{8}{15}P^\mu P^\nu P^2 P_\nu P_\mu\nonumber\\
+			&+ \frac{6}{5}P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho
+			+ \frac{13}{15}P^\mu P^2 P^\rho P_\rho P_\mu
+			+ \frac{13}{15}P^2 P^2 P^2\nonumber\\
+			&+\frac{8}{15} P^\mu P^2 P_\mu P^2
+			 +\frac{8}{15} P^2 P^\nu P^2 P_\nu
+			 -\frac{17}{15} P^\mu P^2 P^\rho P_\mu P_\rho\nonumber\\
+			&-\frac{17}{15} P^\mu P^\nu P_\mu P^2 P_\nu 
+			-\frac{17}{15}P^2 P^\nu P^\rho P_\nu P_\rho
+			-\frac{17}{15}P^\mu P^\nu P_\mu P_\nu P^2
+			\Bigg\}
+		\end{align}
+		
+		
+		Using, commutation relations for the covariant derivatives, as done in \cite{Zhang_2017}, it is possible to write the expression above as:
+		
+		\begin{align}
+			\mathcal{L}^{\text{1-loop}}_{EFT,F}[\phi_b,\psi_b] \supset \frac{i}{16\pi^2}\frac{1}{M_T^2}\Bigg\{&-\frac{2}{15}\tr(P^\mu P^\nu P^\rho P_\mu P_\nu P_\rho)
+			+\frac{18}{5}\tr(P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu) + \text{terms like } \tr(...P^2...)\Bigg\}
+		\end{align}
+		
+		
+		Recall that in a CDE expansion we can always write the final operators with every covariant derivative in commutators. For pure Gauge dimension six operators there is only two independent options\cite{Zhang_2017}:
+		
+		\begin{align}
+			\tr([P^\mu,[P_\mu,P_\nu]][P_\rho,[P^\rho, P^\nu]]) \ \ \ \text{and} \ \ \ \tr([P^\mu,P_\nu][P^\nu,P_\rho][P^\rho,P_\mu])
+		\end{align}
+		
+		Therefore, as discussed 
+		As discussed in \textcolor{red}{mention the location of discussion}, we can match the coefficients of the expression 
+		
+			
 	\end{itemize}
 	
+	
+	\begin{align}
+		\tr([P^\mu,[P_\mu,P_\nu]][P_\rho,[P^\rho, P^\nu]]) &= \tr\{(P^\mu[P_\mu,P_\nu] - [P_\mu,P_\nu]P^\mu)(P_\rho[P^\rho, P^\nu] - [P^\rho, P^\nu]P_\rho)\}\nonumber\\
+		& = \tr\{(P^\mu P_\mu P_\nu - P^\mu P_\nu P_\mu - P_\mu P_\nu P^\mu + P_\nu P_\mu P^\mu)\nonumber\\
+		&\hspace{5cm}(P_\rho P^\rho P^\nu - P_\rho P^\nu P^\rho - P^\rho P^\nu P_\rho + P^\nu P^\rho P_\rho)\}\nonumber\\
+		&=\tr\{(P^\mu P_\mu P_\nu - 2P^\mu P_\nu P_\mu  + P_\nu P_\mu P^\mu)\nonumber\\
+		&\hspace{5cm}(P_\rho P^\rho P^\nu -2 P_\rho P^\nu P^\rho  + P^\nu P^\rho P_\rho)\}\nonumber\\
+		&=\tr\{ P^\mu P_\mu P_\nu P_\rho P^\rho P^\nu - 2P^\mu P_\mu P_\nu P_\rho P^\nu P^\rho + P^\mu P_\mu P_\nu  P^\nu P^\rho P_\rho\nonumber\\
+		&-2P^\mu P_\nu P_\mu P_\rho P^\rho P^\nu + 4 P^\mu P_\nu P_\mu P_\rho P^\nu P^\rho - 2 P^\mu P_\nu P_\mu P^\nu P^\rho P_\rho\nonumber\\
+		& + P_\nu P_\mu P^\mu P_\rho P^\rho P^\nu - 2 P_\nu P_\mu P^\mu P_\rho P^\nu P^\rho + P_\nu P_\mu P^\mu P^\nu P^\rho P_\rho\}\nonumber\\
+		% &=\tr\{ P^2 P_\nu P^2 P^\nu - 2P^2 P_\nu P_\rho P^\nu P^\rho + P^2 P^2 P^2\nonumber\\
+		% &-2P^\mu P_\nu P_\mu P^2 P^\nu + 4 P^\mu P_\nu P_\mu P_\rho P^\nu P^\rho - 2 P^\mu P_\nu P_\mu P^\nu P^2\nonumber\\
+		% & + P_\nu P_\mu P^\mu P^2 P^\nu - 2 P_\nu P^2 P_\rho P^\nu P^\rho + P_\nu P^2 P^\nu P^2\}\nonumber\\
+	\end{align}
+	
+	
+	
+	
+	\begin{align}
+		\tr([P^\mu,P_\nu][P^\nu,P_\rho][P^\rho,P_\mu]) &= \tr\{(P^\mu P_\nu - P_\nu P^\mu)(P^\nu P_\rho - P_\rho P^\nu) (P^\rho P_\mu - P_\mu P^\rho)\}\nonumber\\
+		& = \tr\{(P^\mu P_\nu - P_\nu P^\mu)(P^\nu P_\rho P^\rho P_\mu - P^\nu P_\rho P_\mu P^\rho  - P_\rho P^\nu P^\rho P_\mu + P_\rho P^\nu P_\mu P^\rho) \}\nonumber\\
+		& = \tr\{P^\mu P_\nu P^\nu P_\rho P^\rho P_\mu - P^\mu P_\nu P^\nu P_\rho P_\mu P^\rho - P^\mu P_\nu P_\rho P^\nu P^\rho P_\mu +  P^\mu P_\nu P_\rho P^\nu P_\mu P^\rho\nonumber\\
+		 &- P_\nu P^\mu P^\nu P_\rho P^\rho P_\mu +  P_\nu P^\mu P^\nu P_\rho P_\mu P^\rho  +  P_\nu P^\mu P_\rho P^\nu P^\rho P_\mu - P_\nu P^\mu P_\rho P^\nu P_\mu P^\rho\}\nonumber\\
+		% & = \tr\{P^\mu P^2 P^2 P_\mu - P^\mu P^2 P_\rho P_\mu P^\rho  - P^\mu P_\nu P_\rho P^\nu P^\rho P_\mu +  P^\mu P_\nu P_\rho P^\nu P_\mu P^\rho\nonumber\\
+		% &- P_\nu P^\mu P^\nu P^2 P_\mu +  P_\nu P^\mu P^\nu P_\rho P_\mu P^\rho +  P_\nu P^\mu P_\rho P^\nu P^\rho P_\mu - P_\nu P^\mu P_\rho P^\nu P_\mu P^\rho\}
+	\end{align}
+	
+	
+	Trying something:
+	
+	\begin{align}
+		&=\tr\{ P^\mu P_\mu P_\nu P_\rho P^\rho P^\nu - 2 P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu + P^\mu P_\mu P_\nu  P^\nu P^\rho P_\rho\nonumber\\
+		&-2 P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu  + 4 P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu  - 2 P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu \nonumber\\
+		& + P_\nu P_\mu P^\mu P_\rho P^\rho P^\nu - 2  P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu+ P_\nu P_\mu P^\mu P^\nu P^\rho P_\rho\}\nonumber\\
+	\end{align}
+	
+	
+	\begin{align}
+		& = \tr\{P^\mu P_\nu P^\nu P_\rho P^\rho P_\mu -  P^\mu P_\nu P_\rho P^\nu P^\rho P_\mu - P^\mu P_\nu P_\rho P^\nu P^\rho P_\mu +  P^\mu P_\nu P_\rho P^\nu P_\mu P^\rho\nonumber\\
+		&- P_\nu P^\mu P^\nu P_\rho P^\rho P_\mu +  P_\nu P^\mu P^\nu P_\rho P_\mu P^\rho  +  P_\nu P^\mu P_\rho P^\nu P^\rho P_\mu - P_\nu P^\mu P_\rho P^\nu P_\mu P^\rho\}\nonumber\\
+	\end{align}
+	
+	
+	
+	\begin{align}
+		&a \tr([P^\mu,[P_\mu,P_\nu]][P_\rho,[P^\rho, P^\nu]]) + b \tr([P^\mu,P_\nu][P^\nu,P_\rho][P^\rho,P_\mu]) = \nonumber\\
+		&\tr\{ a\}
+	\end{align}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\newpage 
+	
+	\begin{align}
+		& \nonumber\\
+		& - P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho
+		 -  P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho\nonumber\\
+		& - P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu
+		+ P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu
+	\end{align}
+	
+	\begin{align}
+		&- P^\mu P^\nu P^\rho P_\nu P_\mu P_\rho = - P^\mu P^\nu P^\rho[P_\nu,P_\mu]P_\rho - P^\mu P^\nu P^\rho P_\mu [P_\nu,P_\rho] - P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu\nonumber\\
+		&-  P^\mu P^\nu P_\mu P^\rho P_\nu P_\rho =  -  P^\mu P^\nu [P_\mu, P^\rho]  P_\nu P_\rho-  P^\mu P^\nu P^\rho P_\mu [P_\nu, P_\rho] - P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu\nonumber\\
+		&+ P^\mu P^\nu P^\rho P_\nu P_\rho P_\mu =  + P^\mu P^\nu P^\rho  P_\nu  [P_\rho, P_\mu]+ P^\mu P^\nu P^\rho [P_\nu, P_\mu] P_\rho+ P^\mu P^\nu P^\rho P_\mu [P_\nu, P_\rho]+P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu
+	\end{align}
+	
+	Summing:
+	
+	\begin{align}
+		&-2P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu  -  P^\mu P^\nu [P_\mu, P^\rho]  P_\nu P_\rho-  P^\mu P^\nu P^\rho P_\mu [P_\nu, P_\rho] + P^\mu P^\nu P^\rho  P_\nu  [P_\rho, P_\mu]+P^\mu P^\nu P^\rho P_\mu P_\rho P_\nu
+	\end{align}
 	
 	
 	

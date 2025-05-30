@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.12)  23 MAY 2025 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.12)  29 MAY 2025 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1139,161 +1139,215 @@ Overfull \hbox (17.64696pt too wide) detected at line 2384
 []
  []
 
-[32]
-Overfull \hbox (3.77806pt too wide) detected at line 2514
-[]
- []
-
-[33]
-Overfull \hbox (1.62952pt too wide) detected at line 2524
+[32] [33]
+Overfull \hbox (33.21967pt too wide) detected at line 2519
 []
  []
 
 
-Overfull \hbox (18.06082pt too wide) detected at line 2593
+Overfull \hbox (31.07112pt too wide) detected at line 2529
+[]
+ []
+
+
+Overfull \hbox (3.35236pt too wide) detected at line 2539
+[]
+ []
+
+
+Overfull \hbox (21.6499pt too wide) detected at line 2549
+[]
+ []
+
+
+Overfull \hbox (18.06082pt too wide) detected at line 2598
 []
  []
 
 [34]
-Overfull \hbox (36.4408pt too wide) detected at line 2627
+Overfull \hbox (36.4408pt too wide) detected at line 2632
 []
  []
 
 
-Overfull \hbox (36.4408pt too wide) detected at line 2634
+Overfull \hbox (36.4408pt too wide) detected at line 2642
 []
  []
 
 [35]
-Overfull \hbox (28.90929pt too wide) detected at line 2693
+Overfull \hbox (28.90929pt too wide) detected at line 2701
 []
  []
 
 [36]
-Overfull \hbox (11.98512pt too wide) detected at line 2750
+Overfull \hbox (11.98512pt too wide) detected at line 2758
 []
  []
 
 
-Overfull \hbox (41.43503pt too wide) detected at line 2765
+Overfull \hbox (41.43503pt too wide) detected at line 2773
 []
  []
 
 
-Overfull \hbox (52.81027pt too wide) detected at line 2785
+Overfull \hbox (52.81027pt too wide) detected at line 2793
 []
  []
 
 [37]
-Overfull \hbox (8.81895pt too wide) detected at line 2845
+Overfull \hbox (7.6797pt too wide) detected at line 2811
 []
  []
 
 [38]
-Overfull \hbox (17.58844pt too wide) detected at line 2867
+Overfull \hbox (8.81895pt too wide) detected at line 2876
 []
  []
 
 
-Overfull \hbox (41.00279pt too wide) detected at line 2903
+Overfull \hbox (17.58844pt too wide) detected at line 2898
 []
  []
 
 
-Overfull \hbox (28.61238pt too wide) detected at line 2938
-[]
- []
-
-
-Overfull \hbox (25.0168pt too wide) detected at line 2943
+Overfull \hbox (41.00279pt too wide) detected at line 2934
 []
  []
 
 [39]
-Overfull \hbox (45.54784pt too wide) detected at line 2953
+Overfull \hbox (28.61238pt too wide) detected at line 2969
 []
  []
 
 
-Overfull \hbox (8.52032pt too wide) detected at line 2989
+Overfull \hbox (25.0168pt too wide) detected at line 2974
+[]
+ []
+
+
+Overfull \hbox (45.54784pt too wide) detected at line 2984
 []
  []
 
 [40]
-Overfull \hbox (3.30356pt too wide) detected at line 3050
+Overfull \hbox (8.52032pt too wide) detected at line 3020
 []
  []
 
 [41]
-Overfull \hbox (3.30356pt too wide) detected at line 3060
+Overfull \hbox (3.30356pt too wide) detected at line 3081
 []
  []
 
 
-Overfull \hbox (40.80978pt too wide) detected at line 3092
-[]
- []
-
-
-Overfull \hbox (68.7346pt too wide) detected at line 3110
+Overfull \hbox (3.30356pt too wide) detected at line 3091
 []
  []
 
 [42]
-
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
-29.
-
-
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
-29.
-
-Missing character: There is no ¨ in font cmr10!
-
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
-29.
-
-
-LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
-29.
-
-Missing character: There is no ¨ in font cmr10!
-
-Overfull \hbox (17.46492pt too wide) detected at line 3145
+Overfull \hbox (40.80978pt too wide) detected at line 3123
 []
  []
 
 
-Overfull \hbox (41.079pt too wide) detected at line 3164
+Overfull \hbox (68.7346pt too wide) detected at line 3141
 []
  []
 
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
+60.
+
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
+60.
+
+Missing character: There is no ¨ in font cmr10!
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
+60.
+
+
+LaTeX Warning: Command \textasciidieresis invalid in math mode on input line 31
+60.
+
+Missing character: There is no ¨ in font cmr10!
 [43]
-Overfull \hbox (48.34981pt too wide) detected at line 3194
+Overfull \hbox (17.46492pt too wide) detected at line 3176
 []
  []
 
 
-Overfull \hbox (0.80026pt too wide) detected at line 3216
+Overfull \hbox (41.079pt too wide) detected at line 3195
 []
  []
 
 [44]
-Overfull \hbox (53.7676pt too wide) detected at line 3300
+Overfull \hbox (48.34981pt too wide) detected at line 3225
+[]
+ []
+
+
+Overfull \hbox (0.80026pt too wide) detected at line 3247
 []
  []
 
 [45]
-Overfull \hbox (14.5832pt too wide) detected at line 3313
+Overfull \hbox (53.7676pt too wide) detected at line 3331
 []
  []
 
-[46] [47]
-Overfull \hbox (26.60802pt too wide) detected at line 3442
+[46]
+Overfull \hbox (14.5832pt too wide) detected at line 3344
 []
  []
 
-[48] [49] (./CDE_text.bbl [50]) [51
+[47] [48]
+Overfull \hbox (1.50026pt too wide) detected at line 3488
+[]
+ []
+
+
+Overfull \hbox (0.75264pt too wide) detected at line 3496
+[]
+ []
+
+
+Overfull \hbox (5.29901pt too wide) detected at line 3514
+[]
+ []
+
+
+Overfull \hbox (0.93086pt too wide) detected at line 3550
+[]
+ []
+
+[49]
+Overfull \hbox (39.81853pt too wide) detected at line 3580
+[]
+ []
+
+[50]
+Overfull \hbox (9.9564pt too wide) detected at line 3608
+[]
+ []
+
+
+Overfull \hbox (16.45232pt too wide) detected at line 3620
+[]
+ []
+
+[51]
+Overfull \hbox (8.0633pt too wide) detected at line 3673
+[]
+ []
+
+
+Overfull \hbox (4.17442pt too wide) detected at line 3679
+[]
+ []
+
+[52] [53] (./CDE_text.bbl [54]) [55
 
 ] (./CDE_text.aux)
  ***********
@@ -1302,8 +1356,8 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29153 strings out of 476106
- 564335 string characters out of 5793933
+ 29176 strings out of 476106
+ 564667 string characters out of 5793933
  2255975 words of memory out of 5000000
  50158 multiletter control sequences out of 15000+600000
  583086 words of font info for 103 fonts, out of 8000000 for 9000
@@ -1339,10 +1393,10 @@ super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on CDE_text.pdf (52 pages, 700317 bytes).
+Output written on CDE_text.pdf (56 pages, 712588 bytes).
 PDF statistics:
- 1063 PDF objects out of 1200 (max. 8388607)
- 928 compressed objects within 10 object streams
- 463 named destinations out of 1000 (max. 500000)
+ 1105 PDF objects out of 1200 (max. 8388607)
+ 966 compressed objects within 10 object streams
+ 486 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
