@@ -103,16 +103,4 @@ Benjamin Summ.
   effective action}.
 \newblock PhD thesis, 2020.
 
-\bibitem{PackageX}
-Hiren~H. Patel.
-\newblock Package-x: A mathematica package for the analytic calculation of
-  one-loop integrals.
-\newblock {\em Computer Physics Communications}, 197:276--290, 2015.
-
-\bibitem{Haber_2021}
-Howard Haber.
-\newblock Useful relations among the generators in the defining and adjoint
-  representations of su(n).
-\newblock {\em SciPost Physics Lecture Notes}, January 2021.
-
 \end{thebibliography}

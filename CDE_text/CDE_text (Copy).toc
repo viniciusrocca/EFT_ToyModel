@@ -19,7 +19,3 @@
 \contentsline {subsection}{\numberline {1.5.1}Solving the equation of motion of the heavy fields}{28}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}Tree-level matching}{28}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}One-loop matching}{29}{subsection.1.5.3}%
-\contentsline {chapter}{\numberline {A}Calculations of the toy model EFT}{55}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Master integrals}{55}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Checking dimensional regularization}{55}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Pure Gauge operators}{57}{section.A.3}%
