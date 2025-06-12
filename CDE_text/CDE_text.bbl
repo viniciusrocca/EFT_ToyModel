@@ -81,6 +81,12 @@ Aleksandra Drozd, John Ellis, Jérémie Quevillon, and Tevong You.
 \newblock The universal one-loop effective action.
 \newblock {\em Journal of High Energy Physics}, 2016(3), March 2016.
 
+\bibitem{PackageX}
+Hiren~H. Patel.
+\newblock Package-x: A mathematica package for the analytic calculation of
+  one-loop integrals.
+\newblock {\em Computer Physics Communications}, 197:276--290, 2015.
+
 \bibitem{CHISHOLM1961469}
 J.S.R. Chisholm.
 \newblock Change of variables in quantum field theories.
@@ -102,12 +108,6 @@ Benjamin Summ.
 \newblock {\em One formula to match them all : The bispinor universal one-loop
   effective action}.
 \newblock PhD thesis, 2020.
-
-\bibitem{PackageX}
-Hiren~H. Patel.
-\newblock Package-x: A mathematica package for the analytic calculation of
-  one-loop integrals.
-\newblock {\em Computer Physics Communications}, 197:276--290, 2015.
 
 \bibitem{Haber_2021}
 Howard Haber.
