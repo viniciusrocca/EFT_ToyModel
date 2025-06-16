@@ -1,0 +1,85 @@
+(***************************************************************)
+(***************************************************************)
+(** FeynRules model file for a simplified model          *******)
+(** with a scalar top partner and a fermion singlet (DM).  *****)
+(** Counter terms for the t-t-G vertex are included.         ***)
+(******                                                        *)
+(****** A. Lessa                                               *)
+(******                                                        *)
+(****** Feel free to use this model file!                      *)
+(***************************************************************)
+(***************************************************************)
+
+M$ModelName = "SMS-stop";
+
+M$Information = {Authors -> {"Andre Lessa"}, 
+                 Version -> "1.0",
+                 Date -> "28.08.2023"};
+
+FeynmanGauge = True;
+
+M$InteractionOrderHierarchy = {  {NP1, 1}, {NP2, 1}, {QCD, 2}, {QED,3} };
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+
+M$Parameters = {
+
+ (* New Physics (UV) Parameters *)
+  yDM  == { TeX->Subscript[y,DM],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP1 ,1}, Description->"Dark fermion - heavy stop - SM RH top Yukawa"},
+
+  yHs  == { TeX->Subscript[y,Hs],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP2 ,1}, Description->"Dark scalar square - SM Higgs doublet contraction"}
+
+};
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+
+(* The top partner fermion *)
+F[16] == { 
+         ClassName -> psiT, 
+         Indices -> {Index[Colour]},
+         SelfConjugate  -> False,
+         QuantumNumbers -> {Q -> 2/3},
+         Mass->{mT,  400.0},  
+         Width->{wT,1.}, 
+         ParticleName-> "~psiT", 
+         PDG->5000012, 
+         PropagatorLabel->"psiT", 
+         PropagatorType->Straight, 
+         ParticleName -> {"~psiT" },
+         FullName -> {"Top partner fermion"} },
+
+(* The dark Scalar *)
+S[5] == { 
+          ClassName        -> PhiS,
+          SelfConjugate    -> True,
+          Unphysical       -> False,
+          Mass             -> {mPhiS, 100.0},
+          Width            -> {ws, 0},
+          PropagatorLabel  -> {"PhiS"},
+          PropagatorType   -> ScalarDash, 
+          PDG              -> {5000002},
+          ParticleName     -> {"~PhiS" },
+          AntiParticleName -> {"~PhiS~"},
+          FullName         -> {"Dark scalar"} }
+};
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+(* gauge kinetic and mass terms *)
+
+Lkin := I psiTbar.Ga[mu].DC[psiT, mu] - (mT) psiTbar.psiT  + (1/2)*DC[PhiS,mu] DC[PhiS,mu] - (1/2)*(mPhiS^2 - yHs*(vev^2)/4) PhiS PhiS;
+
+(* DM-Scalar-Top coupling *)
+LYDM := -yDM*(PhiS ProjP[sp1,sp2] psiTbar[sp1,aa].uq[sp2,3,aa]);
+LHs := - (1/4)*yHs*Phibar[ii] Phi[ii] PhiS PhiS;
+
+
+LNP:= Lkin + LHs + LYDM + HC[LYDM];
+
