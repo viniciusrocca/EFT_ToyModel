@@ -6,8 +6,10 @@
 (** The on-shell (physical) basis is assumed with the         **)
 (** coefficients in the heavy mass limit (mST,mChi >> mTop,s) **)
 (** computed using Matchete 0.3.0                           ****)
+(** Based on the SMEFT FeynRules files found in:              **)
+(** https://github.com/SMEFTsim/SMEFTsim                      **)
 (******                                                        *)
-(****** A. Lessa                                               *)
+(****** A. Lessa and V. Rocca                                  *)
 (******                                                        *)
 (****** Feel free to use this model file!                      *)
 (***************************************************************)
@@ -15,13 +17,13 @@
 
 M$ModelName = "Top-EFTfull";
 
-M$Information = {Authors -> {"Andre Lessa"}, 
+M$Information = {Authors -> {"Andre Lessa", "ViniciusRocca"}, 
                  Version -> "1.0",
-                 Date -> "28.08.2023"};
+                 Date -> "xx.06.2025"};
 
 FeynmanGauge = False;
 
-M$InteractionOrderHierarchy = {  {NP,1}, {QCD,2}, {QED,3} };
+M$InteractionOrderHierarchy = {  {NP1,1}, {NP2,1}, {NP3,1}, {QCD,2}, {QED,3} };
 
 (* Loop Functions *)
 
@@ -62,27 +64,77 @@ M$Parameters = {
 (* New Physics (UV) Parameters *)
   yDM  == { TeX->Subscript[y,DM],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP1 ,1}, Description->"Dark fermion - heavy stop - SM RH top Yukawa"},
 
-  yHs  == { TeX->Subscript[y,Hs],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP2 ,1}, Description->"Dark scalar square - SM Higgs doublet contraction"},
+  lamHs  == { TeX->Subscript[y,Hs],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP2 ,1}, Description->"Dark scalar square - SM Higgs doublet contraction"},
 
-  ms  == { TeX->Subscript[M,T],  ComplexParameter -> False, ParameterType->External, Value->1000.0, Description->"Dark scalar mass"},
+  lamHs  == { TeX->Subscript[y,Hs],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP3 ,1}, Description->"Quartic dark scalar coupling"},
 
-  mT  == { TeX->Subscript[M,\[Chi]],  ComplexParameter -> False, ParameterType->External, Value->500.0, Description->"Top partner vector like fermion mass"},
+  mSDM  == { TeX->Subscript[M,T],  ComplexParameter -> False, ParameterType->External, Value->1000.0, Description->"Dark scalar mass"},
+
+  mPsiT  == { TeX->Subscript[M,\[Chi]],  ComplexParameter -> False, ParameterType->External, Value->500.0, Description->"Top partner vector like fermion mass"},
 
   mu  == { TeX->\[Mu],  ComplexParameter -> False, ParameterType->External, Value->1000.0, Description->"Matching scale"},
 
 
 
-cdd == {
+cdda == {
     ParameterType     -> Internal,
-    Value       -> (-1/90)*hbar*gs^4/(mT^2),
+    Value       -> (-27*gs^4)/(12960*mPsiT^2*Pi^2),
     InteractionOrder  -> {{QCD,4},{NPcdd,1}},
     ComplexParameter  -> False,    
-    TeX               -> Subscript[c,dd]
+    TeX               -> Subscript[c,dda]
+  },
+
+cddb == {
+    ParameterType     -> Internal,
+    Value       -> ((9*gs^4))/(12960*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QCD,4}, {NPcdd,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ddb]
+  },
+
+cddc == {
+    ParameterType     -> Internal,
+    Value       -> ((-16*g1^4))/(12960*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4}, {NPcdd,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ddc]
+  },
+
+ced == {
+    ParameterType     -> Internal,
+    Value       -> -1/135*(g1^4)/(mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPced,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ed]
+  },
+
+cee == {
+    ParameterType     -> Internal,
+    Value       -> -1/180*(g1^4)/(mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcG,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ee]
+  },
+
+ceua == {
+    ParameterType     -> Internal,
+    Value       -> (2*g1^4)/(135*mPsiT^2*Pi^2) ,
+    InteractionOrder  -> {{QED,4},{NPceu,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,eua]
+  },   
+
+ceub == {
+    ParameterType     -> Internal,
+    Value       -> (g1^2*yDM^2*(3*LF31m1[mPsiT, mSDM, mu] - LF41m2[mPsiT, mSDM, mu]))/(144*Pi^2),
+    InteractionOrder  -> {{QED,2}, {NP1,2}, {NPceu,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,eub]
   },  
 
 cG == {
     ParameterType     -> Internal,
-    Value       -> (-1/180)*hbar*gs^3/(mT^2),
+    Value       -> -1/2880*gs^3/(mPsiT^2*Pi^2),
     InteractionOrder  -> {{QCD,3},{NPcG,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,G]
@@ -90,63 +142,223 @@ cG == {
 
 cH == {
     ParameterType     -> Internal,
-    Value       -> (-1/96)*hbar*(yHs^3)/(ms^2),
-    InteractionOrder  -> {{NP,3},{NPcH,1}},
+    Value       -> -1/1536*lamHs^3/(mSDM^2*Pi^2),
+    InteractionOrder  -> {{NP2,3},{NPcH,1}},
     ComplexParameter  -> False,    
-    TeX               -> Subscript[c,G]
+    TeX               -> Subscript[c,H]
   }, 
 
-cHBox == {
+cHBoxa == {
     ParameterType     -> Internal,
-    Value       -> (-1/96)*hbar*(yHs^2)/(ms^2),
-    InteractionOrder  -> {{NP,2},{NPcHBox,1}},
+    Value       -> -1/23040*((64*g1^4)/mPsiT^2 )/Pi^2,
+    InteractionOrder  -> {{QED,4},{NPcHBox,1}},
     ComplexParameter  -> False,    
-    TeX               -> Subscript[c,HBox]
+    TeX               -> Subscript[c,HBoxa]
   },
 
-cHq1 == {
+cHBoxb == {
     ParameterType     -> Internal,
-    Value       -> (-1/4)*hbar*(Sqrt[2]*ymt/vev)^2*yDM^2*(LF210[mT,ms,mu]-2*LF31m1[mT,ms,mu] + LF41m2[mT,ms,mu]),
-    InteractionOrder  -> {{NP,2},{NPcHq1,1},{QED,2}},
+    Value       -> -1/23040*( (15*lamHs^2)/mSDM^2)/Pi^2,
+    InteractionOrder  -> {{NP2,2},{NPcHBox,1}},
     ComplexParameter  -> False,    
-    TeX               -> Subscript[c,Hq1]
-  },   
+    TeX               -> Subscript[c,HBoxb]
+  },
+
+cHd== {
+    ParameterType     -> Internal,
+    Value       -> (g1^4)/(270*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcHd,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,Hd]
+  },
+
+cHD== {
+    ParameterType     -> Internal,
+    Value       -> -1/90*g1^4/(mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcHD,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,HD]
+  },  
+
+cHe== {
+    ParameterType     -> Internal,
+    Value       -> (g1^4)/(90*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcHe,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,He]
+  },
+
+cHl1== {
+    ParameterType     -> Internal,
+    Value       -> (g1^4)/(180*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcHl1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,Hl1]
+  },
+
+cHq1a == {
+    ParameterType     -> Internal,
+    Value       -> -1/540*(g1^4)/(mPsiT^2*Pi^2) ,
+    InteractionOrder  -> {{QED,2},{NPcHq1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,Hq1a]
+  },
+
+cHq1b == {
+    ParameterType     -> Internal,
+    Value       ->  - (yDM^2*ymt^2*(LF210[mPsiT, mSDM, mu] - 2*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(32*Pi^2*vev^2),
+    InteractionOrder  -> {{NP1,2},{NPcHq1,1},{QED,2}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,Hq1b]
+  },  
 
 cHq3 == {
     ParameterType     -> Internal,
-    Value       -> (1/4)*hbar*(Sqrt[2]*ymt/vev)^2*yDM^2*(LF210[mT,ms,mu]-2*LF31m1[mT,ms,mu] + LF41m2[mT,ms,mu]),
-    InteractionOrder  -> {{NP,2},{NPcHq3,1},{QED,2}},
+    Value       -> (yDM^2*ymt^2*(LF210[mPsiT, mSDM, mu] - 2*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(32*Pi^2*vev^2),
+    InteractionOrder  -> {{NP1,2},{NPcHq3,1},{QED,2}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,Hq3]
+  },
+
+cHua == {
+    ParameterType     -> Internal,
+    Value       -> -1/135*(g1^4)/(mPsiT^2*Pi^2) ,
+    InteractionOrder  -> {{NPcHu,1},{QED,4}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,Hua]
+  },
+
+cHub == {
+    ParameterType     -> Internal,
+    Value       -> (g1^2*yDM^2*(-3*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(288*Pi^2),
+    InteractionOrder  -> {{NP1,2},{NPcHu,1},{QED,2}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,Hub]
+  },
+
+cld == {
+    ParameterType     -> Internal,
+    Value       -> -1/270*(g1^4)/(mPsiT^2*Pi^2),
+    InteractionOrder  -> {{NPcld,1},{QED,4}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ld]
+  },   
+
+cle == {
+    ParameterType     -> Internal,
+    Value       -> -1/90*(g1^4)/(mPsiT^2*Pi^2),
+    InteractionOrder  -> {{NPcle,1},{QED,4}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,le]
+  },   
+
+cll == {
+    ParameterType     -> Internal,
+    Value       -> -1/360*(g1^4)/(mPsiT^2*Pi^2),
+    InteractionOrder  -> {{NPcll,1},{QED,4}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ll]
   }, 
+
+clq1 == {
+    ParameterType     -> Internal,
+    Value       -> (g1^4)/(540*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{NPclq1,1},{QED,4}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,lq1]
+  }, 
+
+clua == {
+    ParameterType     -> Internal,
+    Value       -> (g1^4)/(135*mPsiT^2*Pi^2) ,
+    InteractionOrder  -> {{NPclu,1},{QED,4}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,lua]
+  }, 
+
+club == {
+    ParameterType     -> Internal,
+    Value       ->   (g1^2*yDM^2*(3*LF31m1[mPsiT, mSDM, mu] - LF41m2[mPsiT, mSDM, mu]))/(288*Pi^2),
+    InteractionOrder  -> {{NP1,2},{NPclu,1},{QED,2}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,lub]
+  }, 
+
+cqd1 == {
+    ParameterType     -> Internal,
+    Value       ->   (g1^4)/(810*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{NPcqd1,1},{QED,4}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,qd1]
+  },
 
 cqd8 == {
     ParameterType     -> Internal,
-    Value       -> (-2/15)*hbar*gs^4/(mT^2),
+    Value       -> 1/120*(gs^4)/(mPsiT^2*Pi^2),
     InteractionOrder  -> {{QCD,4},{NPcqd8,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,qd8]
   },
 
-cqq1 == {
+cqe == {
     ParameterType     -> Internal,
-    Value       -> (-1/180)*hbar*gs^4/(mT^2),
+    Value       -> (g1^4)/(270*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcqd8,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,qe]
+  },
+
+cqq1a == {
+    ParameterType     -> Internal,
+    Value       -> (-27*gs^4)/(25920*mPsiT^2*Pi^2),
     InteractionOrder  -> {{QCD,4},{NPcqq1,1}},
     ComplexParameter  -> False,    
-    TeX               -> Subscript[c,qq1]
+    TeX               -> Subscript[c,qq1a]
   },
+
+cqq1b == {
+    ParameterType     -> Internal,
+    Value       -> (-8*g1^4 )/(25920*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QCD,4},{NPcqq1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,qq1b]
+  },
+
+cqq1c == {
+    ParameterType     -> Internal,
+    Value       -> ( 18*gs^4)/(25920*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QCD,4},{NPcqq1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,qq1c]
+  }
 
 cqq3 == {
     ParameterType     -> Internal,
-    Value       -> (-1/60)*hbar*gs^4/(mT^2),
+    Value       -> -1/960*(gs^4)/(mPsiT^2*Pi^2),
     InteractionOrder  -> {{QCD,4},{NPcqq3,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,qq3]
   },  
 
+cqu1a == {
+    ParameterType     -> Internal,
+    Value       -> -1/405*(g1^4)/(mPsiT^2*Pi^2) ,
+    InteractionOrder  -> {{QED,4},{NPcqu1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,qu1a]
+  },
+
+cqu1b == {
+    ParameterType     -> Internal,
+    Value       ->  (g1^2*yDM^2*(-3*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(864*Pi^2),
+    InteractionOrder  -> {{NP1,2},{QED,2},{NPcqu1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,qu1b]
+  },
+
 cqu8a == {
     ParameterType     -> Internal,
-    Value       -> (-2/15)*hbar*gs^4/(mT^2),
+    Value       -> -1/120*(gs^4)/(mPsiT^2*Pi^2) ,
     InteractionOrder  -> {{QCD,4},{NPcqu8,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,qu8a]
@@ -154,39 +366,72 @@ cqu8a == {
 
 cqu8b == {
     ParameterType     -> Internal,
-    Value       -> (1/6)*hbar*gs^2*yDM^2*(- 3*LF31m1[mT,ms,mu] + LF41m2[mT,ms,mu]),
-    InteractionOrder  -> {{NP,2},{QCD,2},{NPcqu8,1}},
+    Value       -> (gs^2*yDM^2*(-3*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(96*Pi^2),
+    InteractionOrder  -> {{NP1,2},{QCD,2},{NPcqu8,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,qu8b]
   },
 
+cuB == {
+    ParameterType     -> Internal,
+    Value       -> (g1*yDM^2*ymt*(-LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(48*Sqrt[2]*Pi^2*vev),
+    InteractionOrder  -> {{NP1,2},{QED,3},{NPcuB,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,uB]
+  },
+
+cud1a == {
+    ParameterType     -> Internal,
+    Value       -> (2*g1^4)/(405*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcud1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ud1a]
+  },
+
+cud1b == {
+    ParameterType     -> Internal,
+    Value       ->   (g1^2*yDM^2*(3*LF31m1[mPsiT, mSDM, mu] - LF41m2[mPsiT, mSDM, mu]))/(432*Pi^2),
+    InteractionOrder  -> {{NP1,2},{QED,2},{NPcud1,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,ud1b]
+  },
+
 cud8a == {
     ParameterType     -> Internal,
-    Value       -> (-2/15)*hbar*gs^4/(mT^2),
+    Value       -> -1/120*(gs^4)/(mPsiT^2*Pi^2) +  ,
     InteractionOrder  -> {{QCD,4},{NPcud8,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,ud8a]
-  },   
+  },
 
 cud8b == {
     ParameterType     -> Internal,
-    Value       -> (1/6)*hbar*gs^2*yDM^2*(- 3*LF31m1[mT,ms,mu] + LF41m2[mT,ms,mu]),
-    InteractionOrder  -> {{NP,2},{QCD,2},{NPcud8,1}},
+    Value       ->   (gs^2*yDM^2*(-3*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(96*Pi^2) ,
+    InteractionOrder  -> {{NP1, 2}, {QCD,2},{NPcud8,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,ud8b]
-  },  
+  }, 
+ 
 
 cuG == {
     ParameterType     -> Internal,
-    Value       -> (1/4)*hbar*gs*(Sqrt[2]*ymt/vev)*yDM^2*(- LF31m1[mT,ms,mu] + LF41m2[mT,ms,mu]),
+    Value       -> (gs*yDM^2*ymt*(-LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(32*Sqrt[2]*Pi^2*vev),
     InteractionOrder  -> {{NP,2},{QCD,1},{NPcuG,1},{QED,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,uG]
   },   
 
-cuH == {
+cuHa == {
     ParameterType     -> Internal,
-    Value       -> (1/8)*hbar*(Sqrt[2]*ymt/vev)*yDM^2*(yHs*(2*LF210[mT,ms,mu] - LF22m1[mT,ms,mu]) - 4*(Sqrt[2]*ymt/vev)^2*(LF210[mT,ms,mu]-2*LF31m1[mT,ms,mu] + LF41m2[mT,ms,mu])),
+    Value       -> -1/64*(yDM^2*ymt*lamHs*vev^2*(-2*LF210[mSDM, mPsiT, mu] + LF22m1[mSDM, PsiT, mu]) )/(Sqrt[2]*Pi^2*vev^3),
+    InteractionOrder  -> {{NP,2},{NPcuH,1},{QED,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,uHa]
+  },
+
+cuHb == {
+    ParameterType     -> Internal,
+    Value       -> -1/8*(yDM^2*ymt^3*(LF210[mPsiT, mSDM, mu] - 2*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(Sqrt[2]*Pi^2*vev^3),
     InteractionOrder  -> {{NP,2},{NPcuH,1},{QED,3}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,uH]
@@ -194,7 +439,7 @@ cuH == {
 
 cuua == {
     ParameterType     -> Internal,
-    Value       -> (-1/30)*hbar*gs^4/(mT^2),
+    Value       -> (-27*gs^4)/(12960*mPsiT^2*Pi^2) ,
     InteractionOrder  -> {{QCD,4},{NPcuu,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,uua]
@@ -202,18 +447,42 @@ cuua == {
 
 cuub == {
     ParameterType     -> Internal,
-    Value       -> (1/90)*hbar*gs^4/(mT^2),
-    InteractionOrder  -> {{NP,2},{NPcuu,1},{QCD,2}},
+    Value       -> (-64*g1^4)/(12960*mPsiT^2*Pi^2),
+    InteractionOrder  -> {{QED,4},{NPcuu,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,uub]
   },
 
 cuuc == {
     ParameterType     -> Internal,
-    Value       -> (1/36)*hbar*(gs^2)*(yDM^2)*(3*LF31m1[mT,ms,mu] - LF41m2[mT,ms,mu]),
-    InteractionOrder  -> {{NP,4},{NPcuu,1}},
+    Value       -> (9*gs^4)/(12960*mPsiT^2*Pi^2) ,
+    InteractionOrder  -> {{QCD,4},{NPcuu,1}},
     ComplexParameter  -> False,    
     TeX               -> Subscript[c,uuc]
+  },
+
+cuud == {
+    ParameterType     -> Internal,
+    Value       -> - (yDM^2*8*g1^2*(3*LF31m1[mPsiT, mSDM, mu] - LF41m2[mPsiT, mSDM, mu]))/(1728*Pi^2),
+    InteractionOrder  -> {{NP1,2},{QED,2},{NPcuu,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,uud]
+  },
+
+cuue == {
+    ParameterType     -> Internal,
+    Value       -> - (yDM^2*(-3*gs^2)*(3*LF31m1[mPsiT, mSDM, mu] - LF41m2[mPsiT, mSDM, mu]))/(1728*Pi^2),
+    InteractionOrder  -> {{NP1,2},{QCD,2},{NPcuu,1}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,uue]
+  },
+
+cuuf == {
+    ParameterType     -> Internal,
+    Value       ->  - (yDM^2*9*gs^2*(3*LF31m1[mPsiT, mSDM, mu] - LF41m2[mPsiT, mSDM, mu]))/(1728*Pi^2),
+    InteractionOrder  -> {{NP,2},{NPcuu,1},{QCD,2}},
+    ComplexParameter  -> False,    
+    TeX               -> Subscript[c,uuf]
   }    
   
 };
@@ -228,13 +497,48 @@ Odd[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,cc1,cc2},
 	 dRbar[sp3,ff3,cc2].dR[sp4,ff4,cc2] Ga[mu,sp3,sp4]
 	];
 
+Oed[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,cc},
+	 lRbar[sp1,ff1].lR[sp2,ff2] Ga[mu,sp1,sp2]
+	 dRbar[sp3,ff3,cc].dR[sp4,ff4,cc] Ga[mu,sp3,sp4]
+	];
+
+Oee[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4},
+	 lRbar[sp1,ff1].lR[sp2,ff2] Ga[mu,sp1,sp2]
+	 lRbar[sp3,ff3].lR[sp4,ff4] Ga[mu,sp3,sp4]
+	];
+
+Oeu[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,cc},
+	 lRbar[sp1,ff1].lR[sp2,ff2] Ga[mu,sp1,sp2]
+	 uRbar[sp3,ff3,cc].uR[sp4,ff4,cc] Ga[mu,sp3,sp4]
+	];
+
 OG:= operator[{mu,nu,ro,aa,bb,cc},
 	f[aa,bb,cc] FS[G,mu,nu,aa] FS[G,nu,ro,bb] FS[G,ro,mu,cc]
       ];
 
-OH:= operator[{ii,jj,kk}, 
-  I(Phibar[ii] Phibar[jj] Phibar[kk] Phi[ii] Phi[jj] Phi[kk])
-    ];
+OH:= operator[{ii,jj,kk},
+ 	 Phibar[ii] Phi[ii] Phibar[jj] Phi[jj] Phibar[kk] Phi[kk]
+	];
+
+OHbox:= operator[{ii,jj,mu},
+ 	 Phibar[ii]Phi[ii] del[del[Phibar[jj] Phi[jj],mu],mu]
+	];
+
+OHd[ff1_,ff2_]:= operator[{mu,sp1,sp2,cc},
+	HDH[mu] dRbar[sp1,ff1,cc].dR[sp2,ff2,cc] Ga[mu,sp1,sp2]
+	];
+
+OHD:= operator[{ii,jj,mu},
+ 	 DC[Phibar[ii],mu] Phi[ii] Phibar[jj] DC[Phi[jj],mu]
+	];
+
+OHe[ff1_,ff2_]:= operator[{mu,sp1,sp2},
+	HDH[mu] lRbar[sp1,ff1].lR[sp2,ff2] Ga[mu,sp1,sp2]
+	];
+
+OHl1[ff1_,ff2_]:= operator[{mu,sp1,sp2,ii},
+	 HDH[mu] LLbar[sp1,ii,ff1].LL[sp2,ii,ff2] Ga[mu,sp1,sp2]
+	];
 
 OHq1[ff1_,ff2_]:= operator[{sp1,sp2,mu,ii,cc},
 	HDH[mu] QLbar[sp1,ii,ff1,cc].QL[sp2,ii,ff2,cc] Ga[mu,sp1,sp2]
@@ -246,10 +550,49 @@ OHq3[ff1_,ff2_]:= operator[{sp1,sp2,mu,ii,jj,kk,jj1,jj2,cc},
          PauliSigma[kk,jj1,jj2]  PauliSigma[kk,ii,jj]
      ];
 
+OHu[ff1_,ff2_]:= operator[{mu,sp1,sp2,cc},
+	HDH[mu] uRbar[sp1,ff1,cc].uR[sp2,ff2,cc] Ga[mu,sp1,sp2]
+	];
+
+Old[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,cc},
+	LLbar[sp1,ii,ff1].LL[sp2,ii,ff2] Ga[mu,sp1,sp2]
+	dRbar[sp3,ff3,cc].dR[sp4,ff4,cc] Ga[mu,sp3,sp4]
+	];
+
+Ole[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii},
+	LLbar[sp1,ii,ff1].LL[sp2,ii,ff2] Ga[mu,sp1,sp2]
+	lRbar[sp3,ff3].lR[sp4,ff4] Ga[mu,sp3,sp4]
+	];
+
+Oll[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,jj},
+	LLbar[sp1,ii,ff1].LL[sp2,ii,ff2] Ga[mu,sp1,sp2]
+	LLbar[sp3,jj,ff3].LL[sp4,jj,ff4] Ga[mu,sp3,sp4]
+	];
+
+Olq1[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,jj,cc},
+	LLbar[sp1,ii,ff1].LL[sp2,ii,ff2] Ga[mu,sp1,sp2]
+	QLbar[sp3,jj,ff3,cc].QL[sp4,jj,ff4,cc] Ga[mu,sp3,sp4]
+	];
+
+Olu[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,cc},
+	LLbar[sp1,ii,ff1].LL[sp2,ii,ff2] Ga[mu,sp1,sp2]
+	uRbar[sp3,ff3,cc].uR[sp4,ff4,cc] Ga[mu,sp3,sp4]
+	];
+
+Oqd1[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,cc1,cc2},
+	QLbar[sp1,ii,ff1,cc1].QL[sp2,ii,ff2,cc1] Ga[mu,sp1,sp2]
+	dRbar[sp3,ff3,cc2].dR[sp4,ff4,cc2] Ga[mu,sp3,sp4]
+	];
+
 Oqd8[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,cc1,cc2,cc3,cc4,aa},
 	QLbar[sp1,ii,ff1,cc1].QL[sp2,ii,ff2,cc2] Ga[mu,sp1,sp2]
 	dRbar[sp3,ff3,cc3].dR[sp4,ff4,cc4] Ga[mu,sp3,sp4]
 	T[aa,cc1,cc2] T[aa,cc3,cc4]
+	];
+
+Oqe[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,cc},
+	QLbar[sp1,ii,ff1,cc].QL[sp2,ii,ff2,cc] Ga[mu,sp1,sp2]
+	lRbar[sp3,ff3].lR[sp4,ff4] Ga[mu,sp3,sp4]
 	];
 
 Oqq1[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,jj,cc1,cc2},
@@ -262,11 +605,25 @@ Oqq3[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,cc1,cc2,ii1,jj1,ii2,jj2
 	QLbar[sp3,ii2,ff3,cc2].QL[sp4,jj2,ff4,cc2] Ga[mu,sp3,sp4]
 	PauliSigma[kk,ii1,jj1] PauliSigma[kk,ii2,jj2]
 	];
+
+Oqu1[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,cc1,cc2},
+	QLbar[sp1,ii,ff1,cc1].QL[sp2,ii,ff2,cc1] Ga[mu,sp1,sp2]
+	uRbar[sp3,ff3,cc2].uR[sp4,ff4,cc2] Ga[mu,sp3,sp4]
+	];
   
 Oqu8[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,ii,cc1,cc2,cc3,cc4,aa},
 	QLbar[sp1,ii,ff1,cc1].QL[sp2,ii,ff2,cc2] Ga[mu,sp1,sp2]
 	uRbar[sp3,ff3,cc3].uR[sp4,ff4,cc4] Ga[mu,sp3,sp4]
 	T[aa,cc1,cc2] T[aa,cc3,cc4]
+	];
+
+OuB[ff1_,ff2_]:= operator[{sp1,sp2,mu,nu,ii,jj,cc},
+	QLmbar[sp1,ii,ff1,cc].uR[sp2,ff2,cc] sigmaT[mu,nu,sp1,sp2] Eps[ii,jj] Phibar[jj] FS[B,mu,nu]
+	];
+
+Oud1[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,cc1,cc2},
+	 uRbar[sp1,ff1,cc1].uR[sp2,ff2,cc1] Ga[mu,sp1,sp2]
+	 dRbar[sp3,ff3,cc2].dR[sp4,ff4,cc2] Ga[mu,sp3,sp4]
 	];
 
 Oud8[ff1_,ff2_,ff3_,ff4_]:= operator[{mu,sp1,sp2,sp3,sp4,cc1,cc2,cc3,cc4,aa},

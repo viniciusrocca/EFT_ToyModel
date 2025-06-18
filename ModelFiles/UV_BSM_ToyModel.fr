@@ -74,13 +74,14 @@ S[5] == {
 (* ************************** *)
 (* *****   Lagrangian   ***** *)
 (* ************************** *)
+
 (* gauge kinetic and mass terms *)
 
-Lkin := I*psiTbar.Ga[mu].DC[psiT, mu] - mPsiT psiTbar.psiT + (1/2)*DC[SDM,mu] DC[SDM,mu] - (1/2)*(mSDM^2 )*SDM^2 - (1/24)*lamS*SDM^4;                     
+Lkin := I*psiTbar.Ga[mu].DC[psiT, mu] - mPsiT psiTbar.psiT + (1/2)*DC[SDM,mu] DC[SDM,mu] - (1/2)*(mSDM^2 - lamHs*vev^2/4)*SDM^2 - (1/24)*lamS*SDM^4;                     
 
 (* DM-Scalar-Top coupling *)
 
-LYDM := -yDM SDM  * (ProjP[sp1,sp2] psiTbar[sp1,aa].uq[sp2,3,aa]);
+LYDM := -yDM SDM * (ProjP[sp1,sp2] psiTbar[sp1,aa].uq[sp2,3,aa]);
 
 LHs := ExpandIndices[-(1/4)*lamHs*(Phibar[ii] Phi[ii] SDM SDM)];
 

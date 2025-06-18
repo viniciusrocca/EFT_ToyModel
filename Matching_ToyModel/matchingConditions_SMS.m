@@ -19,9 +19,9 @@
         {1, 1, 0}] + 2*LF[{Coupling[MT, {Index[d$$1, Flavor]}, 0], 
          Coupling[Ms, {}, 0]}, {2, 1, -1}]))/8, 
  Coupling[\[Lambda], {}, 0] -> Coupling[\[Lambda], {}, 0] - 
-   (hbar*Coupling[yHs, {}, 0]^2*Log[\[Mu]bar2/Coupling[Ms, {}, 0]^2])/8, 
+   (hbar*Coupling[lamHs, {}, 0]^2*Log[\[Mu]bar2/Coupling[Ms, {}, 0]^2])/8, 
  Coupling[\[Mu]2, {}, 2] -> Coupling[\[Mu]2, {}, 2] + 
-   (hbar*Coupling[Ms, {}, 0]^2*Coupling[yHs, {}, 0]*
+   (hbar*Coupling[lamHs, {}, 0]*Coupling[Ms, {}, 0]^2*
      (1 + \[Epsilon] + \[Epsilon]*Log[\[Mu]bar2/Coupling[Ms, {}, 0]^2]))/
     (4*\[Epsilon]), Coupling[cdd, {Index[i1_, Flavor], Index[i2_, Flavor], 
     Index[i3_, Flavor], Index[i4_, Flavor]}, 0] -> 
@@ -56,9 +56,9 @@
          Coupling[Ms, {}, 0]}, {4, 1, -2}])))/135, 
  Coupling[cG, {}, 0] -> -1/180*(hbar*Coupling[gs, {}, 0]^3*
      FlavorSum[Index[d$$1, Flavor]])/Coupling[MT, {Index[d$$1, Flavor]}, 0]^
-     2, Coupling[cH, {}, 0] -> -1/96*(hbar*Coupling[yHs, {}, 0]^3)/
+     2, Coupling[cH, {}, 0] -> -1/96*(hbar*Coupling[lamHs, {}, 0]^3)/
     Coupling[Ms, {}, 0]^2, Coupling[cHBox, {}, 0] -> 
-  -1/96*(hbar*Coupling[yHs, {}, 0]^2)/Coupling[Ms, {}, 0]^2 - 
+  -1/96*(hbar*Coupling[lamHs, {}, 0]^2)/Coupling[Ms, {}, 0]^2 - 
    (2*hbar*Coupling[gY, {}, 0]^4*FlavorSum[Index[d$$1, Flavor]])/
     (45*Coupling[MT, {Index[d$$1, Flavor]}, 0]^2), 
  Coupling[cHd, {Index[i1_, Flavor], Index[i2_, Flavor]}, 0] -> 
@@ -224,9 +224,9 @@
        {3, 1, -1}] + LF[{Coupling[MT, {Index[d$$1, Flavor]}, 0], 
        Coupling[Ms, {}, 0]}, {4, 1, -2}]))/4, 
  Coupling[cuH, {Index[i1_, Flavor], Index[i2_, Flavor]}, 0] -> 
-  (hbar*(Coupling[yDM, {Index[d$$2, Flavor], Index[d$$1, Flavor]}, 0]*
-      Coupling[yDM, {Index[i2, Flavor], Index[d$$1, Flavor]}, 0]*
-      Coupling[yHs, {}, 0]*Coupling[Yu, {Index[i1, Flavor], 
+  (hbar*(Coupling[lamHs, {}, 0]*Coupling[yDM, {Index[d$$2, Flavor], 
+        Index[d$$1, Flavor]}, 0]*Coupling[yDM, {Index[i2, Flavor], 
+        Index[d$$1, Flavor]}, 0]*Coupling[Yu, {Index[i1, Flavor], 
         Index[d$$2, Flavor]}, 0]*
       (2*LF[{Coupling[Ms, {}, 0], Coupling[MT, {Index[d$$1, Flavor]}, 0]}, 
          {2, 1, 0}] - LF[{Coupling[Ms, {}, 0], Coupling[MT, 

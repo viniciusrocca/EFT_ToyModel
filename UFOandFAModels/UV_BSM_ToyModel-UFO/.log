@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Tue 17 Jun 2025 23:41:51
+# Date: Wed 18 Jun 2025 15:09:29
 
 
 # 
@@ -44,119 +44,8 @@
    * Saved vertices in InterfaceRun[ 1 ].
    * Checked QNumber conservation.
       - Quantum number GhostNumber conserved in all vertices.
-      - Quantum number LeptonNumber NOT conserved in the following vertices
-          {GPbar, l[1], vl[1]}
-          {GPbar, l[2], vl[2]}
-          {GPbar, l[3], vl[3]}
-          {G0, l[1], l[1]}
-          {G0, l[2], l[2]}
-          {G0, l[3], l[3]}
-          {H, l[1], l[1]}
-          {H, l[2], l[2]}
-          {H, l[3], l[3]}
-          {GP, vl[1], l[1]}
-          {GP, vl[2], l[2]}
-          {GP, vl[3], l[3]}
-          {A, l[1], l[1]}
-          {A, l[2], l[2]}
-          {A, l[3], l[3]}
-          {W, vl[1], l[1]}
-          {W, vl[2], l[2]}
-          {W, vl[3], l[3]}
-          {Wbar, l[1], vl[1]}
-          {Wbar, l[2], vl[2]}
-          {Wbar, l[3], vl[3]}
-          {Z, vl[1], vl[1]}
-          {Z, vl[2], vl[2]}
-          {Z, vl[3], vl[3]}
-          {Z, l[1], l[1]}
-          {Z, l[2], l[2]}
-          {Z, l[3], l[3]}
-      - Quantum number Q NOT conserved in the following vertices
-          {GPbar, dq[1], uq[1]}
-          {GPbar, dq[1], uq[2]}
-          {GPbar, dq[1], uq[3]}
-          {GPbar, dq[2], uq[1]}
-          {GPbar, dq[2], uq[2]}
-          {GPbar, dq[2], uq[3]}
-          {GPbar, dq[3], uq[1]}
-          {GPbar, dq[3], uq[2]}
-          {GPbar, dq[3], uq[3]}
-          {G0, dq[1], dq[1]}
-          {G0, dq[2], dq[2]}
-          {G0, dq[3], dq[3]}
-          {H, dq[1], dq[1]}
-          {H, dq[2], dq[2]}
-          {H, dq[3], dq[3]}
-          {GPbar, l[1], vl[1]}
-          {GPbar, l[2], vl[2]}
-          {GPbar, l[3], vl[3]}
-          {G0, l[1], l[1]}
-          {G0, l[2], l[2]}
-          {G0, l[3], l[3]}
-          {H, l[1], l[1]}
-          {H, l[2], l[2]}
-          {H, l[3], l[3]}
-          {GP, uq[1], dq[1]}
-          {GP, uq[1], dq[2]}
-          {GP, uq[1], dq[3]}
-          {GP, uq[2], dq[1]}
-          {GP, uq[2], dq[2]}
-          {GP, uq[2], dq[3]}
-          {GP, uq[3], dq[1]}
-          {GP, uq[3], dq[2]}
-          {GP, uq[3], dq[3]}
-          {G0, uq[1], uq[1]}
-          {G0, uq[2], uq[2]}
-          {G0, uq[3], uq[3]}
-          {H, uq[1], uq[1]}
-          {H, uq[2], uq[2]}
-          {H, uq[3], uq[3]}
-          {A, l[1], l[1]}
-          {A, l[2], l[2]}
-          {A, l[3], l[3]}
-          {A, uq[1], uq[1]}
-          {A, uq[2], uq[2]}
-          {A, uq[3], uq[3]}
-          {A, dq[1], dq[1]}
-          {A, dq[2], dq[2]}
-          {A, dq[3], dq[3]}
-          {G, uq[1], uq[1]}
-          {G, uq[2], uq[2]}
-          {G, uq[3], uq[3]}
-          {G, dq[1], dq[1]}
-          {G, dq[2], dq[2]}
-          {G, dq[3], dq[3]}
-          {W, uq[1], dq[1]}
-          {W, uq[1], dq[2]}
-          {W, uq[1], dq[3]}
-          {W, uq[2], dq[1]}
-          {W, uq[2], dq[2]}
-          {W, uq[2], dq[3]}
-          {W, uq[3], dq[1]}
-          {W, uq[3], dq[2]}
-          {W, uq[3], dq[3]}
-          {Wbar, dq[1], uq[1]}
-          {Wbar, dq[1], uq[2]}
-          {Wbar, dq[1], uq[3]}
-          {Wbar, dq[2], uq[1]}
-          {Wbar, dq[2], uq[2]}
-          {Wbar, dq[2], uq[3]}
-          {Wbar, dq[3], uq[1]}
-          {Wbar, dq[3], uq[2]}
-          {Wbar, dq[3], uq[3]}
-          {Wbar, l[1], vl[1]}
-          {Wbar, l[2], vl[2]}
-          {Wbar, l[3], vl[3]}
-          {Z, uq[1], uq[1]}
-          {Z, uq[2], uq[2]}
-          {Z, uq[3], uq[3]}
-          {Z, dq[1], dq[1]}
-          {Z, dq[2], dq[2]}
-          {Z, dq[3], dq[3]}
-          {Z, l[1], l[1]}
-          {Z, l[2], l[2]}
-          {Z, l[3], l[3]}
+      - Quantum number LeptonNumber conserved in all vertices.
+      - Quantum number Q conserved in all vertices.
       - Quantum number Y conserved in all vertices.
    * particles.py written.
    * parameters.py written.
@@ -189,7 +78,7 @@
 # Decay definitions
 #
 
-   * 18 decays written.
+   * 14 decays written.
    * decay.py not written
 #
 # CTCoupling definitions
