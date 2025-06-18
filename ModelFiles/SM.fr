@@ -37,7 +37,7 @@ FR$RmDblExt = { ymb -> MB, ymc -> MC, ymdo -> MD, yme -> Me,
 (* *****  Change  log   ***** *)
 (* ************************** *)
 
-(* v1.4.7: Index issue with the ghost Lagrangian (special thanks to S. Iwamoto *)
+(* v1.4.7: Index issue with the ghost Lagrangian special thanks to S. Iwamoto *)
 (* v1.4.6: NLO variable added.                                               *)
 (* v1.4.5: Added widths for ghosts.                                          *)
 (* v1.4.4: Changed widths of goldstone bosons to be the same as for the W and Z bosons *)
@@ -111,7 +111,10 @@ IndexStyle[Generation, f];
 (* ***  (as used by mg5)  *** *)
 (* ************************** *)
 
-M$InteractionOrderHierarchy = {  {NP, 1}, {QCD, 2}, {QED,3} };
+M$InteractionOrderHierarchy = {{NP1,1},{NP2,1},{NP3,1},
+  {QCD, 2},
+  {QED, 3}
+};
 
 
 (* ************************** *)

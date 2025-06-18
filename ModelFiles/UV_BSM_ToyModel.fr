@@ -1,24 +1,24 @@
 (***************************************************************)
 (***************************************************************)
 (** FeynRules model file for a simplified model          *******)
-(** with a scalar top partner and a fermion singlet (DM).  *****)
-(** Counter terms for the t-t-G vertex are included.         ***)
+(** with a vector like fermion top partner and a scalar    *****)
+(** singlet (DM).                                             **)
 (******                                                        *)
-(****** A. Lessa                                               *)
+(****** A. Lessa and V. Rocca                                  *)
 (******                                                        *)
 (****** Feel free to use this model file!                      *)
 (***************************************************************)
 (***************************************************************)
 
-M$ModelName = "SMS-stop";
+M$ModelName = "UV-BSM-ToyModel";
 
-M$Information = {Authors -> {"Andre Lessa"}, 
+M$Information = {Authors -> {"Andre Lessa", "Vinicius Rocca"}, 
                  Version -> "1.0",
-                 Date -> "28.08.2023"};
+                 Date -> "xx.06.2025"};
 
 FeynmanGauge = True;
 
-M$InteractionOrderHierarchy = {  {NP1, 1}, {NP2, 1}, {QCD, 2}, {QED,3} };
+M$InteractionOrderHierarchy = {  {NP1, 1}, {NP2, 1}, {NP3,1}, {QCD, 2}, {QED,3} };
 
 (* ************************** *)
 (* *****   Parameters   ***** *)
@@ -29,7 +29,9 @@ M$Parameters = {
  (* New Physics (UV) Parameters *)
   yDM  == { TeX->Subscript[y,DM],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP1 ,1}, Description->"Dark fermion - heavy stop - SM RH top Yukawa"},
 
-  yHs  == { TeX->Subscript[y,Hs],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP2 ,1}, Description->"Dark scalar square - SM Higgs doublet contraction"}
+  lamHs  == { TeX->Subscript[\[Lambda],Hs],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP2 ,1}, Description->"Dark scalar square - SM Higgs doublet contraction"},
+
+  lamS == { TeX->Subscript[\[Lambda],s],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP3 ,1}, Description->"Quartic dark scalar interaction"}
 
 };
 
@@ -41,32 +43,32 @@ M$ClassesDescription = {
 
 (* The top partner fermion *)
 F[16] == { 
-         ClassName -> psiT, 
-         Indices -> {Index[Colour]},
-         SelfConjugate  -> False,
-         QuantumNumbers -> {Q -> 2/3},
-         Mass->{mT,  400.0},  
-         Width->{wT,1.}, 
-         ParticleName-> "~psiT", 
-         PDG->5000012, 
+         ClassName -> psiT,
+         Indices -> {Index[Colour]}, 
+         SelfConjugate-> False,
+         Unphysical     -> False, 
+         QuantumNumbers -> {Q -> 2/3}, 
+         Mass-> {mPsiT,400.}, 
+         PDG->{5000012}, 
          PropagatorLabel->"psiT", 
          PropagatorType->Straight, 
-         ParticleName -> {"~psiT" },
-         FullName -> {"Top partner fermion"} },
+         ParticleName     -> "psiT" ,
+         AntiParticleName -> "psiT~",
+         FullName         -> {"Vector like fermion top partner"} },
 
 (* The dark Scalar *)
 S[5] == { 
-          ClassName        -> PhiS,
+          ClassName        -> SDM,
           SelfConjugate    -> True,
           Unphysical       -> False,
-          Mass             -> {mPhiS, 100.0},
-          Width            -> {ws, 0},
-          PropagatorLabel  -> {"PhiS"},
+          Mass             -> {mSDM,100.},
+          Width            -> 0,
+          QuantumNumbers   -> {},
+          PropagatorLabel  -> {"SDM"},
           PropagatorType   -> ScalarDash, 
           PDG              -> {5000002},
-          ParticleName     -> {"~PhiS" },
-          AntiParticleName -> {"~PhiS~"},
-          FullName         -> {"Dark scalar"} }
+          ParticleName     -> {"~SDM" },
+          FullName         -> {"Dark Scalar"} }
 };
 
 (* ************************** *)
@@ -74,12 +76,13 @@ S[5] == {
 (* ************************** *)
 (* gauge kinetic and mass terms *)
 
-Lkin := I psiTbar.Ga[mu].DC[psiT, mu] - (mT) psiTbar.psiT  + (1/2)*DC[PhiS,mu] DC[PhiS,mu] - (1/2)*(mPhiS^2 - yHs*(vev^2)/4) PhiS PhiS;
+Lkin := I*psiTbar.Ga[mu].DC[psiT, mu] - mPsiT psiTbar.psiT + (1/2)*DC[SDM,mu] DC[SDM,mu] - (1/2)*(mSDM^2 )*SDM^2 - (1/24)*lamS*SDM^4;                     
 
 (* DM-Scalar-Top coupling *)
-LYDM := -yDM*(PhiS ProjP[sp1,sp2] psiTbar[sp1,aa].uq[sp2,3,aa]);
-LHs := - (1/4)*yHs*Phibar[ii] Phi[ii] PhiS PhiS;
 
+LYDM := -yDM SDM  * (ProjP[sp1,sp2] psiTbar[sp1,aa].uq[sp2,3,aa]);
 
-LNP:= Lkin + LHs + LYDM + HC[LYDM];
+LHs := ExpandIndices[-(1/4)*lamHs*(Phibar[ii] Phi[ii] SDM SDM)];
+
+LNP := Lkin + LHs + LYDM + HC[LYDM];
 
