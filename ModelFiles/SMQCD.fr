@@ -78,7 +78,7 @@ IndexStyle[Generation, f];
 (* ***  (as used by mg5)  *** *)
 (* ************************** *)
 
-M$InteractionOrderHierarchy = {  {NP, 1}, {QCD, 2}, {QED,3} };
+M$InteractionOrderHierarchy = {{NP1,1},{NP2,1},{NP3,1}, {QCD, 2}, {QED, 3}};
 
 
 (* ************************** *)

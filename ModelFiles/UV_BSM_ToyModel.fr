@@ -49,7 +49,8 @@ F[16] == {
          Unphysical     -> False, 
          QuantumNumbers -> {Q -> 2/3}, 
          Mass-> {mPsiT,400.}, 
-         PDG->{5000012}, 
+         Width-> {WPsiT,1.0},
+         PDG->{5000006}, 
          PropagatorLabel->"psiT", 
          PropagatorType->Straight, 
          ParticleName     -> "psiT" ,
@@ -66,7 +67,7 @@ S[5] == {
           QuantumNumbers   -> {},
           PropagatorLabel  -> {"SDM"},
           PropagatorType   -> ScalarDash, 
-          PDG              -> {5000002},
+          PDG              -> {5000022},
           ParticleName     -> {"~SDM" },
           FullName         -> {"Dark Scalar"} }
 };
