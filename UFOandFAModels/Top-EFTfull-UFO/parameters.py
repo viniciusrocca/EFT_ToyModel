@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Thu 19 Jun 2025 16:02:55
+# Date: Wed 25 Jun 2025 23:29:43
 
 
 
@@ -148,7 +148,7 @@ lamS = Parameter(name = 'lamS',
 mSDM = Parameter(name = 'mSDM',
                  nature = 'external',
                  type = 'real',
-                 value = 1000.,
+                 value = 100.,
                  texname = 'm_{\\text{SDM}}',
                  lhablock = 'FRBlock',
                  lhacode = [ 4 ])
@@ -156,7 +156,7 @@ mSDM = Parameter(name = 'mSDM',
 mPsiT = Parameter(name = 'mPsiT',
                   nature = 'external',
                   type = 'real',
-                  value = 500.,
+                  value = 400.,
                   texname = 'm_{\\psi _T}',
                   lhablock = 'FRBlock',
                   lhacode = [ 5 ])
@@ -164,7 +164,7 @@ mPsiT = Parameter(name = 'mPsiT',
 mu = Parameter(name = 'mu',
                nature = 'external',
                type = 'real',
-               value = 1000.,
+               value = 400.,
                texname = '\\mu',
                lhablock = 'FRBlock',
                lhacode = [ 6 ])
@@ -748,7 +748,7 @@ cud1b = Parameter(name = 'cud1b',
 cuHa = Parameter(name = 'cuHa',
                  nature = 'internal',
                  type = 'real',
-                 value = '-0.015625*((-2*( (mPsiT**2 - mSDM**2 + mPsiT**2*cmath.log(mSDM**2/mPsiT**2))/(-mPsiT**2 + mSDM**2)**2 if (-mPsiT + mSDM)**2/(mPsiT + mSDM)**2>0.001 else -0.16666666666666666*(11*mPsiT**2 - 12*mPsiT*mSDM + 4*mSDM**2)/mPsiT**4 ) + ( (-mSDM**4 + PsiT**4 + 2*mSDM**2*PsiT**2*cmath.log(mSDM**2/PsiT**2))/(mSDM**2 - PsiT**2)**3 if (mSDM - PsiT)**2/(mSDM + PsiT)**2>0.001 else -0.03333333333333333*(7*mSDM**2 - 24*mSDM*PsiT + 27*PsiT**2)/PsiT**4 ))*lamHs*yDM**2*ymt)/(cmath.pi**2*vev*cmath.sqrt(2))',
+                 value = '-0.015625*((-2*( (mPsiT**2 - mSDM**2 + mPsiT**2*cmath.log(mSDM**2/mPsiT**2))/(-mPsiT**2 + mSDM**2)**2 if (-mPsiT + mSDM)**2/(mPsiT + mSDM)**2>0.001 else -0.16666666666666666*(11*mPsiT**2 - 12*mPsiT*mSDM + 4*mSDM**2)/mPsiT**4 ) + ( (mPsiT**4 - mSDM**4 + 2*mPsiT**2*mSDM**2*cmath.log(mSDM**2/mPsiT**2))/(-mPsiT**2 + mSDM**2)**3 if (-mPsiT + mSDM)**2/(mPsiT + mSDM)**2>0.001 else -0.03333333333333333*(27*mPsiT**2 - 24*mPsiT*mSDM + 7*mSDM**2)/mPsiT**4 ))*lamHs*yDM**2*ymt)/(cmath.pi**2*vev*cmath.sqrt(2))',
                  texname = 'c_{\\text{uHa}}')
 
 cuHb = Parameter(name = 'cuHb',
