@@ -416,7 +416,7 @@ M$Parameters = {
   cuG == {
       ParameterType     -> Internal,
       Value       -> (gs*yDM^2*ymt*(-LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(32*Sqrt[2]*Pi^2*vev),
-      InteractionOrder  -> {{NP,2},{QCD,1},{NPcuG,1},{QED,1}},
+      InteractionOrder  -> {{NP1,2},{QCD,1},{NPcuG,1},{QED,1}},
       ComplexParameter  -> False,    
       TeX               -> Subscript[c,uG]
     },   
@@ -424,7 +424,7 @@ M$Parameters = {
   cuHa == {
       ParameterType     -> Internal,
       Value       -> -1/64*(yDM^2*ymt*lamHs*vev^2*(-2*LF210[mSDM, mPsiT, mu] + LF22m1[mSDM, PsiT, mu]) )/(Sqrt[2]*Pi^2*vev^3),
-      InteractionOrder  -> {{NP,2},{NPcuH,1},{QED,1}},
+      InteractionOrder  -> {{NP1,2},{NPcuH,1},{QED,1}},
       ComplexParameter  -> False,    
       TeX               -> Subscript[c,uHa]
     },
@@ -432,7 +432,7 @@ M$Parameters = {
   cuHb == {
       ParameterType     -> Internal,
       Value       -> -1/8*(yDM^2*ymt^3*(LF210[mPsiT, mSDM, mu] - 2*LF31m1[mPsiT, mSDM, mu] + LF41m2[mPsiT, mSDM, mu]))/(Sqrt[2]*Pi^2*vev^3),
-      InteractionOrder  -> {{NP,2},{NPcuH,1},{QED,3}},
+      InteractionOrder  -> {{NP1,2},{NPcuH,1},{QED,3}},
       ComplexParameter  -> False,    
       TeX               -> Subscript[c,uH]
     },     
@@ -480,7 +480,7 @@ M$Parameters = {
   cuuf == {
       ParameterType     -> Internal,
       Value       ->  - (yDM^2*9*gs^2*(3*LF31m1[mPsiT, mSDM, mu] - LF41m2[mPsiT, mSDM, mu]))/(1728*Pi^2),
-      InteractionOrder  -> {{NP,2},{NPcuu,1},{QCD,2}},
+      InteractionOrder  -> {{NP1,2},{NPcuu,1},{QCD,2}},
       ComplexParameter  -> False,    
       TeX               -> Subscript[c,uuf]
     }    
