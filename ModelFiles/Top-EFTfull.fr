@@ -439,7 +439,7 @@ M$Parameters = {
 
   cuua == {
       ParameterType     -> Internal,
-      Value       -> 0*(-27*gs^4)/(12960*mPsiT^2*Pi^2),
+      Value       -> (-27*gs^4)/(12960*mPsiT^2*Pi^2),
       InteractionOrder  -> {{QCD,4},{NPcuu,1}},
       ComplexParameter  -> False,    
       TeX               -> Subscript[c,uua]
@@ -778,8 +778,4 @@ LOuu :=  Block[{ff1,ff2},
 
 (* Total EFT lagrangian *)
 
-LNP := LOdd + LOed + LOee + LOeu + LOG + LOH + LOHBox + LOHd 
-      + LOHD + LOHe + LOHl1 +LOHq1 + LOHq3 + LOHu + LOld + LOle 
-      + LOll + LOlq1 + LOlu + LOqd1 + LOqd8 + LOqe + LOqq1 
-      + LOqq3 + LOqu1 + LOqu8 + LOuB + HC[LOuB] + LOud1 +  LOud8 + LOuG 
-      + HC[LOuG] + LOuH + HC[LOuH] + LOuu;
+LNP := LOdd + LOed + LOee + LOeu + LOG + LOH + LOHBox + LOHd + LOHD + LOHe + LOHl1 +LOHq1 + LOHq3 + LOHu + LOld + LOle + LOll + LOlq1 + LOlu + LOqd1 + LOqd8 + LOqe + LOqq1 + LOqq3 + LOqu1 + LOqu8 + LOuB + HC[LOuB] + LOud1 +  LOud8 + LOuG + HC[LOuG] + LOuH + HC[LOuH] + LOuu;
