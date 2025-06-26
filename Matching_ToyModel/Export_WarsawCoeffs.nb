@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     87243,       2310]
-NotebookOptionsPosition[     85568,       2275]
-NotebookOutlinePosition[     85990,       2292]
-CellTagsIndexPosition[     85947,       2289]
+NotebookDataLength[    148735,       4154]
+NotebookOptionsPosition[    146277,       4106]
+NotebookOutlinePosition[    146699,       4123]
+CellTagsIndexPosition[    146656,       4120]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -165,8 +165,8 @@ A+xeoPtCwBLBDsBQ8DZvboOEDzD8wObnIfjo4QsARrGtpA==
  GeneratedCell->True,
  CellAutoOverwrite->True,
  CellChangeTimes->{
-  3.9592700069090557`*^9},ExpressionUUID->"1c24074e-a520-4609-9995-\
-5f3f18a505a0"],
+  3.959797156681981*^9},ExpressionUUID->"f04f8ef8-df8b-4c27-8401-\
+3b3131950be8"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -194,10 +194,11 @@ Julie Pag\[EGrave]s, Anders Eller Thomsen, and Felix Wilsch \\n\"\>",
   3.952692837664022*^9, 3.952739145867556*^9, 3.955434280755018*^9, 
   3.9554358779804792`*^9, 3.959067389894858*^9, 3.959263266374357*^9, 
   3.959263428949445*^9, 3.9592644030047894`*^9, 3.959264998135004*^9, 
-  3.959267663362092*^9, 3.959270007022181*^9},
+  3.959267663362092*^9, 3.959270007022181*^9, 3.959797044011908*^9, 
+  3.959797156820908*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"fe46eec4-6384-4356-96a5-51c3e314c3b1"]
+In[1]:=",ExpressionUUID->"cf2e3b67-472f-4334-a3de-2a15b78cf7a6"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -516,7 +517,16 @@ Cell[BoxData[{
    3.951404207384284*^9}, {3.951405177134548*^9, 3.951405418373652*^9}, {
    3.951407471837572*^9, 3.951407478473112*^9}, {3.95273904808633*^9, 
    3.952739051645327*^9}, 3.9592634124387007`*^9},
- CellLabel->"In[5]:=",ExpressionUUID->"b7d3bb6b-98c4-4205-99e4-954e74b85b88"],
+ CellLabel->"In[5]:=",ExpressionUUID->"b7d3bb6b-98c4-4205-99e4-954e74b85b88"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Exporting for Feynrules",
+ FontColor->RGBColor[0, 0, 1]]], "Section",
+ CellChangeTimes->{{3.959796816998804*^9, 
+  3.959796829862508*^9}},ExpressionUUID->"72008165-b9b6-4584-aaf0-\
+0e7e04e43a60"],
 
 Cell[BoxData[
  RowBox[{
@@ -2271,6 +2281,1827 @@ Cell[BoxData[
   3.952695606383169*^9, 3.952695610937104*^9}, {3.9526958337379847`*^9, 
   3.952695856854105*^9}},
  CellLabel->"In[13]:=",ExpressionUUID->"44dcebb1-99a4-4c72-92fb-84b1895cafa8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Exporting for python",
+ FontColor->RGBColor[0, 0, 1]]], "Section",
+ CellChangeTimes->{{3.9597968560125113`*^9, 
+  3.959796860580358*^9}},ExpressionUUID->"fdae244a-2c11-4bfa-96c4-\
+8c16c1cb448b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MatchingConditionDiagPy", " ", "=", " ", 
+   RowBox[{"Collect", "[", 
+    RowBox[{
+     RowBox[{"Map", "[", 
+      RowBox[{"diag", ",", "MatchingConditionSimp"}], "]"}], ",", 
+     RowBox[{"{", 
+      SubscriptBox["y", "DM"], "}"}], ",", "Simplify"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.959796982910112*^9, 3.959796988317568*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"8057e24d-3623-47e1-a0b0-994258d92b51"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"wilsonCoeffs", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{"MatchingConditionDiagPy", ",", 
+      RowBox[{
+       RowBox[{"StringMatchQ", "[", 
+        RowBox[{
+         RowBox[{"ToString", "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "/.", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Coupling", "[", 
+              RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "->", "a"}], 
+            "}"}]}], "]"}], ",", 
+         RowBox[{"\"\<c\>\"", "~~", "___"}]}], "]"}], "&"}]}], "]"}], "//", 
+    "EvaluateLoopFunctions"}]}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.9597970187857313`*^9, {3.959797108306773*^9, 3.959797109732718*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"ea2e9207-27cd-43cb-8290-9291256c90b0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"exprReps", "=", 
+   RowBox[{"{", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"MT", ",", 
+        RowBox[{"{", "3", "}"}], ",", "0"}], "]"}], "->", "mPsiT"}], ",", " ", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"Ms", ",", 
+        RowBox[{"{", "}"}], ",", "0"}], "]"}], "->", "mSDM"}], ",", 
+     RowBox[{
+      SubscriptBox["y", "DM"], "->", "yDM"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"gY", ",", 
+        RowBox[{"{", "}"}], ",", "0"}], "]"}], "->", "g1"}], ",", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"gs", ",", 
+        RowBox[{"{", "}"}], ",", "0"}], "]"}], "->", "g2"}], ",", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"gL", ",", 
+        RowBox[{"{", "}"}], ",", "0"}], "]"}], "->", "g3"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      SubscriptBox["\[Lambda]", "Hs"], "->", "lamHs"}], ",", " ", 
+     RowBox[{
+      SubscriptBox["\[Lambda]", "S"], "->", "lamS"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"Yu", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Index", "[", 
+           RowBox[{"a_", ",", "Flavor"}], "]"}], ",", 
+          RowBox[{"Index", "[", 
+           RowBox[{"b_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], "->", 
+      RowBox[{"yt", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}], " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"b", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"Yu", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Index", "[", 
+           RowBox[{"a_", ",", "Flavor"}], "]"}], ",", "3"}], "}"}], ",", 
+        "0"}], "]"}], "->", 
+      RowBox[{"yt", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"Yu", ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", 
+          RowBox[{"Index", "[", 
+           RowBox[{"a_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], "->", 
+      RowBox[{"yt", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"3", ",", "a"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"Yd", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Index", "[", 
+           RowBox[{"a_", ",", "Flavor"}], "]"}], ",", 
+          RowBox[{"Index", "[", 
+           RowBox[{"b_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], "->", 
+      RowBox[{"yb", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}], " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"b", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Coupling", "[", 
+       RowBox[{"Ye", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Index", "[", 
+           RowBox[{"a_", ",", "Flavor"}], "]"}], ",", 
+          RowBox[{"Index", "[", 
+           RowBox[{"b_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], "->", 
+      RowBox[{"yta", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}], " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"b", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Bar", "[", 
+       RowBox[{"Coupling", "[", 
+        RowBox[{"Yu", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Index", "[", 
+            RowBox[{"a_", ",", "Flavor"}], "]"}], ",", 
+           RowBox[{"Index", "[", 
+            RowBox[{"b_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], 
+       "]"}], "->", 
+      RowBox[{"yt", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}], " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"b", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Bar", "[", 
+       RowBox[{"Coupling", "[", 
+        RowBox[{"Yd", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Index", "[", 
+            RowBox[{"a_", ",", "Flavor"}], "]"}], ",", 
+           RowBox[{"Index", "[", 
+            RowBox[{"b_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], 
+       "]"}], "->", 
+      RowBox[{"yb", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}], " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"b", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Bar", "[", 
+       RowBox[{"Coupling", "[", 
+        RowBox[{"Yu", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Index", "[", 
+            RowBox[{"a_", ",", "Flavor"}], "]"}], ",", "3"}], "}"}], ",", 
+         "0"}], "]"}], "]"}], "->", 
+      RowBox[{"yt", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Bar", "[", 
+       RowBox[{"Coupling", "[", 
+        RowBox[{"Yu", ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", 
+           RowBox[{"Index", "[", 
+            RowBox[{"a_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], 
+       "]"}], "->", 
+      RowBox[{"yt", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Bar", "[", 
+       RowBox[{"Coupling", "[", 
+        RowBox[{"Ye", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Index", "[", 
+            RowBox[{"a_", ",", "Flavor"}], "]"}], ",", 
+           RowBox[{"Index", "[", 
+            RowBox[{"b_", ",", "Flavor"}], "]"}]}], "}"}], ",", "0"}], "]"}], 
+       "]"}], "->", 
+      RowBox[{"yta", " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"a", ",", "3"}], "]"}], " ", 
+       RowBox[{"Delta", "[", 
+        RowBox[{"b", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"hbar", "->", 
+      FractionBox["1", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"4", "Pi"}], ")"}], "^", "2"}]]}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"matchTable", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"wilsonCoeffs", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Coupling", "[", 
+            RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "->", 
+           RowBox[{"{", 
+            RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"Collect", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"wilsonCoeffs", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "/.", "exprReps"}], ",", "yDM", 
+          ",", "Simplify"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "wilsonCoeffs", "]"}]}], "}"}]}], "]"}], "/.", 
+    
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Index", "[", 
+       RowBox[{"a_", ",", "Flavor"}], "]"}], "->", "a"}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"matchTable", "//", "NiceForm"}]}], "Input",
+ CellChangeTimes->{
+  3.95979702762136*^9, {3.95979712726101*^9, 3.959797127973896*^9}, {
+   3.959797193475791*^9, 3.959797205282432*^9}, {3.959797284020495*^9, 
+   3.959797304721418*^9}, {3.959797745200514*^9, 3.959797748773553*^9}, {
+   3.9597978897921867`*^9, 3.959797913951991*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"7c05dbeb-6145-4e41-bb67-2c58cb5ea74a"],
+
+Cell[BoxData[
+ FormBox[
+  StyleBox[
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cdd", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "12960"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"27", 
+              SuperscriptBox["g2", "4"], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"i1", "i4"},
+                 "RowDefault"],
+                FontSize->10]], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"i2", "i3"},
+                 "RowDefault"],
+                FontSize->10]]}]}], "+", " ", 
+            RowBox[{
+             FormBox[
+              StyleBox[
+               RowBox[{"(", 
+                RowBox[{"-", 
+                 RowBox[{"16", 
+                  SuperscriptBox["g1", "4"]}], "+", 
+                 RowBox[{"9", 
+                  SuperscriptBox["g2", "4"]}]}], ")"}],
+               SpanSymmetric->False],
+              StandardForm], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i1", "i2"},
+                "RowDefault"],
+               FontSize->10]], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i3", "i4"},
+                "RowDefault"],
+               FontSize->10]]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"ced", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "135"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cee", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "180"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i1", "i4"},
+                "RowDefault"],
+               FontSize->10]], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i2", "i3"},
+                "RowDefault"],
+               FontSize->10]]}], "+", 
+            RowBox[{
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i1", "i2"},
+                "RowDefault"],
+               FontSize->10]], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i3", "i4"},
+                "RowDefault"],
+               FontSize->10]]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"ceu", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox["2", "135"], 
+         SuperscriptBox["g1", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]]}], "-", 
+        RowBox[{
+         FractionBox["1", "864"], 
+         SuperscriptBox["g1", "2"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i3"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i4"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cG", ",", 
+         RowBox[{"{", "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "2880"], 
+        SuperscriptBox["g2", "3"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cH", ",", 
+         RowBox[{"{", "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "1536"], 
+        SuperscriptBox["lamHs", "3"], 
+        FractionBox["1", 
+         SuperscriptBox["mSDM", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHBox", ",", 
+         RowBox[{"{", "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "23040"], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"64", 
+             SuperscriptBox["g1", "4"], 
+             FractionBox["1", 
+              SuperscriptBox["mPsiT", "2"]]}], "+", 
+            RowBox[{"15", 
+             SuperscriptBox["lamHs", "2"], 
+             FractionBox["1", 
+              SuperscriptBox["mSDM", "2"]]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHd", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "270"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHD", ",", 
+         RowBox[{"{", "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "90"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHe", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "90"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHl1", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "180"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHq1", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        RowBox[{
+         FractionBox["1", "540"], 
+         SuperscriptBox["g1", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]]}], "+", 
+        RowBox[{
+         FractionBox["1", "384"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], 
+         SuperscriptBox["yt", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", 
+              SuperscriptBox["mPsiT", "6"]}], "+", 
+             RowBox[{"3", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "-", 
+             RowBox[{"6", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "+", 
+             SuperscriptBox["mSDM", "6"], "+", 
+             RowBox[{"6", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i1"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHq3", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "384"], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SuperscriptBox["yDM", "2"], 
+        SuperscriptBox["yt", "2"], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", 
+             SuperscriptBox["mPsiT", "6"]}], "+", 
+            RowBox[{"3", 
+             SuperscriptBox["mPsiT", "4"], 
+             SuperscriptBox["mSDM", "2"]}], "-", 
+            RowBox[{"6", 
+             SuperscriptBox["mPsiT", "2"], 
+             SuperscriptBox["mSDM", "4"]}], "+", 
+            SuperscriptBox["mSDM", "6"], "+", 
+            RowBox[{"6", 
+             SuperscriptBox["mPsiT", "4"], 
+             SuperscriptBox["mSDM", "2"], 
+             FormBox[
+              RowBox[{"Log", "[", 
+               FractionBox[
+                SuperscriptBox["mSDM", "2"], 
+                SuperscriptBox["mPsiT", "2"]], "]"}],
+              StandardForm]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"3", "i1"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"3", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["mPsiT", "2"], "-", 
+            SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cHu", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        RowBox[{
+         FractionBox["1", "135"], 
+         SuperscriptBox["g1", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]]}], "+", 
+        RowBox[{
+         FractionBox["1", "1728"], 
+         SuperscriptBox["g1", "2"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i1"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cld", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "270"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cle", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "90"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cll", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "360"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"clq1", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "540"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"clu", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "135"], 
+         SuperscriptBox["g1", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]]}], "-", 
+        RowBox[{
+         FractionBox["1", "1728"], 
+         SuperscriptBox["g1", "2"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i3"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i4"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cqd1", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "810"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cqd8", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "120"], 
+        SuperscriptBox["g2", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cqe", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "270"], 
+        SuperscriptBox["g1", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i3", "i4"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cqq1", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "25920"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{"-", 
+            RowBox[{"27", 
+             SuperscriptBox["g2", "4"], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i1", "i4"},
+                "RowDefault"],
+               FontSize->10]], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i2", "i3"},
+                "RowDefault"],
+               FontSize->10]]}], "+", 
+            RowBox[{"2", " ", 
+             FormBox[
+              StyleBox[
+               RowBox[{"(", 
+                RowBox[{"-", 
+                 RowBox[{"4", 
+                  SuperscriptBox["g1", "4"]}], "+", 
+                 RowBox[{"9", 
+                  SuperscriptBox["g2", "4"]}]}], ")"}],
+               SpanSymmetric->False],
+              StandardForm], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i1", "i2"},
+                "RowDefault"],
+               FontSize->10]], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"i3", "i4"},
+                "RowDefault"],
+               FontSize->10]]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cqq3", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        FractionBox["1", "960"], 
+        SuperscriptBox["g2", "4"], 
+        FractionBox["1", 
+         SuperscriptBox["mPsiT", "2"]], 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i1", "i4"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"i2", "i3"},
+           "RowDefault"],
+          FontSize->10]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cqu1", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        RowBox[{
+         FractionBox["1", "405"], 
+         SuperscriptBox["g1", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]]}], "+", 
+        RowBox[{
+         FractionBox["1", "5184"], 
+         SuperscriptBox["g1", "2"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i3"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i4"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cqu8", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        RowBox[{
+         FractionBox["1", "120"], 
+         SuperscriptBox["g2", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]]}], "+", 
+        RowBox[{
+         FractionBox["1", "576"], 
+         SuperscriptBox["g2", "2"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i3"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i4"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cuB", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "576"], "g1", "yt", 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SuperscriptBox["yDM", "2"], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["mPsiT", "6"], "-", 
+            RowBox[{"6", 
+             SuperscriptBox["mPsiT", "4"], 
+             SuperscriptBox["mSDM", "2"]}], "+", 
+            RowBox[{"3", 
+             SuperscriptBox["mPsiT", "2"], 
+             SuperscriptBox["mSDM", "4"]}], "+", 
+            RowBox[{"2", 
+             SuperscriptBox["mSDM", "6"]}], "-", 
+            RowBox[{"6", 
+             SuperscriptBox["mPsiT", "2"], 
+             SuperscriptBox["mSDM", "4"], 
+             FormBox[
+              RowBox[{"Log", "[", 
+               FractionBox[
+                SuperscriptBox["mSDM", "2"], 
+                SuperscriptBox["mPsiT", "2"]], "]"}],
+              StandardForm]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"3", "i1"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"3", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["mPsiT", "2"], "-", 
+            SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cud1", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox["2", "405"], 
+         SuperscriptBox["g1", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2592"], 
+         SuperscriptBox["g1", "2"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i1"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cud8", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{"-", 
+        RowBox[{
+         FractionBox["1", "120"], 
+         SuperscriptBox["g2", "4"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i1", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]]}], "+", 
+        RowBox[{
+         FractionBox["1", "576"], 
+         SuperscriptBox["g2", "2"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i1"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i2"},
+            "RowDefault"],
+           FontSize->10]], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"i3", "i4"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cuG", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "384"], "g2", "yt", 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SuperscriptBox["yDM", "2"], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["mPsiT", "6"], "-", 
+            RowBox[{"6", 
+             SuperscriptBox["mPsiT", "4"], 
+             SuperscriptBox["mSDM", "2"]}], "+", 
+            RowBox[{"3", 
+             SuperscriptBox["mPsiT", "2"], 
+             SuperscriptBox["mSDM", "4"]}], "+", 
+            RowBox[{"2", 
+             SuperscriptBox["mSDM", "6"]}], "-", 
+            RowBox[{"6", 
+             SuperscriptBox["mPsiT", "2"], 
+             SuperscriptBox["mSDM", "4"], 
+             FormBox[
+              RowBox[{"Log", "[", 
+               FractionBox[
+                SuperscriptBox["mSDM", "2"], 
+                SuperscriptBox["mPsiT", "2"]], "]"}],
+              StandardForm]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"3", "i1"},
+           "RowDefault"],
+          FontSize->10]], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"3", "i2"},
+           "RowDefault"],
+          FontSize->10]], 
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["mPsiT", "2"], "-", 
+            SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cuH", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_"}], "}"}], ",", "0"}], "}"}], ",", 
+       RowBox[{
+        FractionBox["1", "384"], "yt", 
+        FractionBox["1", 
+         SuperscriptBox["\[Pi]", "2"]], 
+        SuperscriptBox["yDM", "2"], " ", 
+        FormBox[
+         StyleBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"3", "lamHs", " ", 
+             FormBox[
+              StyleBox[
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["mPsiT", "2"], "-", 
+                 SuperscriptBox["mSDM", "2"]}], ")"}],
+               SpanSymmetric->False],
+              StandardForm], " ", 
+             FormBox[
+              StyleBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"3", 
+                  SuperscriptBox["mPsiT", "4"]}], "-", 
+                 RowBox[{"4", 
+                  SuperscriptBox["mPsiT", "2"], 
+                  SuperscriptBox["mSDM", "2"]}], "+", 
+                 SuperscriptBox["mSDM", "4"], "+", 
+                 RowBox[{"2", 
+                  SuperscriptBox["mPsiT", "4"], 
+                  FormBox[
+                   RowBox[{"Log", "[", 
+                    FractionBox[
+                    SuperscriptBox["mSDM", "2"], 
+                    SuperscriptBox["mPsiT", "2"]], "]"}],
+                   StandardForm]}]}], ")"}],
+               SpanSymmetric->False],
+              StandardForm], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"3", "i2"},
+                "RowDefault"],
+               FontSize->10]]}], "+", 
+            RowBox[{"2", 
+             SuperscriptBox["yt", "2"], " ", 
+             FormBox[
+              StyleBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"2", 
+                  SuperscriptBox["mPsiT", "6"]}], "+", 
+                 RowBox[{"3", 
+                  SuperscriptBox["mPsiT", "4"], 
+                  SuperscriptBox["mSDM", "2"]}], "-", 
+                 RowBox[{"6", 
+                  SuperscriptBox["mPsiT", "2"], 
+                  SuperscriptBox["mSDM", "4"]}], "+", 
+                 SuperscriptBox["mSDM", "6"], "+", 
+                 RowBox[{"6", 
+                  SuperscriptBox["mPsiT", "4"], 
+                  SuperscriptBox["mSDM", "2"], 
+                  FormBox[
+                   RowBox[{"Log", "[", 
+                    FractionBox[
+                    SuperscriptBox["mSDM", "2"], 
+                    SuperscriptBox["mPsiT", "2"]], "]"}],
+                   StandardForm]}]}], ")"}],
+               SpanSymmetric->False],
+              StandardForm], 
+             SubscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"3", "i2"},
+                "RowDefault"],
+               FontSize->10]], 
+             SubsuperscriptBox["\[Delta]", 
+              StyleBox[
+               TemplateBox[{"3", "d$$1"},
+                "RowDefault"],
+               FontSize->10], "2"]}]}], ")"}],
+          SpanSymmetric->False],
+         StandardForm], 
+        SubscriptBox["\[Delta]", 
+         StyleBox[
+          TemplateBox[{"3", "i1"},
+           "RowDefault"],
+          FontSize->10]], 
+        FractionBox["1", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["mPsiT", "2"], "-", 
+            SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"cuu", ",", 
+         RowBox[{"{", 
+          RowBox[{"i1_", ",", "i2_", ",", "i3_", ",", "i4_"}], "}"}], ",", 
+         "0"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "12960"], 
+         FractionBox["1", 
+          SuperscriptBox["mPsiT", "2"]], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"27", 
+               SuperscriptBox["g2", "4"], 
+               SubscriptBox["\[Delta]", 
+                StyleBox[
+                 TemplateBox[{"i1", "i4"},
+                  "RowDefault"],
+                 FontSize->10]], 
+               SubscriptBox["\[Delta]", 
+                StyleBox[
+                 TemplateBox[{"i2", "i3"},
+                  "RowDefault"],
+                 FontSize->10]]}]}], "+", " ", 
+             RowBox[{
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{"-", 
+                  RowBox[{"64", 
+                   SuperscriptBox["g1", "4"]}], "+", 
+                  RowBox[{"9", 
+                   SuperscriptBox["g2", "4"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"i1", "i2"},
+                 "RowDefault"],
+                FontSize->10]], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"i3", "i4"},
+                 "RowDefault"],
+                FontSize->10]]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm]}], "+", 
+        RowBox[{
+         FractionBox["1", "10368"], 
+         FractionBox["1", 
+          SuperscriptBox["\[Pi]", "2"]], 
+         SuperscriptBox["yDM", "2"], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", " ", 
+            RowBox[{
+             RowBox[{
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"8", 
+                   SuperscriptBox["g1", "2"]}], "-", 
+                  RowBox[{"3", 
+                   SuperscriptBox["g2", "2"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"3", "i3"},
+                 "RowDefault"],
+                FontSize->10]], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"i1", "i2"},
+                 "RowDefault"],
+                FontSize->10]]}], "+", 
+             RowBox[{"9", 
+              SuperscriptBox["g2", "2"], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"3", "i1"},
+                 "RowDefault"],
+                FontSize->10]], 
+              SubscriptBox["\[Delta]", 
+               StyleBox[
+                TemplateBox[{"i2", "i3"},
+                 "RowDefault"],
+                FontSize->10]]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], " ", 
+         FormBox[
+          StyleBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"7", 
+              SuperscriptBox["mPsiT", "6"]}], "-", 
+             RowBox[{"36", 
+              SuperscriptBox["mPsiT", "4"], 
+              SuperscriptBox["mSDM", "2"]}], "+", 
+             RowBox[{"45", 
+              SuperscriptBox["mPsiT", "2"], 
+              SuperscriptBox["mSDM", "4"]}], "-", 
+             RowBox[{"16", 
+              SuperscriptBox["mSDM", "6"]}], "-", 
+             RowBox[{"6", " ", 
+              FormBox[
+               StyleBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"3", 
+                   SuperscriptBox["mPsiT", "2"], 
+                   SuperscriptBox["mSDM", "4"]}], "-", 
+                  RowBox[{"2", 
+                   SuperscriptBox["mSDM", "6"]}]}], ")"}],
+                SpanSymmetric->False],
+               StandardForm], 
+              FormBox[
+               RowBox[{"Log", "[", 
+                FractionBox[
+                 SuperscriptBox["mSDM", "2"], 
+                 SuperscriptBox["mPsiT", "2"]], "]"}],
+               StandardForm]}]}], ")"}],
+           SpanSymmetric->False],
+          StandardForm], 
+         SubscriptBox["\[Delta]", 
+          StyleBox[
+           TemplateBox[{"3", "i4"},
+            "RowDefault"],
+           FontSize->10]], 
+         FractionBox["1", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox["mPsiT", "2"], "-", 
+             SuperscriptBox["mSDM", "2"]}], ")"}], "4"]]}]}]}], "}"}]}], 
+    "}"}], "StandardForm"], Matchete`NiceForm]], "Output",
+ CellChangeTimes->{{3.9597971142926817`*^9, 3.959797128683218*^9}, {
+  3.959797210999672*^9, 3.959797215318735*^9}, {3.9597973083339376`*^9, 
+  3.95979731026674*^9}, {3.959797753389048*^9, 3.9597977550183783`*^9}, {
+  3.9597979190960703`*^9, 3.959797926347473*^9}},
+ CellLabel->
+  "Out[43]//NiceForm=",ExpressionUUID->"6f2f2847-a28a-4014-9888-1190278756c2"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<coeffs_py.txt\>\""}],
+      "]"}], ",", 
+    RowBox[{"Flatten", " ", "/@", "matchTable"}], ",", "\"\<Table\>\"", ",", 
+    RowBox[{"\"\<FieldSeparators\>\"", "->", "\"\<;\>\""}]}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{
+  3.959797038263137*^9, {3.959797136204587*^9, 3.95979713991288*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"67af8e7f-691a-4d3f-b386-fbd598328c04"]
 }, Open  ]]
 },
 WindowSize->{1440, 758.25},
@@ -2294,23 +4125,36 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 209, 4, 72, "Section",ExpressionUUID->"1b6ccc68-a6e8-43f0-8ea6-e59cf829912b"],
 Cell[788, 28, 380, 9, 54, "Input",ExpressionUUID->"2f45b308-4a0e-458d-8986-e9446c6324d3"],
-Cell[1171, 39, 8126, 129, 52, InheritFromParent,ExpressionUUID->"1c24074e-a520-4609-9995-5f3f18a505a0"],
-Cell[9300, 170, 1481, 29, 68, "Print",ExpressionUUID->"fe46eec4-6384-4356-96a5-51c3e314c3b1"]
+Cell[1171, 39, 8124, 129, 52, InheritFromParent,ExpressionUUID->"f04f8ef8-df8b-4c27-8401-3b3131950be8"],
+Cell[9298, 170, 1528, 30, 68, "Print",ExpressionUUID->"cf2e3b67-472f-4334-a3de-2a15b78cf7a6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10818, 204, 339, 5, 72, "Section",ExpressionUUID->"90ef22dd-06ea-4af9-abfc-340199ad0da7"],
-Cell[11160, 211, 1025, 22, 54, "Input",ExpressionUUID->"17c5e59b-933d-4592-9949-87f0441deac6"]
+Cell[10863, 205, 339, 5, 72, "Section",ExpressionUUID->"90ef22dd-06ea-4af9-abfc-340199ad0da7"],
+Cell[11205, 212, 1025, 22, 54, "Input",ExpressionUUID->"17c5e59b-933d-4592-9949-87f0441deac6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12222, 238, 240, 4, 72, "Section",ExpressionUUID->"d191810d-80cb-436d-ac49-d50c0afe143b"],
-Cell[12465, 244, 11464, 274, 793, "Input",ExpressionUUID->"b7d3bb6b-98c4-4205-99e4-954e74b85b88"],
-Cell[23932, 520, 508, 12, 32, "Input",ExpressionUUID->"8bf4ea42-1bf5-45ca-8286-750ea9f4380d"],
-Cell[24443, 534, 1012, 24, 32, "Input",ExpressionUUID->"a0e0c8bf-b572-47f9-929c-eceddae79e16"],
-Cell[CellGroupData[{
-Cell[25480, 562, 13523, 353, 588, "Input",ExpressionUUID->"8ba88bc1-1ae9-43e9-a252-285569add06b"],
-Cell[39006, 917, 45752, 1336, 988, "Output",ExpressionUUID->"fa774f52-b6be-48b0-84d2-30e37f238bcb"]
+Cell[12267, 239, 240, 4, 72, "Section",ExpressionUUID->"d191810d-80cb-436d-ac49-d50c0afe143b"],
+Cell[12510, 245, 11464, 274, 793, "Input",ExpressionUUID->"b7d3bb6b-98c4-4205-99e4-954e74b85b88"]
 }, Open  ]],
-Cell[84773, 2256, 779, 16, 34, "Input",ExpressionUUID->"44dcebb1-99a4-4c72-92fb-84b1895cafa8"]
+Cell[CellGroupData[{
+Cell[24011, 524, 219, 4, 72, "Section",ExpressionUUID->"72008165-b9b6-4584-aaf0-0e7e04e43a60"],
+Cell[24233, 530, 508, 12, 32, "Input",ExpressionUUID->"8bf4ea42-1bf5-45ca-8286-750ea9f4380d"],
+Cell[24744, 544, 1012, 24, 32, "Input",ExpressionUUID->"a0e0c8bf-b572-47f9-929c-eceddae79e16"],
+Cell[CellGroupData[{
+Cell[25781, 572, 13523, 353, 588, "Input",ExpressionUUID->"8ba88bc1-1ae9-43e9-a252-285569add06b"],
+Cell[39307, 927, 45752, 1336, 988, "Output",ExpressionUUID->"fa774f52-b6be-48b0-84d2-30e37f238bcb"]
+}, Open  ]],
+Cell[85074, 2266, 779, 16, 34, "Input",ExpressionUUID->"44dcebb1-99a4-4c72-92fb-84b1895cafa8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[85890, 2287, 218, 4, 72, "Section",ExpressionUUID->"fdae244a-2c11-4bfa-96c4-8c16c1cb448b"],
+Cell[86111, 2293, 460, 11, 32, "Input",ExpressionUUID->"8057e24d-3623-47e1-a0b0-994258d92b51"],
+Cell[86574, 2306, 846, 22, 32, "Input",ExpressionUUID->"ea2e9207-27cd-43cb-8290-9291256c90b0"],
+Cell[CellGroupData[{
+Cell[87445, 2332, 7750, 215, 426, "Input",ExpressionUUID->"7c05dbeb-6145-4e41-bb67-2c58cb5ea74a"],
+Cell[95198, 2549, 50505, 1538, 1390, "Output",ExpressionUUID->"6f2f2847-a28a-4014-9888-1190278756c2"]
+}, Open  ]],
+Cell[145718, 4090, 543, 13, 34, "Input",ExpressionUUID->"67af8e7f-691a-4d3f-b386-fbd598328c04"]
 }, Open  ]]
 }
 ]
