@@ -1,0 +1,4 @@
+u u~ > t t~ gs^4 yDM^2 contains the diagram with only gs^4 (diagram 4), which is already accounted in uubar2ttbar_gs^4.
+u u~ > t t~ gs^6 diagrams are all repeated, which is already accounted in uubar2ttbar_gs^4.
+g g > t t~ gs^4 yDM^2 contains three diragrams with only gs^4 (diagrams 2, 4 and 7), which is already accounted in gg2ttbar_gs^4. 
+g g > t t~ gs^6 contains three diragrams with only gs^4 (diagrams 2, 3 and 4), which is already accounted in gg2ttbar_gs^4.

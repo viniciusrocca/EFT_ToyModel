@@ -1,0 +1,106 @@
+# This file was automatically created by FeynRules 2.3.49
+# Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
+# Date: Thu 26 Jun 2025 17:50:18
+
+
+# 
+# This is the logfile for the model Top-EFTfull
+
+# Authors: Andre Lessa, ViniciusRocca
+# Model version: 1.0
+# Checking the Quantum numbers
+   * Electric charge defined.
+# Checking the Lagrangians
+   * All Lagrangians are ok.
+#
+# Particle definitions
+#
+
+   * No particles removed. All particles correspond to GenInt setup.
+
+# Automatically assigned PDG numbers
+   * Assigned PDG number 9000001 to particle ghA
+   * Assigned PDG number 9000002 to particle ghZ
+   * Assigned PDG number 9000003 to particle ghWp
+   * Assigned PDG number 9000004 to particle ghWm
+
+
+# Compulsory PDG codes:
+   * Class SM leptons complete.
+   * Class SM neutrinos complete.
+   * Class SM quarks complete.
+   * Class SM gauge bosons complete.
+#
+# Parameter definitions
+#
+
+   * Parameter cqu8b has no value. Default value 1 assigned.
+   * Parameter cud8b has no value. Default value 1 assigned.
+   * Parameter cuue has no value. Default value 1 assigned.
+   * Parameter cuuf has no value. Default value 1 assigned.
+   * Parameter ceub has no value. Default value 1 assigned.
+   * Parameter cHq1b has no value. Default value 1 assigned.
+   * Parameter cHq3 has no value. Default value 1 assigned.
+   * Parameter cHub has no value. Default value 1 assigned.
+   * Parameter club has no value. Default value 1 assigned.
+   * Parameter cqu1b has no value. Default value 1 assigned.
+   * Parameter cuB has no value. Default value 1 assigned.
+   * Parameter cud1b has no value. Default value 1 assigned.
+   * Parameter cuHa has no value. Default value 1 assigned.
+   * Parameter cuHb has no value. Default value 1 assigned.
+   * Parameter cuud has no value. Default value 1 assigned.
+   * Parameter cuG has no value. Default value 1 assigned.
+
+
+# Vertices
+   * Calling FeynmanRules for 1 Lagrangians.
+   * Number of classes vertices: 77
+   * Number of flavored vertices: 181
+   * Saved vertices in InterfaceRun[ 1 ].
+   * Checked QNumber conservation.
+      - Quantum number GhostNumber conserved in all vertices.
+      - Quantum number LeptonNumber conserved in all vertices.
+      - Quantum number Q conserved in all vertices.
+      - Quantum number Y conserved in all vertices.
+   * particles.py written.
+   * parameters.py written.
+#
+# Vertex definitions
+#
+
+   * 249 vertices written.
+   * vertices.py written.
+#
+# Lorentz structure definitions
+#
+
+   * 81 lorentz structures written.
+   * lorentz.py written.
+#
+# Coupling definitions
+#
+
+   >>>> Non positive interaction order QED found for coupling GC_86.
+   >>>> Non positive interaction order QED found for coupling GC_97.
+   >>>> Non positive interaction order QED found for coupling GC_98.
+   >>>> Non positive interaction order QED found for coupling GC_101.
+   * 126 couplings written.
+   * couplings.py written.
+#
+# Coupling order definitions
+#
+
+   * 0 couplings orders written.
+   * coupling_orders.py written.
+#
+# Decay definitions
+#
+
+   * 6 decays written.
+   * decay.py not written
+#
+# CTCoupling definitions
+#
+
+   * 0 CTcouplings written.
+   * CT_couplings.py written.
