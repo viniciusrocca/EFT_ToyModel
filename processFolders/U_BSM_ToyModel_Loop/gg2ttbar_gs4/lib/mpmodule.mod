@@ -1,0 +1,1 @@
+/home/vinicius/MadGraph/MG5_aMC_v3_6_3/vendor/CutTools/includects/mpmodule.mod
