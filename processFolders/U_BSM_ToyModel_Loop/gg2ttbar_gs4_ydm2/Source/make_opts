@@ -1,3 +1,8 @@
+madloop=true
+lhapdf=
+pineappl=
+PYTHIA8_PATH=NotInstalled
+MG5AMC_VERSION=5.3.6.3
 DEFAULT_CPP_COMPILER=g++
 MACFLAG=
 STDLIB=-lstdc++
