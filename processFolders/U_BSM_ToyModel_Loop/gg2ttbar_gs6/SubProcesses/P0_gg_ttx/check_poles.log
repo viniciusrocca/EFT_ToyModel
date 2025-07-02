@@ -44,7 +44,7 @@
  mdl_WZ =    2.4952000000000001     
  mdl_WW =    2.0850000000000000     
  mdl_WH =    4.0699999999999998E-003
- mdl_WPsiT =    1.0000000000000000     
+ mdl_WPsiT =    35.904570000000000     
   Internal Params
   ---------------------------------
   
@@ -249,8 +249,8 @@
  Insert the relative tolerance
   A negative number will mean use the default one:    1.0000000000000001E-005
 Using random seed offsets:     1 ,      1 ,      0
-  with seed                   32
- Ranmar initialization seeds       10730        9407
+  with seed                   33
+ Ranmar initialization seeds       11949        9408
  counterterm S.O           1 NP1
  BORN: keeping split order           1
  counterterm S.O           2 NP3
@@ -387,21 +387,6 @@ Using random seed offsets:     1 ,      1 ,      0
  alpha_s value used for the virtuals is (for the first PS point):   0.11900000000000002     
  VIRT: keeping split order            1
  VIRT: keeping split order            2
- INITIALIZATION POINT.
- RESULTS FROM INITIALIZATION POINTS WILL NOT BE USED FOR STATISTICS
- alpha_s value used for the virtuals is (for the first PS point):   0.11900000000000002     
- VIRT: keeping split order            1
- VIRT: keeping split order            2
- INITIALIZATION POINT.
- RESULTS FROM INITIALIZATION POINTS WILL NOT BE USED FOR STATISTICS
- alpha_s value used for the virtuals is (for the first PS point):   0.11900000000000002     
- VIRT: keeping split order            1
- VIRT: keeping split order            2
- INITIALIZATION POINT.
- RESULTS FROM INITIALIZATION POINTS WILL NOT BE USED FOR STATISTICS
- alpha_s value used for the virtuals is (for the first PS point):   0.11900000000000002     
- VIRT: keeping split order            1
- VIRT: keeping split order            2
  
  Splitorders           2
        NP1:           0
@@ -411,9 +396,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.11337775630423325                OLP:  -0.11337775630423252     
+        MadFKS:   -6.5052806672466948E-002           OLP:   -6.5052806672466865E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -5.6032187238085986E-002           OLP:   -5.6032207668668607E-002
+        MadFKS:    1.7466643476696155E-003           OLP:    1.7466527184598981E-003
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -430,9 +415,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -5.1093638615160725E-002           OLP:   -5.1093638615160725E-002
+        MadFKS:   -7.2685347500927797E-002           OLP:   -7.2685347500927741E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:    1.4176766253193144E-002           OLP:    1.4176757169241510E-002
+        MadFKS:   -5.9767389038197314E-003           OLP:   -5.9767519232170364E-003
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -449,9 +434,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.13803870288746381                OLP:  -0.13803870288746384     
+        MadFKS:   -6.3826928350383116E-002           OLP:   -6.3826928350383214E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -9.2356452198226441E-002           OLP:   -9.2356477113251165E-002
+        MadFKS:    2.9294112907918540E-003           OLP:    2.9293998848110726E-003
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -468,9 +453,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.20694185473250004                OLP:  -0.20694185473250015     
+        MadFKS:   -7.7081859864318938E-002           OLP:   -7.7081859864318994E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:  -0.21244324109877807                OLP:  -0.21244327854993422     
+        MadFKS:   -1.0692779836750417E-002           OLP:   -1.0692793656957390E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -487,9 +472,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.10689383718585486                OLP:  -0.10689383718585485     
+        MadFKS:  -0.16310029992692346                OLP:  -0.16310029992692338     
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -4.7171537269604158E-002           OLP:   -4.7171556517203464E-002
+        MadFKS:  -0.13310464771990552                OLP:  -0.13310467719532354     
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -506,9 +491,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -7.2777227476852543E-002           OLP:   -7.2777227476852530E-002
+        MadFKS:   -5.6741898302373757E-002           OLP:   -5.6741898302373729E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -6.0733553144911856E-003           OLP:   -6.0733683513653292E-003
+        MadFKS:    9.4304666918954404E-003           OLP:    9.4304565779828355E-003
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -525,9 +510,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.16275055700630239                OLP:  -0.16275055700630137     
+        MadFKS:   -5.2121905594180409E-002           OLP:   -5.2121905594180368E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:  -0.13251151988147336                OLP:  -0.13251154929456499     
+        MadFKS:    1.3343236285907289E-002           OLP:    1.3343227014401642E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -544,9 +529,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.15355790028399366                OLP:  -0.15355790028399369     
+        MadFKS:  -0.26462129205052892                OLP:  -0.26462129205052909     
   COEFFICIENT SINGLE POLE:
-        MadFKS:  -0.11716422258582330                OLP:  -0.11716425032460445     
+        MadFKS:  -0.33028453942748115                OLP:  -0.33028458738327393     
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -563,9 +548,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -5.4213986528107501E-002           OLP:   -5.4213986528107855E-002
+        MadFKS:  -0.11280963486005965                OLP:  -0.11280963486005965     
   COEFFICIENT SINGLE POLE:
-        MadFKS:    1.1604850172396550E-002           OLP:    1.1604840520461599E-002
+        MadFKS:   -5.5243721812278893E-002           OLP:   -5.5243742136497853E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -582,9 +567,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -7.6219355252941670E-002           OLP:   -7.6219355252941656E-002
+        MadFKS:   -8.2885682856991633E-002           OLP:   -8.2885682856991522E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -9.7528113825374983E-003           OLP:   -9.7528250456109904E-003
+        MadFKS:   -1.7199053435853040E-002           OLP:   -1.7199068313059292E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -601,9 +586,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.18054271124688129                OLP:  -0.18054271124688112     
+        MadFKS:   -5.4610726459739106E-002           OLP:   -5.4610726459739078E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:  -0.16351115964016985                OLP:  -0.16351119228848282     
+        MadFKS:    1.1268872746323915E-002           OLP:    1.1268863020931517E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -620,9 +605,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -8.4201139805985509E-002           OLP:   -8.4201139805985467E-002
+        MadFKS:   -5.3464969847729409E-002           OLP:   -5.3464969847729402E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -1.8716453479063599E-002           OLP:   -1.8716468596138638E-002
+        MadFKS:    1.2233704224212561E-002           OLP:    1.2233694707779623E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -639,9 +624,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.38009223850574098                OLP:  -0.38009223850574125     
+        MadFKS:   -5.1195414280514648E-002           OLP:   -5.1195414280514773E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:  -0.60470737291986643                OLP:  -0.60470744191544945     
+        MadFKS:    1.4094889317193994E-002           OLP:    1.4094880214726421E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -658,9 +643,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.10487167121003053                OLP:  -0.10487167121003063     
+        MadFKS:  -0.14294302546043089                OLP:  -0.14294302546043047     
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -4.4471160172093835E-002           OLP:   -4.4471179051248401E-002
+        MadFKS:  -0.10004180381602605                OLP:  -0.10004182962302399     
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -677,9 +662,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -8.8813660468076414E-002           OLP:   -8.8813660468076067E-002
+        MadFKS:  -0.14148042157789015                OLP:  -0.14148042157789006     
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -2.4157330077200542E-002           OLP:   -2.4157346036597579E-002
+        MadFKS:   -9.7734599466319516E-002           OLP:   -9.7734625007705522E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -696,9 +681,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -5.1584560704324926E-002           OLP:   -5.1584560704324878E-002
+        MadFKS:   -6.2125921903731729E-002           OLP:   -6.2125921903731778E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:    1.3780558998245379E-002           OLP:    1.3780549824766269E-002
+        MadFKS:    4.5429411188114364E-003           OLP:    4.5429300234442402E-003
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -715,9 +700,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -5.2664558542533796E-002           OLP:   -5.2664558542533824E-002
+        MadFKS:   -9.4437550466157164E-002           OLP:   -9.4437550466157053E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:    1.2897755767676775E-002           OLP:    1.2897746397381771E-002
+        MadFKS:   -3.1035961660012192E-002           OLP:   -3.1035978640406560E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -734,9 +719,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:  -0.10363525616312327                OLP:  -0.10363525616312332     
+        MadFKS:  -0.12281119618415041                OLP:  -0.12281119618415084     
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -4.2835167607187349E-002           OLP:   -4.2835186262262376E-002
+        MadFKS:   -6.9452357029739537E-002           OLP:   -6.9452379173323836E-002
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -753,9 +738,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -5.1438088684235592E-002           OLP:   -5.1438088684235661E-002
+        MadFKS:   -6.8975327983751764E-002           OLP:   -6.8975327983751708E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:    1.3899106249854498E-002           OLP:    1.3899097103061898E-002
+        MadFKS:   -2.1467708616829308E-003           OLP:   -2.1467832051006129E-003
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005
@@ -772,9 +757,9 @@ Using random seed offsets:     1 ,      1 ,      0
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -7.1804004946084479E-002           OLP:   -7.1804004946084424E-002
+        MadFKS:  -0.46757022450729241                OLP:  -0.46757022450728508     
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -5.0542533689707687E-003           OLP:   -5.0542662277274532E-003
+        MadFKS:  -0.84254130148650264                OLP:  -0.84254138645701060     
  MU_R    =    344.00000000000000     
  ALPHA_S =   0.11900000000000002     
  PASSED   1.0000000000000001E-005

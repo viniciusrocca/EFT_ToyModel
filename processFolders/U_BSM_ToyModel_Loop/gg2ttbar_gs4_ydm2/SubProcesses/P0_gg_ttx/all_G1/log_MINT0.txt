@@ -1,4 +1,4 @@
-       11626
+       23168
  ===============================================================
  INFO: MadFKS read these parameters from FKS_params.dat                                                  
  ===============================================================
@@ -61,7 +61,7 @@
  mdl_WZ =    2.4952000000000001     
  mdl_WW =    2.0850000000000000     
  mdl_WH =    4.0699999999999998E-003
- mdl_WPsiT =    1.0000000000000000     
+ mdl_WPsiT =    35.904570000000000     
   Internal Params
   ---------------------------------
   
@@ -279,8 +279,8 @@ channel    6 :     3 T        0        0  0.0000E+00  0.0000E+00  0.1000E+01
  ------- iteration           1
  Update # PS points (even_rn):          280  -->          256
 Using random seed offsets:     0 ,      1 ,      0
-  with seed                   35
- Ranmar initialization seeds       14386        9410
+  with seed                   36
+ Ranmar initialization seeds       15605        9411
  initial-final FKS maps:
            0 :           8           1           2           3           4           5           6           7           8
            1 :           2           3           4           0           0           0           0           0           0
@@ -299,10 +299,10 @@ tau_min   8     1 : 0.34400E+03      --       0.34400E+03
  Filling grid for alpha_S computation ... 
  done... 
  Scale values (may change event by event):
- muR,  muR_reference:  0.194877D+03 0.194877D+03  1.00
- muF1, muF1_reference: 0.194877D+03 0.194877D+03  1.00
- muF2, muF2_reference: 0.194877D+03 0.194877D+03  1.00
- QES,  QES_reference:  0.194877D+03 0.194877D+03  1.00
+ muR,  muR_reference:  0.218720D+03 0.218720D+03  1.00
+ muF1, muF1_reference: 0.218720D+03 0.218720D+03  1.00
+ muF2, muF2_reference: 0.218720D+03 0.218720D+03  1.00
+ QES,  QES_reference:  0.218720D+03 0.218720D+03  1.00
   
  muR_reference [functional form]:
     H_T/2 := sum_i mT(i)/2, i=final state
@@ -313,7 +313,7 @@ tau_min   8     1 : 0.34400E+03      --       0.34400E+03
  QES_reference [functional form]: 
     H_T/2 := sum_i mT(i)/2, i=final state
   
- alpha_s=  0.10670243108255982     
+ alpha_s=  0.10505650280800458     
  counterterm S.O           1 NP1
  BORN: keeping split order           1
  counterterm S.O           2 NP3
@@ -326,7 +326,7 @@ tau_min   8     1 : 0.34400E+03      --       0.34400E+03
  BORN: not keeping split order           1
  Charge-linked born are not used
  Color-linked born are used
- alpha_s value used for the virtuals is (for the first PS point):   0.10670243108255982     
+ alpha_s value used for the virtuals is (for the first PS point):   0.10505650280800458     
   ========================================================================================== 
  {                                                                                          }
  {       [32m                                                                            [0m       }
@@ -456,9 +456,9 @@ tau_min   8     1 : 0.34400E+03      --       0.34400E+03
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -5.0931814066103219E-002           OLP:   -5.0931814066103198E-002
+        MadFKS:   -4.3900616486666690E-002           OLP:   -4.3900616486666690E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -2.0924894646306216E-002           OLP:   -2.0924903898429530E-002
+        MadFKS:   -9.8452992627244777E-003           OLP:   -9.8453071372150355E-003
  Parameters related to the different treatment of alpha in ME and PDFs
  alphascheme           0
  nlep_run             -1
@@ -475,10 +475,10 @@ tau_min   6     2 : 0.34400E+03      --       0.34400E+03
 tau_min   7     2 : 0.34400E+03      --       0.34400E+03
 tau_min   8     2 : 0.34400E+03      --       0.34400E+03
  PDFscheme           0
- REAL 4: keeping split order            1
- REAL 2: keeping split order            1
- REAL 3: keeping split order            1
  REAL 5: keeping split order            1
+ REAL 2: keeping split order            1
+ REAL 4: keeping split order            1
+ REAL 3: keeping split order            1
 tau_min   1     3 : 0.34400E+03      --       0.34400E+03
 tau_min   2     3 : 0.34400E+03      --       0.34400E+03
 tau_min   3     3 : 0.34400E+03  0.34400E+03  0.34400E+03
@@ -519,4 +519,4 @@ tau_min   8     6 : 0.34400E+03      --       0.34400E+03
  chi**2 per D.o.F.:   0.0000000000000000     
   1:  0                                                 1                                                 2
   2:  0               1                2                3               4                5                6
-Time in seconds: 158
+Time in seconds: 164

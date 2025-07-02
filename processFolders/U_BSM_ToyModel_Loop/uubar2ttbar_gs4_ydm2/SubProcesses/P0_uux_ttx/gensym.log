@@ -45,7 +45,7 @@
  mdl_WZ =    2.4952000000000001     
  mdl_WW =    2.0850000000000000     
  mdl_WH =    4.0699999999999998E-003
- mdl_WPsiT =    1.0000000000000000     
+ mdl_WPsiT =    35.904570000000000     
   Internal Params
   ---------------------------------
   
@@ -188,8 +188,8 @@
 
 
 Using random seed offsets:     1 ,      1 ,      0
-  with seed                   32
- Ranmar initialization seeds       10730        9407
+  with seed                   34
+ Ranmar initialization seeds       13168        9409
 tau_min   1     1 : 0.34400E+03      --       0.34400E+03
 tau_min   2     1 : 0.34400E+03      --       0.34400E+03
 tau_min   3     1 : 0.34400E+03  0.34400E+03  0.34400E+03
@@ -200,10 +200,10 @@ tau_min   6     1 : 0.34400E+03      --       0.34400E+03
  Filling grid for alpha_S computation ... 
  done... 
  Scale values (may change event by event):
- muR,  muR_reference:  0.231455D+03 0.231455D+03  1.00
- muF1, muF1_reference: 0.231455D+03 0.231455D+03  1.00
- muF2, muF2_reference: 0.231455D+03 0.231455D+03  1.00
- QES,  QES_reference:  0.231455D+03 0.231455D+03  1.00
+ muR,  muR_reference:  0.197479D+03 0.197479D+03  1.00
+ muF1, muF1_reference: 0.197479D+03 0.197479D+03  1.00
+ muF2, muF2_reference: 0.197479D+03 0.197479D+03  1.00
+ QES,  QES_reference:  0.197479D+03 0.197479D+03  1.00
   
  muR_reference [functional form]:
     H_T/2 := sum_i mT(i)/2, i=final state
@@ -214,7 +214,7 @@ tau_min   6     1 : 0.34400E+03      --       0.34400E+03
  QES_reference [functional form]: 
     H_T/2 := sum_i mT(i)/2, i=final state
   
- alpha_s=  0.10426835716264540     
+ alpha_s=  0.10651066710441513     
  counterterm S.O           1 NP3
  BORN: keeping split order           1
  counterterm S.O           2 NP1
@@ -226,9 +226,9 @@ tau_min   6     1 : 0.34400E+03      --       0.34400E+03
  counterterm S.O           5 QED
  BORN: not keeping split order           1
  born momenta
-   1    0.26087E+03    0.00000E+00    0.00000E+00    0.26087E+03
-   2    0.26087E+03   -0.00000E+00   -0.00000E+00   -0.26087E+03
-   3    0.26087E+03   -0.81693E+02    0.12692E+03    0.12525E+03
-   4    0.26087E+03    0.81693E+02   -0.12692E+03   -0.12525E+03
+   1    0.19755E+03    0.00000E+00    0.00000E+00    0.19755E+03
+   2    0.19755E+03   -0.00000E+00   -0.00000E+00   -0.19755E+03
+   3    0.19755E+03    0.92948E+02    0.26594E+02   -0.98026E+01
+   4    0.19755E+03   -0.92948E+02   -0.26594E+02    0.98026E+01
  Bad swap           1           2           4           3
  Found            0  matches.            1  channels remain for integration.

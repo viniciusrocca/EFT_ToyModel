@@ -42,5 +42,5 @@
       MP__MDL_WT = 0_16
       MDL_WH = 4.070000D-03
       MP__MDL_WH = 0.00407_16
-      MDL_WPSIT = 1.000000D+00
-      MP__MDL_WPSIT = 1.0_16
+      MDL_WPSIT = 3.590457D+01
+      MP__MDL_WPSIT = 35.90457_16

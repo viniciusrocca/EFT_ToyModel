@@ -1,4 +1,4 @@
-       13698
+       26178
  ===============================================================
  INFO: MadFKS read these parameters from FKS_params.dat                                                  
  ===============================================================
@@ -61,7 +61,7 @@
  mdl_WZ =    2.4952000000000001     
  mdl_WW =    2.0850000000000000     
  mdl_WH =    4.0699999999999998E-003
- mdl_WPsiT =    1.0000000000000000     
+ mdl_WPsiT =    35.904570000000000     
   Internal Params
   ---------------------------------
   
@@ -256,7 +256,7 @@ INFO: orders_tag_plot is computed as:         + NP1 *        1         + NP3 *  
  getting user params
  Number of phase-space points per iteration:       26244
  Maximum number of iterations is:           2
- Desired accuracy is:   5.4551976650885466E-002
+ Desired accuracy is:   5.5045826091887191E-002
  Using adaptive grids:           2
  Using Multi-channel integration
  Do MC over helicities for the virtuals
@@ -270,17 +270,17 @@ INFO: orders_tag_plot is computed as:         + NP1 *        1         + NP3 *  
  RESTART: Use old grids, but refil plots
  about to integrate            7       26244           2
  imode is           -1
-channel    1 :     1 F        0      360  0.8351E+01  0.0000E+00  0.1000E+01
-channel    2 :     1 F        0     1118  0.4171E+02  0.0000E+00  0.1000E+01
-channel    3 :     2 F        0      996  0.3777E+02  0.0000E+00  0.1000E+01
-channel    4 :     2 F        0     4805  0.1826E+03  0.0000E+00  0.6143E+00
-channel    5 :     3 F        0      910  0.3507E+02  0.0000E+00  0.1000E+01
-channel    6 :     3 F        0     5094  0.1820E+03  0.0000E+00  0.1000E+01
+channel    1 :     1 F        0      365  0.9132E+01  0.0000E+00  0.1000E+01
+channel    2 :     1 F        0     1152  0.4230E+02  0.0000E+00  0.1000E+01
+channel    3 :     2 F        0     1041  0.3600E+02  0.0000E+00  0.1000E+01
+channel    4 :     2 F        0     4926  0.1742E+03  0.0000E+00  0.1000E+01
+channel    5 :     3 F        0      967  0.3397E+02  0.0000E+00  0.1000E+01
+channel    6 :     3 F        0     4803  0.1707E+03  0.0000E+00  0.1000E+01
  ------- iteration           1
  Update # PS points (even_rn):        26244  -->        26244
 Using random seed offsets:     0 ,      1 ,      0
-  with seed                   33
- Ranmar initialization seeds       11948        9408
+  with seed                   34
+ Ranmar initialization seeds       13167        9409
  initial-final FKS maps:
            0 :           8           1           2           3           4           5           6           7           8
            1 :           2           3           4           0           0           0           0           0           0
@@ -288,21 +288,21 @@ Using random seed offsets:     0 ,      1 ,      0
  Total number of FKS directories is           8
  For the Born we use nFKSprocesses:
            1           2           3           4           1           1           2           2
-tau_min   1     6 : 0.34400E+03      --       0.34400E+03
-tau_min   2     6 : 0.34400E+03      --       0.34400E+03
-tau_min   3     6 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   4     6 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   5     6 : 0.34400E+03      --       0.34400E+03
-tau_min   6     6 : 0.34400E+03      --       0.34400E+03
-tau_min   7     6 : 0.34400E+03      --       0.34400E+03
-tau_min   8     6 : 0.34400E+03      --       0.34400E+03
+tau_min   1     4 : 0.34400E+03      --       0.34400E+03
+tau_min   2     4 : 0.34400E+03      --       0.34400E+03
+tau_min   3     4 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   4     4 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   5     4 : 0.34400E+03      --       0.34400E+03
+tau_min   6     4 : 0.34400E+03      --       0.34400E+03
+tau_min   7     4 : 0.34400E+03      --       0.34400E+03
+tau_min   8     4 : 0.34400E+03      --       0.34400E+03
  Filling grid for alpha_S computation ... 
  done... 
  Scale values (may change event by event):
- muR,  muR_reference:  0.177410D+03 0.177410D+03  1.00
- muF1, muF1_reference: 0.177410D+03 0.177410D+03  1.00
- muF2, muF2_reference: 0.177410D+03 0.177410D+03  1.00
- QES,  QES_reference:  0.177410D+03 0.177410D+03  1.00
+ muR,  muR_reference:  0.175830D+03 0.175830D+03  1.00
+ muF1, muF1_reference: 0.175830D+03 0.175830D+03  1.00
+ muF2, muF2_reference: 0.175830D+03 0.175830D+03  1.00
+ QES,  QES_reference:  0.175830D+03 0.175830D+03  1.00
   
  muR_reference [functional form]:
     H_T/2 := sum_i mT(i)/2, i=final state
@@ -313,7 +313,7 @@ tau_min   8     6 : 0.34400E+03      --       0.34400E+03
  QES_reference [functional form]: 
     H_T/2 := sum_i mT(i)/2, i=final state
   
- alpha_s=  0.10808037809414334     
+ alpha_s=  0.10821403697337086     
  counterterm S.O           1 NP1
  BORN: keeping split order           1
  counterterm S.O           2 NP3
@@ -326,7 +326,7 @@ tau_min   8     6 : 0.34400E+03      --       0.34400E+03
  BORN: not keeping split order           1
  Charge-linked born are not used
  Color-linked born are used
- alpha_s value used for the virtuals is (for the first PS point):   0.10808037809414334     
+ alpha_s value used for the virtuals is (for the first PS point):   0.10821403697337086     
   ========================================================================================== 
  {                                                                                          }
  {       [32m                                                                            [0m       }
@@ -456,9 +456,9 @@ tau_min   8     6 : 0.34400E+03      --       0.34400E+03
        QED:           0
  ---- POLES CANCELLED ----
   COEFFICIENT DOUBLE POLE:
-        MadFKS:   -6.8271121715618985E-002           OLP:   -6.8271121715618985E-002
+        MadFKS:   -5.4746978108900918E-002           OLP:   -5.4746978108900890E-002
   COEFFICIENT SINGLE POLE:
-        MadFKS:   -4.1064851766457015E-002           OLP:   -4.1064864417299146E-002
+        MadFKS:   -3.0969737463544651E-002           OLP:   -3.0969747584224418E-002
  Parameters related to the different treatment of alpha in ME and PDFs
  alphascheme           0
  nlep_run             -1
@@ -467,32 +467,15 @@ tau_min   8     6 : 0.34400E+03      --       0.34400E+03
  w_run                 1
  PDFscheme           0
  REAL 1: keeping split order            1
-tau_min   1     2 : 0.34400E+03      --       0.34400E+03
-tau_min   2     2 : 0.34400E+03      --       0.34400E+03
-tau_min   3     2 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   4     2 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   5     2 : 0.34400E+03      --       0.34400E+03
-tau_min   6     2 : 0.34400E+03      --       0.34400E+03
-tau_min   7     2 : 0.34400E+03      --       0.34400E+03
-tau_min   8     2 : 0.34400E+03      --       0.34400E+03
- REAL 3: keeping split order            1
+tau_min   1     6 : 0.34400E+03      --       0.34400E+03
+tau_min   2     6 : 0.34400E+03      --       0.34400E+03
+tau_min   3     6 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   4     6 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   5     6 : 0.34400E+03      --       0.34400E+03
+tau_min   6     6 : 0.34400E+03      --       0.34400E+03
+tau_min   7     6 : 0.34400E+03      --       0.34400E+03
+tau_min   8     6 : 0.34400E+03      --       0.34400E+03
  REAL 5: keeping split order            1
-tau_min   1     4 : 0.34400E+03      --       0.34400E+03
-tau_min   2     4 : 0.34400E+03      --       0.34400E+03
-tau_min   3     4 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   4     4 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   5     4 : 0.34400E+03      --       0.34400E+03
-tau_min   6     4 : 0.34400E+03      --       0.34400E+03
-tau_min   7     4 : 0.34400E+03      --       0.34400E+03
-tau_min   8     4 : 0.34400E+03      --       0.34400E+03
-tau_min   1     5 : 0.34400E+03      --       0.34400E+03
-tau_min   2     5 : 0.34400E+03      --       0.34400E+03
-tau_min   3     5 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   4     5 : 0.34400E+03  0.34400E+03  0.34400E+03
-tau_min   5     5 : 0.34400E+03      --       0.34400E+03
-tau_min   6     5 : 0.34400E+03      --       0.34400E+03
-tau_min   7     5 : 0.34400E+03      --       0.34400E+03
-tau_min   8     5 : 0.34400E+03      --       0.34400E+03
 tau_min   1     3 : 0.34400E+03      --       0.34400E+03
 tau_min   2     3 : 0.34400E+03      --       0.34400E+03
 tau_min   3     3 : 0.34400E+03  0.34400E+03  0.34400E+03
@@ -501,6 +484,23 @@ tau_min   5     3 : 0.34400E+03      --       0.34400E+03
 tau_min   6     3 : 0.34400E+03      --       0.34400E+03
 tau_min   7     3 : 0.34400E+03      --       0.34400E+03
 tau_min   8     3 : 0.34400E+03      --       0.34400E+03
+ REAL 3: keeping split order            1
+tau_min   1     5 : 0.34400E+03      --       0.34400E+03
+tau_min   2     5 : 0.34400E+03      --       0.34400E+03
+tau_min   3     5 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   4     5 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   5     5 : 0.34400E+03      --       0.34400E+03
+tau_min   6     5 : 0.34400E+03      --       0.34400E+03
+tau_min   7     5 : 0.34400E+03      --       0.34400E+03
+tau_min   8     5 : 0.34400E+03      --       0.34400E+03
+tau_min   1     2 : 0.34400E+03      --       0.34400E+03
+tau_min   2     2 : 0.34400E+03      --       0.34400E+03
+tau_min   3     2 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   4     2 : 0.34400E+03  0.34400E+03  0.34400E+03
+tau_min   5     2 : 0.34400E+03      --       0.34400E+03
+tau_min   6     2 : 0.34400E+03      --       0.34400E+03
+tau_min   7     2 : 0.34400E+03      --       0.34400E+03
+tau_min   8     2 : 0.34400E+03      --       0.34400E+03
 tau_min   1     1 : 0.34400E+03      --       0.34400E+03
 tau_min   2     1 : 0.34400E+03      --       0.34400E+03
 tau_min   3     1 : 0.34400E+03  0.34400E+03  0.34400E+03
@@ -511,103 +511,103 @@ tau_min   7     1 : 0.34400E+03      --       0.34400E+03
 tau_min   8     1 : 0.34400E+03      --       0.34400E+03
  REAL 2: keeping split order            1
  REAL 4: keeping split order            1
-ABS integral  = 0.5073E+03  +/-  0.2289E+02  (   4.511 %)
-Integral      = 0.2880E+03  +/-  0.2303E+02  (   7.998 %)
-Virtual       = -.9959E+03  +/-  0.1180E+02  (   1.185 %)
-Virtual ratio = -.2093E+01  +/-  0.7367E-02  (   0.352 %)
-ABS virtual   = 0.9974E+03  +/-  0.1180E+02  (   1.183 %)
-Born          = 0.3782E+03  +/-  0.4265E+01  (   1.128 %)
-V  2          = -.2288E-01  +/-  0.2296E+00  ( ******* %)
-B  2          = 0.3782E+03  +/-  0.4265E+01  (   1.128 %)
-V  3          = -.9959E+03  +/-  0.1179E+02  (   1.184 %)
+ABS integral  = 0.4733E+03  +/-  0.8054E+01  (   1.702 %)
+Integral      = 0.2613E+03  +/-  0.8415E+01  (   3.221 %)
+Virtual       = -.9889E+03  +/-  0.1128E+02  (   1.141 %)
+Virtual ratio = -.2076E+01  +/-  0.6916E-02  (   0.333 %)
+ABS virtual   = 0.9906E+03  +/-  0.1127E+02  (   1.138 %)
+Born          = 0.4109E+03  +/-  0.4197E+01  (   1.022 %)
+V  2          = -.3665E-01  +/-  0.2254E+00  ( 615.157 %)
+B  2          = 0.4109E+03  +/-  0.4197E+01  (   1.022 %)
+V  3          = -.9888E+03  +/-  0.1125E+02  (   1.138 %)
 Chi^2 per d.o.f. 0.0000E+00
-accumulated results ABS integral  = 0.5073E+03  +/-  0.2289E+02  (   4.511 %)
-accumulated results Integral      = 0.2880E+03  +/-  0.2303E+02  (   7.998 %)
-accumulated results Virtual       = -.9959E+03  +/-  0.1180E+02  (   1.185 %)
-accumulated results Virtual ratio = -.2093E+01  +/-  0.7367E-02  (   0.352 %)
-accumulated results ABS virtual   = 0.9974E+03  +/-  0.1180E+02  (   1.183 %)
-accumulated results Born          = 0.3782E+03  +/-  0.4265E+01  (   1.128 %)
-accumulated results V  2          = -.2288E-01  +/-  0.2296E+00  ( ******* %)
-accumulated results B  2          = 0.3782E+03  +/-  0.4265E+01  (   1.128 %)
-accumulated results V  3          = -.9959E+03  +/-  0.1179E+02  (   1.184 %)
+accumulated results ABS integral  = 0.4733E+03  +/-  0.8054E+01  (   1.702 %)
+accumulated results Integral      = 0.2613E+03  +/-  0.8415E+01  (   3.221 %)
+accumulated results Virtual       = -.9889E+03  +/-  0.1128E+02  (   1.141 %)
+accumulated results Virtual ratio = -.2076E+01  +/-  0.6916E-02  (   0.333 %)
+accumulated results ABS virtual   = 0.9906E+03  +/-  0.1127E+02  (   1.138 %)
+accumulated results Born          = 0.4109E+03  +/-  0.4197E+01  (   1.022 %)
+accumulated results V  2          = -.3665E-01  +/-  0.2254E+00  ( 615.157 %)
+accumulated results B  2          = 0.4109E+03  +/-  0.4197E+01  (   1.022 %)
+accumulated results V  3          = -.9888E+03  +/-  0.1125E+02  (   1.138 %)
 accumulated result Chi^2 per DoF = 0.0000E+00
-  1:  0                                                  1                                                2
-  2:  0                                    1                                     2 3         4 5          6
-channel    1 :     1 T      430      360  0.8312E+01  -.3755E+01  0.1000E+01
-channel    2 :     1 T     2283     1118  0.4055E+02  0.2809E+02  0.1000E+01
-channel    3 :     2 T     2023      996  0.3703E+02  -.6260E+01  0.1000E+01
-channel    4 :     2 T     9759     4805  0.2093E+03  0.1512E+03  0.2894E+00
-channel    5 :     3 T     1901      910  0.3539E+02  -.6596E+01  0.1000E+01
-channel    6 :     3 T     9856     5094  0.1767E+03  0.1253E+03  0.1000E+01
+  1:  0                                                 1                                                 2
+  2:  0                                       1                                         23        4 5     6
+channel    1 :     1 T      511      365  0.8533E+01  -.2896E+01  0.1000E+01
+channel    2 :     1 T     2387     1152  0.3931E+02  0.2742E+02  0.1000E+01
+channel    3 :     2 T     1972     1041  0.3536E+02  -.6275E+01  0.1000E+01
+channel    4 :     2 T     9761     4926  0.1719E+03  0.1188E+03  0.1000E+01
+channel    5 :     3 T     1932      967  0.3629E+02  -.9071E+01  0.1000E+01
+channel    6 :     3 T     9677     4803  0.1819E+03  0.1333E+03  0.1000E+01
  ------- iteration           2
-ABS integral  = 0.4704E+03  +/-  0.5456E+01  (   1.160 %)
-Integral      = 0.2512E+03  +/-  0.5983E+01  (   2.382 %)
-Virtual       = -.9812E+03  +/-  0.1346E+02  (   1.372 %)
-Virtual ratio = -.2083E+01  +/-  0.8148E-02  (   0.391 %)
-ABS virtual   = 0.9829E+03  +/-  0.1346E+02  (   1.369 %)
-Born          = 0.3435E+03  +/-  0.4212E+01  (   1.226 %)
-V  2          = 0.2247E+00  +/-  0.2563E+00  ( 114.065 %)
-B  2          = 0.3435E+03  +/-  0.4212E+01  (   1.226 %)
-V  3          = -.9815E+03  +/-  0.1347E+02  (   1.372 %)
-Chi^2= 0.1697E+01
-accumulated results ABS integral  = 0.4775E+03  +/-  0.5307E+01  (   1.111 %)
-accumulated results Integral      = 0.2587E+03  +/-  0.5791E+01  (   2.238 %)
-accumulated results Virtual       = -.9891E+03  +/-  0.8875E+01  (   0.897 %)
-accumulated results Virtual ratio = -.2088E+01  +/-  0.5464E-02  (   0.262 %)
-accumulated results ABS virtual   = 0.9906E+03  +/-  0.8872E+01  (   0.896 %)
-accumulated results Born          = 0.3607E+03  +/-  0.2997E+01  (   0.831 %)
-accumulated results V  2          = 0.9411E-01  +/-  0.1710E+00  ( 181.725 %)
-accumulated results B  2          = 0.3607E+03  +/-  0.2997E+01  (   0.831 %)
-accumulated results V  3          = -.9892E+03  +/-  0.8870E+01  (   0.897 %)
-accumulated result Chi^2 per DoF = 0.1697E+01
-  1:  0                                               1                                                   2
-  2:  0                                       1                                         2 3     4 5       6
-channel    1 :     1 T      467      430  0.9182E+01  -.3989E+01  0.1000E+01
-channel    2 :     1 T     2127     2283  0.4386E+02  0.3036E+02  0.1000E+01
-channel    3 :     2 T     1939     2023  0.3675E+02  -.9119E+01  0.1000E+01
-channel    4 :     2 T    10758     9759  0.1791E+03  0.1270E+03  0.5789E+00
-channel    5 :     3 T     1814     1901  0.3535E+02  -.7379E+01  0.1000E+01
-channel    6 :     3 T     9138     9856  0.1733E+03  0.1219E+03  0.1000E+01
+ABS integral  = 0.4673E+03  +/-  0.4018E+01  (   0.860 %)
+Integral      = 0.2503E+03  +/-  0.4698E+01  (   1.877 %)
+Virtual       = -.9645E+03  +/-  0.1095E+02  (   1.135 %)
+Virtual ratio = -.2092E+01  +/-  0.6848E-02  (   0.327 %)
+ABS virtual   = 0.9659E+03  +/-  0.1094E+02  (   1.133 %)
+Born          = 0.4010E+03  +/-  0.4077E+01  (   1.017 %)
+V  2          = 0.9465E-01  +/-  0.2258E+00  ( 238.564 %)
+B  2          = 0.4010E+03  +/-  0.4077E+01  (   1.017 %)
+V  3          = -.9646E+03  +/-  0.1093E+02  (   1.133 %)
+Chi^2= 0.2508E+00
+accumulated results ABS integral  = 0.4693E+03  +/-  0.3595E+01  (   0.766 %)
+accumulated results Integral      = 0.2542E+03  +/-  0.4102E+01  (   1.613 %)
+accumulated results Virtual       = -.9765E+03  +/-  0.7856E+01  (   0.805 %)
+accumulated results Virtual ratio = -.2084E+01  +/-  0.4866E-02  (   0.234 %)
+accumulated results ABS virtual   = 0.9780E+03  +/-  0.7853E+01  (   0.803 %)
+accumulated results Born          = 0.4059E+03  +/-  0.2925E+01  (   0.721 %)
+accumulated results V  2          = 0.2895E-01  +/-  0.1595E+00  ( 551.103 %)
+accumulated results B  2          = 0.4059E+03  +/-  0.2925E+01  (   0.721 %)
+accumulated results V  3          = -.9766E+03  +/-  0.7839E+01  (   0.803 %)
+accumulated result Chi^2 per DoF = 0.2508E+00
+  1:  0                                                1                                                  2
+  2:  0                                        1                                         2 3     4 5      6
+channel    1 :     1 F      439      511  0.8298E+01  -.3746E+01  0.1000E+01
+channel    2 :     1 T     2192     2387  0.4085E+02  0.3044E+02  0.1000E+01
+channel    3 :     2 T     1901     1972  0.3530E+02  -.7583E+01  0.1000E+01
+channel    4 :     2 T     9583     9761  0.1756E+03  0.1204E+03  0.1000E+01
+channel    5 :     3 T     1931     1932  0.3509E+02  -.8151E+01  0.1000E+01
+channel    6 :     3 T    10202     9677  0.1742E+03  0.1229E+03  0.1000E+01
  -------
- Final result [ABS]:   477.50637118397714       +/-   5.3071841518963252     
- Final result:   258.74370925520498       +/-   5.7906773156940252     
- chi**2 per D.o.F.:   1.6970988690529698     
+ Final result [ABS]:   469.28684232620304       +/-   3.5952534355681034     
+ Final result:   254.24977424810791       +/-   4.1021842548144853     
+ chi**2 per D.o.F.:  0.25083290866639846     
  Satistics from MadLoop:
-   Total points tried:                                     40958
+   Total points tried:                                     52343
    Stability unknown:                                          0
-   Stable PS point:                                         5368
-   Unstable PS point (and rescued):                        35590
+   Stable PS point:                                         6996
+   Unstable PS point (and rescued):                        45347
    Exceptional PS point (unstable and not rescued):            0
-   Double precision used:                                   5368
-   Quadruple precision used:                               35590
+   Double precision used:                                   6996
+   Quadruple precision used:                               45347
    Initialization phase-space points:                          0
    Unknown return code (100):                                  0
    Unknown return code (10):                                   0
    Unit return code distribution (1):               
- #Unit            6  =         5368
- #Unit            8  =        35590
+ #Unit            6  =         6996
+ #Unit            8  =        45347
  counters for the granny resonances
  ntot                0
- Time spent in Born :   0.117375523    
- Time spent in PS_Generation :   0.363066167    
- Time spent in Reals_evaluation:    1.00192308    
+ Time spent in Born :   0.123299979    
+ Time spent in PS_Generation :   0.548681140    
+ Time spent in Reals_evaluation:    1.10153043    
  Time spent in MCsubtraction :    0.00000000    
- Time spent in Counter_terms :    1.29992080    
- Time spent in Integrated_CT :   0.949951172    
- Time spent in Virtuals :    2302.61890    
+ Time spent in Counter_terms :    1.47238016    
+ Time spent in Integrated_CT :    1.15332031    
+ Time spent in Virtuals :    2968.97046    
  Time spent in FxFx_cluster :    0.00000000    
- Time spent in Nbody_prefactor :    1.15728498    
- Time spent in N1body_prefactor :    3.22672129E-02
- Time spent in Adding_alphas_pdf :   0.404999495    
- Time spent in Reweight_scale :   0.765452087    
+ Time spent in Nbody_prefactor :    1.26075161    
+ Time spent in N1body_prefactor :    3.68057042E-02
+ Time spent in Adding_alphas_pdf :   0.642877460    
+ Time spent in Reweight_scale :    1.10000169    
  Time spent in Reweight_pdf :    0.00000000    
- Time spent in Filling_plots :    7.01127672    
- Time spent in Applying_cuts :   0.165528089    
+ Time spent in Filling_plots :    8.08580971    
+ Time spent in Applying_cuts :   0.204636276    
  Time spent in Sum_ident_contr :    0.00000000    
  Time spent in Pick_unwgt :    0.00000000    
  Time spent in Write_events :    0.00000000    
  Time spent in EW_sudakov :    0.00000000    
- Time spent in AlphaS_dependencies :    4.56659651    
- Time spent in Other_tasks :   0.938964844    
- Time spent in Total :    2321.39331    
-Time in seconds: 2321
+ Time spent in AlphaS_dependencies :    5.05974197    
+ Time spent in Other_tasks :    1.11791992    
+ Time spent in Total :    2990.87817    
+Time in seconds: 2993

@@ -25,8 +25,8 @@
    
  Enter graph number (iconfig), '0' loops over all graphs
 Using random seed offsets:     1 ,      1 ,      0
-  with seed                   34
- Ranmar initialization seeds       13168        9409
+  with seed                   35
+ Ranmar initialization seeds       14387        9410
 tau_min   1     1 : 0.34400E+03      --       0.34400E+03
 tau_min   2     1 : 0.34400E+03      --       0.34400E+03
 tau_min   3     1 : 0.34400E+03  0.34400E+03  0.34400E+03
@@ -50,9 +50,9 @@ tau_min   8     1 : 0.34400E+03      --       0.34400E+03
  
  REAL 1: keeping split order            1
  Soft tests done for (Born) config           1
- Failures:           0           0           3           0
+ Failures:           0           0           1           0
 Sum of all orders:      Soft test  1 PASSED. Fraction of failures: 0.00
-Split-order  2: NP1:  0; NP3:  0; NP2:  0; QCD:  6; QED:  0;      Soft test  1 PASSED. Fraction of failures: 0.03
+Split-order  2: NP1:  0; NP3:  0; NP2:  0; QCD:  6; QED:  0;      Soft test  1 PASSED. Fraction of failures: 0.01
 Split-order  3: NP1:  2; NP3:  0; NP2:  0; QCD:  4; QED:  0;      Soft test  1 PASSED. Fraction of failures: 0.00
  
  
@@ -76,9 +76,9 @@ Split-order  3: NP1:  2; NP3:  0; NP2:  0; QCD:  4; QED:  0; Collinear test  1 P
  
  
  Soft tests done for (Born) config           1
- Failures:           0           0           0           0
+ Failures:           0           0           2           0
 Sum of all orders:      Soft test  2 PASSED. Fraction of failures: 0.00
-Split-order  2: NP1:  0; NP3:  0; NP2:  0; QCD:  6; QED:  0;      Soft test  2 PASSED. Fraction of failures: 0.00
+Split-order  2: NP1:  0; NP3:  0; NP2:  0; QCD:  6; QED:  0;      Soft test  2 PASSED. Fraction of failures: 0.02
 Split-order  3: NP1:  2; NP3:  0; NP2:  0; QCD:  4; QED:  0;      Soft test  2 PASSED. Fraction of failures: 0.00
  
  
@@ -236,7 +236,7 @@ Split-order  3: NP1:  2; NP3:  0; NP2:  0; QCD:  4; QED:  0;      Soft test  8 P
  
  
  Collinear tests done for (Born) config           1
- Failures:           1           0           1           0
-Sum of all orders: Collinear test  8 PASSED. Fraction of failures: 0.01
-Split-order  2: NP1:  0; NP3:  0; NP2:  0; QCD:  6; QED:  0; Collinear test  8 PASSED. Fraction of failures: 0.01
+ Failures:           0           0           0           0
+Sum of all orders: Collinear test  8 PASSED. Fraction of failures: 0.00
+Split-order  2: NP1:  0; NP3:  0; NP2:  0; QCD:  6; QED:  0; Collinear test  8 PASSED. Fraction of failures: 0.00
 Split-order  3: NP1:  2; NP3:  0; NP2:  0; QCD:  4; QED:  0; Collinear test  8 PASSED. Fraction of failures: 0.00
