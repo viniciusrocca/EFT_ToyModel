@@ -28,13 +28,13 @@
 
       MASS_ION(2) = -1.000000000000000D+00
 
-      PDLABEL = 'nn23lo1'
+      PDLABEL = 'nn23nlo'
 
-      PDSUBLABEL(1) = 'nn23lo1'
+      PDSUBLABEL(1) = 'nn23nlo'
 
-      PDSUBLABEL(2) = 'nn23lo1'
+      PDSUBLABEL(2) = 'nn23nlo'
 
-      LHAID = 230000
+      LHAID = 244600
 
       FIXED_REN_SCALE = .FALSE.
 
