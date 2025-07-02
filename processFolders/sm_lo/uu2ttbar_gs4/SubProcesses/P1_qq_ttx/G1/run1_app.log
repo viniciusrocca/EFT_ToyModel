@@ -1,12 +1,12 @@
  Process in group number            1
  A PDF is used, so alpha_s(MZ) is going to be modified
- Old value of alpha_s from param_card:   0.13000000000000003     
+ Old value of alpha_s from param_card:   0.11900000000000002     
   ****************************************
  
        NNPDFDriver version 1.0.3
-   Grid: NNPDF23_lo_as_0130_qed_mem0.grid
+   Grid: NNPDF23nlo_as_0119_qed_mem0.grid
   ****************************************
- New value of alpha_s from PDF nn23lo1:  0.13000000000000000     
+ New value of alpha_s from PDF nn23nlo:  0.11899999999999999     
  Define smin to   118336.00000000000     
  *****************************************************
  *               MadGraph/MadEvent                   *
@@ -35,7 +35,7 @@
  mdl_mSDM =    0.0000000000000000     
  aEWM1 =    127.90000000000001     
  mdl_Gf =    1.1663700000000000E-005
- aS =   0.13000000000000003     
+ aS =   0.11900000000000002     
  mdl_ymb =    4.7000000000000002     
  mdl_ymt =    172.00000000000000     
  mdl_ymtau =    1.7769999999999999     
@@ -80,20 +80,20 @@
   Internal Params evaluated point by point
   ----------------------------------------
   
- mdl_sqrt__aS =   0.36055512754639896     
- mdl_G__exp__2 =    1.6336281798666927     
+ mdl_sqrt__aS =   0.34496376621320685     
+ mdl_G__exp__2 =    1.4953981031087418     
   Couplings of UV_BSM_ToyModel-UFO
   ---------------------------------
   
-        GC_11 =   0.00000E+00   0.12781E+01
+        GC_11 =   0.00000E+00   0.12229E+01
 
  Collider parameters:
  --------------------
 
  Running at P P   machine @    13000.000000000000       GeV
- PDF set = nn23lo1
- alpha_s(Mz)= 0.1300 running at 2 loops.
- alpha_s(Mz)= 0.1300 running at 2 loops.
+ PDF set = nn23nlo
+ alpha_s(Mz)= 0.1190 running at 2 loops.
+ alpha_s(Mz)= 0.1190 running at 2 loops.
  Renormalization scale set on event-by-event basis
  Factorization   scale set on event-by-event basis
 
@@ -130,8 +130,8 @@ Running Configuration Number:    1
  T-channel found:            0
  Transforming s_hat 1/s            3   7.0021301775147942E-004   118336.00000000000        168999999.99999997     
 Using random seed offsets     1 :      1
-  with seed                   24
- Ranmar initialization seeds       31059        9398
+  with seed                   30
+ Ranmar initialization seeds        8292        9405
   Particle       3       4
       Et >     0.0     0.0
        E >     0.0     0.0
@@ -148,53 +148,53 @@ xqcutij # 3>     0.0     0.0
  ********************************************
  
  RESET CUMULATIVE VARIABLE
- Iteration  1   Mean: 0.1931E+02 Abs mean: 0.1931E+02   Fluctuation:  0.680E+00   0.832E+02   100.0%
-  1    0.1931E+02 0.1931E+02 +- 0.6805E+00      1.11
- Writing out events   3.8622221052162465E-003   1.1142999930627611     
+ Iteration  1   Mean: 0.1773E+02 Abs mean: 0.1773E+02   Fluctuation:  0.631E+00   0.747E+02    99.8%
+  1    0.1773E+02 0.1773E+02 +- 0.6311E+00      1.13
+ Writing out events   3.5527876055247375E-003   1.1257251894864504     
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         1009           0
- Iteration  2   Mean: 0.1809E+02 Abs mean: 0.1809E+02   Fluctuation:  0.256E+00   0.441E+02   100.0%
-  2    0.1809E+02 0.1809E+02 +- 0.2562E+00      0.63
+ Iteration  2   Mean: 0.1797E+02 Abs mean: 0.1797E+02   Fluctuation:  0.237E+00   0.513E+02   100.0%
+  2    0.1797E+02 0.1797E+02 +- 0.2374E+00      0.59
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         2000           0
- Iteration  3   Mean: 0.1867E+02 Abs mean: 0.1867E+02   Fluctuation:  0.121E+00   0.352E+02   100.0%
-  3    0.1867E+02 0.1867E+02 +- 0.1207E+00      0.41
+ Iteration  3   Mean: 0.1774E+02 Abs mean: 0.1774E+02   Fluctuation:  0.110E+00   0.353E+02   100.0%
+  3    0.1774E+02 0.1774E+02 +- 0.1102E+00      0.39
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         4000           0
- Accuracy:    0.009   0.100   0.006   2.646
- Finished due to accuracy    9.4372239045335607E-003  0.10000000000000001     
+ Accuracy:    0.004   0.100   0.006   0.423
+ Finished due to accuracy    3.6137329811734521E-003  0.10000000000000001     
 
  -------------------------------------------------------------------------------
- Accumulated results:   Integral =  0.1859E+02
-                        Std dev  =  0.1079E+00
-                       Cross sec =  0.1859E+02
-             Chi**2 per DoF.     =      2.6457
+ Accumulated results:   Integral =  0.1778E+02
+                        Std dev  =  0.9872E-01
+                       Cross sec =  0.1778E+02
+             Chi**2 per DoF.     =      0.4235
  -------------------------------------------------------------------------------
- Found          400  events.
- Wrote          397  events.
- Actual xsec    18.593229006123462     
- Correct abs xsec    18.593229006123462     
- Event xsec    18.593229006123430     
+ Found          386  events.
+ Wrote          383  events.
+ Actual xsec    17.777567061607709     
+ Correct abs xsec    17.777567061607709     
+ Event xsec    17.777567061607659     
  Events wgts > 1:            0
  % Cross section > 1:    0.0000000000000000        0.0000000000000000     
 -------------------------------------------------
 ---------------------------
- Results Last   3 iters: Integral =   0.1859E+02
-                     Abs integral =   0.1859E+02
-                          Std dev =   0.1079E+00
-                  Chi**2 per DoF. =      2.7026
+ Results Last   3 iters: Integral =   0.1778E+02
+                     Abs integral =   0.1778E+02
+                          Std dev =   0.9872E-01
+                  Chi**2 per DoF. =      0.4163
 -------------------------------------------------
 ---------------------------
  Status  0.10000000000000001                4           5
@@ -203,5 +203,7 @@ ls status:
 events.lhe
 ftn26
 input_app.txt
+multijob.dat
 results.dat
+run_01_log.txt
 run1_app.log

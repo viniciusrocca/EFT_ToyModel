@@ -10,14 +10,14 @@ tar -xzf MadLoop5_resources.tar.gz
 fi
 keeplog=false
 if [ "$keeplog" = true ] ; then
-    k=run_01_app.log
+    k=Run_as_psf_setNLO_app.log
 else
     k=/dev/null
 fi
 script=ajob5                         
 
 grid_directory=
-j=G2e0
+j=G2d0
      if [[ ! -e $j ]]; then
           mkdir $j
           if [[ -e $grid_directory/ftn26 ]];then
@@ -34,13 +34,13 @@ j=G2e0
 	 rm -f $k
      fi
      rm -f moffset.dat >& /dev/null
-      echo   5  > moffset.dat
+      echo   4  > moffset.dat
      if  [[ -e ftn26 ]]; then
           cp ftn26 ftn25
      fi
      # create the input file
-         echo "    2532       9       3" >& input_sg.txt
-         echo "    -2.1980340783203505" >> input_sg.txt
+         echo "    2607       9       3" >& input_sg.txt
+         echo "    -2.4345827612063844" >> input_sg.txt
      if [[ ! -e ftn25 ]]; then
          echo "2" >> input_sg.txt   # grid refinement
          echo "1" >> input_sg.txt   # suppress amplitude

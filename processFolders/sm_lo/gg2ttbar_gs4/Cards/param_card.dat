@@ -37,7 +37,7 @@ BLOCK MASS #
 BLOCK SMINPUTS # 
       1 1.279000e+02 # aewm1
       2 1.166370e-05 # gf
-      3 1.300000e-01 # as (note: this parameter is not used if you use a pdf set)
+      3 1.1900000e-01 # as (note: this parameter is not used if you use a pdf set)
 ###################################
 ## INFORMATION FOR YUKAWA
 ###################################
