@@ -193,8 +193,8 @@ Running Configuration Number:    1
  T-channel found:            0
  Transforming s_hat 1/s            3   7.0021301775147942E-004   118336.00000000000        168999999.99999997     
 Using random seed offsets     1 :      1
-  with seed                   36
- Ranmar initialization seeds       15606        9411
+  with seed                   48
+ Ranmar initialization seeds       30234        9423
   Particle       3       4
       Et >     0.0     0.0
        E >     0.0     0.0
@@ -211,53 +211,53 @@ xqcutij # 3>     0.0     0.0
  ********************************************
  
  RESET CUMULATIVE VARIABLE
- Iteration  1   Mean: 0.1733E+02 Abs mean: 0.1733E+02   Fluctuation:  0.602E+00   0.754E+02    99.9%
-  1    0.1733E+02 0.1733E+02 +- 0.6020E+00      1.10
- Writing out events   3.4701077832380166E-003   1.0983573855539228     
+ Iteration  1   Mean: 0.1691E+02 Abs mean: 0.1691E+02   Fluctuation:  0.607E+00   0.776E+02   100.0%
+  1    0.1691E+02 0.1691E+02 +- 0.6065E+00      1.13
+ Writing out events   3.3823121087115412E-003   1.1341149800965160     
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         1009           0
- Iteration  2   Mean: 0.1802E+02 Abs mean: 0.1802E+02   Fluctuation:  0.248E+00   0.572E+02    99.9%
-  2    0.1802E+02 0.1802E+02 +- 0.2478E+00      0.62
+ Iteration  2   Mean: 0.1768E+02 Abs mean: 0.1768E+02   Fluctuation:  0.240E+00   0.535E+02   100.0%
+  2    0.1768E+02 0.1768E+02 +- 0.2404E+00      0.61
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         2000           0
- Iteration  3   Mean: 0.1750E+02 Abs mean: 0.1750E+02   Fluctuation:  0.115E+00   0.336E+02   100.0%
-  3    0.1750E+02 0.1750E+02 +- 0.1154E+00      0.42
+ Iteration  3   Mean: 0.1754E+02 Abs mean: 0.1754E+02   Fluctuation:  0.112E+00   0.339E+02   100.0%
+  3    0.1754E+02 0.1754E+02 +- 0.1117E+00      0.40
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         4000           0
- Accuracy:    0.008   0.100   0.006   1.953
- Finished due to accuracy    8.1908100838476369E-003  0.10000000000000001     
+ Accuracy:    0.005   0.100   0.006   0.658
+ Finished due to accuracy    4.6193016218119267E-003  0.10000000000000001     
 
  -------------------------------------------------------------------------------
- Accumulated results:   Integral =  0.1759E+02
-                        Std dev  =  0.1031E+00
-                       Cross sec =  0.1759E+02
-             Chi**2 per DoF.     =      1.9528
+ Accumulated results:   Integral =  0.1755E+02
+                        Std dev  =  0.9990E-01
+                       Cross sec =  0.1755E+02
+             Chi**2 per DoF.     =      0.6585
  -------------------------------------------------------------------------------
- Found          370  events.
- Wrote          367  events.
- Actual xsec    17.592451204402490     
- Correct abs xsec    17.592451204402490     
- Event xsec    17.592451204402664     
+ Found          379  events.
+ Wrote          376  events.
+ Actual xsec    17.549124915627864     
+ Correct abs xsec    17.549124915627864     
+ Event xsec    17.549124915627775     
  Events wgts > 1:            0
  % Cross section > 1:    0.0000000000000000        0.0000000000000000     
 -------------------------------------------------
 ---------------------------
- Results Last   3 iters: Integral =   0.1759E+02
-                     Abs integral =   0.1759E+02
-                          Std dev =   0.1031E+00
-                  Chi**2 per DoF. =      1.8849
+ Results Last   3 iters: Integral =   0.1755E+02
+                     Abs integral =   0.1755E+02
+                          Std dev =   0.9990E-01
+                  Chi**2 per DoF. =      0.6959
 -------------------------------------------------
 ---------------------------
  Status  0.10000000000000001                4           5
@@ -271,3 +271,5 @@ results.dat
 run_01_log.txt
 run_02_log.txt
 run1_app.log
+Run_as_pdf_setNLO_log.txt
+run_doubledMasses_log.txt

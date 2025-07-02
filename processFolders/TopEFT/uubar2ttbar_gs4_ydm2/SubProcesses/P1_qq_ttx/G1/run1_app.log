@@ -23,7 +23,7 @@
   External Params
   ---------------------------------
   
- mdl_yDM =    1.0000000000000000     
+ mdl_yDM =    2.0000000000000000     
  mdl_lamHs =    1.0000000000000000     
  mdl_lamS =    1.0000000000000000     
  mdl_mSDM =    90000.000000000000     
@@ -60,7 +60,7 @@
  mdl_mSDM__exp__4 =    6.5610000000000000E+019
  mdl_mPsiT__exp__6 =    1.0000000000000000E+030
  mdl_mSDM__exp__6 =    5.3144100000000000E+029
- mdl_yDM__exp__2 =    1.0000000000000000     
+ mdl_yDM__exp__2 =    4.0000000000000000     
  mdl_MH__exp__2 =    15625.000000000000     
  mdl_ymt__exp__2 =    29584.000000000000     
  mdl_ymt__exp__3 =    5088448.0000000000     
@@ -106,18 +106,18 @@
  mdl_cud1a =    8.2253660217037888E-016
  mdl_cuub =   -8.2253660217037888E-016
  mdl_g1__exp__2 =   0.12821534428217499     
- mdl_ceub =   -7.1390520090071353E-015
- mdl_cHq1b =    1.4559125309108803E-014
- mdl_cHq3 =   -1.4559125309108803E-014
- mdl_cHub =    3.5695260045035676E-015
- mdl_club =   -3.5695260045035676E-015
- mdl_cqu1b =    1.1898420015011891E-015
- mdl_cuB =    3.3729544431194018E-015
- mdl_cud1b =   -2.3796840030023783E-015
- mdl_cuHa =   -6.0905648474588935E-014
+ mdl_ceub =   -2.8556208036028541E-014
+ mdl_cHq1b =    5.8236501236435212E-014
+ mdl_cHq3 =   -5.8236501236435212E-014
+ mdl_cHub =    1.4278104018014271E-014
+ mdl_club =   -1.4278104018014271E-014
+ mdl_cqu1b =    4.7593680060047566E-015
+ mdl_cuB =    1.3491817772477607E-014
+ mdl_cud1b =   -9.5187360120095132E-015
+ mdl_cuHa =   -2.4362259389835574E-013
  mdl_vev__exp__3 =    14927015.789112601     
- mdl_cuHb =    2.8766325720847305E-014
- mdl_cuud =    4.7593683867541973E-015
+ mdl_cuHb =    1.1506530288338922E-013
+ mdl_cuud =    1.9037473547016789E-014
  mdl_muH =    88.388347648318444     
  mdl_ee__exp__2 =    9.8251529432049817E-002
  mdl_sw__exp__2 =   0.23369913342182450     
@@ -140,19 +140,19 @@
  mdl_cuua =   -4.7203325780800013E-014
  mdl_cuuc =    1.5734444444444450E-014
  mdl_G__exp__2 =    1.4953981031087418     
- mdl_cqu8b =    1.2489602814740600E-013
- mdl_cud8b =    1.2489602814740600E-013
- mdl_cuue =   -2.0816004691234335E-014
- mdl_cuuf =    6.2448010077030115E-014
- mdl_cuG =    1.7278663455196062E-014
+ mdl_cqu8b =    4.9958411258962402E-013
+ mdl_cud8b =    4.9958411258962402E-013
+ mdl_cuue =   -8.3264018764937341E-014
+ mdl_cuuf =    2.4979204030812046E-013
+ mdl_cuG =    6.9114653820784248E-014
   Couplings of Top-EFTfull-UFO
   ---------------------------------
   
-        GC_31 =   0.00000E+00   0.12490E-12
-        GC_44 =  -0.00000E+00  -0.20816E-13
-        GC_45 =   0.00000E+00   0.62448E-13
+        GC_31 =   0.00000E+00   0.49958E-12
+        GC_44 =  -0.00000E+00  -0.83264E-13
+        GC_45 =   0.00000E+00   0.24979E-12
         GC_53 =   0.00000E+00   0.12229E+01
-        GC_88 =   0.00000E+00   0.30083E-11
+        GC_88 =   0.00000E+00   0.12033E-10
 
  Collider parameters:
  --------------------
@@ -197,8 +197,8 @@ Running Configuration Number:    1
  T-channel found:            0
  Transforming s_hat 1/s            3   7.0021301775147942E-004   118336.00000000000        168999999.99999997     
 Using random seed offsets     1 :      1
-  with seed                   30
- Ranmar initialization seeds        8292        9405
+  with seed                   48
+ Ranmar initialization seeds       30234        9423
   Particle       3       4
       Et >     0.0     0.0
        E >     0.0     0.0
@@ -215,53 +215,53 @@ xqcutij # 3>     0.0     0.0
  ********************************************
  
  RESET CUMULATIVE VARIABLE
- Iteration  1   Mean: 0.4881E-06 Abs mean: 0.4881E-06   Fluctuation:  0.168E-07   0.273E-05    99.8%
-  1    0.4881E-06 0.4881E-06 +- 0.1683E-07      1.09
- Writing out events   9.7809245169666576E-011   1.0903207635772243     
+ Iteration  1   Mean: 0.1891E-05 Abs mean: 0.1891E-05   Fluctuation:  0.655E-07   0.956E-05   100.0%
+  1    0.1891E-05 0.1891E-05 +- 0.6551E-07      1.10
+ Writing out events   3.7815914464107825E-010   1.0956001214438496     
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         1009           0
- Iteration  2   Mean: 0.4852E-06 Abs mean: 0.4852E-06   Fluctuation:  0.632E-08   0.154E-05   100.0%
-  2    0.4852E-06 0.4852E-06 +- 0.6318E-08      0.58
+ Iteration  2   Mean: 0.1963E-05 Abs mean: 0.1963E-05   Fluctuation:  0.266E-07   0.960E-05   100.0%
+  2    0.1963E-05 0.1963E-05 +- 0.2657E-07      0.61
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         2000           0
- Iteration  3   Mean: 0.4878E-06 Abs mean: 0.4878E-06   Fluctuation:  0.310E-08   0.157E-05   100.0%
-  3    0.4878E-06 0.4878E-06 +- 0.3101E-08      0.40
+ Iteration  3   Mean: 0.1930E-05 Abs mean: 0.1930E-05   Fluctuation:  0.121E-07   0.481E-05   100.0%
+  3    0.1930E-05 0.1930E-05 +- 0.1210E-07      0.40
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         4000           0
- Accuracy:    0.001   0.100   0.006   0.066
- Finished due to accuracy    1.4493992037350825E-003  0.10000000000000001     
+ Accuracy:    0.005   0.100   0.006   0.876
+ Finished due to accuracy    5.2548250355062293E-003  0.10000000000000001     
 
  -------------------------------------------------------------------------------
- Accumulated results:   Integral =  0.4873E-06
-                        Std dev  =  0.2746E-08
-                       Cross sec =  0.4873E-06
-             Chi**2 per DoF.     =      0.0661
+ Accumulated results:   Integral =  0.1934E-05
+                        Std dev  =  0.1086E-07
+                       Cross sec =  0.1934E-05
+             Chi**2 per DoF.     =      0.8760
  -------------------------------------------------------------------------------
- Found          384  events.
- Wrote          381  events.
- Actual xsec    4.8730002154487030E-007
- Correct abs xsec    4.8730002154487030E-007
- Event xsec    4.8730002154486670E-007
+ Found          372  events.
+ Wrote          369  events.
+ Actual xsec    1.9342236238494164E-006
+ Correct abs xsec    1.9342236238494164E-006
+ Event xsec    1.9342236238494117E-006
  Events wgts > 1:            0
  % Cross section > 1:    0.0000000000000000        0.0000000000000000     
 -------------------------------------------------
 ---------------------------
- Results Last   3 iters: Integral =   0.4873E-06
-                     Abs integral =   0.4873E-06
-                          Std dev =   0.2746E-08
-                  Chi**2 per DoF. =      0.0666
+ Results Last   3 iters: Integral =   0.1934E-05
+                     Abs integral =   0.1934E-05
+                          Std dev =   0.1086E-07
+                  Chi**2 per DoF. =      0.8691
 -------------------------------------------------
 ---------------------------
  Status  0.10000000000000001                4           5
@@ -274,3 +274,6 @@ multijob.dat
 results.dat
 run_01_log.txt
 run1_app.log
+Run_as_pdf_setNLO_log.txt
+run_doubledMasses_log.txt
+run_doubledYdm_log.txt

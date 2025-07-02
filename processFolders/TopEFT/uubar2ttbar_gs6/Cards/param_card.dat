@@ -5,7 +5,7 @@
 ## INFORMATION FOR FRBLOCK
 ###################################
 BLOCK FRBLOCK # 
-      1 1.000000e+00 # ydm
+      1 2.000000e+00 # ydm
       2 1.000000e+00 # lamhs
       3 1.000000e+00 # lams
       4 9.000000e+04 # msdm
