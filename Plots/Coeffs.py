@@ -4,53 +4,53 @@ import numpy as np
 
 def LF110(m, M, mu):
 
-    if (m-M)**2/((m+M)**22) > 10^(-3):
+    if (m-M)**2/((m+M)**2) > 10**(-3):
         return (m**2 - M**2 + m**2*np.log(mu**2/m**2) - M**2*np.log(mu**2/M**2))/(m^2 - M^2)
     else:
         return ((m - 7*M)*(m - M))/(6*M**2) + np.log(mu**2/M**2)
 
 def LF21m1(m, M, mu):
 
-    if (m-M)**2/((m+M)**22) > 10^(-3):
+    if (m-M)**2/((m+M)**2) > 10**(-3):
        return (-(m**2 * M**2) + M**4 + (m**4 - 2 * m**2 * M^2) * np.log(mu**2/m**2) + M**4 * np.log(mu**2/M**2))/((m**2 - M**2)**2)
     else:
-         return 7/6 + (m*(m - 6*M))/(3 * M**2) + np.log(mu**2/M**2)
+        return 7/6 + (m*(m - 6*M))/(3 * M**2) + np.log(mu**2/M**2)
 
 def LF210(m, M, mu):
 
-    if (m-M)**2/((m+M)**22) > 10^(-3):
+    if (m-M)**2/((m+M)**2) > 10**(-3):
         return (-m**2 + M**2 + M**2 * np.log(m**2/M**2))/((m**2 - M**2)**2)
     else:
         return -1/6*(4* m**2 - 12*m*M + 11* M**2)/(M**4)
     
 def LF220(m, M, mu):
     
-    if (m-M)**2/((m+M)**22) > 10^(-3):
+    if (m-M)**2/((m+M)**2) > 10**(-3):
         return (-2* m**2 + 2* M**2 + (m**2 + M**2)*np.log(m**2/M**2))/((m**2 - M**2)**3)
     else:
         return (13 * m**2 - 36*m*M + 28 * M**2)/(30 * M**6)
     
 def LF22m1(m,M, mu):
 
-    if (m-M)**2/((m+M)**22) > 10^(-3):
+    if (m-M)**2/((m+M)**2) > 10**(-3):
         return (-m**4 + M**4 + 2 * m**2 * M**2 * np.log(m**2/M**2))/((m**2 - M**2)**3)
     else:
         return  -1/30*(7 * m**2 - 24*m*M + 27 * M**2)/M**4
 
 def LF31m1(m,M, mu):
 
-    if (m-M)**2/((m+M)**22) > 10^(-3):
-        return -1/2*(m**4 - 4 * m**2 * M^2 + 3 * M**4 + 2 * M**4 * np.log(m**2/M**2))/((m**2 - M**2)**3)
+    if (m-M)**2/((m+M)**2) > 10**(-3):
+        return -1/2*(m**4 - 4 * m**2 * M**2 + 3 * M**4 + 2 * M**4 * np.log(m**2/M**2))/((m**2 - M**2)**3)
     else:
         return -1/60*(33 * m**2 - 96*m*M + 83 * M**2)/(M**4)
     
 
 def LF41m2(m,M, mu):
      
-     if (m-M)**2/((m+M)**22) > 10^(-3):
+     if (m-M)**2/((m+M)**2) > 10**(-3):
          return (-2 * m**6 + 9 * m**4 * M**2 - 18 * m**2 * M**4 + 11 * M**6 + 6 * M**6 * np.log(m**2/M**2))/(6*(m**2 - M**2)**4)
      else:
-         -1/60*(28 * m**2 - 80*m*M + 67* M**2)/(M**4)
+         return -1/60*(28 * m**2 - 80*m*M + 67* M**2)/(M**4)
          
 
 def cdd(mPsiT, mSDM, yDM, gs, g1):
@@ -143,7 +143,7 @@ def cHq1(mPsiT, mSDM, yDM, gs, g1, vev, ymt, t_op = True):
     
 def cHq3(mPsiT, mSDM, yDM, gs, g1, vev, ymt, t_op = True):
 
-    Pi = np.Pi
+    Pi = np.pi
     mu = mPsiT
     c = (yDM**2 * ymt**2 * (LF210(mPsiT,mSDM,mu) - 2 * LF31m1(mPsiT,mSDM,mu) + LF41m2(mPsiT,mSDM,mu)))/(32 * Pi**2 * vev**2)
     return c
@@ -154,7 +154,7 @@ def cHu(mPsiT, mSDM, yDM, gs, g1, t_op = True):
     mu = mPsiT
     cHua = -1/135 * (g1**4)/(mPsiT**2 * Pi**2)
     if t_op == True:
-        cHub = (g1**2 * yDM**2 * (-3*LF31m1(mPsiT,mSDM,mu) + LF41m2(mPsiT,mSDM,mu)))/(288*Pi^2)
+        cHub = (g1**2 * yDM**2 * (-3*LF31m1(mPsiT,mSDM,mu) + LF41m2(mPsiT,mSDM,mu)))/(288 * Pi**2)
         return cHua + cHub
     else:
         return cHua
@@ -253,7 +253,7 @@ def cqu8(mPsiT, mSDM, yDM, gs, g1, t_op = True):
     
 def cuB(mPsiT, mSDM, yDM, gs, g1, ymt, vev):
 
-    Pi = np.Pi
+    Pi = np.pi
     mu = mPsiT
     c = (g1 * yDM**2 * ymt * (-LF31m1(mPsiT,mSDM,mu) + LF41m2(mPsiT,mSDM,mu)))/(48 * np.sqrt(2) * Pi**2 * vev)
     return c
