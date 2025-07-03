@@ -14,8 +14,8 @@
       MP__MDL_YMT = 172.0_16
       MDL_YMTAU = 1.777000D+00
       MP__MDL_YMTAU = 1.777_16
-      MDL_YDM = 1.000000D+00
-      MP__MDL_YDM = 1.0_16
+      MDL_YDM = 2.000000D+00
+      MP__MDL_YDM = 2.0_16
       MDL_LAMHS = 1.000000D+00
       MP__MDL_LAMHS = 1.0_16
       MDL_LAMS = 1.000000D+00
@@ -42,5 +42,5 @@
       MP__MDL_WT = 0_16
       MDL_WH = 4.070000D-03
       MP__MDL_WH = 0.00407_16
-      MDL_WPSIT = 3.590457D+01
-      MP__MDL_WPSIT = 35.90457_16
+      MDL_WPSIT = 1.436183D+02
+      MP__MDL_WPSIT = 143.6183_16

@@ -22,7 +22,7 @@
 #*     run as ./bin/aMCatNLO.py filename                    *
 #*                                                          *
 #************************************************************
-launch -n Run_as_pdf_setNLO
+launch run_doubledMasses
 Traceback (most recent call last):
   File "/home/vinicius/.ssh/EFT_ToyModel/processFolders/U_BSM_ToyModel_Loop/uubar2ttbar_gs4_ydm2/bin/internal/extended_cmd.py", line 1548, in onecmd
     return self.onecmd_orig(line, **opt)
@@ -30,12 +30,11 @@ Traceback (most recent call last):
   File "/home/vinicius/.ssh/EFT_ToyModel/processFolders/U_BSM_ToyModel_Loop/uubar2ttbar_gs4_ydm2/bin/internal/extended_cmd.py", line 1497, in onecmd_orig
     return func(arg, **opt)
            ^^^^^^^^^^^^^^^^
-  File "/home/vinicius/.ssh/EFT_ToyModel/processFolders/U_BSM_ToyModel_Loop/uubar2ttbar_gs4_ydm2/bin/internal/amcatnlo_run_interface.py", line 1767, in do_launch
-    self.results.delete_run(self.run_name)
-  File "/home/vinicius/.ssh/EFT_ToyModel/processFolders/U_BSM_ToyModel_Loop/uubar2ttbar_gs4_ydm2/bin/internal/gen_crossxhtml.py", line 223, in delete_run
-    assert run_name in self
-           ^^^^^^^^^^^^^^^^
-AssertionError
+  File "/home/vinicius/.ssh/EFT_ToyModel/processFolders/U_BSM_ToyModel_Loop/uubar2ttbar_gs4_ydm2/bin/internal/amcatnlo_run_interface.py", line 1743, in do_launch
+    self.check_launch(argss, options)
+  File "/home/vinicius/.ssh/EFT_ToyModel/processFolders/U_BSM_ToyModel_Loop/uubar2ttbar_gs4_ydm2/bin/internal/amcatnlo_run_interface.py", line 735, in check_launch
+    raise self.InvalidCmd('%s is not a valid mode, please use "LO", "NLO", "aMC@NLO" or "aMC@LO"' % args[0])
+internal.InvalidCmd: run_doubledMasses is not a valid mode, please use "LO", "NLO", "aMC@NLO" or "aMC@LO"
 Value of current Options:
              pythia8_path 	:	None
                 hwpp_path 	:	None
@@ -155,8 +154,8 @@ BLOCK MASS #
       15 1.777000e+00 # mta
       23 9.118760e+01 # mz
       25 1.250000e+02 # mh
-      5000006 1.000000e+05 # mpsit
-      5000022 9.000000e+04 # msdm
+      5000006 2.000000e+05 # mpsit
+      5000022 1.8000000e+05 # msdm
       1 0.000000e+00 # d : 0.0
       2 0.000000e+00 # u : 0.0
       3 0.000000e+00 # s : 0.0
@@ -323,7 +322,7 @@ DECAY  250   2.495200e+00 #  g0 : wz
 DECAY  251   2.085000e+00 #  g+ : ww
 #
 #      PDG        Width
-DECAY  5000006   3.590457e+01 #  wpsit
+DECAY  5000006   auto #  wpsit
 #  BR             NDA  ID1    ID2   ...
    1.000000e+00   2    5000022  6 # 35.90456626609473
 #
