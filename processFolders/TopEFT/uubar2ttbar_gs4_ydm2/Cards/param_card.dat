@@ -8,8 +8,8 @@ BLOCK FRBLOCK #
       1 1.000000e+00 # ydm
       2 0.000000e+00 # lamhs
       3 0.000000e+00 # lams
-      4 9.9000000e+03 # msdm
-      5 1.000000e+04 # mpsit
+      4 1.99000000e+04 # msdm
+      5 2.000000e+04 # mpsit
       6 1.000000e+05 # mu
 ###################################
 ## INFORMATION FOR MASS
