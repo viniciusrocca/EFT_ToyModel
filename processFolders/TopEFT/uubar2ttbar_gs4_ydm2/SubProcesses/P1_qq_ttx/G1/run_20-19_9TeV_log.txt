@@ -28,7 +28,7 @@
  mdl_lamS =    0.0000000000000000     
  mdl_mSDM =    19900.000000000000     
  mdl_mPsiT =    20000.000000000000     
- mdl_mu =    100000.00000000000     
+ mdl_mu =    20000.000000000000     
  mdl_MB =    4.7000000000000002     
  mdl_MT =    172.00000000000000     
  mdl_MTA =    1.7769999999999999     
@@ -197,8 +197,8 @@ Running Configuration Number:    1
  T-channel found:            0
  Transforming s_hat 1/s            3   7.0021301775147942E-004   118336.00000000000        168999999.99999997     
 Using random seed offsets     1 :      1
-  with seed                   60
- Ranmar initialization seeds       14781        9436
+  with seed                   72
+ Ranmar initialization seeds       29409        9448
   Particle       3       4
       Et >     0.0     0.0
        E >     0.0     0.0
@@ -215,53 +215,53 @@ xqcutij # 3>     0.0     0.0
  ********************************************
  
  RESET CUMULATIVE VARIABLE
- Iteration  1   Mean: 0.1158E-04 Abs mean: 0.1158E-04   Fluctuation:  0.386E-06   0.694E-04   100.0%
-  1    0.1158E-04 0.1158E-04 +- 0.3865E-06      1.06
- Writing out events   2.3156253847286349E-009   1.0555159779688519     
+ Iteration  1   Mean: 0.1235E-04 Abs mean: 0.1235E-04   Fluctuation:  0.404E-06   0.650E-04    99.9%
+  1    0.1235E-04 0.1235E-04 +- 0.4040E-06      1.03
+ Writing out events   2.4731941927442971E-009   1.0340593413862211     
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         1009           0
- Iteration  2   Mean: 0.1148E-04 Abs mean: 0.1148E-04   Fluctuation:  0.152E-06   0.424E-04   100.0%
-  2    0.1148E-04 0.1148E-04 +- 0.1516E-06      0.59
+ Iteration  2   Mean: 0.1148E-04 Abs mean: 0.1148E-04   Fluctuation:  0.155E-06   0.526E-04   100.0%
+  2    0.1148E-04 0.1148E-04 +- 0.1549E-06      0.60
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         2000           0
- Iteration  3   Mean: 0.1156E-04 Abs mean: 0.1156E-04   Fluctuation:  0.732E-07   0.299E-04   100.0%
-  3    0.1156E-04 0.1156E-04 +- 0.7317E-07      0.40
+ Iteration  3   Mean: 0.1146E-04 Abs mean: 0.1146E-04   Fluctuation:  0.733E-07   0.296E-04    99.9%
+  3    0.1146E-04 0.1146E-04 +- 0.7327E-07      0.40
  Relative summed weights:
   0.1000E+01  0.0000E+00
  Relative number of events:
   0.1000E+01  0.0000E+00
  Events:
         4000           0
- Accuracy:    0.002   0.100   0.006   0.102
- Finished due to accuracy    1.7931095413749399E-003  0.10000000000000001     
+ Accuracy:    0.009   0.100   0.006   2.702
+ Finished due to accuracy    9.3496256564343273E-003  0.10000000000000001     
 
  -------------------------------------------------------------------------------
- Accumulated results:   Integral =  0.1154E-04
-                        Std dev  =  0.6495E-07
-                       Cross sec =  0.1154E-04
-             Chi**2 per DoF.     =      0.1015
+ Accumulated results:   Integral =  0.1149E-04
+                        Std dev  =  0.6538E-07
+                       Cross sec =  0.1149E-04
+             Chi**2 per DoF.     =      2.7017
  -------------------------------------------------------------------------------
- Found          382  events.
- Wrote          379  events.
- Actual xsec    1.1543047234979048E-005
- Correct abs xsec    1.1543047234979048E-005
- Event xsec    1.1543047234978972E-005
+ Found          400  events.
+ Wrote          397  events.
+ Actual xsec    1.1493913801114235E-005
+ Correct abs xsec    1.1493913801114235E-005
+ Event xsec    1.1493913801114152E-005
  Events wgts > 1:            0
  % Cross section > 1:    0.0000000000000000        0.0000000000000000     
 -------------------------------------------------
 ---------------------------
- Results Last   3 iters: Integral =   0.1154E-04
-                     Abs integral =   0.1154E-04
-                          Std dev =   0.6495E-07
-                  Chi**2 per DoF. =      0.1024
+ Results Last   3 iters: Integral =   0.1149E-04
+                     Abs integral =   0.1149E-04
+                          Std dev =   0.6538E-07
+                  Chi**2 per DoF. =      2.3507
 -------------------------------------------------
 ---------------------------
  Status  0.10000000000000001                4           5
@@ -274,20 +274,22 @@ multijob.dat
 results.dat
 run_01_log.txt
 run_02_log.txt
+run_10-9_9TeV_log.txt
 run1_app.log
+run_20-19_9TeV_log.txt
 Run_as_pdf_setNLO_log.txt
 run_doubledMasses_log.txt
 run_doubledYdm_log.txt
 --------------------- Multi run with 12 jobs. ---------------------
-job a0 : 1.1557e-05 1.1557e-05 +- 4.8844e-08 1073.0
-job b0 : 1.1558e-05 1.1558e-05 +- 6.8925e-08 1036.0
-job c0 : 1.1558e-05 1.1558e-05 +- 5.0291e-08 1060.0
-job d0 : 1.1582e-05 1.1582e-05 +- 3.9848e-08 1073.0
-job e0 : 1.149e-05 1.149e-05 +- 4.0488e-08 1031.0
-job f0 : 1.1591e-05 1.1591e-05 +- 4.0911e-08 1075.0
-job g0 : 1.1555e-05 1.1555e-05 +- 4.9059e-08 1041.0
-job h0 : 1.1495e-05 1.1495e-05 +- 4.0354e-08 1036.0
-job i0 : 1.1526e-05 1.1526e-05 +- 4.1033e-08 1018.0
-job j0 : 1.1551e-05 1.1551e-05 +- 4.1389e-08 1034.0
-job k0 : 1.14e-05 1.14e-05 +- 4.0162e-08 1040.0
-job l0 : 1.1505e-05 1.1505e-05 +- 4.0734e-08 1021.0
+job a0 : 1.1504e-05 1.1504e-05 +- 2.0831e-08 2017.0
+job b0 : 1.1534e-05 1.1534e-05 +- 2.0777e-08 2010.0
+job c0 : 1.1531e-05 1.1531e-05 +- 2.0447e-08 2018.0
+job d0 : 1.1541e-05 1.1541e-05 +- 3.4776e-08 2024.0
+job e0 : 1.1475e-05 1.1475e-05 +- 4.1975e-08 1016.0
+job f0 : 1.1544e-05 1.1544e-05 +- 4.1052e-08 1008.0
+job g0 : 1.1574e-05 1.1574e-05 +- 4.009e-08 1013.0
+job h0 : 1.1504e-05 1.1504e-05 +- 4.3313e-08 1020.0
+job i0 : 1.149e-05 1.149e-05 +- 2.8422e-08 1979.0
+job j0 : 1.1553e-05 1.1553e-05 +- 2.0663e-08 2023.0
+job k0 : 1.153e-05 1.153e-05 +- 5.629e-08 1028.0
+job l0 : 1.1513e-05 1.1513e-05 +- 4.1301e-08 1025.0

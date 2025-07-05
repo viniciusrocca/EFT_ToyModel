@@ -53,7 +53,7 @@
 
 #! Prefered WebBrower
 #! If None: try to find one available on the system
-# web_browser = None
+ web_browser = google-chrome
 
 #! Prefered PS viewer
 #!  If None: try to find one available on the system

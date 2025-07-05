@@ -154,7 +154,7 @@ Top-EFTfull-UFO
 # Warning: Do not generate more than 1M events in a single run       *
 #*********************************************************************
   10000 = nevents ! Number of unweighted events requested 
- 57 = iseed   ! rnd seed (0=assigned automatically=default))
+ 69 = iseed   ! rnd seed (0=assigned automatically=default))
 #*********************************************************************
 # Collider type and energy                                           *
 # lpp: 0=No PDF, 1=proton, -1=antiproton,                            *
@@ -285,7 +285,7 @@ BLOCK FRBLOCK #
       3 0.000000e+00 # lams
       4 1.99000000e+04 # msdm
       5 2.000000e+04 # mpsit
-      6 1.000000e+05 # mu
+      6 2.000000e+04 # mu
 ###################################
 ## INFORMATION FOR MASS
 ###################################
@@ -344,7 +344,7 @@ DECAY 22 0.000000e+00 # a : 0.0
 </slha>
 <MGGenerationInfo>
 #  Number of Events        :       10000
-#  Integrated weight (pb)  :       1.1531e-05
+#  Integrated weight (pb)  :       1.1524e-05
 </MGGenerationInfo>
 </header>
 </LesHouchesEvents>
