@@ -2,10 +2,10 @@
       MP__MDL_CABI = 0.227736_16
       MDL_YDM = 1.000000D+00
       MP__MDL_YDM = 1.0_16
-      MDL_LAMHS = 1.000000D+00
-      MP__MDL_LAMHS = 1.0_16
-      MDL_LAMS = 1.000000D+00
-      MP__MDL_LAMS = 1.0_16
+      MDL_LAMHS = 0.000000D+00
+      MP__MDL_LAMHS = 0.0_16
+      MDL_LAMS = 0.000000D+00
+      MP__MDL_LAMS = 0.0_16
       MU_R = 9.118800D+01
       MP__MU_R = 91.188_16
       MDL_MB = 4.700000D+00
@@ -20,8 +20,8 @@
       MP__MDL_MH = 125.0_16
       MDL_MPSIT = 1.000000D+04
       MP__MDL_MPSIT = 10000.0_16
-      MDL_MSDM = 9.900000D+03
-      MP__MDL_MSDM = 9900.0_16
+      MDL_MSDM = 8.500000D+03
+      MP__MDL_MSDM = 8500.0_16
       AEWM1 = 1.279000D+02
       MP__AEWM1 = 127.9_16
       MDL_GF = 1.166370D-05
@@ -42,5 +42,5 @@
       MP__MDL_WW = 2.085_16
       MDL_WH = 4.070000D-03
       MP__MDL_WH = 0.00407_16
-      MDL_WPSIT = 0.000000D+00
-      MP__MDL_WPSIT = 0.0_16
+      MDL_WPSIT = 7.617212D+00
+      MP__MDL_WPSIT = 7.617212_16
