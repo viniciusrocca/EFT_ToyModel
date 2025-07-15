@@ -18,6 +18,7 @@
 \contentsline {section}{\numberline {1.5}DM toy model}{30}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}Tree-level matching}{30}{subsection.1.5.1}%
 \contentsline {subsection}{\numberline {1.5.2}One-loop matching}{31}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Warsaw Basis}{42}{section.1.6}%
 \contentsline {chapter}{\numberline {A}Calculations of the toy model EFT}{43}{appendix.A}%
 \contentsline {section}{\numberline {A.1}Solving the classical equation of motion for the heavy fields}{43}{section.A.1}%
 \contentsline {section}{\numberline {A.2}List of interaction matrices}{44}{section.A.2}%
