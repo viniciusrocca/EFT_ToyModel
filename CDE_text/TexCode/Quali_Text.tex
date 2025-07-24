@@ -67,7 +67,7 @@
 
 
 
-\title{Qualification textv}
+\title{Qualification text}
 \author{Vinicius Rocca}
 \date{\today}
 
@@ -3234,7 +3234,7 @@ In this analysis, we focus on the total cross section for the process $pp\to t\b
 
 To perform the calculations, we implemented the Lagrangians defined in Eqs.~(\ref{eq:L_UV_ttbar}) and (\ref{eq:L_EFT_ttbar}) using FeynArts \cite{FeynArts}, FeynRules \cite{FeynRules} and NLOCT \cite{NLOCT}, exporting the models in the UFO \cite{UFO} format. This allow us to use the Monte Carlo generator \texttt{MadGraph5\_aMC@NLO}~\cite{MG5,MG5NLO} to generate events based on either the full UV one-loop calculation or the EFT approximation. 
 
-In both approaches, the total cross sections were computed at leading order in the strong coupling $\alpha_s$ and in the new physics coupling $y_{DM}$, keeping terms of order $\mathcal{O}(\alpha_s^2)$ and $\mathcal{O}(\alpha_s^2 y_{DM}^2)$. In the UV theory, this corresponds to including the Standard Model (SM) Born-level amplitude and its interference with the one-loop BSM correction:
+In both approaches, the total cross sections were computed at leading order in the gauge strong coupling $\alpha_s$ and in the new physics coupling $y_{DM}$, keeping terms of order $\mathcal{O}(g_s^4)$ and $\mathcal{O}(g_s^4 y_{DM}^2)$. In the UV theory, this corresponds to including the Standard Model (SM) Born-level amplitude and its interference with the one-loop BSM correction:
 \begin{align}
 	\abs{\mathcal{M}_{UV}}^2 = \abs{\mathcal{M}_{SM}}^2 + 2 Re(\mathcal{M}_{SM}^*\mathcal{M}_{BSM}) 
 \end{align}
@@ -3269,7 +3269,7 @@ For top pair production, the SM Born-level contribution involves a single Feynma
 					%(b) -- [fermion, edge label = $k'$] (e)
 				};          
 			\end{feynman}        
-		\end{tikzpicture}\right\vert^2 \propto \alpha_s^2 
+		\end{tikzpicture}\right\vert^2 \propto g_s^4 
 	\end{equation}
 	\item $gg\to t\bar{t}$
 	\begin{equation}
@@ -3294,29 +3294,29 @@ For top pair production, the SM Born-level contribution involves a single Feynma
 				%(b) -- [fermion, edge label = $k'$] (e)
 			};          
 		\end{feynman}        
-	\end{tikzpicture}\right\vert^2 \propto \alpha_s^2 
+	\end{tikzpicture}\right\vert^2 \propto g_s^4 
 	\end{equation}
 \end{itemize}
 Since these SM contributions are common to both the UV and EFT computations, our analysis focuses on the interference terms, where new physics effects appear.
 
-Diagrammatically, the interference terms arise from the overlap between the SM Born-level diagrams shown above and the BSM one-loop diagrams displayed in the left column of Fig.~\ref{fig:diagramstable}, or their EFT counterparts shown in the right column. Each interference term contributes at a specific order in the coupling expansion, scaling either as $\alpha_s^3$ or $\alpha_s^2 y_{DM}^2$, depending on the structure of the BSM loop:
+Diagrammatically, the interference terms arise from the overlap between the SM Born-level diagrams shown above and the BSM one-loop diagrams displayed in the left column of Fig.~\ref{fig:diagramstable}, or their EFT counterparts shown in the right column. Each interference term contributes at a specific order in the coupling expansion, scaling either as $g_s^6$ or $g_s^4 y_{DM}^2$, depending on the structure of the BSM loop:
 
 \begin{itemize}
-	\item The interference between the SM Born diagram and the first row of Fig.~\ref{fig:diagramstable} contributes at order $\alpha_s^3$. These one-loop diagrams involve only QCD vertices, such as quark-gluon ($q$-$\bar{q}$-$g$) and heavy partner-gluon ($T$-$\bar{T}$-$g$) interactions.
-	\item The interference with the second row contributes at order $\alpha_s^2 y_{DM}^2$, as each diagram contains two insertions of the new-physics vertex $t_R$–$T$–$s$, each proportional to $y_{DM}$, in addition to the QCD-like ones.
+	\item The interference between the SM Born diagram and the first row of Fig.~\ref{fig:diagramstable} contributes at order $g_s^6$. These one-loop diagrams involve only QCD vertices, such as quark-gluon ($q$-$\bar{q}$-$g$) and heavy partner-gluon ($T$-$\bar{T}$-$g$) interactions.
+	\item The interference with the second row contributes at order $g_s^4 y_{DM}^2$, as each diagram contains two insertions of the new-physics vertex $t_R$–$T$–$s$, each proportional to $y_{DM}$, in addition to the QCD-like ones.
 \end{itemize}
 
-The EFT diagrams carry the same coupling structure as their UV one-loop counterparts. As a result, in the energy regime where the EFT is valid, the total cross section, when expanded in powers of $\alpha_s$ and $y_{DM}$, must match term by term between the two approaches. This insight forms the basis of our strategy for evaluating the EFT's accuracy: we compare the interference contributions to the total cross section, grouping them according to their dependence on the coupling constants.
+The EFT diagrams carry the same coupling structure as their UV one-loop counterparts. As a result, in the energy regime where the EFT is valid, the total cross section, when expanded in powers of $g_s$ and $y_{DM}$, must match term by term between the two approaches. This insight forms the basis of our strategy for evaluating the EFT's accuracy: we compare the interference contributions to the total cross section, grouping them according to their dependence on the coupling constants.
 
-To carry out these computations, we used the Fixed Order mode of \texttt{MadGraph5\_aMC@NLO} for the next-to-leading-order (NLO) calculations of the UV one-loop model, targeting a precision of 0.1. For the EFT, the evaluations were performed at leading order (LO), also using \texttt{MadGraph\_aMC@NLO}footnote{For the NLO computations, we generated 1,000 Monte Carlo events per mass configuration; for the EFT, we used 10,000 events per point.}. We focused on the interference contributions to the total cross section for the subprocesses $qq \to t\bar{t}$ and $gg \to t\bar{t}$, isolating the terms proportional to $\alpha_s^2 y_{DM}^2$. The parameter scan ranged from $(M_T, M_s) = (200, 190)\, \text{GeV}$ to $(10.0, 9.5)\, \text{TeV}$, thus covering both the validity regime of the EFT and regions where it is expected to break down. In all configurations, we fixed the BSM mass ratio at $M_s / M_T = 0.95$.
+To carry out these computations, we used the Fixed Order mode of \texttt{MadGraph5\_aMC@NLO} for the next-to-leading-order (NLO) calculations of the UV one-loop model, targeting a precision of 0.1. For the EFT, the evaluations were performed at leading order (LO), also using \texttt{MadGraph\_aMC@NLO}footnote{For the NLO computations, we generated 1,000 Monte Carlo events per mass configuration; for the EFT, we used 10,000 events per point.}. We focused on the interference contributions to the total cross section for the subprocesses $qq \to t\bar{t}$ and $gg \to t\bar{t}$, isolating the terms proportional to $g_s^4 y_{DM}^2$. The parameter scan ranged from $(M_T, M_s) = (200, 190)\, \text{GeV}$ to $(10.0, 9.5)\, \text{TeV}$, thus covering both the validity regime of the EFT and regions where it is expected to break down. In all configurations, we fixed the BSM mass ratio at $M_s / M_T = 0.95$.
 
-The total cross section values proportional to $\alpha_s^2 y_{DM}^2$ obtained from the UV one-loop computations are shown in the upper panels of Fig.~\ref{fig:cs_qq2ttbar_gs4_ydm2}. The lower panels display the ratio $\sigma_{\text{EFT}} / \sigma_{\text{UV}}$, which quantifies the agreement between the EFT prediction and the full UV result. From the plots, we observe a precise agreement between the two approaches up to approximately $M_T \sim 4,\text{TeV}$, consistent with the expected domain of validity of the EFT expansion.
+The total cross section values proportional to $g_s^4 y_{DM}^2$ obtained from the UV one-loop computations are shown in the upper panels of Fig.~\ref{fig:cs_qq2ttbar_gs4_ydm2}. The lower panels display the ratio $\sigma_{\text{EFT}} / \sigma_{\text{UV}}$, which quantifies the agreement between the EFT prediction and the full UV result. From the plots, we observe a precise agreement between the two approaches up to approximately $M_T \sim 4,\text{TeV}$, consistent with the expected domain of validity of the EFT expansion. However, an exception is noted at the highest mass point, $M_T = 10\, \text{TeV}$ and $M_s=9.5\, \text{TeV}$ for the $gg\to t\bar{t}$ channel, where the EFT result overestimates the UV one-loop calculation by approximately 15\%. We attribute this discrepancy to effects of large logarithms in the UV one-loop computations when BSM masses are significantly greater than the matching scale $\mu$, which in our NLO computations is the mass of the SM $Z$ boson\footnote{Changing the matching scale is not trivial in \texttt{MadGraph5\_aMC@NLO}, and we are currently investigating methods to address this.}.
 
-In the intermediate regime, between $M_T \sim 4,\text{TeV}$ and $M_T \sim 1,\text{TeV}$, where the EFT is no longer strictly valid, the deviation remains moderate, around 10\%, and still within the required accuracy for the fixed order calculations of the \texttt{MadGraph5\_aMC@NLO}. Below $M_T \sim 800,\text{GeV}$, however, the discrepancy becomes more significant. At $M_T = 600,\text{GeV}$, the EFT underestimates the UV result by approximately 20\% for the $gg \to t\bar{t}$ channel and 15\% for $q\bar{q} \to t\bar{t}$.
+In the intermediate regime, between $M_T \sim 4,\text{TeV}$ and $M_T \sim 1,\text{TeV}$, the deviation remains moderate, around 10\%. Below $M_T \sim 800,\text{GeV}$, however, the discrepancy becomes more significant. At $M_T = 600,\text{GeV}$, the EFT underestimates the UV result by approximately 20\% for the $gg \to t\bar{t}$ channel and 15\% for $q\bar{q} \to t\bar{t}$.
 
 These results indicate that the $gg \to t\bar{t}$ subprocess is slightly more sensitive to the breakdown of the EFT description as the mass scale decreases, compared to $q\bar{q} \to t\bar{t}$. This sensitivity becomes particularly evident for $M_T \lesssim 1,\text{TeV}$, where the EFT approximation starts to lose accuracy more rapidly.
 
-
+An interesting detail is observed in the lower panel of the $qq\to t\bar{t}$ plot (Fig.~\ref{fig:cs_qq2ttbar_gs4_ydm2}) at $M_T = 1\, \text{TeV}$ and $M_T = 200\, \text{GeV}$. At these specific points, the ratio of the EFT to UV total cross sections deviates from the general behavior observed in the rest of the parameter scan. We are currently investigating the physical reasons behind this anomalous behavior.
 
 \begin{figure}[h!]
 	\centering
@@ -3337,9 +3337,9 @@ In this work, we carried out a theoretical investigation of a systematic method 
 
 The second part of the work focused on testing the accuracy and limitations of the EFT description by comparing its predictions with those of the full one-loop calculation in a concrete, UV-complete BSM model. The model includes a color-triplet vector-like top partner ($\psi_T$) and a real scalar singlet ($s$), the latter acting as a dark matter candidate. Assuming the BSM particles are significantly heavier than the energies probed, we employed Matchete to derive the relevant dimension-six EFT operators contributing to $t\bar{t}$ production at the LHC. The resulting Wilson coefficients were found to be loop-suppressed, with typical magnitudes ranging from $\mathcal{O}(10^{-6})$ to $\mathcal{O}(10^{-4}), \text{TeV}^{-2}$ for $y_{\text{DM}} = 1.0$, and up to $\mathcal{O}(10^{-3}), \text{TeV}^{-2}$ for $y_{\text{DM}} = 5.0$. These values lie well below the current experimental sensitivity, as expected in a weakly coupled scenario.
 
-We then used Monte Carlo simulations to compute the total cross section for $pp \to t\bar{t}$ at leading order, spiting it in $q\bar{q}$ and $gg$ channels, for both the full UV model and its EFT limit. Particularly, we focused on the interference terms proportional to $\alpha_s^2 y_{DM}$. Analyzing the results we notice that the EFT reproduced the full model results with high accuracy for heavy masses $M_T \gtrsim 4, \text{TeV}$, validating the EFT expansion within its expected domain of applicability. In the intermediate regime $1, \text{TeV} \lesssim M_T \lesssim 4, \text{TeV}$, the EFT maintained a deviation of around 10\%, which is equal to the accuracy that we are using in the fixed order calculation. However, for lighter masses $M_T \sim 800, \text{GeV}$, the deviation increased significantly, with the EFT underestimating the full result by 15–20\% or more. This breakdown became more pronounced for $M_T < 800, \text{GeV}$, where the discrepancy rapidly grows. Among the subprocesses, $gg \to t\bar{t}$ exhibited a slightly greater sensitivity to the breakdown of the EFT approximation compared to $q\bar{q} \to t\bar{t}$ as the BSM scale decreased.
+We then used Monte Carlo simulations to compute the total cross section for $pp \to t\bar{t}$ at leading order, spiting it in $q\bar{q}$ and $gg$ channels, for both the full UV model and its EFT limit. Particularly, we focused on the interference terms proportional to $g_s^4 y_{DM}^2$. Analyzing the results we notice that the EFT reproduced the full model results with high accuracy for heavy masses $M_T \gtrsim 4, \text{TeV}$. In the intermediate regime $1, \text{TeV} \lesssim M_T \lesssim 4, \text{TeV}$, the EFT maintained a deviation of around 10\%. However, for lighter masses $M_T \sim 800, \text{GeV}$, the deviation increased significantly, with the EFT underestimating the full result by 15–20\% or more. This breakdown became more pronounced for $M_T < 800, \text{GeV}$, where the discrepancy rapidly grows. Among the subprocesses, $gg \to t\bar{t}$ exhibited a slightly greater sensitivity to the breakdown of the EFT approximation compared to $q\bar{q} \to t\bar{t}$ as the BSM scale decreased.
 
-For future work, we intend to extend the analysis from the second chapter to include the interference contribution to the total cross section proportional to $\alpha_s^3$. Additionally, we plan to investigate the impact of this simple dark matter model on key Standard Model observables, such as the invariant mass distribution of the $t\bar{t}$ pair, the transverse momentum ($p_T$) distribution of the top quark, and the distribution of the transverse angle between the top and antitop quarks.
+For future work, we aim to refine the analysis presented in Chapter~2 and extend it to include the interference contributions to the total cross section that are proportional to $g_s^6$. In addition, we plan to explore the impact of this simple dark matter model on key Standard Model observables, such as the invariant mass distribution of the $t\bar{t}$ pair, the transverse momentum ($p_T$) distribution of the top quark, and the distribution of the transverse angle between the top and antitop quarks. These differential distributions will also serve to complement our EFT analysis, both within and beyond the regime of validity of the effective expansion.
 
 
 
