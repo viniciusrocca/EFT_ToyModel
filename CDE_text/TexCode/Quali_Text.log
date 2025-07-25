@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.7.22)  24 JUL 2025 01:17
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.7.22)  25 JUL 2025 15:50
  restricted system commands enabled.
 **Quali_Text.tex
 (./Quali_Text.tex
@@ -1112,19 +1112,25 @@ mpat=1.1.0]{tikz-feynman} so that you can be warned if TikZ-Feynman changes. on
 Package hyperref Info: Link coloring ON on input line 74.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+<logo.png, id=7, 116.435pt x 116.435pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package luatex.def Info: logo.png  used on input line 79.
+(luatex.def)             Requested size: 58.21735pt x 58.21735pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Quali_Text.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./logo.png>] (./Quali_Text.
+toc)
 \tf@toc=\write4
 
 \openout4 = Quali_Text.toc
@@ -1134,6 +1140,9 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 
 ] [2
 
+
+Missing character: There is no ’ (U+2019) in font ec-lmr10!
+Missing character: There is no – (U+2013) in font ec-lmr10!
 ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1149,29 +1158,29 @@ Chapter 1.
 [7
 
 ] [8] [9] [10]
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 7
-81.
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 8
+21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [11] [12]
 [13]
-Overfull \hbox (30.31653pt too wide) detected at line 980
+Overfull \hbox (30.31653pt too wide) detected at line 1020
 []
  []
 
 [14] [15]
-Overfull \hbox (25.88652pt too wide) detected at line 1113
+Overfull \hbox (25.88652pt too wide) detected at line 1153
 []
  []
 
 [16]
-Overfull \hbox (8.92644pt too wide) detected at line 1166
+Overfull \hbox (8.92644pt too wide) detected at line 1206
 []
  []
 
 [17]
-Overfull \hbox (36.97435pt too wide) detected at line 1238
+Overfull \hbox (36.97435pt too wide) detected at line 1278
 []
  []
 
@@ -1185,7 +1194,7 @@ Missing character: There is no ¨ (U+00A8) in font cmr10!
 [27] [28
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
 ]
-Overfull \hbox (15.1559pt too wide) detected at line 2083
+Overfull \hbox (15.1559pt too wide) detected at line 2123
 []
  []
 
@@ -1196,59 +1205,59 @@ Missing character: There is no ´ (U+00B4) in font cmr10!
 Missing character: There is no ´ (U+00B4) in font cmr10!
 Missing character: There is no ´ (U+00B4) in font cmr10!
 [29] [30]
-Overfull \hbox (3.1213pt too wide) detected at line 2216
+Overfull \hbox (3.1213pt too wide) detected at line 2256
 []
  []
 
 [31] [32
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
 ] [33]
-Overfull \hbox (4.93292pt too wide) detected at line 2463
+Overfull \hbox (4.93292pt too wide) detected at line 2503
 []
  []
 
 [34]
-Overfull \hbox (17.6507pt too wide) detected at line 2538
+Overfull \hbox (17.6507pt too wide) detected at line 2578
 []
  []
 
 [35]
-Overfull \hbox (9.82216pt too wide) detected at line 2614
+Overfull \hbox (9.82216pt too wide) detected at line 2654
 []
  []
 
 [36]
-Overfull \hbox (8.81895pt too wide) detected at line 2690
+Overfull \hbox (8.81895pt too wide) detected at line 2730
 []
  []
 
 
-Overfull \hbox (2.38153pt too wide) detected at line 2704
+Overfull \hbox (2.38153pt too wide) detected at line 2744
 []
  []
 
 [37]
-Overfull \hbox (28.61612pt too wide) detected at line 2774
+Overfull \hbox (28.61612pt too wide) detected at line 2814
 []
  []
 
 
-Overfull \hbox (15.04227pt too wide) detected at line 2789
+Overfull \hbox (15.04227pt too wide) detected at line 2829
 []
  []
 
 [38]
-Overfull \hbox (14.11949pt too wide) detected at line 2803
+Overfull \hbox (14.11949pt too wide) detected at line 2843
 []
  []
 
 
-Overfull \hbox (5.38899pt too wide) detected at line 2827
+Overfull \hbox (5.38899pt too wide) detected at line 2867
 []
  []
 
 [39] [40]
-Overfull \hbox (16.71533pt too wide) detected at line 2924
+Overfull \hbox (16.71533pt too wide) detected at line 2964
 []
  []
 
@@ -1257,40 +1266,40 @@ Chapter 2.
 [46
 
 ]
-<EFT_Coeffs_Abs.png, id=913, 867.24pt x 578.16pt>
+<EFT_Coeffs_Abs.png, id=915, 867.24pt x 578.16pt>
 File: EFT_Coeffs_Abs.png Graphic file (type png)
 <use EFT_Coeffs_Abs.png>
-Package luatex.def Info: EFT_Coeffs_Abs.png  used on input line 3216.
+Package luatex.def Info: EFT_Coeffs_Abs.png  used on input line 3256.
 (luatex.def)             Requested size: 329.55463pt x 219.70308pt.
-<EFT_Coeffs_Abs_5.png, id=914, 867.24pt x 578.16pt>
+<EFT_Coeffs_Abs_5.png, id=916, 867.24pt x 578.16pt>
 File: EFT_Coeffs_Abs_5.png Graphic file (type png)
 <use EFT_Coeffs_Abs_5.png>
-Package luatex.def Info: EFT_Coeffs_Abs_5.png  used on input line 3217.
+Package luatex.def Info: EFT_Coeffs_Abs_5.png  used on input line 3257.
 (luatex.def)             Requested size: 329.55463pt x 219.70308pt.
  [47]
-<DiagramsTable.pdf, id=931, 353.69339pt x 583.97272pt>
+<DiagramsTable.pdf, id=933, 353.69339pt x 583.97272pt>
 File: DiagramsTable.pdf Graphic file (type pdf)
 <use DiagramsTable.pdf>
-Package luatex.def Info: DiagramsTable.pdf  used on input line 3230.
+Package luatex.def Info: DiagramsTable.pdf  used on input line 3270.
 (luatex.def)             Requested size: 227.62206pt x 375.81744pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-235.
+275.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [48<./EFT_Coeffs_Abs.png><./EFT_Coeffs_Abs_5.png>] [49<./DiagramsTable.pdf>]
-<qq2ttbar_CS.png, id=988, 722.7pt x 505.89pt>
+<qq2ttbar_CS.png, id=990, 722.7pt x 505.89pt>
 File: qq2ttbar_CS.png Graphic file (type png)
 <use qq2ttbar_CS.png>
-Package luatex.def Info: qq2ttbar_CS.png  used on input line 3323.
+Package luatex.def Info: qq2ttbar_CS.png  used on input line 3363.
 (luatex.def)             Requested size: 218.51521pt x 152.95692pt.
-<gg2ttbar_CS.png, id=989, 722.7pt x 505.89pt>
+<gg2ttbar_CS.png, id=991, 722.7pt x 505.89pt>
 File: gg2ttbar_CS.png Graphic file (type png)
 <use gg2ttbar_CS.png>
-Package luatex.def Info: gg2ttbar_CS.png  used on input line 3324.
+Package luatex.def Info: gg2ttbar_CS.png  used on input line 3364.
 (luatex.def)             Requested size: 218.51521pt x 152.95692pt.
 
 
@@ -1313,45 +1322,45 @@ Appendix A.
 Missing character: There is no ´ (U+00B4) in font cmr10!
 Missing character: There is no ´ (U+00B4) in font cmr10!
 [55] [56]
-Overfull \hbox (8.21964pt too wide) detected at line 3929
+Overfull \hbox (8.21964pt too wide) detected at line 3969
 []
  []
 
 
-Overfull \hbox (6.07109pt too wide) detected at line 3939
+Overfull \hbox (6.07109pt too wide) detected at line 3979
 []
  []
 
 [57]
-Overfull \hbox (4.49931pt too wide) detected at line 3978
+Overfull \hbox (4.49931pt too wide) detected at line 4018
 []
  []
 
 
-LaTeX Warning: Reference `eq:An_1' on page 58 undefined on input line 3980.
+LaTeX Warning: Reference `eq:An_1' on page 58 undefined on input line 4020.
 
 [58]
-Overfull \hbox (11.44077pt too wide) detected at line 4023
+Overfull \hbox (11.44077pt too wide) detected at line 4063
 []
  []
 
 
-Overfull \hbox (11.44077pt too wide) detected at line 4038
+Overfull \hbox (11.44077pt too wide) detected at line 4078
 []
  []
 
 
-Overfull \hbox (3.90926pt too wide) detected at line 4088
+Overfull \hbox (3.90926pt too wide) detected at line 4128
 []
  []
 
 [59] [60]
-Overfull \hbox (9.82216pt too wide) detected at line 4149
+Overfull \hbox (9.82216pt too wide) detected at line 4189
 []
  []
 
 [61] [62] [63]
-Overfull \hbox (15.80975pt too wide) detected at line 4315
+Overfull \hbox (15.80975pt too wide) detected at line 4355
 []
  []
 
@@ -1360,47 +1369,47 @@ Missing character: There is no ¨ (U+00A8) in font cmr10!
 Missing character: There is no ¨ (U+00A8) in font cmr10!
 Missing character: There is no ¨ (U+00A8) in font cmr10!
 
-Overfull \hbox (43.73457pt too wide) detected at line 4342
+Overfull \hbox (43.73457pt too wide) detected at line 4382
 []
  []
 
 [64]
-Overfull \hbox (16.07896pt too wide) detected at line 4377
+Overfull \hbox (16.07896pt too wide) detected at line 4417
 []
  []
 
 
-Overfull \hbox (23.34978pt too wide) detected at line 4398
+Overfull \hbox (23.34978pt too wide) detected at line 4438
 []
  []
 
 [65] [66]
-Overfull \hbox (28.76756pt too wide) detected at line 4498
+Overfull \hbox (28.76756pt too wide) detected at line 4538
 []
  []
 
 [67] [68]
-Overfull \hbox (1.50023pt too wide) detected at line 4653
+Overfull \hbox (1.50023pt too wide) detected at line 4693
 []
  []
 
 
-Overfull \hbox (5.29898pt too wide) detected at line 4679
+Overfull \hbox (5.29898pt too wide) detected at line 4719
 []
  []
 
 [69]
-Overfull \hbox (9.9564pt too wide) detected at line 4725
+Overfull \hbox (9.9564pt too wide) detected at line 4765
 []
  []
 
 
-Overfull \hbox (36.45233pt too wide) detected at line 4733
+Overfull \hbox (36.45233pt too wide) detected at line 4773
 []
  []
 
 [70]
-Overfull \hbox (16.45232pt too wide) detected at line 4745
+Overfull \hbox (16.45232pt too wide) detected at line 4785
 []
  []
 
@@ -1457,14 +1466,14 @@ LaTeX Warning: There were undefined references.
 )
 
 Here is how much of LuaTeX's memory you used:
- 31709 strings out of 476553
- 476994,1977958 words of node,token memory allocated
+ 31720 strings out of 476553
+ 476989,1977958 words of node,token memory allocated
  3290 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 20 glue, 4 kern, 1 glyph, 883 attribute, 60 glue_sp
 ec, 443 attribute_list, 2 write nodes
-   avail lists: 1:12,2:18109,3:765,4:316,5:7431,6:125,7:28900,8:581,9:18283,10:1
-9,11:913
- 52185 multiletter control sequences out of 65536+600000
+   avail lists: 1:12,2:18109,3:765,4:317,5:7431,6:125,7:28900,8:581,9:18283,10:2
+5,11:913
+ 52194 multiletter control sequences out of 65536+600000
  134 fonts using 8321567 bytes
  98i,24n,102p,1403b,1943s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips
@@ -1494,15 +1503,15 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msam10.pfb>
-Output written on Quali_Text.pdf (77 pages, 1629563 bytes).
+/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmtt8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/symbols/msam10.pfb>
+Output written on Quali_Text.pdf (77 pages, 1627961 bytes).
 
-PDF statistics: 1458 PDF objects out of 1728 (max. 8388607)
+PDF statistics: 1460 PDF objects out of 1728 (max. 8388607)
  1314 compressed objects within 14 object streams
  646 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
