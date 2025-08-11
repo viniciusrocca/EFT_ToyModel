@@ -1,4 +1,0 @@
-run_card: events set to 1000 and FO accuracy set to 10%
-param_card: mPsiT and mSDM set to 100TeV and 90TeV
-FO_analysis: Method set to LHE
-FKS_parm: Set the correct coupling orders for each process of our interest
