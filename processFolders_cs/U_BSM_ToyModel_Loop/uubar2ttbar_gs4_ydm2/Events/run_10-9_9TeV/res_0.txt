@@ -1,0 +1,21 @@
+
+
+Cross section per integration channel:
+          P0_uux_ttx                1   4.65150938e-05    3.7594e-07       0.8082%  
+
+
+ABS cross section per integration channel:
+          P0_uux_ttx                1   4.65150938e-05    3.7594e-07       0.8082%  
+
+
+ABS cross section per dir
+          P0_uux_ttx   4.65150938e-05    3.7594e-07 
+
+
+Cross section per dir
+          P0_uux_ttx   4.65150938e-05    3.7594e-07 
+
+Total ABS and 
+Total: 
+                      4.65150938e-05 +- 3.7594e-07  (8.0822e-01%)
+                      4.65150938e-05 +- 3.7594e-07  (8.0822e-01%) 
