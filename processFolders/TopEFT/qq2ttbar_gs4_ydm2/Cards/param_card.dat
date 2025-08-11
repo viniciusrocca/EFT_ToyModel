@@ -15,9 +15,9 @@ Block frblock
     1 1.000000e+00 # yDM 
     2 0.000000e+00 # lamHs 
     3 0.000000e+00 # lamS 
-    4 2.3750000e+03 # mSDM 
-    5 2.5000000e+03 # mPsiT 
-    6 2.5000000e+03 # mu 
+    4 9.500000e+03 # mSDM 
+    5 1.000000e+04 # mPsiT 
+    6 1.000000e+04 # mu 
 
 ###################################
 ## INFORMATION FOR MASS
@@ -52,7 +52,7 @@ Block mass
 Block sminputs 
     1 1.279000e+02 # aEWM1 
     2 1.166370e-05 # Gf 
-    3 1.19000e-01 # aS (Note: this Parameter is not used if you use a PDF set) 
+    3 1.184000e-01 # aS (Note: this Parameter is not used if you use a PDF set) 
 
 ###################################
 ## INFORMATION FOR YUKAWA

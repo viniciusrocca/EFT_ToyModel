@@ -1,0 +1,21 @@
+
+
+Cross section per integration channel:
+           P0_gg_ttx                1   3.63936843e-04    3.6520e-06       1.0035%  
+
+
+ABS cross section per integration channel:
+           P0_gg_ttx                1   3.63936843e-04    3.6520e-06       1.0035%  
+
+
+ABS cross section per dir
+           P0_gg_ttx   3.63936843e-04    3.6520e-06 
+
+
+Cross section per dir
+           P0_gg_ttx   3.63936843e-04    3.6520e-06 
+
+Total ABS and 
+Total: 
+                      3.63936843e-04 +- 3.6520e-06  (1.0035e+00%)
+                      3.63936843e-04 +- 3.6520e-06  (1.0035e+00%) 

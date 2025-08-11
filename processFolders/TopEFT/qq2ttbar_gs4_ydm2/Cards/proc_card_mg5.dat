@@ -40,8 +40,7 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm vt
 define vl~ = ve~ vm~ vt~
-import model /home/vinicius/EFT_ToyModel/UFOandFAModels/Top-EFTfull-UF\
-O
+import model Top-EFTfull-UFO
 define q = u c d s u~ c~ d~ s~
-generate q q > t t~ QCD^2==4 NP1^2==2 QED<=0
-output ~/EFT_ToyModel/processFolders/TopEFT/qq2ttbar_gs4_ydm2
+generate q q > t t~ QCD^2==4 NP1^2==2
+output ~/processFolders/TopEFT/qq2ttbar_gs4_ydm2

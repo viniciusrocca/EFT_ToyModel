@@ -235,7 +235,7 @@
 # pineappl = pineappl
 
 
-mg5_path = /home/vinicius/MadGraph/MG5_aMC_v3_6_3 
+mg5_path = /home/vrocca/MadGraph/MG5_aMC_v3_6_3 
 
 # MG5 MAIN DIRECTORY
-mg5_path = /home/vinicius/MadGraph/MG5_aMC_v3_6_3
+mg5_path = /home/vrocca/MadGraph/MG5_aMC_v3_6_3
