@@ -40,6 +40,7 @@ def getDistributions(filename):
     mTT = []
     deltaPhi = []
     weights = []
+    pT = []
     for ev in events:
         w = ev.eventinfo.weight/nevents
         weights.append(w)
@@ -47,6 +48,7 @@ def getDistributions(filename):
             if abs(ptc.id) != 6: continue
             if ptc.id == 6:
                 pA = np.array([ptc.px,ptc.py,ptc.pz,ptc.e])
+                pT.append(np.linalg.norm(pA[0:2]))
             else:
                 pB = np.array([ptc.px,ptc.py,ptc.pz,ptc.e])
 
@@ -56,7 +58,7 @@ def getDistributions(filename):
         deltaPhi.append(getDeltaPhi(pA,pB))
     
     dists = {'mTT' : np.array(mTT), 'pT1' : np.array(pT1), 'pT2' : np.array(pT2), 
-         'deltaPhi' : np.array(deltaPhi), 'weights' : np.array(weights), 
+         'deltaPhi' : np.array(deltaPhi), 'weights' : np.array(weights), 'pT': np.array(pT),
          'nevents' : nevents}
 
     return dists
@@ -106,7 +108,7 @@ def get_params_from_filename(run_dir):
 
 def AddInfoToDistributions(distributions, args, mPsiT, mSDM):
     """Adds the model name, process and mass parameters to the final dictionary"""
-    converter_dict = {'TopEFT': 'EFT', 'UV_BSM': '1-loop UV', 
+    converter_dict = {'TopEFT': 'EFT', 'UV_BSM': '1-loop UV', 'sm':'SM',
                       'qq2ttbar_gs4_ydm2': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4_ydm2': r'$g g \to t \bar{t}$',
                       'pp2ttbar_gs4_ydm2': r'$p p \to t \bar{t}$ ', 'qq2ttbar_gs6': r'$q q \to t \bar{t}$', 'gg2ttbar_gs6': r'$g g \to t \bar{t}$',
                       'pp2ttbar_gs6': r'$p p \to t \bar{t}$', 'qq2ttbar_gs4': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4': r'$g g \to t \bar{t}$',
@@ -131,7 +133,7 @@ def AddInfoToDistributions(distributions, args, mPsiT, mSDM):
 def main():
     #Defining the inputs
     parser = argparse.ArgumentParser(description="Process LHE files for a specific model and process.")
-    parser.add_argument("model", type=str, help="The model name (e.g., TopEFT, UV_BSM).")
+    parser.add_argument("model", type=str, help="The model name (e.g., TopEFT, UV_BSM, sm).")
     parser.add_argument("process", type=str, help="The process name (e.g., qq2ttbar_gs4_ydm2).")
     parser.add_argument("output_path", type=str, help="The full path for the output .npz file (e.g., /home/user/distributions).")
     args = parser.parse_args()
