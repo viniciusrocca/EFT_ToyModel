@@ -7,6 +7,7 @@ from matplotlib import pyplot as plt
 import tempfile
 import pylhe
 import gzip
+import seaborn as sns
 
 
 
@@ -63,8 +64,7 @@ def getInfo(f,labelsDict=None):
 
 
     if labelsDict is None:
-        labelsDict = {'Top-FormFactorsOneLoop-UFO' : '1-loop', 'Top-EFT-UFO' : 'EFT', 
-                      'Top-EFTphysical_simple-UFO' : 'EFT',
+        labelsDict = {'UV_BSM_ToyModel_NLO-UFO' : '1-loop', 'Top-EFTfull-UFO' : 'EFT', 
                       'SMS-stop-UFO' : 'SM', 'SMS-stop-NLO_SMQCD-UFO' : 'SM',
               'g g > t t~' : r'$g g \to \bar{t} t$', 'g g > t~ t' : r'$g g \to \bar{t} t$',
               'q q > t t~' : r'$q q \to \bar{t} t$', 'q q > t~ t' : r'$q q \to \bar{t} t$',
@@ -77,7 +77,8 @@ def getInfo(f,labelsDict=None):
     
     # Get process data:
     processData = bannerData.split('<MGProcCard>')[1].split('</MGProcCard>')[0]
-#     print(processData)
+
+    
     # Get model
     model = processData.split('Begin MODEL')[1].split('End   MODEL')[0]
     model = model.split('\n')[1].strip()
@@ -117,4 +118,14 @@ def getInfo(f,labelsDict=None):
                'xsec (pb)' : xsec, 'nevents' : nEvents}
     
     return fileInfo
+
+def selectColor(model, process):
+    if model == 'EFT' and process == r'$g g \to t \bar{t}$':
+        return sns.color_palette('Paired')[0]
+    elif model == '1-loop UV' and process == r'$g g \to t \bar{t}$':
+        return sns.color_palette('Paired')[1]
+    elif model == 'EFT' and process == r'$q q \to t \bar{t}$':
+        return sns.color_palette('Paired')[2]
+    else:
+        return sns.color_palette('Paired')[3]
 

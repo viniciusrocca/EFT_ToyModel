@@ -102,18 +102,42 @@ def get_params_from_filename(run_dir):
     parts = stem.split('_')
     idx = parts.index('banner')
     m1, m2 = parts[idx - 2], parts[idx - 1]
-    return f"mPsiT_{m1}_mSDM_{m2}"
+    return f"mPsiT_{m1}_mSDM_{m2}", float(m1), float(m2)
+
+def AddInfoToDistributions(distributions, args, mPsiT, mSDM):
+    """Adds the model name, process and mass parameters to the final dictionary"""
+    converter_dict = {'TopEFT': 'EFT', 'UV_BSM': '1-loop UV', 
+                      'qq2ttbar_gs4_ydm2': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4_ydm2': r'$g g \to t \bar{t}$',
+                      'pp2ttbar_gs4_ydm2': r'$p p \to t \bar{t}$ ', 'qq2ttbar_gs6': r'$q q \to t \bar{t}$', 'gg2ttbar_gs6': r'$g g \to t \bar{t}$',
+                      'pp2ttbar_gs6': r'$p p \to t \bar{t}$', 'qq2ttbar_gs4': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4': r'$g g \to t \bar{t}$',
+                      'pp2ttbar_gs4': r'$p p \to t \bar{t}$', 'gs4': r'$g_s^4$', 'gs6': r'$g_s^6$', 'ydm2': r'$y_{DM}^2$'}
+    
+    #Add new keys with the new information
+    distributions['model'] = converter_dict[args.model]
+    distributions['process'] = converter_dict[args.process]
+    distributions['mass_params'] = (mPsiT,mSDM)
+
+    #Extract the coupling order
+    parts = args.process.split('_')
+    parts = parts[1:]
+    for i,p in enumerate(parts):
+        parts[i] = converter_dict[p]
+
+    distributions['cp_order'] = parts[1:]
+    
+    return distributions
+
 
 def main():
     #Defining the inputs
     parser = argparse.ArgumentParser(description="Process LHE files for a specific model and process.")
     parser.add_argument("model", type=str, help="The model name (e.g., TopEFT, UV_BSM).")
     parser.add_argument("process", type=str, help="The process name (e.g., qq2ttbar_gs4_ydm2).")
-    parser.add_argument("output_path", type=str, help="The full path for the output .npz file (e.g., results/my_file.npz).")
+    parser.add_argument("output_path", type=str, help="The full path for the output .npz file (e.g., /home/user/distributions).")
     args = parser.parse_args()
 
     #Building the event folder of the specified process
-    process_dir = Path(f"/home/vinicius/Documents/processFolders/{args.model}/{args.process}/Events")
+    process_dir = Path(f"/home/vinicius/EFT_ToyModel/processFolders/{args.model}/{args.process}/Events")
     if not process_dir.exists():
         print(f"[Error] Directory not found: {process_dir}"); return
 
@@ -138,7 +162,7 @@ def main():
     for run_dir in run_dirs:
         
         # Get the specific parameters for this run
-        identifier_string = get_params_from_filename(run_dir)
+        identifier_string, mPsiT, mSDM = get_params_from_filename(run_dir)
         
         # Construct a unique output filename for this run
         output_filename = f"{identifier_string}.npz"
@@ -150,13 +174,21 @@ def main():
         else:
             lhe_file_path = next(run_dir.glob('unweighted_events.lhe.gz'))
         #events = getLHEevents(lhe_file_path)
+
+        #Computing the distributions
         distributions = getDistributions(lhe_file_path)
-        
-        # Save the results
+
         if distributions and 'mTT' in distributions and distributions['mTT'].size > 0:
+        
+            #Adding lables
+            distributions = AddInfoToDistributions(distributions, args, mPsiT, mSDM)
+            
+            #Saving the file
             np.savez_compressed(output_path, **distributions)
             print(f"Saved results to: {output_path}")
+        
         else:
+            # If the check above fails
             print("  -> No valid events found. No output generated.")
 
 if __name__ == "__main__":
