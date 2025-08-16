@@ -1,4 +1,4 @@
-import glob, os
+import glob, os, pyslha
 import numpy as np
 import itertools
 from scipy.interpolate import  griddata
@@ -63,6 +63,111 @@ def getDistributions(filename):
 
     return dists
 
+def getInfoSummary(f):
+    # Finding the the summary.txt file in the same directory as the input file 'f'
+    summary_path = os.path.join(os.path.dirname(f), 'summary.txt')
+        
+    with open(summary_path, 'r') as summary_file:
+        for line in summary_file:
+            clean_line = line.strip()
+                
+            # Getting process
+            if clean_line.startswith('Process'):
+                process = clean_line.split('Process', 1)[1].strip()
+                process =  process.split('[')[0].strip()
+
+             # Getting cross section
+            if clean_line.startswith('Total cross section:'):
+                value_str = clean_line.split(':', 1)[1].strip().split()[0]
+                cross_section = float(value_str)
+                
+            
+    return {'process': process, 'cross_section': cross_section}
+
+
+def getInfo(f,nlo = False,labelsDict=None):
+
+
+    if labelsDict is None:
+        labelsDict = {'UV_BSM_ToyModel_NLO-UFO' : '1-loop', 'Top-EFTfull-UFO' : 'EFT', 
+                      'SMS-stop-UFO' : 'SM', 'SMS-stop-NLO_SMQCD-UFO' : 'SM',
+              'g g > t t~' : r'$g g \to t \bar{t}$', 'g g > t~ t' : r'$g g \to t \bar{t} $',
+              'q q > t t~' : r'$q q \to t \bar{t}$', 'q q > t~ t' : r'$q q \to t \bar{t}$',
+              'p p > t t~' : r'$p p \to t \bar{t}$', 'p p > t~ t' : r'$p p \to t \bar{t}$'
+             }
+    
+    banner = list(glob.glob(os.path.join(os.path.dirname(f),'*banner*')))[0]
+    with open(banner,'r') as bannerF:
+        bannerData = bannerF.read()
+
+    if nlo == True:
+
+        #Extracting the summary info
+        summary_info = getInfoSummary(f)
+
+        #Getting the process
+        proc = summary_info.get('process')
+        if proc in labelsDict:
+            proc = labelsDict[proc]
+
+        #Getting cross section
+        xsec = summary_info.get('cross_section')
+
+        #Need a fix
+        nEvents = 'Fail' #Just for now
+        model = '1-loop' #Just for now
+    else:
+        # Get process data:
+        processData = bannerData.split('<MGProcCard>')[1].split('</MGProcCard>')[0]
+
+        
+        # Get model
+        model = processData.split('Begin MODEL')[1].split('End   MODEL')[0]
+        model = model.split('\n')[1].strip()
+        if model in labelsDict:
+            model = labelsDict[model]
+        # Get process
+        proc = processData.split('Begin PROCESS')[1].split('End PROCESS')[0]
+        proc = proc.split('\n')[1].split('#')[0].strip()
+        if proc in labelsDict:
+            proc = labelsDict[proc]
+
+        # Get event data:
+        eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
+        nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
+        xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
+    
+    # Get parameters data:
+    parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
+    parsSLHA = pyslha.readSLHA(parsData)
+    
+    
+    mT  = parsSLHA.blocks['MASS'][6]
+    if 5000022 in parsSLHA.blocks['MASS'] and nlo == True:
+        mSDM = parsSLHA.blocks['MASS'][5000022]
+        mPsiT = parsSLHA.blocks['MASS'][5000006]        
+        yDM = list(parsSLHA.blocks['FRBLOCK'].values())[0]
+    elif model == 'EFT':
+        pars = list(parsSLHA.blocks['FRBLOCK'].values())
+        mSDM = pars[3]
+        mPsiT = pars[4]     
+        yDM = pars[0]
+    else:
+        mSDM = 0.0
+        mPsiT = 0.0
+        yDM = 0.0
+
+    if yDM == 0.0:
+        model = 'SM'
+
+
+    
+
+    fileInfo = {'model' : model, 'process' : proc, '(mSDM,mPsiT,mT,yDM)' : (mSDM,mPsiT,mT,yDM),
+               'xsec (pb)' : xsec, 'nevents' : nEvents}
+    
+    return fileInfo
+
 def getDeltaPhi(pA,pB):
     """Calculates the differentce of the azimuthal angle phi for A and B"""
     phi_diff = transversePhi(pA) - transversePhi(pB)
@@ -106,7 +211,7 @@ def get_params_from_filename(run_dir):
     m1, m2 = parts[idx - 2], parts[idx - 1]
     return f"mPsiT_{m1}_mSDM_{m2}", float(m1), float(m2)
 
-def AddInfoToDistributions(distributions, args, mPsiT, mSDM):
+def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info):
     """Adds the model name, process and mass parameters to the final dictionary"""
     converter_dict = {'TopEFT': 'EFT', 'UV_BSM': '1-loop UV', 'sm':'SM',
                       'qq2ttbar_gs4_ydm2': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4_ydm2': r'$g g \to t \bar{t}$',
@@ -118,6 +223,9 @@ def AddInfoToDistributions(distributions, args, mPsiT, mSDM):
     distributions['model'] = converter_dict[args.model]
     distributions['process'] = converter_dict[args.process]
     distributions['mass_params'] = (mPsiT,mSDM)
+    distributions['ydm'] = info['(mSDM,mPsiT,mT,yDM)'][-1]
+    distributions['xsec (pb)'] = info['xsec (pb)']
+    
 
     #Extract the coupling order
     parts = args.process.split('_')
@@ -173,8 +281,10 @@ def main():
         # Process the LHE file for this run only
         if args.model == 'UV_BSM':
             lhe_file_path = next(run_dir.glob('events.lhe.gz'))
+            info = getInfo(lhe_file_path, nlo = True)
         else:
             lhe_file_path = next(run_dir.glob('unweighted_events.lhe.gz'))
+            info = getInfo(lhe_file_path)
         #events = getLHEevents(lhe_file_path)
 
         #Computing the distributions
@@ -183,7 +293,7 @@ def main():
         if distributions and 'mTT' in distributions and distributions['mTT'].size > 0:
         
             #Adding lables
-            distributions = AddInfoToDistributions(distributions, args, mPsiT, mSDM)
+            distributions = AddInfoToDistributions(distributions, args, mPsiT, mSDM, info)
             
             #Saving the file
             np.savez_compressed(output_path, **distributions)
