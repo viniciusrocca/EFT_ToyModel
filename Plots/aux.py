@@ -29,12 +29,16 @@ def getLHEevents(fpath):
                 newF.write(l)
     events = list(pylhe.read_lhe_with_attributes(fixedFile))
     nevents = pylhe.read_num_events(fixedFile)
+    initBlock = pylhe.read_lhe_init(fixedFile)
+    initBlock = initBlock['procInfo'][0]
     os.remove(fixedFile)
-    return nevents,events
+    return nevents,events,initBlock
 
 def getDistributions(filename):
 
-    nevents,events = getLHEevents(filename)
+    nevents,events, initBlock = getLHEevents(filename)
+    xSec = initBlock['xSection']
+    xSecErr = initBlock['error']
     pT1 = []
     pT2 = []
     mTT = []
@@ -42,7 +46,7 @@ def getDistributions(filename):
     weights = []
     pT = []
     for ev in events:
-        w = ev.eventinfo.weight/nevents
+        w = ev.eventinfo.weight/nevents #Apparently Madgraph already do this
         weights.append(w)
         for ptc in ev.particles:
             if abs(ptc.id) != 6: continue
@@ -59,7 +63,7 @@ def getDistributions(filename):
     
     dists = {'mTT' : np.array(mTT), 'pT1' : np.array(pT1), 'pT2' : np.array(pT2), 
          'deltaPhi' : np.array(deltaPhi), 'weights' : np.array(weights), 'pT': np.array(pT),
-         'nevents' : nevents}
+         'nevents' : nevents, 'xsec (pb)': xSec, 'xSecErr (pb)': xSecErr}
 
     return dists
 
@@ -141,7 +145,7 @@ def getInfo(f,nlo = False,labelsDict=None):
     parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
     parsSLHA = pyslha.readSLHA(parsData)
     
-    
+    print('oi')
     mT  = parsSLHA.blocks['MASS'][6]
     if 5000022 in parsSLHA.blocks['MASS'] and nlo == True:
         mSDM = parsSLHA.blocks['MASS'][5000022]
@@ -211,7 +215,7 @@ def get_params_from_filename(run_dir):
     m1, m2 = parts[idx - 2], parts[idx - 1]
     return f"mPsiT_{m1}_mSDM_{m2}", float(m1), float(m2)
 
-def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info):
+def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo = False):
     """Adds the model name, process and mass parameters to the final dictionary"""
     converter_dict = {'TopEFT': 'EFT', 'UV_BSM': '1-loop UV', 'sm':'SM',
                       'qq2ttbar_gs4_ydm2': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4_ydm2': r'$g g \to t \bar{t}$',
@@ -224,7 +228,12 @@ def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info):
     distributions['process'] = converter_dict[args.process]
     distributions['mass_params'] = (mPsiT,mSDM)
     distributions['ydm'] = info['(mSDM,mPsiT,mT,yDM)'][-1]
-    distributions['xsec (pb)'] = info['xsec (pb)']
+
+    if nlo == True:
+        distributions['weights'] = distributions['nevents']*distributions['weights']
+
+    if "xsec (pb)" not in distributions:
+        distributions['xsec (pb)'] = info['xsec (pb)']
     
 
     #Extract the coupling order
@@ -257,20 +266,40 @@ def main():
 
     print(f"Found {len(lhe_files)} run files for model '{args.model}' and process '{args.process}'.")
 
-   # Create an output directory named after the process 
-    output_dir = Path(f"{args.output_path}/{args.model}/{args.process}")
-    output_dir.mkdir(parents=True, exist_ok=True)
+   #Define the base output from the input
+    base_output_path = Path(args.output_path)
 
     # Find all individual run directories
     run_dirs = sorted([p.parent for p in process_dir.glob('run_*/*events.lhe.gz')])
     if not run_dirs:
         print(f"[Error] No run directories found in {process_dir}"); return
 
-    print(f"Found {len(run_dirs)} runs to process for '{args.process}'. Storing results in '{output_dir}'.")
+    print(f"Found {len(run_dirs)} runs to process for '{args.process}'. Storing results in '{base_output_path}'.")
 
+    
     # Loop over each individual run directory 
     for run_dir in run_dirs:
+        #Setting the default value for nlo to False
+        nlo = False
+
+        #Finding the banner for the current run
+        banner_file = glob.glob(os.path.join(run_dir, '*banner.txt'))
         
+        #Check if this run involves bias
+        is_biased_run = False
+        if banner_file and 'bias' in os.path.basename(banner_file[0]).lower():
+            is_biased_run = True
+
+        #Construct the correct output directory for this run
+        if is_biased_run:
+            output_dir = base_output_path / 'bias' / args.model / args.process
+        else:
+            output_dir = base_output_path / args.model / args.process
+        
+        #Verifying if the specific directory exists
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+
         # Get the specific parameters for this run
         identifier_string, mPsiT, mSDM = get_params_from_filename(run_dir)
         
@@ -281,7 +310,8 @@ def main():
         # Process the LHE file for this run only
         if args.model == 'UV_BSM':
             lhe_file_path = next(run_dir.glob('events.lhe.gz'))
-            info = getInfo(lhe_file_path, nlo = True)
+            nlo = True
+            info = getInfo(lhe_file_path, nlo)
         else:
             lhe_file_path = next(run_dir.glob('unweighted_events.lhe.gz'))
             info = getInfo(lhe_file_path)
@@ -293,7 +323,7 @@ def main():
         if distributions and 'mTT' in distributions and distributions['mTT'].size > 0:
         
             #Adding lables
-            distributions = AddInfoToDistributions(distributions, args, mPsiT, mSDM, info)
+            distributions = AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo)
             
             #Saving the file
             np.savez_compressed(output_path, **distributions)

@@ -8,6 +8,7 @@ import tempfile
 import pylhe
 import gzip
 import seaborn as sns
+import math
 
 
 
@@ -129,3 +130,14 @@ def selectColor(model, process):
     else:
         return sns.color_palette('Paired')[3]
 
+def xSecTest(data):
+    #This function checks if the sum of the weights is the total cross section
+    for d in data:
+        mPsiT,mSDM = d['mass_params']
+
+        if math.isclose(d['xsec (pb)'],  sum(d['weights'] ), rel_tol = 1e-7):
+            print(d['model'], d['process'], ' mPsiT: %.1f, mSDM: %.1f' % (mPsiT,mSDM), 'Result: Passed')
+        else:
+            print(d['model'], d['process'], ' mPsiT: %.1f, mSDM: %.1f' % (mPsiT,mSDM), 'Result: Reproved')
+    return
+     
