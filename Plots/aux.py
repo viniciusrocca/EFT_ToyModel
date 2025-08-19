@@ -145,7 +145,7 @@ def getInfo(f,nlo = False,labelsDict=None):
     parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
     parsSLHA = pyslha.readSLHA(parsData)
     
-    print('oi')
+    
     mT  = parsSLHA.blocks['MASS'][6]
     if 5000022 in parsSLHA.blocks['MASS'] and nlo == True:
         mSDM = parsSLHA.blocks['MASS'][5000022]
