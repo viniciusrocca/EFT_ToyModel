@@ -130,6 +130,7 @@ def selectColor(model, process):
     else:
         return sns.color_palette('Paired')[3]
     
+    
 def getInfoSummary(f):
     # Finding the the summary.txt file in the same directory as the input file 'f'
     summary_path = os.path.join(os.path.dirname(f), 'summary.txt')
@@ -152,7 +153,7 @@ def getInfoSummary(f):
     return {'process': process, 'cross_section': cross_section}
 
 
-def xSecTest(data):
+def xSecTest(data, display = False):
     #This function checks if the sum of the weights is the total cross section
     for d in data:
         mPsiT,mSDM = d['mass_params']
@@ -161,6 +162,9 @@ def xSecTest(data):
             print(d['model'], d['process'], ' mPsiT: %.1f, mSDM: %.1f' % (mPsiT,mSDM), 'Result: Passed')
         else:
             print(d['model'], d['process'], ' mPsiT: %.1f, mSDM: %.1f' % (mPsiT,mSDM), 'Result: Reproved')
+
+        if display == True:
+            print('xsec = %.9f sum of weights = %.9f ' % (d['xsec (pb)'], sum(d['weights'] )))
     return
      
 def getInfoSMS(f,nlo = False,labelsDict=None):

@@ -79,11 +79,14 @@ def getInfoSummary(f):
             if clean_line.startswith('Process'):
                 process = clean_line.split('Process', 1)[1].strip()
                 process =  process.split('[')[0].strip()
+            cross_section = 0
 
              # Getting cross section
-            if clean_line.startswith('Total cross section:'):
-                value_str = clean_line.split(':', 1)[1].strip().split()[0]
-                cross_section = float(value_str)
+            #if clean_line.startswith('Total cross section:'):
+             #   value_str = clean_line.split(':', 1)[1].strip().split()[0]
+              #  cross_section = float(value_str)
+                
+        
                 
             
     return {'process': process, 'cross_section': cross_section}
