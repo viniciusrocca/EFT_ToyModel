@@ -103,51 +103,52 @@ def getInfo(f,nlo = False,labelsDict=None):
               'p p > t t~' : r'$p p \to t \bar{t}$', 'p p > t~ t' : r'$p p \to t \bar{t}$'
              }
     
-    banner = list(glob.glob(os.path.join(os.path.dirname(f),'*banner*')))[0]
+    runDir = os.path.dirname(f)
+    if not os.path.isdir(runDir):
+        print(f'Folder {runDir} not found')
+        return None
+    banners = list(glob.glob(os.path.join(runDir,'*banner*txt')))
+    if len(banners) != 1:
+        print(f'{len(banners)} found (can only deal with 1 banner).')
+        return None
+    banner = banners[0]
     with open(banner,'r') as bannerF:
         bannerData = bannerF.read()
-
-    if nlo == True:
-
-        #Extracting the summary info
-        summary_info = getInfoSummary(f)
-
-        #Getting the process
-        proc = summary_info.get('process')
-        if proc in labelsDict:
-            proc = labelsDict[proc]
-
-        #Getting cross section
-        xsec = summary_info.get('cross_section')
-
-        #Need a fix
-        nEvents = 'Fail' #Just for now
-        model = '1-loop' #Just for now
-    else:
-        # Get process data:
+    
+    # Get process data:
+    if '<MGProcCard>' in bannerData:
         processData = bannerData.split('<MGProcCard>')[1].split('</MGProcCard>')[0]
-
-        
         # Get model
         model = processData.split('Begin MODEL')[1].split('End   MODEL')[0]
         model = model.split('\n')[1].strip()
-        if model in labelsDict:
-            model = labelsDict[model]
         # Get process
         proc = processData.split('Begin PROCESS')[1].split('End PROCESS')[0]
         proc = proc.split('\n')[1].split('#')[0].strip()
-        if proc in labelsDict:
-            proc = labelsDict[proc]
+        
+    elif os.path.isfile(os.path.join(runDir,'../../Cards/proc_card_mg5.dat')):
+        procCard = os.path.join(runDir,'../../Cards/proc_card_mg5.dat')
+        with open(procCard,'r') as f:
+            processData = f.readlines()
+        modelLine = [l for l in processData if 'import model' in l][-1]
+        model = modelLine.strip().split(' ')[-1]
+        model = os.path.basename(model)
+        procLine = [l for l in processData if 'generate' in l][-1]
+        proc = procLine.strip().split('generate ')[-1]
+    else:
+        model = None
+        proc = None
 
-        # Get event data:
-        eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
-        nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
-        xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
-    
+    if '[' in proc and ']' in proc:
+        proc = proc.split('[')[0].strip()
+
+    if proc in labelsDict:
+        proc = labelsDict[proc]
+    if model in labelsDict:
+        model = labelsDict[model]
+
     # Get parameters data:
     parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
     parsSLHA = pyslha.readSLHA(parsData)
-    
     
     mT  = parsSLHA.blocks['MASS'][6]
     if 5000022 in parsSLHA.blocks['MASS'] and nlo == True:
@@ -166,9 +167,28 @@ def getInfo(f,nlo = False,labelsDict=None):
 
     if yDM == 0.0:
         model = 'SM'
-
-
     
+    # Get event data:
+    if '<MGGenerationInfo>' in bannerData:
+        eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
+        nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
+        xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
+    elif os.path.isfile(os.path.join(runDir,'summary.txt')):
+        with open(os.path.join(runDir,'summary.txt'),'r') as f:
+            summaryLines = f.readlines()
+        totalXsecLine = [l for l in summaryLines if 'Total cross section' in l][0]
+        if 'DO NOT USE' in totalXsecLine:
+            totalXsecLine = [i for i,l in enumerate(summaryLines) if 'Scale variation' in l][0]
+            totalXsecLine = summaryLines[totalXsecLine+2]
+        if 'Total cross section' in totalXsecLine:
+            totalXsecLine = totalXsecLine.split(':')[1].strip()
+        totalXsecLine = totalXsecLine.split(' +')[0].strip()
+        totalXsecLine = totalXsecLine.replace('pb','')
+        xsec = float(totalXsecLine)
+        nEvents = -1
+    else:
+        nEvents = -1
+        xsec = -1.0    
 
     fileInfo = {'model' : model, 'process' : proc, '(mSDM,mPsiT,mT,yDM)' : (mSDM,mPsiT,mT,yDM),
                'xsec (pb)' : xsec, 'nevents' : nEvents}
@@ -218,7 +238,7 @@ def get_params_from_filename(run_dir):
     m1, m2 = parts[idx - 2], parts[idx - 1]
     return f"mPsiT_{m1}_mSDM_{m2}", float(m1), float(m2)
 
-def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo = False):
+def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo = False, bias = False):
     """Adds the model name, process and mass parameters to the final dictionary"""
     converter_dict = {'TopEFT': 'EFT', 'UV_BSM': '1-loop UV', 'sm':'SM',
                       'qq2ttbar_gs4_ydm2': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4_ydm2': r'$g g \to t \bar{t}$',
@@ -231,11 +251,15 @@ def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo = False):
     distributions['process'] = converter_dict[args.process]
     distributions['mass_params'] = (mPsiT,mSDM)
     distributions['ydm'] = info['(mSDM,mPsiT,mT,yDM)'][-1]
+    distributions['bias'] = bias
 
     if nlo == True:
         distributions['weights'] = distributions['nevents']*distributions['weights']
 
-    if "xsec (pb)" not in distributions:
+    
+    #Correcting the weights when doing bias generation
+    if abs((distributions['xsec (pb)']-info['xsec (pb)'])/info['xsec (pb)']) > 0.01 and nlo == True:
+        distributions['weights'] = (info['xsec (pb)']/distributions['xsec (pb)'])* distributions['weights']
         distributions['xsec (pb)'] = info['xsec (pb)']
     
 
@@ -326,7 +350,7 @@ def main():
         if distributions and 'mTT' in distributions and distributions['mTT'].size > 0:
         
             #Adding lables
-            distributions = AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo)
+            distributions = AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo, is_biased_run)
             
             #Saving the file
             np.savez_compressed(output_path, **distributions)
