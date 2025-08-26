@@ -97,7 +97,7 @@ def getInfo(f,nlo = False,labelsDict=None):
 
     if labelsDict is None:
         labelsDict = {'UV_BSM_ToyModel_NLO-UFO' : '1-loop', 'Top-EFTfull-UFO' : 'EFT', 
-                      'SMS-stop-UFO' : 'SM', 'SMS-stop-NLO_SMQCD-UFO' : 'SM',
+                      'SMS-stop-UFO' : 'SM', 'SMS-stop_NLO-UFO' : 'SM',
               'g g > t t~' : r'$g g \to t \bar{t}$', 'g g > t~ t' : r'$g g \to t \bar{t} $',
               'q q > t t~' : r'$q q \to t \bar{t}$', 'q q > t~ t' : r'$q q \to t \bar{t}$',
               'p p > t t~' : r'$p p \to t \bar{t}$', 'p p > t~ t' : r'$p p \to t \bar{t}$'
@@ -259,7 +259,7 @@ def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo = False, 
     
     #Correcting the weights when doing bias generation
     if abs((distributions['xsec (pb)']-info['xsec (pb)'])/info['xsec (pb)']) > 0.01 and nlo == True:
-        distributions['weights'] = (info['xsec (pb)']/distributions['xsec (pb)'])* distributions['weights']
+        distributions['weights'] = (info['xsec (pb)']/distributions['xsec (pb)']) * distributions['weights']
         distributions['xsec (pb)'] = info['xsec (pb)']
     
 

@@ -181,54 +181,55 @@ def getInfoSMS(f,nlo = False,labelsDict=None):
               'p p > t t~' : r'$p p \to t \bar{t}$', 'p p > t~ t' : r'$p p \to t \bar{t}$'
              }
     
-    banner = list(glob.glob(os.path.join(os.path.dirname(f),'*banner*')))[0]
+    runDir = os.path.dirname(f)
+    if not os.path.isdir(runDir):
+        print(f'Folder {runDir} not found')
+        return None
+    banners = list(glob.glob(os.path.join(runDir,'*banner*txt')))
+    if len(banners) != 1:
+        print(f'{len(banners)} found (can only deal with 1 banner).')
+        return None
+    banner = banners[0]
     with open(banner,'r') as bannerF:
         bannerData = bannerF.read()
-
-    if nlo == True:
-
-        #Extracting the summary info
-        summary_info = getInfoSummary(f)
-
-        #Getting the process
-        proc = summary_info.get('process')
-        if proc in labelsDict:
-            proc = labelsDict[proc]
-
-        #Getting cross section
-        xsec = summary_info.get('cross_section')
-
-        #Need a fix
-        nEvents = 'Fail' #Just for now
-        model = '1-loop' #Just for now
-    else:
-        # Get process data:
+    
+    # Get process data:
+    if '<MGProcCard>' in bannerData:
         processData = bannerData.split('<MGProcCard>')[1].split('</MGProcCard>')[0]
-
-        
         # Get model
         model = processData.split('Begin MODEL')[1].split('End   MODEL')[0]
         model = model.split('\n')[1].strip()
-        if model in labelsDict:
-            model = labelsDict[model]
         # Get process
         proc = processData.split('Begin PROCESS')[1].split('End PROCESS')[0]
         proc = proc.split('\n')[1].split('#')[0].strip()
-        if proc in labelsDict:
-            proc = labelsDict[proc]
+        
+    elif os.path.isfile(os.path.join(runDir,'../../Cards/proc_card_mg5.dat')):
+        procCard = os.path.join(runDir,'../../Cards/proc_card_mg5.dat')
+        with open(procCard,'r') as f:
+            processData = f.readlines()
+        modelLine = [l for l in processData if 'import model' in l][-1]
+        model = modelLine.strip().split(' ')[-1]
+        model = os.path.basename(model)
+        procLine = [l for l in processData if 'generate' in l][-1]
+        proc = procLine.strip().split('generate ')[-1]
+    else:
+        model = None
+        proc = None
 
-        # Get event data:
-        eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
-        nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
-        xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
-    
+    if '[' in proc and ']' in proc:
+        proc = proc.split('[')[0].strip()
+
+    if proc in labelsDict:
+        proc = labelsDict[proc]
+    if model in labelsDict:
+        model = labelsDict[model]
+
     # Get parameters data:
     parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
     parsSLHA = pyslha.readSLHA(parsData)
     
-    
     mT  = parsSLHA.blocks['MASS'][6]
-    if 5000002 in parsSLHA.blocks['MASS'] and nlo == True:
+    if 5000002 in parsSLHA.blocks['MASS']:
         mST = parsSLHA.blocks['MASS'][5000002]
         mChi = parsSLHA.blocks['MASS'][5000012]        
         yDM = list(parsSLHA.blocks['FRBLOCK'].values())[-1]
@@ -237,11 +238,39 @@ def getInfoSMS(f,nlo = False,labelsDict=None):
         mST= pars[1]
         mChi = pars[2]     
         yDM = pars[0]
+    else:
+        mST = 0.0
+        mChi = 0.0
+        yDM = 0.0
+
     if yDM == 0.0:
         model = 'SM'
     
+    # Get event data:
+    if '<MGGenerationInfo>' in bannerData:
+        eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
+        nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
+        xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
+    elif os.path.isfile(os.path.join(runDir,'summary.txt')):
+        with open(os.path.join(runDir,'summary.txt'),'r') as f:
+            summaryLines = f.readlines()
+        totalXsecLine = [l for l in summaryLines if 'Total cross section' in l][0]
+        if 'DO NOT USE' in totalXsecLine:
+            totalXsecLine = [i for i,l in enumerate(summaryLines) if 'Scale variation' in l][0]
+            totalXsecLine = summaryLines[totalXsecLine+2]
+        if 'Total cross section' in totalXsecLine:
+            totalXsecLine = totalXsecLine.split(':')[1].strip()
+        totalXsecLine = totalXsecLine.split(' +')[0].strip()
+        totalXsecLine = totalXsecLine.replace('pb','')
+        xsec = float(totalXsecLine)
+        nEvents = -1
+    else:
+        nEvents = -1
+        xsec = -1.0
 
     fileInfo = {'model' : model, 'process' : proc, '(mST,mChi,mT,yDM)' : (mST,mChi,mT,yDM),
                'xsec (pb)' : xsec, 'nevents' : nEvents}
     
     return fileInfo
+
+    
