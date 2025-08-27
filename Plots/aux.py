@@ -45,6 +45,11 @@ def getDistributions(filename):
     deltaPhi = []
     weights = []
     pT = []
+    cos_t = []
+    cos_tbar = []
+    rap_t = []
+    rap_tbar = []
+    rap_ttbar = []
     for ev in events:
         w = ev.eventinfo.weight/nevents #Apparently Madgraph already do this
         weights.append(w)
@@ -55,7 +60,16 @@ def getDistributions(filename):
                 pT.append(np.linalg.norm(pA[0:2]))
             else:
                 pB = np.array([ptc.px,ptc.py,ptc.pz,ptc.e])
+        
+        #Finding the center of mass velocity
+        p_tot = pA + pB
+        v_cm = np.array(p_tot[0:3])/p_tot[-1]
 
+        rap_t.append(rapidity(pA))
+        rap_tbar.append(rapidity(pB))
+        rap_ttbar.append(rapidity(pA + pB))
+        cos_t.append(cost(pA, v_cm))
+        cos_tbar.append(cost(pB, v_cm))
         pT1.append(max(np.linalg.norm(pA[0:2]),np.linalg.norm(pB[0:2])))
         pT2.append(min(np.linalg.norm(pA[0:2]),np.linalg.norm(pB[0:2])))
         mTT.append(np.sqrt((pA[-1]+pB[-1])**2-np.linalg.norm(pA[0:3]+pB[0:3])**2))
@@ -63,9 +77,60 @@ def getDistributions(filename):
     
     dists = {'mTT' : np.array(mTT), 'pT1' : np.array(pT1), 'pT2' : np.array(pT2), 
          'deltaPhi' : np.array(deltaPhi), 'weights' : np.array(weights), 'pT': np.array(pT),
-         'nevents' : nevents, 'xsec (pb)': xSec, 'xSecErr (pb)': xSecErr}
+         'nevents' : nevents, 'xsec (pb)': xSec, 'xSecErr (pb)': xSecErr, 'cost*': np.array(cos_t),
+         'cost*_bar': np.array(cos_tbar), 'y_t': np.array(rap_t), 'y_tbar': np.array(rap_tbar),
+         'abs_delta_y':abs(np.array(rap_t) - np.array(rap_tbar)), 
+         'delta_y': abs(np.array(rap_t)) - abs(np.array(rap_tbar))}
 
     return dists
+
+def rapidity(p):
+    """Computes the rapidity of a particle"""
+    r = 1/2 * np.log((p[-1] + p[2])/(p[-1] - p[2]))
+    return r
+
+def cost(p, v_cm):
+    """Computes the cossine of the polar angle of top or anti-top in the center of mass frame"""
+    #Boost to cm
+    p = boost(p,v_cm, 'px,py,pz,E')
+    return p[2]/np.linalg.norm(p[0:3])
+
+def getDeltaPhi(pA,pB):
+    """Calculates the differentce of the azimuthal angle phi for A and B"""
+
+    #Finding the center of mass velocity
+    p_tot = pA + pB
+    v_cm = np.array(p_tot[0:3])/p_tot[-1]
+
+    #Boosting 4-momentum to the cm frame
+    pA_cm = boost(pA,v_cm, 'px,py,pz,E')
+    pB_cm = boost(pB, v_cm, 'px,py,pz,E')
+
+    #Computing the transverse angle difference in the center of mass reference frame
+    phi_diff = transversePhi(pA_cm) - transversePhi(pB_cm)
+    
+    if phi_diff > np.pi:
+        phi_diff -= 2 * np.pi
+    if phi_diff < -np.pi:
+        phi_diff += 2 * np.pi
+        
+    return phi_diff
+    
+
+def transversePhi(p):
+    """Calculates the azimuthal angle phi from a momentum vector [px, py, pz, E]."""
+    if p[0] == 0.0 and p[1] == 0.0:
+        return print('Not defined')
+    elif p[0] == 0 and p[1] > 0:
+        return np.pi/2
+    elif p[0] == 0 and p[1] < 0:
+        return -np.pi/2
+    elif p[0] < 0 and p[1] >= 0:
+        return np.arctan(p[1]/p[0]) + np.pi
+    elif p[0] < 0 and p[1] < 0:
+        return np.arctan(p[1]/p[0]) - np.pi
+    else:
+        return np.arctan(p[1]/p[0])
 
 def getInfoSummary(f):
     # Finding the the summary.txt file in the same directory as the input file 'f'
@@ -195,28 +260,6 @@ def getInfo(f,nlo = False,labelsDict=None):
     
     return fileInfo
 
-def getDeltaPhi(pA,pB):
-    """Calculates the differentce of the azimuthal angle phi for A and B"""
-    phi_diff = transversePhi(pA) - transversePhi(pB)
-    while phi_diff <= -np.pi: phi_diff += 2 * np.pi
-    while phi_diff > np.pi: phi_diff -= 2 * np.pi
-    return abs(phi_diff)
-    
-
-def transversePhi(p):
-    """Calculates the azimuthal angle phi from a momentum vector [px, py, pz, E]."""
-    if p[0] == 0.0 and p[1] == 0.0:
-        return print('Not defined')
-    elif p[0] == 0 and p[1] > 0:
-        return np.pi/2
-    elif p[0] == 0 and p[1] < 0:
-        return -np.pi/2
-    elif p[0] < 0 and p[1] >= 0:
-        return np.arctan(p[1]/p[0]) + np.pi
-    elif p[0] < 0 and p[1] < 0:
-        return np.arctan(p[1]/p[0]) - np.pi
-    else:
-        return np.arctan(p[1]/p[0])
     
 
 def get_params_from_filename(run_dir):
@@ -272,6 +315,51 @@ def AddInfoToDistributions(distributions, args, mPsiT, mSDM, info, nlo = False, 
     distributions['cp_order'] = parts[1:]
     
     return distributions
+
+def boost(p,v,convention = 'E,px,py,px', c=1):
+    """Performs a lorentz boost in a general direction. Notice that the default configuration is c=1, i.e, natural units
+        Args:
+        p (list or np.array): The four-vector.
+        v (list or np.array): The three-velocity [vx, vy, vz] of the boost.
+        c (float): The speed of light. Defaults to 1 (natural units).
+        convention (str): The format of the four-vector 'p'.
+                          Can be 'E,px,py,pz' or 'px,py,pz,E'.
+    
+        Returns:
+            np.array: The boosted four-vector in the same format as the input.
+    """
+
+    if convention == 'px,py,pz,E':
+        # Convert to [E, px, py, pz] for the calculation
+        p = np.array([p[3], p[0], p[1], p[2]])
+    
+    #Computing the norm of the velocity
+    v_norm = np.linalg.norm(v)
+
+    if v_norm == 0:
+        return p # No boost needed if velocity is zero
+    
+    if v_norm >= 1:
+        raise ValueError("Boost velocity must be less than the speed of light.")
+
+    #Computing the Lorentz factor
+    gamma = 1/np.sqrt(1 - v_norm**2)
+    #Defining the Lorentz transformation matrix
+    l = [
+    [gamma, -gamma * v[0]/c, -gamma * v[1]/c, -gamma * v[2]/c],
+    [-gamma * v[0]/c, 1 + (gamma - 1) * v[0]**2 / v_norm**2, (gamma - 1) * v[0] * v[1] / v_norm**2, (gamma - 1) * v[0] * v[2] / v_norm**2],
+    [-gamma * v[1]/c, (gamma - 1) * v[1] * v[0] / v_norm**2, 1 + (gamma - 1) * v[1]**2 / v_norm**2, (gamma - 1) * v[1] * v[2] / v_norm**2],
+    [-gamma * v[2]/c, (gamma - 1) * v[2] * v[0] / v_norm**2, (gamma - 1) * v[2] * v[1] / v_norm**2, 1 + (gamma - 1) * v[2]**2 / v_norm**2]
+    ]
+    
+    p_boosted = l @ p
+
+    if convention == 'px,py,pz,E':
+        # Convert boosted [E, px, py, pz] back to [px, py, pz, E]
+        return np.array([p_boosted[1], p_boosted[2], p_boosted[3], p_boosted[0]])
+    else:
+        return p_boosted
+    
 
 
 def main():
