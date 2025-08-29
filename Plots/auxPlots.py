@@ -273,4 +273,25 @@ def getInfoSMS(f,nlo = False,labelsDict=None):
     
     return fileInfo
 
+def getXsection(fpath):
+    """
+    Reads a set of LHE files and returns a the cross section and it's error
+    """
+
+    # It is necessary to remove the < signs from the LHE files (in the generate line) before parsing with pylhe
+    fixedFile = tempfile.mkstemp(suffix='.lhe')
+    os.close(fixedFile[0])
+    fixedFile = fixedFile[1]
+    with  gzip.open(fpath,'rt') as f:
+        data = f.readlines()
+        with open(fixedFile,'w') as newF:
+            for l in data:
+                if 'generate' in l:
+                    continue
+                newF.write(l)
+    initBlock = pylhe.read_lhe_init(fixedFile)
+    initBlock = initBlock['procInfo'][0]
+    os.remove(fixedFile)
+    return (initBlock['xSection'], initBlock['error'])
+
     
