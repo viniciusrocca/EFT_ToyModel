@@ -1,0 +1,11 @@
+# 1: Process the UV_BSM model qq
+UV_BSM, qq2ttbar_gs4_ydm2, /home/vrocca/xsec_processFolders/UV_BSM/qq2ttbar_gs4_ydm2/Events, /home/vrocca/xsec_processFolders/xsecs/uv_bsm_qq_xsections.txt
+
+# 2: Process the UV_BSM model gg
+UV_BSM, gg2ttbar_gs4_ydm2, /home/vrocca/xsec_processFolders/UV_BSM/gg2ttbar_gs4_ydm2/Events, /home/vrocca/xsec_processFolders/xsecs/uv_bsm_gg_xsections.txt
+
+# 3: Process the TopEFT model qq
+TopEFT, qq2ttbar_gs4_ydm2, /home/vrocca/xsec_processFolders/TopEFT/qq2ttbar_gs4_ydm2/Events, /home/vrocca/xsec_processFolders/xsecs/top_eft_qq_xsections.txt
+
+# 4: Process the TopEFT model gg
+TopEFT, gg2ttbar_gs4_ydm2, /home/vrocca/xsec_processFolders/TopEFT/gg2ttbar_gs4_ydm2/Events, /home/vrocca/xsec_processFolders/xsecs/top_eft_gg_xsections.txt
