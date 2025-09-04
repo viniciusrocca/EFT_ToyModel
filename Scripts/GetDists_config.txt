@@ -1,0 +1,6 @@
+# Configuration file to extract distributions from LHE files
+process_directory: /home/vinicius/EFT_ToyModel/processFolders
+output_path: /home/vinicius/EFT_ToyModel/processFolders/Distributions
+model: SMS_1_loop
+process: qq2ttbar_gs4_ydm2
+run_name: spinFlip_*
