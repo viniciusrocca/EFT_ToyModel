@@ -123,9 +123,15 @@ def getInfo(f,labelsDict=None):
 def selectColor(model, process):
     if model == 'EFT' and process == r'$g g \to t \bar{t}$':
         return sns.color_palette('Paired')[0]
+    elif model == 'VLF EFT' and process == r'$g g \to t \bar{t}$':
+        return sns.color_palette('Paired')[0]
+    elif model == '1-loop VLF' and process == r'$g g \to t \bar{t}$':
+        return sns.color_palette('Paired')[1]
     elif model == '1-loop UV' and process == r'$g g \to t \bar{t}$':
         return sns.color_palette('Paired')[1]
     elif model == 'EFT' and process == r'$q q \to t \bar{t}$':
+        return sns.color_palette('Paired')[2]
+    elif model == 'VLF EFT' and process == r'$q q \to t \bar{t}$':
         return sns.color_palette('Paired')[2]
     else:
         return sns.color_palette('Paired')[3]
