@@ -98,32 +98,30 @@ C --------------------
           if (mtt .gt. 0.0d0) then
 
 c        Calculate the normalization offset using the first polynomial at mtt_bias_offset
-            p_offset = -(1.3666d-06*mtt_bias_offset**2 - 8.4340d-03*mtt_bias_offset - 8.2184d-01)
+            p_offset = -(1.5297d-06*mtt_bias_offset**2 - 8.6630d-03*mtt_bias_offset + 8.0929d+00)
          
 c        Pre-calculate the function values at each boundary for stitching
-            p1_at_b1 = -(1.3666d-06*bound_1**2 - 8.4340d-03*bound_1 - 8.2184d-01)
-            p2_at_b1 = -(1.8045d-05*bound_1**2 - 8.3650d-02*bound_1 + 8.3392d+01)
+            p1_at_b1 = -(1.5297d-06*bound_1**2 - 8.6630d-03*bound_1 + 8.0929d+00)
+            p2_at_b1 = -(-7.8599d-07*bound_1**2 + 3.7463d-04*bound_1 - 1.017d0)
          
-            p2_at_b2 = -(1.8045d-05*bound_2**2 - 8.3650d-02*bound_2 + 8.3392d+01)
-            p3_at_b2 = -(-9.1940d-07*bound_2**2 + 4.4198d-03*bound_2 - 2.0221d+01)
+            p2_at_b2 = -(-7.8599d-07*bound_2**2 + 3.7463d-04*bound_2 - 1.017d0)
+            p3_at_b2 = -(1.8282d-06*bound_2**2 - 1.2213d-02*bound_2 + 1.4555d+01)
 
 
 c --- Main piecewise function with stitching ---
-            if (mtt .lt. bound_2) then
+            if (mtt .lt. bound_1) then
 c           --- REGION 1 ---
-               p_val = -(1.3666d-06*mtt**2 - 8.4340d-03*mtt - 8.2184d-01)
+               p_val = -(1.5297d-06*mtt**2 - 8.6630d-03*mtt + 8.0929d+00)
                bias_weight = EXP(p_val - p_offset)
 
-            
-c            else if (mtt .lt. bound_2) then
+            else if (mtt .lt. bound_2) then
 c           --- REGION 2  ---
-c               p_val = -(1.8045d-05*mtt**2 - 8.3650d-02*mtt + 8.3592d+01)
-c               bias_weight = EXP(p_val + (p1_at_b1 - p2_at_b1) - p_offset)
+               p_val = -(-7.8599d-07*mtt**2 + 3.7463d-04*mtt - 1.217d0)
+               bias_weight = EXP(p_val + (p1_at_b1 - p2_at_b1) - p_offset)
             
             else
 c           --- REGION 3  ---
-	       mtt = min(mtt, 3500.0)
-               p_val = -(-9.1940d-07*mtt**2 + 4.4198d-03*mtt - 2.0221d+01)
+               p_val = -(1.8282d-06*mtt**2 - 1.2213d-02*mtt + 1.4355d+01)
                bias_weight = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) - p_offset)
          
          endif

@@ -38,10 +38,11 @@ C
           integer i,j
           double precision pt(nexternal)
           double precision max_mtt
-          double precision p_val, p_offset
+          double precision p_val, p_offset, mtt_eff
           double precision p1_at_b1, p2_at_b1, p2_at_b2, p3_at_b2
-          double precision, parameter :: bound_1 = 2001.0d0
-          double precision, parameter :: bound_2 = 2451.0d0
+          double precision stitch_factor_12, stitch_factor_23
+          double precision, parameter :: bound_1 = 1451.0d0
+          double precision, parameter :: bound_2 = 2351.0d0
 c
 c local variables defined in the run_card
 c
@@ -95,39 +96,34 @@ C --------------------
 
           mtt = dsqrt(pTot(0)**2 - pTot(1)**2 - pTot(2)**2 - pTot(3)**2)
 
-          if (mtt .gt. 0.0d0) then
+          p_offset = - ( 1.6d-06 * mtt_bias_offset**2 - 8.95d-03 * mtt_bias_offset - 5.87d-01 )
 
-c        Calculate the normalization offset using the first polynomial at mtt_bias_offset
-            p_offset = -(1.3666d-06*mtt_bias_offset**2 - 8.4340d-03*mtt_bias_offset - 8.2184d-01)
-         
-c        Pre-calculate the function values at each boundary for stitching
-            p1_at_b1 = -(1.3666d-06*bound_1**2 - 8.4340d-03*bound_1 - 8.2184d-01)
-            p2_at_b1 = -(1.8045d-05*bound_1**2 - 8.3650d-02*bound_1 + 8.3392d+01)
-         
-            p2_at_b2 = -(1.8045d-05*bound_2**2 - 8.3650d-02*bound_2 + 8.3392d+01)
-            p3_at_b2 = -(-9.1940d-07*bound_2**2 + 4.4198d-03*bound_2 - 2.0221d+01)
+c         Calculate the stitch factors needed at the boundaries
+          p1_at_b1 = - ( 1.6d-06 * bound_1**2 - 8.95d-03 * bound_1 - 5.87d-01 )
+          p2_at_b1 = - ( 1.0d-06 * bound_1**2 - 7.61d-03 * bound_1 - 1.2d0 )
+          stitch_factor_12 = p1_at_b1 - p2_at_b1
 
+          p2_at_b2 = - ( 1.0d-06 * bound_2**2 - 7.61d-03 * bound_2 - 1.2d0 )
+          p3_at_b2 = - ( 1.8d-06 * bound_2**2 - 1.2d-02 * bound_2 + 4.5d0 )
+          stitch_factor_23 = p2_at_b2 - p3_at_b2
 
-c --- Main piecewise function with stitching ---
-            if (mtt .lt. bound_2) then
-c           --- REGION 1 ---
-               p_val = -(1.3666d-06*mtt**2 - 8.4340d-03*mtt - 8.2184d-01)
-               bias_weight = EXP(p_val - p_offset)
+          if (mtt.gt.0.0d0) then
+            if (mtt .lt. bound_1) then
+              p_val = - ( 1.6d-06 * mtt**2 - 8.95d-03 * mtt - 5.87d-01 )
+              bias_weight = EXP(p_val - p_offset)
 
-            
-c            else if (mtt .lt. bound_2) then
-c           --- REGION 2  ---
-c               p_val = -(1.8045d-05*mtt**2 - 8.3650d-02*mtt + 8.3592d+01)
-c               bias_weight = EXP(p_val + (p1_at_b1 - p2_at_b1) - p_offset)
-            
+            else if (mtt .lt. bound_2) then
+              p_val = - ( 1.0d-06 * mtt**2 - 7.61d-03 * mtt - 1.03d0 )
+              bias_weight = EXP(p_val + stitch_factor_12 - p_offset)
+
             else
-c           --- REGION 3  ---
-	       mtt = min(mtt, 3500.0)
-               p_val = -(-9.1940d-07*mtt**2 + 4.4198d-03*mtt - 2.0221d+01)
-               bias_weight = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) - p_offset)
-         
+c             Apply cutoff for stability
+              mtt = min(mtt, 3500.0)
+              p_val = - ( 1.8d-06 * mtt**2 - 1.2d-02 * mtt + 4.7d0 )
+              bias_weight = EXP(p_val + stitch_factor_12 + stitch_factor_23 - p_offset)
          endif
-      endif
+
+          endif
 
       return
 

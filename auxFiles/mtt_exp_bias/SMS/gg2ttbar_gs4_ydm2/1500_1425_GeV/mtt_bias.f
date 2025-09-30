@@ -38,10 +38,8 @@ C
           integer i,j
           double precision pt(nexternal)
           double precision max_mtt
-          double precision p_val, p_offset
-          double precision p1_at_b1, p2_at_b1, p2_at_b2, p3_at_b2
-          double precision, parameter :: bound_1 = 2001.0d0
-          double precision, parameter :: bound_2 = 2451.0d0
+          double precision polynomial_arg
+          double precision polynomial_offset
 c
 c local variables defined in the run_card
 c
@@ -95,39 +93,24 @@ C --------------------
 
           mtt = dsqrt(pTot(0)**2 - pTot(1)**2 - pTot(2)**2 - pTot(3)**2)
 
-          if (mtt .gt. 0.0d0) then
+          if (mtt.gt.0.0d0) then
+            if (mtt .lt. 1351.0d0) then
+              polynomial_arg = - (1.8d-06 * mtt**2 - 9.2d-03 * mtt - 2.7d0)
+              polynomial_offset =  - (1.8d-06 * mtt_bias_offset**2 - 9.2d-03 * mtt_bias_offset - 2.7d0)
 
-c        Calculate the normalization offset using the first polynomial at mtt_bias_offset
-            p_offset = -(1.3666d-06*mtt_bias_offset**2 - 8.4340d-03*mtt_bias_offset - 8.2184d-01)
-         
-c        Pre-calculate the function values at each boundary for stitching
-            p1_at_b1 = -(1.3666d-06*bound_1**2 - 8.4340d-03*bound_1 - 8.2184d-01)
-            p2_at_b1 = -(1.8045d-05*bound_1**2 - 8.3650d-02*bound_1 + 8.3392d+01)
-         
-            p2_at_b2 = -(1.8045d-05*bound_2**2 - 8.3650d-02*bound_2 + 8.3392d+01)
-            p3_at_b2 = -(-9.1940d-07*bound_2**2 + 4.4198d-03*bound_2 - 2.0221d+01)
+            else if (mtt .ge. 1351.0d0 .and. mtt .lt. 2301.0d0) then
+              polynomial_arg = - (8.0d-07 * mtt**2 - 6.9d-03 * mtt - 3.8d0)
+              polynomial_offset = - (1.8d-06 * mtt_bias_offset**2 - 9.2d-03 * mtt_bias_offset - 2.7d0)
 
 
-c --- Main piecewise function with stitching ---
-            if (mtt .lt. bound_2) then
-c           --- REGION 1 ---
-               p_val = -(1.3666d-06*mtt**2 - 8.4340d-03*mtt - 8.2184d-01)
-               bias_weight = EXP(p_val - p_offset)
-
-            
-c            else if (mtt .lt. bound_2) then
-c           --- REGION 2  ---
-c               p_val = -(1.8045d-05*mtt**2 - 8.3650d-02*mtt + 8.3592d+01)
-c               bias_weight = EXP(p_val + (p1_at_b1 - p2_at_b1) - p_offset)
-            
             else
-c           --- REGION 3  ---
-	       mtt = min(mtt, 3500.0)
-               p_val = -(-9.1940d-07*mtt**2 + 4.4198d-03*mtt - 2.0221d+01)
-               bias_weight = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) - p_offset)
-         
-         endif
-      endif
+              mtt = min(mtt,3500.0 )
+              polynomial_arg = - (1.6d-06 * mtt**2 - 1.1d-02 * mtt + 1.8d0)
+              polynomial_offset = - (1.8d-06 * mtt_bias_offset**2 - 9.2d-03 * mtt_bias_offset - 2.7d0)
+          endif
+
+          bias_weight = EXP(polynomial_arg)
+          endif
 
       return
 
