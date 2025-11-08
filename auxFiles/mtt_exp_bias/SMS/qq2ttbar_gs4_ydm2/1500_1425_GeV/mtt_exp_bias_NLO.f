@@ -27,9 +27,19 @@ c
       integer ipdg(nexternal),i,j
       double precision pTot(0:3)
       double precision mtt
-      double precision polynomial_arg
-      double precision polynomial_offset
+      double precision p_val, p_offset
+      double precision p1_at_b1, p2_at_b1, p2_at_b2, p3_at_b2
+      double precision p3_at_b3, p4_at_b3, p4_at_b4, p5_at_b4
+      double precision p5_at_b5, p6_at_b5, p6_at_b6, p7_at_b6
 
+c --- Boundary and Normalization Parameters ---
+      double precision, parameter :: bound_1 = 900.0d0
+      double precision, parameter :: bound_2 = 2200.0d0
+      double precision, parameter :: bound_3 = 2800.0d0
+      double precision, parameter :: bound_4 = 4600.0d0
+      double precision, parameter :: bound_5 = 5700.0d0
+      double precision, parameter :: bound_6 = 6500.0d0
+      double precision, parameter :: mtt_norm = 2000.0d0
       
 c local variables defined in the run_card
 c
@@ -49,34 +59,66 @@ c      double precision mtt_bias_enhancement_power
       enddo
 
       mtt = dsqrt(pTot(0)**2 - pTot(1)**2 - pTot(2)**2 - pTot(3)**2)
+if (mtt .gt. 0.0d0) then
 
-      if (mtt.gt.0.0d0) then
-         if (mtt .lt. 1051.0d0) then
-            polynomial_arg = - ( 5.1d-06 * mtt**2 - 10.0d-03 * mtt - 1.1 )
-            polynomial_offset = - ( 5.1d-06 * 500.0**2 - 10.0d-03 * 500.0 - 1.1 )
-            bias_wgt = EXP(polynomial_arg - polynomial_offset)
-            
-         else if (mtt .ge. 1051.0d0 .and. mtt .lt. 1451.0d0) then
-            polynomial_arg = - ( - 3.0d-06 * mtt**2 - 1.7d-03 * mtt - 1.0 )
-            polynomial_offset = - ( 5.1d-06 * 500.0**2 - 10.0d-03 * 500.0 - 1.1 )
-            bias_wgt = EXP(polynomial_arg - polynomial_offset)
+c        Calculate the normalization offset using the first polynomial at mtt_norm
+         p_offset = -(-6.1329d-06*mtt_norm**2 + 6.2221d-03*mtt_norm - 1.0890d+01)
+         
+c        Pre-calculate the function values at each boundary for stitching
+         p1_at_b1 = -(-6.1329d-06*bound_1**2 + 6.2221d-03*bound_1 - 1.0890d+01)
+         p2_at_b1 = -( 4.1848d-07*bound_1**2 - 3.6289d-03*bound_1 - 7.2336d+00)
+         
+         p2_at_b2 = -( 4.1848d-07*bound_2**2 - 3.6289d-03*bound_2 - 7.2336d+00)
+         p3_at_b2 = -(-9.4944d-07*bound_2**2 + 3.0940d-03*bound_2 - 1.5519d+01)
 
-         else if (mtt .ge. 1451.0d0 .and. mtt .lt. 1701.0d0) then
-            polynomial_arg = - (  -5.1d-08 * mtt**4 + 3.2d-04 * mtt**3 - 7.5d-01 * mtt**2 + 7.9d+02 * mtt - 3.0933d+05 )
-            polynomial_offset = - ( 5.1d-06 * 500.0**2 - 10.0d-03 * 500.0 - 1.1 )
-            bias_wgt = EXP(polynomial_arg - polynomial_offset)
+         p3_at_b3 = -(-9.4944d-07*bound_3**2 + 3.0940d-03*bound_3 - 1.5519d+01)
+         p4_at_b3 = -(-4.1803d-07*bound_3**2 + 8.8715d-04*bound_3 - 1.4067d+01)
+
+         p4_at_b4 = -(-4.1803d-07*bound_4**2 + 8.8715d-04*bound_4 - 1.4067d+01)
+         p5_at_b4 = -( 8.2147d-07*bound_4**2 - 1.1271d-02*bound_4 + 1.5970d+01)
+         
+         p5_at_b5 = -( 8.2147d-07*bound_5**2 - 1.1271d-02*bound_5 + 1.5970d+01)
+         p6_at_b5 = -( 9.0804d-07*bound_5**2 - 1.3142d-02*bound_5 + 2.3229d+01)
+         
+         p6_at_b6 = -( 9.0804d-07*bound_6**2 - 1.3142d-02*bound_6 + 2.3229d+01)
+         p7_at_b6 = -(-2.5237d-06*bound_6**2 + 2.8872d-02*bound_6 - 1.0532d+02)
+
+c --- Main piecewise function with stitching ---
+         if (mtt .lt. bound_1) then
+c           --- REGION 1 ---
+            p_val = -(-6.1329d-06*mtt**2 + 6.2221d-03*mtt - 1.0890d+01)
+            bias_wgt = EXP(p_val - p_offset)
+
+         else if (mtt .lt. bound_2) then
+c           --- REGION 2 (Stitched) ---
+            p_val = -( 4.1848d-07*mtt**2 - 3.6289d-03*mtt - 7.2336d+00)
+            bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) - p_offset)
             
-        else if (mtt .ge. 1701.0d0 .and. mtt .lt. 2701.0d0) then
-            polynomial_arg = - ( - 4.8d-07 * mtt**2 + 3.0d-04 * mtt - 9.6 )
-            polynomial_offset = - ( 5.1d-06 * 500.0**2 - 10.0d-03 * 500.0 - 1.1 )
-            bias_wgt = EXP(polynomial_arg - polynomial_offset)
+         else if (mtt .lt. bound_3) then
+c           --- REGION 3 (Stitched) ---
+            p_val = -(-9.4944d-07*mtt**2 + 3.0940d-03*mtt - 1.6019d+01)
+            bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) - p_offset)
+
+         else if (mtt .lt. bound_4) then
+c           --- REGION 4 (Stitched) ---
+            p_val = -(-4.1803d-07*mtt**2 + 8.8715d-04*mtt - 1.4267d+01)
+            bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) - p_offset)
+            
+         else if (mtt .lt. bound_5) then
+c           --- REGION 5 (Stitched) ---
+            p_val = -( 8.2147d-07*mtt**2 - 1.1271d-02*mtt + 1.5770d+01)
+            bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) + (p4_at_b4 - p5_at_b4) - p_offset)
+         
+         else if (mtt .lt. bound_6) then
+c           --- REGION 6 (Stitched) ---
+            p_val = -( 9.0804d-07*mtt**2 - 1.3142d-02*mtt + 2.3029d+01)
+            bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) + (p4_at_b4 - p5_at_b4) + (p5_at_b5 - p6_at_b5) - p_offset)
 
          else
-c            mtt = min(mtt,6000.0)
-            polynomial_arg = - (  2.2d-07 * mtt**2 - 3.9d-03 * mtt - 3.4 )
-            polynomial_offset = - ( 5.1d-06 * 500.0**2 - 10.0d-03 * 500.0 - 1.1 )
-            bias_wgt = EXP(polynomial_arg - polynomial_offset)
-
+c           --- REGION 7 (Stitched) ---
+	    mtt = min(7500.0, mtt)
+            p_val = -(-2.5237d-06*mtt**2 + 2.8872d-02*mtt - 1.05523d+02)
+            bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) + (p4_at_b4 - p5_at_b4) + (p5_at_b5 - p6_at_b5) + (p6_at_b6 - p7_at_b6) - p_offset)
          endif
       endif
 

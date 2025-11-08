@@ -27,19 +27,22 @@ c
       integer ipdg(nexternal),i,j
       double precision pTot(0:3)
       double precision mtt
+      
+c --- Local Calculation Variables ---
       double precision p_val, p_offset
       double precision p1_at_b1, p2_at_b1, p2_at_b2, p3_at_b2
       double precision p3_at_b3, p4_at_b3, p4_at_b4, p5_at_b4
       double precision p5_at_b5, p6_at_b5, p6_at_b6, p7_at_b6
-
+      
 c --- Boundary and Normalization Parameters ---
       double precision, parameter :: bound_1 = 900.0d0
-      double precision, parameter :: bound_2 = 2200.0d0
-      double precision, parameter :: bound_3 = 2800.0d0
+      double precision, parameter :: bound_2 = 1200.0d0
+      double precision, parameter :: bound_3 = 3100.0d0
       double precision, parameter :: bound_4 = 4600.0d0
-      double precision, parameter :: bound_5 = 5700.0d0
-      double precision, parameter :: bound_6 = 6500.0d0
-      double precision, parameter :: mtt_norm = 1000.0d0
+      double precision, parameter :: bound_5 = 5100.0d0
+      double precision, parameter :: bound_6 = 5500.0d0
+      double precision, parameter :: mtt_norm = 200.0d0
+
       
 c local variables defined in the run_card
 c
@@ -59,65 +62,66 @@ c      double precision mtt_bias_enhancement_power
       enddo
 
       mtt = dsqrt(pTot(0)**2 - pTot(1)**2 - pTot(2)**2 - pTot(3)**2)
-if (mtt .gt. 0.0d0) then
+
+      if (mtt .gt. 0.0d0) then
 
 c        Calculate the normalization offset using the first polynomial at mtt_norm
-         p_offset = -(-6.1329d-06*mtt_norm**2 + 6.2221d-03*mtt_norm - 1.0890d+01)
+         p_offset = -(-3.5964d-06*mtt_norm**2 - 4.1705d-03*mtt_norm - 2.4657d+00)
          
 c        Pre-calculate the function values at each boundary for stitching
-         p1_at_b1 = -(-6.1329d-06*bound_1**2 + 6.2221d-03*bound_1 - 1.0890d+01)
-         p2_at_b1 = -( 4.1848d-07*bound_1**2 - 3.6289d-03*bound_1 - 7.2336d+00)
+         p1_at_b1 = -(-3.5964d-06*bound_1**2 - 4.1705d-03*bound_1 - 2.4657d+00)
+         p2_at_b1 = -( 2.2273d-04*bound_1**2 - 4.6954d-01*bound_1 + 2.3503d+02)
          
-         p2_at_b2 = -( 4.1848d-07*bound_2**2 - 3.6289d-03*bound_2 - 7.2336d+00)
-         p3_at_b2 = -(-9.4944d-07*bound_2**2 + 3.0940d-03*bound_2 - 1.5519d+01)
+         p2_at_b2 = -( 2.2273d-04*bound_2**2 - 4.6954d-01*bound_2 + 2.3503d+02)
+         p3_at_b2 = -(-9.9496d-07*bound_2**2 + 2.3841d-03*bound_2 - 1.1708d+01)
 
-         p3_at_b3 = -(-9.4944d-07*bound_3**2 + 3.0940d-03*bound_3 - 1.5519d+01)
-         p4_at_b3 = -(-4.1803d-07*bound_3**2 + 8.8715d-04*bound_3 - 1.4067d+01)
+         p3_at_b3 = -(-9.9496d-07*bound_3**2 + 2.3841d-03*bound_3 - 1.1708d+01)
+         p4_at_b3 = -(-2.3001d-07*bound_3**2 - 1.3753d-03*bound_3 - 7.4397d+00)
 
-         p4_at_b4 = -(-4.1803d-07*bound_4**2 + 8.8715d-04*bound_4 - 1.4067d+01)
-         p5_at_b4 = -( 8.2147d-07*bound_4**2 - 1.1271d-02*bound_4 + 1.5970d+01)
+         p4_at_b4 = -(-2.3001d-07*bound_4**2 - 1.3753d-03*bound_4 - 7.4397d+00)
+         p5_at_b4 = -(-1.0969d-05*bound_4**2 + 1.0092d-01*bound_4 - 2.5154d+02)
          
-         p5_at_b5 = -( 8.2147d-07*bound_5**2 - 1.1271d-02*bound_5 + 1.5970d+01)
-         p6_at_b5 = -( 9.0804d-07*bound_5**2 - 1.3142d-02*bound_5 + 2.3229d+01)
+         p5_at_b5 = -(-1.0969d-05*bound_5**2 + 1.0092d-01*bound_5 - 2.5154d+02)
+         p6_at_b5 = -( 1.7276d-05*bound_5**2 - 1.8274d-01*bound_5 + 4.6197d+02)
          
-         p6_at_b6 = -( 9.0804d-07*bound_6**2 - 1.3142d-02*bound_6 + 2.3229d+01)
-         p7_at_b6 = -(-2.5237d-06*bound_6**2 + 2.8872d-02*bound_6 - 1.0532d+02)
+         p6_at_b6 = -( 1.7276d-05*bound_6**2 - 1.8274d-01*bound_6 + 4.6197d+02)
+         p7_at_b6 = -( 4.6583d-06*bound_6**2 - 5.3751d-02*bound_6 + 1.3371d+02)
 
-c --- Main piecewise function with stitching ---
+
          if (mtt .lt. bound_1) then
 c           --- REGION 1 ---
-            p_val = -(-6.1329d-06*mtt**2 + 6.2221d-03*mtt - 1.0890d+01)
+            p_val = -(-3.5964d-06*mtt**2 - 4.1705d-03*mtt - 2.4657d+00)
             bias_wgt = EXP(p_val - p_offset)
 
          else if (mtt .lt. bound_2) then
-c           --- REGION 2 (Stitched) ---
-            p_val = -( 4.1848d-07*mtt**2 - 3.6289d-03*mtt - 7.2336d+00)
+c           --- REGION 2  ---
+            p_val = -( 2.2273d-04*mtt**2 - 4.6954d-01*mtt + 2.3503d+02)
             bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) - p_offset)
             
          else if (mtt .lt. bound_3) then
-c           --- REGION 3 (Stitched) ---
-            p_val = -(-9.4944d-07*mtt**2 + 3.0940d-03*mtt - 1.5519d+01)
+c           --- REGION 3  ---
+            p_val = -(-9.9496d-07*mtt**2 + 2.3841d-03*mtt - 1.1708d+01)
             bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) - p_offset)
 
          else if (mtt .lt. bound_4) then
-c           --- REGION 4 (Stitched) ---
-            p_val = -(-4.1803d-07*mtt**2 + 8.8715d-04*mtt - 1.4067d+01)
+c           --- REGION 4  ---
+            p_val = -(-2.3001d-07*mtt**2 - 1.3753d-03*mtt - 7.4397d+00)
             bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) - p_offset)
             
          else if (mtt .lt. bound_5) then
-c           --- REGION 5 (Stitched) ---
-            p_val = -( 8.2147d-07*mtt**2 - 1.1271d-02*mtt + 1.5970d+01)
+c           --- REGION 5  ---
+            p_val = -(-1.0969d-05*mtt**2 + 1.0092d-01*mtt - 2.5154d+02)
             bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) + (p4_at_b4 - p5_at_b4) - p_offset)
          
          else if (mtt .lt. bound_6) then
-c           --- REGION 6 (Stitched) ---
-            p_val = -( 9.0804d-07*mtt**2 - 1.3142d-02*mtt + 2.3229d+01)
+c           --- REGION 6 ---
+            p_val = -( 1.7276d-05*mtt**2 - 1.8274d-01*mtt + 4.6197d+02)
             bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) + (p4_at_b4 - p5_at_b4) + (p5_at_b5 - p6_at_b5) - p_offset)
 
          else
-c           --- REGION 7 (Stitched) ---
-	    mtt = min(7500.0, mtt)
-            p_val = -(-2.5237d-06*mtt**2 + 2.8872d-02*mtt - 1.0532d+02)
+c           --- REGION 7 ---
+	    mtt = min(mtt,5500.0)
+            p_val = -( 4.6583d-06*mtt**2 - 5.3751d-02*mtt + 1.3371d+02)
             bias_wgt = EXP(p_val + (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2) + (p3_at_b3 - p4_at_b3) + (p4_at_b4 - p5_at_b4) + (p5_at_b5 - p6_at_b5) + (p6_at_b6 - p7_at_b6) - p_offset)
          endif
       endif
