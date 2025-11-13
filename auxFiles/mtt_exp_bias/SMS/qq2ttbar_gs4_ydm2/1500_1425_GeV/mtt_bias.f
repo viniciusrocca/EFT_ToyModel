@@ -173,6 +173,7 @@ c                 --- REGION 5 ---
       
               else
 c                 --- REGION 6 ---
+                  mtt = min(6700.0, mtt)
                   p_val = 8.1272d-07*mtt**2 - 1.0905d-02*mtt 
      &                 + 1.5564d+01
                   p_val = -p_val

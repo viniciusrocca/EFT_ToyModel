@@ -37,14 +37,21 @@ C local variables
 C
           integer i,j
           double precision pt(nexternal)
+          double precision max_mtt
+
+c --- Local Calculation Variables ---
           double precision p_val, p_offset, final_arg
           double precision stitch_sum, mtt_sq
-          double precision p1_at_b1, p2_at_b1
-          
-C
-C Boundary and Normalization Parameters
-C
-          double precision, parameter :: bound_1 = 2500.0d0
+          double precision p1_at_b1, p2_at_b1, p2_at_b2, p3_at_b2
+          double precision p3_at_b3, p4_at_b3, p4_at_b4, p5_at_b4
+      
+c --- Boundary and Normalization Parameters ---
+          double precision, parameter :: bound_1 = 650.0d0
+          double precision, parameter :: bound_2 = 2800.0d0
+          double precision, parameter :: bound_3 = 3700.0d0
+          double precision, parameter :: bound_4 = 4600.0d0
+
+
 c
 c local variables defined in the run_card
 c
@@ -97,40 +104,91 @@ C --------------------
           enddo
 
           mtt = dsqrt(pTot(0)**2 - pTot(1)**2 - pTot(2)**2 - pTot(3)**2)
-
+	  
           if (mtt .gt. 0.0d0) then
 
 c             Calculate the normalization offset using the first polynomial
-              p_offset = 1.2570d-06*mtt_bias_offset**2
-              p_offset = p_offset - 8.1964d-03*mtt_bias_offset
-              p_offset = p_offset - 2.4205d+00
+              p_offset = -2.9462d-05*mtt_bias_offset**2
+              p_offset = p_offset + 3.2422d-02*mtt_bias_offset
+              p_offset = p_offset - 1.5982d+01
               p_offset = -p_offset
     
 c             Pre-calculate the function values at each boundary
-              p1_at_b1 = 1.2570d-06*bound_1**2 - 8.1964d-03*bound_1
-              p1_at_b1 = p1_at_b1 - 2.4205d+00
+              p1_at_b1 = -2.9462d-05*bound_1**2 + 3.2422d-02*bound_1
+              p1_at_b1 = p1_at_b1 - 1.5982d+01
               p1_at_b1 = -p1_at_b1
               
-              p2_at_b1 = 6.1533d-07*bound_1**2 - 7.0413d-03*bound_1
-              p2_at_b1 = p2_at_b1 - 1.6579d+00
+              p2_at_b1 = 2.3824d-07*bound_1**2 - 3.2085d-03*bound_1
+              p2_at_b1 = p2_at_b1 - 5.2567d+00
               p2_at_b1 = -p2_at_b1
     
+              p2_at_b2 = 2.3824d-07*bound_2**2 - 3.2085d-03*bound_2
+              p2_at_b2 = p2_at_b2 - 5.2567d+00
+              p2_at_b2 = -p2_at_b2
+              
+              p3_at_b2 = 9.5203d-07*bound_2**2 - 8.0783d-03*bound_2
+              p3_at_b2 = p3_at_b2 + 2.8267d+00
+              p3_at_b2 = -p3_at_b2
+    
+              p3_at_b3 = 9.5203d-07*bound_3**2 - 8.0783d-03*bound_3
+              p3_at_b3 = p3_at_b3 + 2.8267d+00
+              p3_at_b3 = -p3_at_b3
+              
+              p4_at_b3 = -3.0332d-07*bound_3**2 + 7.1874d-04*bound_3
+              p4_at_b3 = p4_at_b3 - 1.2817d+01
+              p4_at_b3 = -p4_at_b3
+
+              p4_at_b4 = -3.0332d-07*bound_4**2 + 7.1874d-04*bound_4
+              p4_at_b4 = p4_at_b4 - 1.2817d+01
+              p4_at_b4 = -p4_at_b4
+              
+              p5_at_b4 = 4.6638d-07*bound_4**2 - 5.8418d-03*bound_4
+              p5_at_b4 = p5_at_b4 + 8.4144d-02
+              p5_at_b4 = -p5_at_b4
+
               if (mtt .lt. bound_1) then
 c                 --- REGION 1 ---
-                  p_val = 1.2570d-06*mtt**2 - 8.1964d-03*mtt 
-     &                 - 2.4205d+00
+                  p_val = -2.9462d-05*mtt**2 + 3.2422d-02*mtt 
+     &                 - 1.5982d+01
                   p_val = -p_val
                   final_arg = p_val - p_offset
 
-              else
+              else if (mtt .lt. bound_2) then
 c                 --- REGION 2 ---
-                  mtt = min(mtt, 5700.0)
-                  p_val = 6.1533d-07*mtt**2 - 7.0413d-03*mtt 
-     &                 - 1.6579d+00
+                  p_val = 2.3824d-07*mtt**2 - 3.2085d-03*mtt 
+     &                 - 5.2567d+00
                   p_val = -p_val
                   stitch_sum = (p1_at_b1 - p2_at_b1)
                   final_arg = p_val + stitch_sum - p_offset
         
+              else if (mtt .lt. bound_3) then
+c                 --- REGION 3 ---
+                  p_val = 9.5203d-07*mtt**2 - 8.0783d-03*mtt 
+     &                 + 2.8267d+00
+                  p_val = -p_val
+                  stitch_sum = (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2)
+                  final_arg = p_val + stitch_sum - p_offset
+
+              else if (mtt .lt. bound_4) then
+c                 --- REGION 4 ---
+                  p_val = -3.0332d-07*mtt**2 + 7.1874d-04*mtt 
+     &                 - 1.2817d+01
+                  p_val = -p_val
+                  stitch_sum = (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2)
+                  stitch_sum = stitch_sum + (p3_at_b3 - p4_at_b3)
+                  final_arg = p_val + stitch_sum - p_offset
+        
+              else
+c                 --- REGION 5 ---
+                  mtt = min(5000.0d0, mtt)
+                  p_val = 4.6638d-07*mtt**2 - 5.8418d-03*mtt 
+     &                 + 8.4144d-02
+                  p_val = -p_val
+                  stitch_sum = (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2)
+                  stitch_sum = stitch_sum + (p3_at_b3 - p4_at_b3)
+                  stitch_sum = stitch_sum + (p4_at_b4 - p5_at_b4)
+                  final_arg = p_val + stitch_sum - p_offset
+      
               endif
 c             Calculate the final bias_weight on its own line
               bias_weight = EXP(final_arg)

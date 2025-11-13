@@ -26,21 +26,18 @@ c
       double precision bias_wgt,p(0:3,nexternal),H_T
       integer ipdg(nexternal),i,j
       double precision pTot(0:3)
+      double precision mtt, mtt_sq
       double precision p_val, p_offset, final_arg
-      double precision stitch_sum, mtt_sq
+      double precision stitch_sum
       double precision p1_at_b1, p2_at_b1, p2_at_b2, p3_at_b2
       double precision p3_at_b3, p4_at_b3, p4_at_b4, p5_at_b4
 
-C
-C Boundary and Normalization Parameters
-C
-
-      double precision, parameter :: bound_1 = 1900.0d0
-      double precision, parameter :: bound_2 = 3000.0d0
-      double precision, parameter :: bound_3 = 4800.0d0
-      double precision, parameter :: bound_4 = 6500.0d0
-      double precision, parameter :: bound_5 = 8500.0d0
-      double precision, parameter :: mtt_norm = 2000.0d0
+C --- Boundary and Normalization Parameters ---
+      double precision, parameter :: bound_1 = 900.0d0
+      double precision, parameter :: bound_2 = 1200.0d0
+      double precision, parameter :: bound_3 = 1900.0d0
+      double precision, parameter :: bound_4 = 3400.0d0
+      double precision, parameter :: mtt_norm = 1500.0d0
 
       
 c local variables defined in the run_card
@@ -65,71 +62,71 @@ c      double precision mtt_bias_enhancement_power
       if (mtt .gt. 0.0d0) then
 
 c             Calculate the normalization offset using the first polynomial
-              p_offset = 9.7271d-07*mtt_norm**2
-              p_offset = p_offset - 7.8786d-03*mtt_norm
-              p_offset = p_offset - 2.0171d+00
+              p_offset = -4.5930d-06*mtt_norm**2
+              p_offset = p_offset - 2.9131d-03*mtt_norm
+              p_offset = p_offset - 1.2490d+00
               p_offset = -p_offset
     
 c             Pre-calculate the function values at each boundary
-              p1_at_b1 = 9.7271d-07*bound_1**2 - 7.8786d-03*bound_1
-              p1_at_b1 = p1_at_b1 - 2.0171d+00
+              p1_at_b1 = -4.5930d-06*bound_1**2 - 2.9131d-03*bound_1
+              p1_at_b1 = p1_at_b1 - 1.2490d+00
               p1_at_b1 = -p1_at_b1
               
-              p2_at_b1 = 8.2416d-06*bound_1**2 - 4.3273d-02*bound_1
-              p2_at_b1 = p2_at_b1 + 3.8291d+01
+              p2_at_b1 = -1.4674d-04*bound_1**2 + 3.0145d-01*bound_1
+              p2_at_b1 = p2_at_b1 - 1.6292d+02
               p2_at_b1 = -p2_at_b1
     
-              p2_at_b2 = 8.2416d-06*bound_2**2 - 4.3273d-02*bound_2
-              p2_at_b2 = p2_at_b2 + 3.8291d+01
+              p2_at_b2 = -1.4674d-04*bound_2**2 + 3.0145d-01*bound_2
+              p2_at_b2 = p2_at_b2 - 1.6292d+02
               p2_at_b2 = -p2_at_b2
               
-              p3_at_b2 = -2.4915d-07*bound_2**2 - 8.3352d-04*bound_2
-              p3_at_b2 = p3_at_b2 - 1.2091d+01
+              p3_at_b2 = -7.4646d-07*bound_2**2 - 2.4963d-04*bound_2
+              p3_at_b2 = p3_at_b2 - 7.4813d+00
               p3_at_b2 = -p3_at_b2
     
-              p3_at_b3 = -2.4915d-07*bound_3**2 - 8.3352d-04*bound_3
-              p3_at_b3 = p3_at_b3 - 1.2091d+01
+              p3_at_b3 = -7.4646d-07*bound_3**2 - 2.4963d-04*bound_3
+              p3_at_b3 = p3_at_b3 - 7.4813d+00
               p3_at_b3 = -p3_at_b3
               
-              p4_at_b3 = -1.4350d-07*bound_3**2 - 1.3296d-03*bound_3
-              p4_at_b3 = p4_at_b3 - 1.7618d+01
+              p4_at_b3 = 5.5304d-08*bound_3**2 - 2.7483d-03*bound_3
+              p4_at_b3 = p4_at_b3 - 6.2571d+00
               p4_at_b3 = -p4_at_b3
     
-              p4_at_b4 = -1.4350d-07*bound_4**2 - 1.3296d-03*bound_4
-              p4_at_b4 = p4_at_b4 - 1.7618d+01
+              p4_at_b4 = 5.5304d-08*bound_4**2 - 2.7483d-03*bound_4
+              p4_at_b4 = p4_at_b4 - 6.2571d+00
               p4_at_b4 = -p4_at_b4
               
-              p5_at_b4 = 1.5090d-05*bound_4**2 - 2.1504d-01*bound_4
-              p5_at_b4 = p5_at_b4 + 7.2476d+02
+              p5_at_b4 = -4.0408d-07*bound_4**2 + 1.1178d-03*bound_4
+              p5_at_b4 = p5_at_b4 - 1.4871d+01
               p5_at_b4 = -p5_at_b4
 
               if (mtt .lt. bound_1) then
 c                 --- REGION 1 ---
-                  p_val = 9.7271d-07*mtt**2 - 7.8786d-03*mtt 
-     &                 - 2.0171d+00
+                  p_val = -4.5930d-06*mtt**2 - 2.9131d-03*mtt 
+     &                 - 1.2490d+00
                   p_val = -p_val
                   final_arg = p_val - p_offset
 
               else if (mtt .lt. bound_2) then
 c                 --- REGION 2 ---
-                  p_val = 8.2416d-06*mtt**2 - 4.3273d-02*mtt 
-     &                 + 3.8291d+01
+                  p_val = -1.4674d-04*mtt**2 + 3.0145d-01*mtt 
+     &                 - 1.6292d+02
                   p_val = -p_val
                   stitch_sum = (p1_at_b1 - p2_at_b1)
                   final_arg = p_val + stitch_sum - p_offset
         
               else if (mtt .lt. bound_3) then
 c                 --- REGION 3 ---
-                  p_val = -2.4915d-07*mtt**2 - 8.3352d-04*mtt 
-     &                 - 1.2091d+01
+                  p_val = -7.4646d-07*mtt**2 - 2.4963d-04*mtt 
+     &                 - 7.4813d+00
                   p_val = -p_val
                   stitch_sum = (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2)
                   final_arg = p_val + stitch_sum - p_offset
 
               else if (mtt .lt. bound_4) then
 c                 --- REGION 4 ---
-                  p_val = -1.4350d-07*mtt**2 - 1.3296d-03*mtt 
-     &                 - 1.7618d+01
+                  p_val = 5.5304d-08*mtt**2 - 2.7483d-03*mtt 
+     &                 - 6.2571d+00
                   p_val = -p_val
                   stitch_sum = (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2)
                   stitch_sum = stitch_sum + (p3_at_b3 - p4_at_b3)
@@ -137,9 +134,9 @@ c                 --- REGION 4 ---
         
               else
 c                 --- REGION 5 ---
-                  mtt = min(7200.0d0, mtt)
-                  p_val = 1.5090d-05*mtt**2 - 2.1504d-01*mtt 
-     &                 + 7.2476d+02
+                  mtt = min(7000.0d0, mtt)
+                  p_val = -4.0408d-07*mtt**2 + 1.1178d-03*mtt 
+     &                 - 1.4871d+01
                   p_val = -p_val
                   stitch_sum = (p1_at_b1 - p2_at_b1) + (p2_at_b2 - p3_at_b2)
                   stitch_sum = stitch_sum + (p3_at_b3 - p4_at_b3)
