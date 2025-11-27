@@ -19,7 +19,7 @@ def combineRecastData(files,outputFile):
 
         
     allColumns = allData.columns.tolist()
-    orderColumns = ['model', 'mST', 'mChi', 'mT', 'yDM']
+    orderColumns = ['model', 'mPsiT', 'mSDM', 'mT', 'yDM']
     binErrorColumns = [c for c in allColumns if 'bin' in c.lower() and 'error' in c.lower()]
     allCols = orderColumns[:] + [c for c in allColumns if not c in orderColumns]
     allData = allData[allCols]
@@ -48,9 +48,11 @@ def combineRecastData(files,outputFile):
     for proc,data in procDataDict.items():
         if totalData is None:
             totalData = data.copy(deep=True)
+            if 'process' in totalData.columns:
+                totalData['process'] = r'$p p \to t \bar{t}$'
         else:
             for c in totalData.columns:
-                if c in orderColumns:
+                if c in orderColumns or c == 'process':
                     continue
                 elif c not in binErrorColumns:
                     totalData[c] = totalData[c] +  data[c]

@@ -11,132 +11,51 @@ import tempfile,gzip,pylhe
 cms_bins = np.array([250.,400.,480.,560.,640.,720.,800.,900.,1000.,
                 1150.,1300.,1500.,1700.,2000.,2300.,3500.])
 
-def getLHEevents(fpath):
+def clean_item(item):
+        # If it's a numpy array (0-d or otherwise), get the scalar value
+        if isinstance(item, np.ndarray):
+            return item.item()
+        # If it's a numpy scalar (like np.float64), convert to python type
+        if hasattr(item, 'item'):
+            return item.item()
+        return item
+
+
+def getMTThistAndInfo(file, weightMultiplier = 1.0):
     """
-    Reads a set of LHE files and returns a dictionary with the file labels as keys
-    and the PyLHE Events object as values.
+    Reads the .npz file with top-related distributions computed from MC Events and extracts some info and the invariant mass distribution. 
+    Computes the invariant mass histogram and its error for the cms binning.
     """
-
-    # It is necessary to remove the < signs from the LHE files (in the generate line) before parsing with pylhe
-    fixedFile = tempfile.mkstemp(suffix='.lhe')
-    os.close(fixedFile[0])
-    fixedFile = fixedFile[1]
-    with  gzip.open(fpath,'rt') as f:
-        data = f.readlines()
-        with open(fixedFile,'w') as newF:
-            for l in data:
-                if 'generate' in l:
-                    continue
-                newF.write(l)
-    events = list(pylhe.read_lhe_with_attributes(fixedFile))
-    nevents = pylhe.read_num_events(fixedFile)
-    os.remove(fixedFile)
-    return nevents,events
-
-
-def getMTThist(nevents,events,weightMultiplier = 1.0):
-    """
-    Reads a PyLHE Event object and extracts the ttbar invariant
-    mass for each event.
-    """
+    data = np.load(file, allow_pickle = True)
     
-    mTT = []
-    weights = []
-    for ev in events:
-        weightPB = weightMultiplier*ev.eventinfo.weight/nevents
-        weightAndError = np.array([weightPB,weightPB**2])
+    #Getting info:
+    process = str(clean_item(data['process']))
+    model   = str(clean_item(data['model']))
+    mPsiT   = float(data['mass_params'][0])
+    mSDM    = float(data['mass_params'][1])
+    yDM     = float(data['ydm'])
+    mT      = 172.5 # GeV
+    weights = weightMultiplier * data['weights']
+    weights = np.array([[w, w**2] for w in weights])
 
-        # Add information to particles:
-        for ptc in ev.particles:
-            ptc.daughters = []
-            ptc.PID = int(ptc.id)
-            p = np.sqrt(ptc.px**2 + ptc.py**2 + ptc.pz**2)
-            ptc.PT = np.sqrt(ptc.px**2 + ptc.py**2)
-            if not ptc.PT: # Only for incoming partons
-                ptc.Eta = None
-                ptc.Phi = None
-            else:
-                ptc.Eta = (1./2.)*np.log((p+ptc.pz)/(p-ptc.pz))        
-                ptc.Phi = np.arctan2(ptc.py,ptc.px)
-            ptc.Px = ptc.px
-            ptc.Py = ptc.py
-            ptc.Pz = ptc.pz
-            ptc.E = ptc.e
+    #Storing the info in a dictionary
+    fileInfo = {'model' : model, 'process' : process, 'mPsiT' : float(mPsiT), 'mSDM' : float(mSDM), 'mT' : mT, 'yDM' : float(yDM),
+               'xsec (pb)' : clean_item(data['xsec (pb)']), 'MC Events' : clean_item(data['nevents']), 'file' : file}
 
-        # Get tops
-        tops = {}
-        for ptc in ev.particles:        
-            if abs(ptc.PID) == 6:
-                tops[ptc.PID] = ptc # Store only the last top/anti-top  
+    #Computing the histogram
+    mttHist,_ = np.histogram(data['mTT'],bins=cms_bins,weights=weights[:,0])
+    #Compute MC error
+    mttHistError,_ = np.histogram(data['mTT'],bins=cms_bins,weights=weights[:,1])
+    mttHistError = np.sqrt(mttHistError)    
 
-        # Sum the top momenta
-        pTot = np.zeros(4)
-        for top in tops.values():
-            pTot += np.array([top.E,top.Px,top.Py,top.Pz])
-        # Compute invariant mass squared
-        m2 = np.dot(pTot[0],pTot[0]) - np.dot(pTot[1:4],pTot[1:4])
-
-        mTT.append(np.sqrt(m2))
-        weights.append(weightAndError)
+    data_set = np.array(list(zip(cms_bins[:-1],cms_bins[1:],mttHist,mttHistError)))
     
-    weights = np.array(weights)
-    mttHist,_ = np.histogram(mTT,weights=weights[:,0],bins=cms_bins)
-    mttHistError,_ = np.histogram(mTT,weights=weights[:,1],bins=cms_bins)
-    mttHistError = np.sqrt(mttHistError)
+    return data_set, fileInfo
 
-    data = np.array(list(zip(cms_bins[:-1],cms_bins[1:],mttHist,mttHistError)))
-    
-    return data
-
-
-def getInfo(f):
-
-    procDict = {
-                'g g > t t~' : r'$g g \to \bar{t} t$', 'g g > t~ t' : r'$g g \to \bar{t} t$',
-                'q q > t t~' : r'$q q \to \bar{t} t$', 'q q > t~ t' : r'$q q \to \bar{t} t$'
-                }
-    
-    banner = list(glob.glob(os.path.join(os.path.dirname(f),'*banner*')))[0]
-    with open(banner,'r') as bannerF:
-        bannerData = bannerF.read()
-    
-    # Get process data:
-    processData = bannerData.split('<MGProcCard>')[1].split('</MGProcCard>')[0]
-
-    # Get model
-    model = processData.split('Begin MODEL')[1].split('End   MODEL')[0]
-    model = model.split('\n')[1].strip()
-
-    # Get process
-    proc = processData.split('Begin PROCESS')[1].split('End PROCESS')[0]
-    proc = proc.split('\n')[1].split('#')[0].strip()
-    if proc in procDict:
-        proc = procDict[proc]
-    
-    # Get parameters data:
-    parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
-    parsSLHA = pyslha.readSLHA(parsData)
-    
-    mST = parsSLHA.blocks['MASS'][5000002]
-    mChi = parsSLHA.blocks['MASS'][5000012]
-    mT  = parsSLHA.blocks['MASS'][6]
-    yDM = list(parsSLHA.blocks['FRBLOCK'].values())[-1]
-
-    
-    # Get event data:
-    eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
-    nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
-    xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
-
-    fileInfo = {'model' : model, 'process' : proc, 'mST' : mST, 'mChi' : mChi, 'mT' : mT, 'yDM' : yDM,
-               'xsec (pb)' : xsec, 'MC Events' : nEvents, 'file' : f}
-    
-    return fileInfo
 
 
 def getRecastData(inputFiles,weightMultiplier=1.0,skipParameters=[]):
 
-    
     # Filter files (if needed)
     if not skipParameters:
         selectedFiles = inputFiles[:]
@@ -144,8 +63,8 @@ def getRecastData(inputFiles,weightMultiplier=1.0,skipParameters=[]):
         selectedFiles = []
         for f in inputFiles:
             # print('\nReading file: %s' %f)
-            fileInfo = getInfo(f)
-            parInfo = (fileInfo['mST'],fileInfo['mChi'],fileInfo['yDM'], 
+            aux, fileInfo = getMTThistAndInfo(f,weightMultiplier=weightMultiplier)
+            parInfo = (fileInfo['mPsiT'],fileInfo['mSDM'],fileInfo['yDM'], 
                         fileInfo['mT'], fileInfo['model'], fileInfo['process'])
             if parInfo in skipParameters:
                 continue
@@ -163,10 +82,7 @@ def getRecastData(inputFiles,weightMultiplier=1.0,skipParameters=[]):
     progressbar.start()
     nfiles = 0
     for f in selectedFiles:       
-        fileInfo = getInfo(f) 
-        # Get events:
-        nevents,events = getLHEevents(f)
-        data = getMTThist(nevents,events,weightMultiplier=weightMultiplier)
+        data, fileInfo = getMTThistAndInfo(f,weightMultiplier=weightMultiplier)
         # Create a dictionary with the bin counts and their errors
         dataDict = fileInfo
         bins_left = data[:,0]
@@ -190,17 +106,17 @@ if __name__ == "__main__":
     
     import argparse    
     ap = argparse.ArgumentParser( description=
-            "Run the recasting for CMS-TOP-20-001 using one or multiple MadGraph (parton level) LHE files. "
+            "Run the recasting for CMS-TOP-20-001 using one or multiple mTT distributions computed from MadGraph (parton level) events. "
             + "If multiple files are given as argument, add them."
             + " Store the SR bins in a pickle (Pandas DataFrame) file." )
     ap.add_argument('-f', '--inputFile', required=True,nargs='+',
-            help='path to the LHE event file(s) generated by MadGraph.', default =[])
+            help='path to the .npz file(s) with the distributions.', default =[])
     ap.add_argument('-o', '--outputFile', required=False,
             help='path to output file storing the DataFrame with the recasting data.'
                  + 'If not defined, will use the name of the first input file', 
             default = None)
     ap.add_argument('-w', '--weightMultiplier', required=True, type=float,
-                    help='Factor used to multiply the weights (in case events were generated with specific top decays in each branch) [default=2.0]', default = 2.0)
+                    help='Factor used to multiply the weights (in case events were generated with specific top decays in each branch) [default=1.0]', default = 1.0)
     ap.add_argument('-O', '--overwrite', required=False, action='store_true',
                     help='If set, will overwrite the existing output file. Otherwise, it will simply add the points not yet present in the file', default = False)
 
@@ -213,7 +129,7 @@ if __name__ == "__main__":
     weightMultiplier = args.weightMultiplier
 
     if outputFile is None:
-        outputFile = inputFiles[0].replace('.lhe.gz','_cms_top_20_001.pcl')
+        outputFile = inputFiles[0].replace('.npz','_cms_top_20_001.pcl')
 
     if os.path.splitext(outputFile)[1] != '.pcl':
         outputFile = os.path.splitext(outputFile)[0] + '.pcl'
@@ -226,7 +142,7 @@ if __name__ == "__main__":
             df_orig = pd.read_pickle(outputFile)
             skipParameters = []
             for irow,row in df_orig.iterrows():
-                skipParameters.append((row['mST'],row['mChi'],row['yDM'], row['mT'], row['model'], row['process']))
+                skipParameters.append((row['mPsiT'],row['mSDM'],row['yDM'], row['mT'], row['model'], row['process']))
 
 
     print('-----------------\n Running with weight multiplier = %1.1f\n -------------------------' %weightMultiplier)

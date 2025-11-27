@@ -67,6 +67,7 @@ def read_CMSdata(dataDir='./data',bg="MATRIX"):
     # The digitized values are divided by the width
     #cms_bg = np.array(cms_bg)*bin_widths
     
+    cms_bg_err = get_bg_error(cms_bg, data, bg_ratio_err)
 
     covdata = csv_reader(os.path.join(dataDir,'parton_abs_ttm_covariance.csv'))
     covmat = np.zeros(15*15).reshape(15,15)
@@ -119,7 +120,7 @@ def getKfactor(smNNLO,smLO):
     # Get k-factor for each bin
     kfac = np.divide(smNNLO,smLO)
 
-    return kfac
+    return 1.0
 
 def chi2(yDM,signal,sm,data,covmat,deltas=0.0, deltabg=0.0):
     theory = (sm + yDM**2*signal)
@@ -150,7 +151,8 @@ def getUL(signal,sm_bin,xsecsObs,covMatrix,deltas=0.0, deltabg=0.0):
 def computeULs(inputFile,outputFile,full=False):
 
     # ### Load CMS data and BG
-    xsecsObs,sm,covMatrix = read_CMSdata()
+    xsecsObs,sm,covMatrix, sm_err = read_CMSdata()
+    deltabg_array = np.divide(sm_err, sm, out=np.zeros_like(sm), where=sm!=0)
     
     # ### Load LO background from MG5
     smLO = getSMLO()
@@ -196,12 +198,12 @@ def computeULs(inputFile,outputFile,full=False):
             # Finally, divide by the bin widths
             signal = signal/bin_widths
             sm_bin = sm/bin_widths
-            resDict = getUL(signal,sm_bin,xsecsObs,covMatrix,deltas=0.0)
+            resDict = getUL(signal,sm_bin,xsecsObs,covMatrix,deltas=0.0, deltabg = deltabg_array)
             yDM95 = resDict['yDM95']
             deltaChi95 = resDict['deltaChi95']       
 
             # Expected
-            resDictExp = getUL(signal,sm_bin,sm_bin,covMatrix,deltas=0.0)
+            resDictExp = getUL(signal,sm_bin,sm_bin,covMatrix,deltas=0.0, deltabg = deltabg_array)
             yDM95exp = resDictExp['yDM95']            
             
         else: # Use full CLs calculation
@@ -235,7 +237,7 @@ def computeULs(inputFile,outputFile,full=False):
 
     recastData['yDM (95% C.L.)'] = yDM95list
     recastData['yDMexp (95% C.L.)'] = yDM95expList
-    recastData['$\Delta \chi^2$ (95% C.L.)'] = deltaChi95list
+    recastData[r'$\Delta \chi^2$ (95% C.L.)'] = deltaChi95list
     progressbar.finish()
     recastData.to_pickle(outputFile)
 
