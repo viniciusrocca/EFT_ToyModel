@@ -1,0 +1,78 @@
+#This file stores the parameters for power bias:
+
+For (1000,500):
+     if (mtt.gt.0.0d0) then
+         if (mtt.lt.2101.0d0) then
+            bias_wgt = (mtt/2500.0)**3.0
+         else if (mtt.lt.2501) then
+            bias_wgt = (mtt/1700.0)**2.0
+         else
+            bias_wgt = (mtt/2000.0)**8.0
+         endif
+      endif
+      
+For (725, 675)
+     if (mtt.gt.0.0d0) then
+         if (mtt.lt.1601.0d0) then
+            bias_wgt = (mtt/1800.0)**3.0
+         else if (mtt.lt.1801.0) then
+            bias_wgt = (mtt/1500.0)**2.0
+         else
+            bias_wgt = (mtt/1550.0)**8.0
+         endif
+      endif
+      
+For (500, 475)
+     if (mtt.gt.0.0d0) then
+         if (mtt.lt.1051.0d0) then
+            bias_wgt = (mtt/1200.0)**3.0
+         else if (mtt.lt.1201.0) then
+            bias_wgt = (mtt/1034.0)**2.0
+         else
+            bias_wgt = (mtt/1150.0)**8.0
+         endif
+      endif
+      
+For (1500, 1425)
+     if (mtt.gt.0.0d0) then
+         if (mtt.lt.3510.0d0) then
+            bias_wgt = (mtt/3100.0)**3.3
+         else if (mtt.lt.1201.0) then
+            bias_wgt = (mtt/3104.0)**2.0
+         else
+            bias_wgt = (mtt/3207.0)**8.0
+         endif
+      endif
+
+For (1300, 1200)
+     if (mtt.gt.0.0d0) then
+         if (mtt.lt.2868.0d0) then
+            bias_wgt = (mtt/3227.0)**3.0
+         else if (mtt.lt.3228.0) then
+            bias_wgt = (mtt/2690.0)**2.0
+         else
+            bias_wgt = (mtt/2780.0)**8.0
+         endif
+      endif
+      
+For (900, 600)
+     if (mtt.gt.0.0d0) then
+         if (mtt.lt.1986.0d0) then
+            bias_wgt = (mtt/2300.0)**3.0
+         else if (mtt.lt.2235.0) then
+            bias_wgt = (mtt/1862.0)**2.0
+         else
+            bias_wgt = (mtt/1924.0)**8.0
+         endif
+      endif
+      
+For (1500, 1000)
+     if (mtt.gt.0.0d0) then
+         if (mtt.lt.3510.0d0) then
+            bias_wgt = (mtt/3100.0)**3.3
+         else if (mtt.lt.3770.0) then
+            bias_wgt = (mtt/3104.0)**2.0
+         else
+            bias_wgt = (mtt/3207.0)**8.0
+         endif
+      endif
