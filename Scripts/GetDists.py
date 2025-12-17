@@ -254,23 +254,25 @@ def vectorized_boost(p, v, c=1):
 def getInfoSummary(f):
     # Finding the the summary.txt file in the same directory as the input file 'f'
     summary_path = os.path.join(os.path.dirname(f), 'summary.txt')
-    if not os.path.exists(summary_path):
-        return {'process': 'Unknown', 'cross_section': 0}
         
     with open(summary_path, 'r') as summary_file:
-        process = 'Unknown'
-        cross_section = 0
         for line in summary_file:
             clean_line = line.strip()
                 
             # Getting process
             if clean_line.startswith('Process'):
-                try:
-                    process = clean_line.split('Process', 1)[1].strip()
-                    process =  process.split('[')[0].strip()
-                except IndexError:
-                    pass
+                process = clean_line.split('Process', 1)[1].strip()
+                process =  process.split('[')[0].strip()
+            cross_section = 0
+
+             # Getting cross section
+            #if clean_line.startswith('Total cross section:'):
+             #   value_str = clean_line.split(':', 1)[1].strip().split()[0]
+              #  cross_section = float(value_str)
                 
+        
+                
+            
     return {'process': process, 'cross_section': cross_section}
 
 
@@ -284,7 +286,7 @@ def getInfo(f,nlo = False,labelsDict=None):
               'g g > t t~' : r'$g g \to t \bar{t}$', 'g g > t~ t' : r'$g g \to t \bar{t} $',
               'q q > t t~' : r'$q q \to t \bar{t}$', 'q q > t~ t' : r'$q q \to t \bar{t}$',
               'p p > t t~' : r'$p p \to t \bar{t}$', 'p p > t~ t' : r'$p p \to t \bar{t}$'
-              }
+             }
     
     runDir = os.path.dirname(f)
     if not os.path.isdir(runDir):
@@ -292,43 +294,36 @@ def getInfo(f,nlo = False,labelsDict=None):
         return None
     banners = list(glob.glob(os.path.join(runDir,'*banner*txt')))
     if len(banners) != 1:
-        if len(banners) == 0: return None
-        banner = banners[0]
-    else:
-        banner = banners[0]
-
+        print(f'{len(banners)} found (can only deal with 1 banner).')
+        return None
+    banner = banners[0]
     with open(banner,'r') as bannerF:
         bannerData = bannerF.read()
     
     # Get process data:
-    model = None
-    proc = None
     if '<MGProcCard>' in bannerData:
-        try:
-            processData = bannerData.split('<MGProcCard>')[1].split('</MGProcCard>')[0]
-            # Get model
-            model = processData.split('Begin MODEL')[1].split('End  MODEL')[0]
-            model = model.split('\n')[1].strip()
-            # Get process
-            proc = processData.split('Begin PROCESS')[1].split('End PROCESS')[0]
-            proc = proc.split('\n')[1].split('#')[0].strip()
-        except IndexError:
-            pass
+        processData = bannerData.split('<MGProcCard>')[1].split('</MGProcCard>')[0]
+        # Get model
+        model = processData.split('Begin MODEL')[1].split('End   MODEL')[0]
+        model = model.split('\n')[1].strip()
+        # Get process
+        proc = processData.split('Begin PROCESS')[1].split('End PROCESS')[0]
+        proc = proc.split('\n')[1].split('#')[0].strip()
         
     elif os.path.isfile(os.path.join(runDir,'../../Cards/proc_card_mg5.dat')):
-        try:
-            procCard = os.path.join(runDir,'../../Cards/proc_card_mg5.dat')
-            with open(procCard,'r') as f:
-                processData = f.readlines()
-            modelLine = [l for l in processData if 'import model' in l][-1]
-            model = modelLine.strip().split(' ')[-1]
-            model = os.path.basename(model)
-            procLine = [l for l in processData if 'generate' in l][-1]
-            proc = procLine.strip().split('generate ')[-1]
-        except:
-            pass
+        procCard = os.path.join(runDir,'../../Cards/proc_card_mg5.dat')
+        with open(procCard,'r') as f:
+            processData = f.readlines()
+        modelLine = [l for l in processData if 'import model' in l][-1]
+        model = modelLine.strip().split(' ')[-1]
+        model = os.path.basename(model)
+        procLine = [l for l in processData if 'generate' in l][-1]
+        proc = procLine.strip().split('generate ')[-1]
+    else:
+        model = None
+        proc = None
 
-    if proc and '[' in proc and ']' in proc:
+    if '[' in proc and ']' in proc:
         proc = proc.split('[')[0].strip()
 
     if proc in labelsDict:
@@ -337,84 +332,61 @@ def getInfo(f,nlo = False,labelsDict=None):
         model = labelsDict[model]
 
     # Get parameters data:
-    mSDM = 0.0
-    mPsiT = 0.0
-    yDM = 0.0
-    mT = 172.5 
-
-    try:
-        if '<slha>' in bannerData:
-            parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
-            parsSLHA = pyslha.readSLHA(parsData)
-            
-            if 6 in parsSLHA.blocks['MASS']:
-                mT  = parsSLHA.blocks['MASS'][6]
-            
-            if 5000022 in parsSLHA.blocks['MASS'] and nlo == True:
-                mSDM = parsSLHA.blocks['MASS'][5000022]
-                mPsiT = parsSLHA.blocks['MASS'][5000006]        
-                if 'FRBLOCK' in parsSLHA.blocks:
-                    yDM = list(parsSLHA.blocks['FRBLOCK'].values())[0]
-            elif model == 'VLF EFT':
-                 if 'FRBLOCK' in parsSLHA.blocks:
-                    pars = list(parsSLHA.blocks['FRBLOCK'].values())
-                    if len(pars) > 4:
-                        mSDM = pars[3]
-                        mPsiT = pars[4]     
-                        yDM = pars[0]
-            elif 5000002 in parsSLHA.blocks['MASS'] and nlo == True:
-                mST = parsSLHA.blocks['MASS'][5000002]
-                mChi = parsSLHA.blocks['MASS'][5000012]        
-                if 'FRBLOCK' in parsSLHA.blocks:
-                    yDM = list(parsSLHA.blocks['FRBLOCK'].values())[-1]
-                mSDM = mChi
-                mPsiT = mST
-            elif model == 'SMS EFT':
-                if 'FRBLOCK' in parsSLHA.blocks:
-                    pars = list(parsSLHA.blocks['FRBLOCK'].values())
-                    if len(pars) > 2:
-                        mST= pars[1]
-                        mChi = pars[2]     
-                        yDM = pars[0]
-                        mSDM = mChi
-                        mPsiT = mST
-    except Exception as e:
-        pass
+    parsData = bannerData.split('<slha>')[1].split('</slha>')[0]
+    parsSLHA = pyslha.readSLHA(parsData)
+    
+    mT  = parsSLHA.blocks['MASS'][6]
+    if 5000022 in parsSLHA.blocks['MASS'] and nlo == True:
+        mSDM = parsSLHA.blocks['MASS'][5000022]
+        mPsiT = parsSLHA.blocks['MASS'][5000006]        
+        yDM = list(parsSLHA.blocks['FRBLOCK'].values())[0]
+    elif model == 'VLF EFT':
+        pars = list(parsSLHA.blocks['FRBLOCK'].values())
+        mSDM = pars[3]
+        mPsiT = pars[4]     
+        yDM = pars[0]
+    elif 5000002 in parsSLHA.blocks['MASS']:
+        mST = parsSLHA.blocks['MASS'][5000002]
+        mChi = parsSLHA.blocks['MASS'][5000012]        
+        yDM = list(parsSLHA.blocks['FRBLOCK'].values())[-1]
+        mSDM = mChi
+        mPsiT = mST
+    elif model == 'SMS EFT':
+        pars = list(parsSLHA.blocks['FRBLOCK'].values())
+        mST= pars[1]
+        mChi = pars[2]     
+        yDM = pars[0]
+        mSDM = mChi
+        mPsiT = mST
+    else:
+        mSDM = 0.0
+        mPsiT = 0.0
+        yDM = 0.0
 
     if yDM == 0.0:
         model = 'SM'
     
     # Get event data:
-    nEvents = -1
-    xsec = -1.0
-    
     if '<MGGenerationInfo>' in bannerData:
-        try:
-            eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
-            nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
-            xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
-        except:
-            pass
+        eventData = bannerData.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
+        nEvents = eval(eventData.split('\n')[1].split(':')[1].strip())
+        xsec = eval(eventData.split('\n')[2].split(':')[1].strip())
     elif os.path.isfile(os.path.join(runDir,'summary.txt')):
-        try:
-            with open(os.path.join(runDir,'summary.txt'),'r') as f:
-                summaryLines = f.readlines()
-            
-            totalXsecLines = [l for l in summaryLines if 'Total cross section' in l]
-            if totalXsecLines:
-                totalXsecLine = totalXsecLines[0]
-                if 'DO NOT USE' in totalXsecLine:
-                    idx_list = [i for i,l in enumerate(summaryLines) if 'Scale variation' in l]
-                    if idx_list:
-                        totalXsecLine = summaryLines[idx_list[0]+2]
-
-                if 'Total cross section' in totalXsecLine:
-                    totalXsecLine = totalXsecLine.split(':')[1].strip()
-                    totalXsecLine = totalXsecLine.split(' +')[0].strip()
-                    totalXsecLine = totalXsecLine.replace('pb','')
-                    xsec = float(totalXsecLine)
-        except:
-            pass
+        with open(os.path.join(runDir,'summary.txt'),'r') as f:
+            summaryLines = f.readlines()
+        totalXsecLine = [l for l in summaryLines if 'Total cross section' in l][0]
+        if 'DO NOT USE' in totalXsecLine:
+            totalXsecLine = [i for i,l in enumerate(summaryLines) if 'Scale variation' in l][0]
+            totalXsecLine = summaryLines[totalXsecLine+2]
+        if 'Total cross section' in totalXsecLine:
+            totalXsecLine = totalXsecLine.split(':')[1].strip()
+        totalXsecLine = totalXsecLine.split(' +')[0].strip()
+        totalXsecLine = totalXsecLine.replace('pb','')
+        xsec = float(totalXsecLine)
+        nEvents = -1
+    else:
+        nEvents = -1
+        xsec = -1.0    
 
     fileInfo = {'model' : model, 'process' : proc, '(mSDM,mPsiT,mT,yDM)' : (mSDM,mPsiT,mT,yDM),
                'xsec (pb)' : xsec, 'nevents' : nEvents}
@@ -425,10 +397,12 @@ def getXsection(fpath):
     """
     Reads a LHE files and returns a the cross section and it's error
     """
+
+    # It is necessary to remove the < signs from the LHE files (in the generate line) before parsing with pylhe
     fixedFile = tempfile.mkstemp(suffix='.lhe')
     os.close(fixedFile[0])
     fixedFile = fixedFile[1]
-    with gzip.open(fpath,'rt') as f:
+    with  gzip.open(fpath,'rt') as f:
         data = f.readlines()
         with open(fixedFile,'w') as newF:
             for l in data:
@@ -444,25 +418,24 @@ def getXsection(fpath):
 
 def get_params_from_filename(run_dir):
     """Parses a banner's filename containing '_interference_' to find parameters."""
+    # Find banner file using glob.glob
     banner_files = glob.glob(os.path.join(run_dir, '*banner.txt'))
     if not banner_files:
+        # Print a warning if no banner is found
         print(f" Error: No banner file found in {run_dir.name}")
         return None, None, None 
     else:
-        # Added print back as requested
-        print(f" -> Processing run: {os.path.basename(banner_files[0])}")
+        print(f"  -> Processing run: {os.path.basename(banner_files[0])}")
 
     banner_file = banner_files[0]
+    # Get filename without extension using os.path
     basename = os.path.basename(banner_file)
     stem = os.path.splitext(basename)[0]
     
-    try:
-        parts = stem.split('_')
-        idx = parts.index('banner')
-        m1, m2 = parts[idx - 2], parts[idx - 1]
-        return f"mPsiT_{m1}_mSDM_{m2}", float(m1), float(m2)
-    except (ValueError, IndexError):
-        return f"run_{os.path.basename(run_dir)}", 0.0, 0.0
+    parts = stem.split('_')
+    idx = parts.index('banner')
+    m1, m2 = parts[idx - 2], parts[idx - 1]
+    return f"mPsiT_{m1}_mSDM_{m2}", float(m1), float(m2)
 
 def AddInfoToDistributions(distributions, params, mPsiT, mSDM, info, nlo = False, bias = False):
     """Adds the model name, process and mass parameters to the final dictionary"""
@@ -474,8 +447,8 @@ def AddInfoToDistributions(distributions, params, mPsiT, mSDM, info, nlo = False
                       'pp2ttbar_gs4': r'$p p \to t \bar{t}$', 'gs4': r'$g_s^4$', 'gs6': r'$g_s^6$', 'ydm2': r'$y_{DM}^2$'}
     
     #Add new keys with the new information
-    distributions['model'] = converter_dict.get(params.get('model'), params.get('model'))
-    distributions['process'] = converter_dict.get(params.get('process'), params.get('process'))
+    distributions['model'] = converter_dict[params['model']]
+    distributions['process'] = converter_dict[params['process']]
     distributions['mass_params'] = (mPsiT,mSDM)
     distributions['ydm'] = info['(mSDM,mPsiT,mT,yDM)'][-1]
     distributions['bias'] = bias
@@ -485,22 +458,18 @@ def AddInfoToDistributions(distributions, params, mPsiT, mSDM, info, nlo = False
 
     
     #Correcting the weights when doing bias generation
-    if info['xsec (pb)'] > 0 and distributions['xsec (pb)'] > 0:
-        if abs((distributions['xsec (pb)']-info['xsec (pb)'])/info['xsec (pb)']) > 0.01 and nlo == True:
-            distributions['weights'] = (info['xsec (pb)']/distributions['xsec (pb)']) * distributions['weights']
-            distributions['xsec (pb)'] = info['xsec (pb)']
+    if abs((distributions['xsec (pb)']-info['xsec (pb)'])/info['xsec (pb)']) > 0.01 and nlo == True:
+        distributions['weights'] = (info['xsec (pb)']/distributions['xsec (pb)']) * distributions['weights']
+        distributions['xsec (pb)'] = info['xsec (pb)']
     
 
     #Extract the coupling order
-    if 'process' in params and '_' in params['process']:
-        parts = params['process'].split('_')
-        parts = parts[1:]
-        clean_parts = []
-        for p in parts:
-             clean_parts.append(converter_dict.get(p, p))
-        distributions['cp_order'] = clean_parts
-    else:
-        distributions['cp_order'] = []
+    parts = params['process'].split('_')
+    parts = parts[1:]
+    for i,p in enumerate(parts):
+        parts[i] = converter_dict[p]
+
+    distributions['cp_order'] = parts[1:]
     
     return distributions
 
