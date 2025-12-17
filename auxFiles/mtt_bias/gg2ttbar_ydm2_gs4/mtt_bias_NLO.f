@@ -32,7 +32,8 @@ c
       double precision mtt
       double precision peak_loc
       double precision bound_1, bound_2, bound_3
-      double precision den_1, den_2, den_3
+      double precision den_1, den_2, den_3, den_4
+      double precision alpha, beta, mu
       
 c local variables defined in the run_card
 c
@@ -69,24 +70,35 @@ c      double precision mtt_bias_enhancement_power
                 bias_wgt = (mtt/den_3)**8.0
              endif
           else
-             bound_1 = (1600.0d0/1500.0d0) * peak_loc 
-             bound_2 = (1800.0d0/1500.0d0) * peak_loc
+             bound_1 = (1700.0d0/1500.0d0) * peak_loc 
+             bound_2 = (1900.0d0/1500.0d0) * peak_loc
              bound_3 = (2000.0d0/1050.0d0) * peak_loc
              den_1 = bound_2
              den_2 = peak_loc
+             den_3 = (1550.0d0/1500.0d0) * peak_loc
              if (mdl_mpsit.lt.625.0d0) then
-                den_3 = (1400.0d0/1050.0d0) * peak_loc
+                alpha = 3.5
+                beta = 2.5
+                mu = 6.5
+             else if (mdl_mpsit.lt.825.0d0) then
+                alpha = 3.5
+                beta = 2.5
+                mu = 8.0
              else
-                den_3 = (1550.0d0/1500.0d0) * peak_loc
+                bound_1 = (2000.0d0/1750.0d0) * peak_loc
+                bound_2 = (2300.0d0/1750.0d0) * peak_loc
+                den_1 = (2400.0d0/1750.0d0) * peak_loc
+                den_2 = peak_loc
+                alpha = 4.0
+                beta = 2.5
+                mu = 6.5
              endif
              if (mtt.lt.bound_1) then
-                bias_wgt = (mtt/den_1)**3.3
+                bias_wgt = (mtt/den_1)**alpha
              else if (mtt.lt.bound_2) then
-                bias_wgt = (mtt/den_2)**3.5
-             else if (mtt.lt.2000.0d0) then
-                bias_wgt = (mtt/den_2)**6.8
+                bias_wgt = (mtt/den_2)**beta
              else
-                bias_wgt = (mtt/den_3)**10.0
+                bias_wgt = (mtt/den_3)**mu
              endif
           endif
       endif
