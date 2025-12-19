@@ -1,0 +1,5 @@
+python3 cms_top_20_001_Recast.py -f ~/EFT_ToyModel/processFolders/Distributions/bias/UV_BSM/*/Exclusion_data/*.npz  -o qq_gg_cms_top_20_001.pcl -w 1.0
+
+python3 cms_top_20_001_CombineData.py -f qq_gg_cms_top_20_001.pcl -o pp2ttbar_cms_top_20_001.pcl
+
+python3 cms_top_20_001_Limits.py -f pp2ttbar_cms_top_20_001.pcl -o limits_cms_top_20_001.pcl
