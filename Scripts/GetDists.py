@@ -12,6 +12,7 @@ import sys
 import argparse
 from pathlib import Path
 import time
+from tqdm import tqdm 
 import progressbar as P
 
 def getLHEevents(fpath):
@@ -532,91 +533,87 @@ def main():
     if skip_existing:
         print("Option 'skip_existing' is ON. Existing files will be skipped.")
 
-    # PROGRESSBAR SETUP
-    widgets = [
-        'Run: ', P.Counter(), f'/{len(run_dirs)} ',
-        P.Percentage(), ' ',
-        P.Bar(marker=P.RotatingMarker(), left='[', right=']'),
-        ' ', P.Timer(), ' ', P.ETA()
-    ]
-    
-    pbar = P.ProgressBar(widgets=widgets, maxval=len(run_dirs)).start()
 
-    for i, run_dir in enumerate(run_dirs):
-        start_time = time.time()
-        
-        nlo = False
-        banner_file = glob.glob(os.path.join(run_dir, '*banner.txt'))
-        
-        is_biased_run = False
-        if banner_file and 'bias' in os.path.basename(banner_file[0]).lower():
-            is_biased_run = True
-
-        base_run_name = params['run_name'].removesuffix('_*')
-        if is_biased_run and base_run_name == 'run':
-            output_dir = base_output_path / 'bias' / params['model'] / params['process']
-        elif base_run_name == 'run':
-            output_dir = base_output_path / params['model'] / params['process']
-        elif is_biased_run:
-            output_dir = base_output_path / 'bias' / params['model'] / params['process'] / base_run_name
-        else:
-            output_dir = base_output_path / params['model'] / params['process'] / base_run_name
-
-        output_dir.mkdir(parents=True, exist_ok=True)
-
-        identifier_string, mPsiT, mSDM = get_params_from_filename(run_dir)
-        if identifier_string is None:
-            identifier_string = run_dir.name
-        
-        output_filename = f"{identifier_string}.npz"
-        output_path = output_dir / output_filename
-        
-        if skip_existing and output_path.exists():
-            print(f"Skipping {run_dir.name} (File exists)")
-            pbar.update(i + 1)
-            continue
-        
-        if params['model'] == 'UV_BSM' or params['model'] == 'SMS_1_loop':
-            try:
-                lhe_file_path = next(run_dir.glob('events.lhe.gz'))
-                nlo = True
-            except StopIteration:
-                lhe_file_path = None
-        else:
-            try:
-                lhe_file_path = next(run_dir.glob('unweighted_events.lhe.gz'))
-            except StopIteration:
-                lhe_file_path = None
-
-        if not lhe_file_path:
-            print(f"No LHE file found in {run_dir.name}. Skipping.")
-            pbar.update(i + 1)
-            continue
-
-        try:
-            info = getInfo(lhe_file_path, nlo)
-            distributions = getDistributions(lhe_file_path)
-
-            if distributions and 'mTT' in distributions and distributions['mTT'].size > 0:
-                distributions = AddInfoToDistributions(distributions, params, mPsiT, mSDM, info, nlo, is_biased_run)
-                np.savez_compressed(output_path, **distributions)
-                
-                #  SAVED RESULTS PRINT
-                print(f"Saved results to: {output_path}")
-                
-                end_time = time.time()
-                elapsed = end_time - start_time
-                print(f"Run {run_dir.name} done in {elapsed:.2f}s")
-                print() 
+    with tqdm(total=len(run_dirs), unit="run", dynamic_ncols=True) as pbar:
+        for i, run_dir in enumerate(run_dirs):
+            start_time = time.time()
             
-            else:
-                print(f"Run {run_dir.name} -> No valid events found.")
-        except Exception as e:
-            print(f"Error processing {run_dir.name}: {e}")
-        
-        pbar.update(i + 1)
+            
+            nlo = False
+            banner_file = glob.glob(os.path.join(run_dir, '*banner.txt'))
+            
+            is_biased_run = False
+            if banner_file and 'bias' in os.path.basename(banner_file[0]).lower():
+                is_biased_run = True
 
-    pbar.finish()
+            base_run_name = params['run_name'].removesuffix('_*')
+            if is_biased_run and base_run_name == 'run':
+                output_dir = base_output_path / 'bias' / params['model'] / params['process']
+            elif base_run_name == 'run':
+                output_dir = base_output_path / params['model'] / params['process']
+            elif is_biased_run:
+                output_dir = base_output_path / 'bias' / params['model'] / params['process'] / base_run_name
+            else:
+                output_dir = base_output_path / params['model'] / params['process'] / base_run_name
+
+            output_dir.mkdir(parents=True, exist_ok=True)
+
+            identifier_string, mPsiT, mSDM = get_params_from_filename(run_dir)
+            if identifier_string is None:
+                identifier_string = run_dir.name
+            
+            output_filename = f"{identifier_string}.npz"
+            output_path = output_dir / output_filename
+            
+            if skip_existing and output_path.exists():
+                pbar.write(f"Skipping {run_dir.name} (File exists)")
+                pbar.write("")
+                pbar.update(1)
+                continue
+            
+            if params['model'] == 'UV_BSM' or params['model'] == 'SMS_1_loop':
+                try:
+                    lhe_file_path = next(run_dir.glob('events.lhe.gz'))
+                    nlo = True
+                except StopIteration:
+                    lhe_file_path = None
+            else:
+                try:
+                    lhe_file_path = next(run_dir.glob('unweighted_events.lhe.gz'))
+                except StopIteration:
+                    lhe_file_path = None
+
+            if not lhe_file_path:
+                pbar.write(f"No LHE file found in {run_dir.name}. Skipping.")
+                pbar.update(1)
+                continue
+
+            try:
+                info = getInfo(lhe_file_path, nlo)
+                distributions = getDistributions(lhe_file_path)
+
+                if distributions and 'mTT' in distributions and distributions['mTT'].size > 0:
+                    distributions = AddInfoToDistributions(distributions, params, mPsiT, mSDM, info, nlo, is_biased_run)
+                    np.savez_compressed(output_path, **distributions)
+                    
+                    #  SAVED RESULTS PRINT
+                    pbar.write(f"Saved results to: {output_path}")
+                    
+                    end_time = time.time()
+                    elapsed = end_time - start_time
+                    pbar.write(f"Run {run_dir.name} done in {elapsed:.2f}s")
+                    pbar.write("") 
+                
+                else:
+                    pbar.write(f"Run {run_dir.name} -> No valid events found." )
+            except Exception as e:
+                pbar.write(f"Error processing {run_dir.name}: {e}")
+            pbar.update(1)
+            
+            
+             
+
+        
 
 if __name__ == "__main__":
     main()
