@@ -64,10 +64,13 @@ def read_CMSdata(dataDir='./data',bg="MATRIX"):
     cms_bg = []
     for i,item in enumerate(bg_ratio[2:]):
         cms_bg.append(float(item[1])*cms_data[i]) #Multiplying the ratio by the data to obtain MATRIX
-    # The digitized values are divided by the width
-    #cms_bg = np.array(cms_bg)*bin_widths
+    
     
     cms_bg_err = get_bg_error(cms_bg, data, bg_ratio_err)
+
+    # The digitized values are divided by the width
+    cms_bg = np.array(cms_bg)*bin_widths# The digitized values are divided by the width
+    cms_bg_err = np.array(cms_bg_err)*bin_widths
 
     covdata = csv_reader(os.path.join(dataDir,'parton_abs_ttm_covariance.csv'))
     covmat = np.zeros(15*15).reshape(15,15)
@@ -153,7 +156,6 @@ def computeULs(inputFile,outputFile,full=False):
     # ### Load CMS data and BG
     xsecsObs,sm,covMatrix, sm_err = read_CMSdata()
     deltabg_array = np.divide(sm_err, sm, out=np.zeros_like(sm), where=sm!=0)
-    
     # ### Load LO background from MG5
     smLO = getSMLO()
     # Get k-factor for each bin
@@ -198,12 +200,13 @@ def computeULs(inputFile,outputFile,full=False):
             # Finally, divide by the bin widths
             signal = signal/bin_widths
             sm_bin = sm/bin_widths
-            resDict = getUL(signal,sm_bin,xsecsObs,covMatrix,deltas=0.0, deltabg = deltabg_array)
+            deltabg_bin = deltabg_array
+            resDict = getUL(signal,sm_bin,xsecsObs,covMatrix,deltas=0.0, deltabg = deltabg_bin)
             yDM95 = resDict['yDM95']
             deltaChi95 = resDict['deltaChi95']       
 
             # Expected
-            resDictExp = getUL(signal,sm_bin,sm_bin,covMatrix,deltas=0.0, deltabg = deltabg_array)
+            resDictExp = getUL(signal,sm_bin,sm_bin,covMatrix,deltas=0.0, deltabg = deltabg_bin)
             yDM95exp = resDictExp['yDM95']            
             
         else: # Use full CLs calculation
