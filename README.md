@@ -27,7 +27,7 @@ Below we describe the folders stored in this repository. Additional information 
 
  * [auxFiles](./auxFiles): Contain mostly codes for implementing bias in MG5 event generation
  ---
- * [CDE_text](./CDE_text): folder storing the text with the path integral formalism to integrate out heavy fields from a UV model
+ * [CDE_text](./CDE_text): folder storing the text with the path integral formalism to integrate out heavy fields from a UV model. This folder also stores some mathematica notebook used to check some examples present in the text
  ---
   * [mathematicaNBs](./mathematicaNBs/): contains several mathematical notebooks for loading the models and performing the matching to obtain the EFT.
  ---
