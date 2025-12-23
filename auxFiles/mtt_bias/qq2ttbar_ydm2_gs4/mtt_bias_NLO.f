@@ -23,8 +23,7 @@ c      'bias' = event_norm
 c
       implicit none
       include 'nexternal.inc'
-c      include '../MODEL/input.inc'
-c      include '../MODEL/coupl.inc'
+      include '../../Source/MODEL/coupl.inc'
       double precision bias_wgt,p(0:3,nexternal),H_T
       integer ipdg(nexternal),i,j
       double precision pTot(0:3)

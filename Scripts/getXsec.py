@@ -114,7 +114,7 @@ def process_run(files: str, output_file: str):
         run_dir = os.path.dirname(fpath)
         
         m1, m2 = get_params_from_filename(run_dir)
-        if 'UV_BSM' in files:
+        if 'UV_BSM' in files or 'SMS_1_loop' in files:
             xsec, xsec_err = getXsectionSummary(fpath)
         else:
             xsec, xsec_err = getXsectionFromLHE(fpath)

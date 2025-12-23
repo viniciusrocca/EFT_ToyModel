@@ -1,0 +1,41 @@
+# Power bias parameters for gg NLO
+
+For (500,475)
+
+if (mtt.gt.0.0d0) then
+          peak_loc = 2.05 * mdl_mpsit
+          if (peak_loc.gt.2900.0d0) then
+             bound_1 = (3710.0d0/3075.0d0) * peak_loc 
+             bound_2 = (3850.0d0/3075.0d0) * peak_loc
+             den_1 = peak_loc
+             den_2 = peak_loc
+             den_3 = (3207.0d0/3075.0d0) * peak_loc
+             if (mtt.lt.bound_1) then
+                bias_wgt = (mtt/den_1)**5.3
+             else if (mtt.lt.bound_2) then
+                bias_wgt = (mtt/den_2)**2.3
+             else
+                bias_wgt = (mtt/den_3)**8.0
+             endif
+          else
+             bound_1 = (1600.0d0/1500.0d0) * peak_loc 
+             bound_2 = (1800.0d0/1500.0d0) * peak_loc
+             bound_3 = (2000.0d0/1050.0d0) * peak_loc
+             den_1 = bound_2
+             den_2 = peak_loc
+             if (mdl_mpsit.lt.625.0d0) then
+                den_3 = (1400.0d0/1050.0d0) * peak_loc
+             else
+                den_3 = (1550.0d0/1500.0d0) * peak_loc
+             endif
+             if (mtt.lt.bound_1) then
+                bias_wgt = (mtt/den_1)**3.3
+             else if (mtt.lt.bound_2) then
+                bias_wgt = (mtt/den_2)**3.5
+             else if (mtt.lt.bound_3) then
+                bias_wgt = (mtt/den_2)**6.8
+             else
+                bias_wgt = (mtt/den_3)**10.0
+             endif
+          endif
+      endif
