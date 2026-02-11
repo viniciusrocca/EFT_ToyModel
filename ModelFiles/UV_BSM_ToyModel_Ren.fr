@@ -1,0 +1,168 @@
+(***************************************************************)
+(***************************************************************)
+(** FeynRules model file for a simplified model          *******)
+(** with a vector like fermion top partner and a scalar    *****)
+(** singlet (DM).                                             **)
+(******                                                        *)
+(****** A. Lessa and V. Rocca                                  *)
+(******                                                        *)
+(****** Feel free to use this model file!                      *)
+(***************************************************************)
+(***************************************************************)
+
+M$ModelName = "UV-BSM-ToyModel";
+
+M$Information = {Authors -> {"Andre Lessa", "Vinicius Rocca"}, 
+                 Version -> "1.0",
+                 Date -> "xx.06.2025"};
+
+FeynmanGauge = True;
+
+M$InteractionOrderHierarchy = {  {NP1, 1}, {NP2, 1}, {NP3,1}, {QCD, 2}, {QED,3} };
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+
+M$Parameters = {
+
+ (* New Physics (UV) Parameters *)
+  yDM  == { TeX->Subscript[y,DM],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP1 ,1}, Description->"Dark fermion - heavy stop - SM RH top Yukawa"},
+
+  lamHs  == { TeX->Subscript[\[Lambda],Hs],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP2 ,1}, Description->"Dark scalar square - SM Higgs doublet contraction"},
+
+  lamS == { TeX->Subscript[\[Lambda],s],  ComplexParameter -> False, ParameterType->External, Value->1.0, InteractionOrder->{NP3 ,1}, Description->"Quartic dark scalar interaction"},
+
+  (* Counter-term parameters *)
+(* (the divergent term has been set to zero) *)
+
+(* Dimensional Regularization Parameter *)
+  Eps == {
+    ParameterType -> Internal,
+    Value -> 0 (* Set to 0 for finite parts, or keep symbol for checking poles *)
+  },
+
+  xC == { TeX->Subscript[x,C],  
+        ComplexParameter -> False, 
+        ParameterType->Internal, 
+        Value -> mSDM^2/mPsiT^2
+      },
+
+  xT == { TeX->Subscript[x,T],
+        ComplexParameter -> False, 
+        ParameterType->Internal, 
+        Value -> MT^2/mPsiT^2
+      },
+
+  lA  == { TeX->Subscript[l,A],  
+         ComplexParameter -> False, ParameterType->Internal, 
+         Value -> xC^2 + (1 - xT)^2 - 2*xC*(1 + xT)
+         },
+
+  lB  == { TeX->Subscript[l,B],  
+         ComplexParameter -> False, ParameterType->Internal, 
+         Value -> -xC^2 - (-1 + xT)^2 + 2*xC*(1 + xT)
+         },
+
+(* On-shell counter-terms (mPsiT > mSDM + MT) *)
+  deltaCT1L == {
+              ComplexParameter -> False, 
+              ParameterType->Internal, 
+              Value -> -1/(128 Subscript[g, s] Sqrt[lA] \[Pi]^6 xT^2 yDM^2) I (Sqrt[lA] xT (2 - 2 xC + xT) + Sqrt[lA] (1 + xC^2 - xC (2 + xT)) Log[xC] + ((-1 + xC)^3 + (1 + xC - 2 xC^2) xT + xC xT^2) (Log[4] + Log[xC] - 2 Log[1 + xC - xT + Sqrt[(-1 + xC)^2 - 2 (1 + xC) xT + xT^2]]))
+              },
+
+  deltaCT1R == {
+              ComplexParameter -> False, ParameterType -> Internal, 
+              Value -> 1/(128 Sqrt[lA] \[Pi]^4 xT^2)(Sqrt[lA] ((-1 + xC)^2 + xT^2) Log[xC] - 2 (-1 + xC + xT) (Sqrt[lA]xT + (1 + xC^2 + xT^2 - 2 xC (1 + xT)) Log[(1 + Sqrt[lA] + xC - xT)/(2 Sqrt[xC])]))},
+
+(* Off-shell counter-terms (mPsiT < mSDM + MT) *)
+  deltaCT2L == {
+              ComplexParameter -> False, 
+              ParameterType->Internal, 
+              Value ->  1/(64 Sqrt[lB] \[Pi]^4 xT^2)(Sqrt[lB] xT (2-2 xC+xT)+Sqrt[lB] (1+xC^2-xC (2+xT)) Log[xC]+I Log[4 xC]-I (xT+xC (3+(-3+xC) xC+xT-2 xC xT+xT^2)) (Log[4]+Log[xC]-2 Log[1+Sqrt[-lB]+xC-xT])-2 I Log[1+Sqrt[-lB]+xC-xT])
+             },
+
+  deltaCT2R == {
+              ComplexParameter -> False, 
+              ParameterType->Internal, 
+              Value -> 1/(128 Sqrt[lB] \[Pi]^4 xT^2)(Sqrt[lB] ((-1+xC)^2+xT^2) Log[xC]-I (-1+xC+xT) (-2 I Sqrt[lB] xT+(1+xC^2+xT^2-2 xC (1+xT)) Log[4 xC]-2 (1+xC^2+xT^2-2 xC (1+xT)) Log[1+Sqrt[-lB]+xC-xT]))
+             },
+
+(* Use delta_1 or delta_2 depending on the mass relations *)
+
+  deltaCTL == {
+             TeX->Subscript[\[Delta],L],  
+             ComplexParameter -> False, 
+             ParameterType->Internal, 
+             Value -> If[mPsiT > mSDM + MT, deltaCT1L, deltaCT2L]
+            },
+
+  deltaCTR == { 
+             TeX->Subscript[\[Delta],R],  
+             ComplexParameter -> False, 
+             ParameterType->Internal, 
+             Value -> If[mPsiT > mSDM + MT, deltaCT1R, deltaCT2R]
+            }
+
+};
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+
+(* The top partner fermion *)
+F[16] == { 
+         ClassName -> psiT,
+         Indices -> {Index[Colour]}, 
+         SelfConjugate-> False,
+         Unphysical     -> False, 
+         QuantumNumbers -> {Q -> 2/3}, 
+         Mass-> {mPsiT,400.}, 
+         Width-> {WPsiT,1.0},
+         PDG->{5000006}, 
+         PropagatorLabel->"psiT", 
+         PropagatorType->Straight, 
+         ParticleName     -> "psiT" ,
+         AntiParticleName -> "psiT~",
+         FullName         -> {"Vector like fermion top partner"} },
+
+(* The dark Scalar *)
+S[5] == { 
+          ClassName        -> SDM,
+          SelfConjugate    -> True,
+          Unphysical       -> False,
+          Mass             -> {mSDM,100.},
+          Width            -> 0,
+          QuantumNumbers   -> {},
+          PropagatorLabel  -> {"SDM"},
+          PropagatorType   -> ScalarDash, 
+          PDG              -> {5000022},
+          ParticleName     -> {"~SDM" },
+          FullName         -> {"Dark Scalar"} }
+};
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+(* gauge kinetic and mass terms *)
+
+Lkin := I*psiTbar.Ga[mu].DC[psiT, mu] - mPsiT psiTbar.psiT + (1/2)*DC[SDM,mu] DC[SDM,mu] - (1/2)*(mSDM^2 - lamHs*vev^2/4)*SDM^2 - (1/24)*lamS*SDM^4;                     
+
+(* DM-Scalar-Top coupling *)
+
+LYDM := -yDM SDM * (ProjP[sp1,sp2] psiTbar[sp1,aa].uq[sp2,3,aa]);
+
+LHs := ExpandIndices[-(1/4)*lamHs*(Phibar[ii] Phi[ii] SDM SDM)];
+
+(* Counter-terms from on-shell renormalization *)
+LCT := Block[{aa,cc1,cc2,mu,sp1,sp2,sp3},
+       ExpandIndices[
+               2*yDM^2*gs*Pi^2*G[mu,aa]*T[aa,cc1,cc2]*Ga[mu,sp1,sp2]*(uqbar[sp1,3,cc1].uq[sp3,3,cc2])*(deltaCTL*ProjM[sp2,sp3]+deltaCTR*ProjP[sp2,sp3])
+             ]
+            ];
+
+LNP := Lkin + LHs + LYDM + HC[LYDM] + LCT;
+

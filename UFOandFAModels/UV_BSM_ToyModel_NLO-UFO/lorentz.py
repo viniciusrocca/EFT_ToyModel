@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Mon 23 Jun 2025 11:21:29
+# Date: Fri 6 Feb 2026 14:03:41
 
 
 from object_library import all_lorentz, Lorentz
@@ -58,14 +58,6 @@ UUS1 = Lorentz(name = 'UUS1',
 
 UUV1 = Lorentz(name = 'UUV1',
                spins = [ -1, -1, 3 ],
-               structure = 'P(3,2)')
-
-UUV2 = Lorentz(name = 'UUV2',
-               spins = [ -1, -1, 3 ],
-               structure = 'P(3,3)')
-
-UUV3 = Lorentz(name = 'UUV3',
-               spins = [ -1, -1, 3 ],
                structure = 'P(3,2) + P(3,3)')
 
 SSS1 = Lorentz(name = 'SSS1',
@@ -78,15 +70,7 @@ FFS1 = Lorentz(name = 'FFS1',
 
 FFS2 = Lorentz(name = 'FFS2',
                spins = [ 2, 2, 1 ],
-               structure = 'ProjM(2,1) - ProjP(2,1)')
-
-FFS3 = Lorentz(name = 'FFS3',
-               spins = [ 2, 2, 1 ],
                structure = 'ProjP(2,1)')
-
-FFS4 = Lorentz(name = 'FFS4',
-               spins = [ 2, 2, 1 ],
-               structure = 'ProjM(2,1) + ProjP(2,1)')
 
 FFV1 = Lorentz(name = 'FFV1',
                spins = [ 2, 2, 3 ],
@@ -114,15 +98,7 @@ FFV6 = Lorentz(name = 'FFV6',
 
 VSS1 = Lorentz(name = 'VSS1',
                spins = [ 3, 1, 1 ],
-               structure = 'P(1,2)')
-
-VSS2 = Lorentz(name = 'VSS2',
-               spins = [ 3, 1, 1 ],
                structure = 'P(1,2) - P(1,3)')
-
-VSS3 = Lorentz(name = 'VSS3',
-               spins = [ 3, 1, 1 ],
-               structure = 'P(1,3)')
 
 VVS1 = Lorentz(name = 'VVS1',
                spins = [ 3, 3, 1 ],
@@ -187,4 +163,8 @@ VVVV3 = Lorentz(name = 'VVVV3',
 VVVV4 = Lorentz(name = 'VVVV4',
                 spins = [ 3, 3, 3, 3 ],
                 structure = 'Metric(1,4)*Metric(2,3) + Metric(1,3)*Metric(2,4) - 2*Metric(1,2)*Metric(3,4)')
+
+VVVV5 = Lorentz(name = 'VVVV5',
+                spins = [ 3, 3, 3, 3 ],
+                structure = 'Metric(1,4)*Metric(2,3) - (Metric(1,3)*Metric(2,4))/2. - (Metric(1,2)*Metric(3,4))/2.')
 
