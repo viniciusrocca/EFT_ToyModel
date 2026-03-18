@@ -283,7 +283,8 @@ def getInfo(f,nlo = False,labelsDict=None):
     """
     if labelsDict is None:
         labelsDict = {'UV_BSM_ToyModel_NLO-UFO' : '1-loop VLF', 'Top-EFTfull-UFO' : 'VLF EFT', 
-                      'SMS-stop-UFO' : 'Scalar EFT', 'SMS-stop_NLO-UFO' : '1-loop Scalar',
+                      'SMS-stop-UFO' : 'Scalar EFT', 'SMS-stop_NLO-UFO' : '1-loop Scalar', 
+                      'DMsimp_s_spin1': 'Z prime',
               'g g > t t~' : r'$g g \to t \bar{t}$', 'g g > t~ t' : r'$g g \to t \bar{t} $',
               'q q > t t~' : r'$q q \to t \bar{t}$', 'q q > t~ t' : r'$q q \to t \bar{t}$',
               'p p > t t~' : r'$p p \to t \bar{t}$', 'p p > t~ t' : r'$p p \to t \bar{t}$'
@@ -359,12 +360,21 @@ def getInfo(f,nlo = False,labelsDict=None):
         yDM = pars[0]
         mSDM = mChi
         mPsiT = mST
+    elif model == 'Z prime':
+        mZ_prime = parsSLHA.blocks['MASS'][5000001]
+        pars = list(parsSLHA.blocks['FRBLOCK'].values())
+        gvd11 = pars[3]
+        gvu11 = pars[4]
+        gvd22 = pars[5]
+        gvu22 = pars[6]
+        gvd33 = pars[7]
+        gvu33 = pars[8]
     else:
         mSDM = 0.0
         mPsiT = 0.0
         yDM = 0.0
 
-    if yDM == 0.0:
+    if yDM == 0.0 and model != 'Z prime':
         model = 'SM'
     
     # Get event data:
@@ -388,8 +398,12 @@ def getInfo(f,nlo = False,labelsDict=None):
     else:
         nEvents = -1
         xsec = -1.0    
-
-    fileInfo = {'model' : model, 'process' : proc, '(mSDM,mPsiT,mT,yDM)' : (mSDM,mPsiT,mT,yDM),
+    if model == 'Z prime':
+        fileInfo = {'model' : model, 'process' : proc, 'mZp' : mZ_prime, 'gvd11': gvd11,
+                    'gvu11': gvu11, 'gvd22': gvd22, 'gvu22': gvu22, 'gvd33': gvd33, 
+                    'gvu33':gvu33, 'xsec (pb)' : xsec, 'nevents' : nEvents}
+    else:
+        fileInfo = {'model' : model, 'process' : proc, '(mSDM,mPsiT,mT,yDM)' : (mSDM,mPsiT,mT,yDM),
                'xsec (pb)' : xsec, 'nevents' : nEvents}
     
     return fileInfo
@@ -441,11 +455,13 @@ def get_params_from_filename(run_dir):
 def AddInfoToDistributions(distributions, params, mPsiT, mSDM, info, nlo = False, bias = False):
     """Adds the model name, process and mass parameters to the final dictionary"""
     converter_dict = {'TopEFT': 'VLF EFT', 'UV_BSM': '1-loop VLF', 'sm':'SM',
-                      'SMS_EFT': 'Scalar EFT', 'SMS_1_loop': '1-loop Scalar',
+                      'SMS_EFT': 'Scalar EFT', 'SMS_1_loop': '1-loop Scalar', 'DMsimp_s_spin1': 'Z prime', 
+                      'VLF': 'VLF', 'pp2ttbar': r'$p p \to t \bar{t}$ ',
                       'qq2ttbar_gs4_ydm2': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4_ydm2': r'$g g \to t \bar{t}$',
                       'pp2ttbar_gs4_ydm2': r'$p p \to t \bar{t}$ ', 'qq2ttbar_gs6': r'$q q \to t \bar{t}$', 'gg2ttbar_gs6': r'$g g \to t \bar{t}$',
                       'pp2ttbar_gs6': r'$p p \to t \bar{t}$', 'qq2ttbar_gs4': r'$q q \to t \bar{t}$', 'gg2ttbar_gs4': r'$g g \to t \bar{t}$',
-                      'pp2ttbar_gs4': r'$p p \to t \bar{t}$', 'gs4': r'$g_s^4$', 'gs6': r'$g_s^6$', 'ydm2': r'$y_{DM}^2$'}
+                      'qq2ttbar_gs2_dmv2': r'$q q \to t \bar{t}$', 'pp2ttbar_gs2_dmv2': r'$p p \to t \bar{t}$',
+                      'pp2ttbar_gs4': r'$p p \to t \bar{t}$', 'gs4': r'$g_s^4$', 'gs6': r'$g_s^6$', 'ydm2': r'$y_{DM}^2$' }
     
     #Add new keys with the new information
     distributions['model'] = converter_dict[params['model']]
@@ -571,7 +587,7 @@ def main():
                 pbar.update(1)
                 continue
             
-            if params['model'] == 'UV_BSM' or params['model'] == 'SMS_1_loop':
+            if params['model'] == 'UV_BSM' or params['model'] == 'SMS_1_loop' or params['model'] == 'VLF':
                 try:
                     lhe_file_path = next(run_dir.glob('events.lhe.gz'))
                     nlo = True
