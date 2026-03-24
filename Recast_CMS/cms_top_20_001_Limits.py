@@ -39,7 +39,7 @@ def get_bg_error(cms_bg, data, bg_ratio_err):
     bg_err = []
     for i,item in enumerate(data[9:24]):
         data_err = np.sqrt(float(item[4])**2 + float(item[6])**2) #Considering the statistical and systematic errors
-        err = abs(float(item[3]) * cms_bg[i]) * np.sqrt((bg_ratio_err[i]/float(item[3]))**2 - (data_err / cms_bg[i])**2) #computing the error
+        err =  np.sqrt((bg_ratio_err[i] * float(item[3]))**2 + (data_err * cms_bg[i]/float(item[3]))**2) #computing the error
         bg_err.append(err)
     return np.array(bg_err)
 
