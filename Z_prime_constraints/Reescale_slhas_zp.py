@@ -75,17 +75,18 @@ def rescale_slha(ref_slha_path, mass, output_dir):
             in_zp_decay = False
             
             for line in lines:
-                # Update the Total Width
-                if line.startswith("DECAY  5000001"):
+                # 1. Update the Total Width (Robust against spaces)
+                if line.startswith("DECAY") and "5000001" in line:
                     in_zp_decay = True
                     new_total_width = mass * w_frac
-                    new_lines.append(f"DECAY  5000001   {new_total_width:.6e} #  wy1\n")
+                    new_lines.append(f"DECAY 5000001   {new_total_width:.6e} #  wy1\n")
                     continue
 
-                elif line.startswith("DECAY "):
+                # 2. Exit the Z' Decay Block
+                elif line.startswith("DECAY"):
                     in_zp_decay = False
                     
-                # Update the Branching Ratios
+                # 3. Update the Branching Ratios
                 if in_zp_decay and len(line.strip()) > 0 and not line.startswith("#"):
                     parts = line.split()
                     if len(parts) >= 4:
