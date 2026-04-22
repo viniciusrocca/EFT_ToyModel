@@ -5,19 +5,18 @@ import glob
 # ---------------------------------------------------------
 # 1. Configuration & Parameters
 # ---------------------------------------------------------
-# 13 generated mass points
 masses = np.arange(2000.0, 5100.0, 100.0).tolist()
+width_fractions = [0.005,0.010, 0.015, 0.02, 0.025, 0.03]
 
-# The contour slices for total width (0.5% up to 3%)
-width_fractions = [0.005, 0.010, 0.015, 0.020, 0.025, 0.030, 0.035]
-
-# Cross section maximum value
-max_xsec_limit = 15.0 # pb
+# --- TARGET SCAN LIMITS ---
+min_S_target = 1e-5 # pb
+max_S_target = 10.0 # pb
+num_points = 40
 
 # --- REFERENCE RUN PARAMETERS ---
 ref_width_fraction = 0.010
 ref_gq = 1.000000e-02
-ref_gt = np.sqrt((ref_width_fraction * 4 * np.pi) - 2 * (ref_gq**2))
+ref_gt = np.sqrt((ref_width_fraction * 4 * np.pi) - 2 * (ref_gq**2)) 
 
 # Folders
 input_dir = "/home/vinicius/EFT_ToyModel/processFolders/Zp_SLHAs_ref/"
@@ -25,7 +24,7 @@ output_dir = "/home/vinicius/EFT_ToyModel/processFolders/Zp_SLHAs/"
 os.makedirs(output_dir, exist_ok=True)
 
 # ---------------------------------------------------------
-# Rescaling Logic
+# 2. Rescaling Logic (Inverted Math)
 # ---------------------------------------------------------
 def rescale_slha(ref_slha_path, mass, output_dir):
     try:
@@ -35,103 +34,162 @@ def rescale_slha(ref_slha_path, mass, output_dir):
         print(f"File not found: {ref_slha_path}. Skipping...")
         return 0
 
-    # Extract the reference cross-section to evaluate the 15 pb limit mathematically
     ref_xsec = 0.0
+    ref_br_top = 0.0
+    in_zp_decay = False
+    
     for line in lines:
         if "ufo2slha" in line:
             parts = line.split()
             ref_xsec = float(parts[6])
-            break
             
-    if ref_xsec == 0.0:
-        print(f"Error: Could not find cross-section in {ref_slha_path}")
+        if line.startswith("DECAY") and "5000001" in line:
+            in_zp_decay = True
+            continue 
+        elif line.startswith("DECAY"):
+            in_zp_decay = False
+            continue
+            
+        if in_zp_decay and not line.strip().startswith("#"):
+            parts = line.split()
+            if len(parts) >= 4:
+                try:
+                    pids = [int(parts[2]), int(parts[3])]
+                    if 6 in pids and -6 in pids:
+                        ref_br_top = float(parts[0])
+                except ValueError:
+                    pass 
+            
+    if ref_xsec == 0.0 or ref_br_top == 0.0:
+        print(f"Error: Could not find cross-section or BR in {ref_slha_path}")
         return 0
 
     points_generated = 0
     
     for w_frac in width_fractions:
-        constraint_val = w_frac * 4 * np.pi
-        max_gq = np.sqrt(constraint_val / 2.0)
+        constraint_val = w_frac * 4 * np.pi 
+        A = (ref_xsec * ref_br_top) / ((ref_gq**2) * (ref_gt**2))
+        S_max_physical = (A * (constraint_val**2)) / 8.0
+        max_S_scan = min(max_S_target, S_max_physical) 
         
-        # Set the scan values
-        #gq_values = np.linspace(1e-2, max_gq - 0.005, 40)
-        gq_values = np.geomspace(1e-5, max_gq - 0.005, 60)
+        # --- SOLUTION: FOCUS THE GRID AT THE TOP ---
         
-        for gq in gq_values:
-            xsec_scale = (gq**2) / (ref_gq**2)
-            new_xsec = ref_xsec * xsec_scale
+        # Step 1: Divide your "width budget" (60 points) to focus on the top.
+        num_high_points = 20  # 40 points will cover 0.05 pb up to the ceiling
+        num_low_points = 30   # 20 points will cover 1e-5 pb up to 0.05 pb
+        
+        # Step 2: Generate the dense high-end points (linearly spaced)
+        high_points = np.geomspace(0.05, max_S_scan, num_high_points)
+        
+        # Step 3: Generate the background points (geomspace to cover the log floor)
+        # We start at the floor and end just below the linear grid to avoid overlap.
+        # Use an endpoint=False logic to make it merge cleanly.
+        low_points = np.geomspace(min_S_target, high_points[0], num_low_points)
+        
+        # Step 4: Merge the two grids into the final target list
+        target_S_values = np.concatenate([low_points, high_points])
+        
+        for S in target_S_values:
+            discriminant = (A * constraint_val)**2 - 8 * A * S
+            if discriminant < 0: 
+                discriminant = 0.0 
             
-            # --- 15 pb maximum limit---
-            if new_xsec > max_xsec_limit:
-                continue 
+            # Calculate the two physical regimes
+            roots = [
+                ("topDom", (2 * S) / (A * constraint_val + np.sqrt(discriminant))),
+                ("jetDom", (A * constraint_val + np.sqrt(discriminant)) / (4 * A))
+            ]
             
-            gt = np.sqrt(constraint_val - 2 * (gq**2))
-            width_ratio = ref_width_fraction / w_frac
-            
-            br_scale_top = (gt**2 / ref_gt**2) * width_ratio
-            br_scale_light = (gq**2 / ref_gq**2) * width_ratio
-            
-            new_lines = []
-            in_zp_decay = False
-            
-            for line in lines:
-                # 1. Update the Total Width (Robust against spaces)
-                if line.startswith("DECAY") and "5000001" in line:
-                    in_zp_decay = True
-                    new_total_width = mass * w_frac
-                    new_lines.append(f"DECAY 5000001   {new_total_width:.6e} #  wy1\n")
-                    continue
-
-                # 2. Exit the Z' Decay Block
-                elif line.startswith("DECAY"):
-                    in_zp_decay = False
-                    
-                # 3. Update the Branching Ratios
-                if in_zp_decay and len(line.strip()) > 0 and not line.startswith("#"):
-                    parts = line.split()
-                    if len(parts) >= 4:
-                        old_br = float(parts[0])
-                        pids = [int(parts[2]), int(parts[3])]
-                        
-                        if 6 in pids and -6 in pids:
-                            new_br = old_br * br_scale_top
-                        elif any(abs(p) in [1, 2, 3, 4, 5] for p in pids):
-                            new_br = old_br * br_scale_light
-                        else:
-                            new_br = old_br 
-                            
-                        line = line.replace(parts[0], f"{new_br:.6e}", 1)
-
-                # Update Cross-Section Error
-                elif line.startswith("XSECTION"):
-                    parts = line.split()
-                    old_err = float(parts[-1]) 
-                    new_err = old_err * xsec_scale
-                    line = line.replace(parts[-1], f"{new_err:.3e}\n")
-
-                # 4. Update Nominal Cross-Section
-                elif "ufo2slha" in line:
-                    line = f"  0  0  0  0  0  0  {new_xsec:.4e} ufo2slha 1.0\n"
-                    
-                new_lines.append(line)
+            for regime, gq_sq in roots:
+                gq = np.sqrt(gq_sq)
+                gt = np.sqrt(max(0.0, constraint_val - 2 * gq_sq))
                 
-            width_pct = int(w_frac * 1000) 
-            out_name = f"Zprime_W{width_pct:02d}_m{int(mass)}_gq{gq:.4f}_gt{gt:.4f}.slha"
-            
-            with open(os.path.join(output_dir, out_name), 'w') as f:
-                f.writelines(new_lines)
-            
-            points_generated += 1
+                xsec_scale = (gq**2) / (ref_gq**2)
+                new_xsec = ref_xsec * xsec_scale
+                
+                width_ratio = ref_width_fraction / w_frac
+                
+                if ref_gt > 0:
+                    br_scale_top = (gt**2 / ref_gt**2) * width_ratio
+                else:
+                    br_scale_top = 0.0
+                    
+                br_scale_light = (gq**2 / ref_gq**2) * width_ratio
+                
+                new_lines = []
+                in_zp_decay = False
+                
+                # We define the new total width here so it can be used for partial widths
+                new_total_width = mass * w_frac
+                
+                for line in lines:
+                    # 1. Update the Total Width
+                    if line.startswith("DECAY") and "5000001" in line:
+                        in_zp_decay = True
+                        new_lines.append(f"DECAY 5000001   {new_total_width:.6e} #  wy1\n")
+                        continue
+
+                    # Exit the Z' Decay Block
+                    elif line.startswith("DECAY"):
+                        in_zp_decay = False
+                        
+                    # 2. Update the Couplings in DMINPUTS
+                    if "# gvd11" in line or "# gvu11" in line:
+                        parts = line.split()
+                        if len(parts) >= 2:
+                            line = line.replace(parts[1], f"{gq:.6e}", 1)
+                    elif "# gvu33" in line:
+                        parts = line.split()
+                        if len(parts) >= 2:
+                            line = line.replace(parts[1], f"{gt:.6e}", 1)
+                        
+                    # 3. Update Branching Ratios AND Partial Widths
+                    if in_zp_decay and not line.strip().startswith("#"):
+                        parts = line.split()
+                        if len(parts) >= 4:
+                            try:
+                                pids = [int(parts[2]), int(parts[3])]
+                                if 6 in pids and -6 in pids:
+                                    new_br = float(parts[0]) * br_scale_top
+                                    new_partial_width = new_total_width * new_br
+                                    line = f"      {new_br:.6e}   2  -6   6 # {new_partial_width:.6e}\n"
+                                    
+                                elif any(abs(p) in [1, 2, 3, 4, 5] for p in pids):
+                                    new_br = float(parts[0]) * br_scale_light
+                                    new_partial_width = new_total_width * new_br
+                                    # Formats the PID spacing so it perfectly matches MadGraph's alignment
+                                    line = f"      {new_br:.6e}   2  {pids[0]:>2}  {pids[1]:>2} # {new_partial_width:.6e}\n"
+                            except ValueError:
+                                pass 
+
+                    # 4. Update Cross-Section Error
+                    elif line.startswith("XSECTION"):
+                        parts = line.split()
+                        old_err = float(parts[-1]) 
+                        new_err = old_err * xsec_scale
+                        line = line.replace(parts[-1], f"{new_err:.3e}\n")
+
+                    # 5. Update Nominal Cross-Section
+                    elif "ufo2slha" in line:
+                        line = f"  0  0  0  0  0  0  {new_xsec:.4e} ufo2slha 1.0\n"
+                        
+                    new_lines.append(line)
+                    
+                width_pct = int(w_frac * 1000) 
+                out_name = f"Zprime_W{width_pct:02d}_m{int(mass)}_S{S:.2e}_{regime}.slha"
+                
+                with open(os.path.join(output_dir, out_name), 'w') as f:
+                    f.writelines(new_lines)
+                
+                points_generated += 1
             
     return points_generated
 
 # ---------------------------------------------------------
-#  Execution 
+# 3. Execution 
 # ---------------------------------------------------------
-
 total_points = 0
 for mass in masses:
-    # Look for ANY file in the input directory that contains the mass integer and ends with .slha
     search_pattern = os.path.join(input_dir, f"*{int(mass)}*.slha")
     matching_files = glob.glob(search_pattern)
     
@@ -139,7 +197,6 @@ for mass in masses:
         print(f"File not found: No files matching *{int(mass)}*.slha in {input_dir}. Skipping...")
         continue
         
-    # Grab the first file that matches the pattern
     ref_file = matching_files[0] 
     
     print(f"Processing {os.path.basename(ref_file)}...")
