@@ -3,17 +3,17 @@ import numpy as np
 import glob
 
 # ---------------------------------------------------------
-# 1. Configuration & Parameters
+# Configuration & Parameters
 # ---------------------------------------------------------
-masses = np.arange(2000.0, 5100.0, 100.0).tolist()
-width_fractions = [0.005,0.010, 0.015, 0.02, 0.025, 0.03]
+masses = np.arange(1500.0, 5100.0, 100.0).tolist()
+width_fractions = [0.005,0.010, 0.02]
 
-# --- TARGET SCAN LIMITS ---
+# --- Scan limits ---
 min_S_target = 1e-5 # pb
 max_S_target = 10.0 # pb
-num_points = 40
+num_points = 70
 
-# --- REFERENCE RUN PARAMETERS ---
+# --- Reference run parameters---
 ref_width_fraction = 0.010
 ref_gq = 1.000000e-02
 ref_gt = np.sqrt((ref_width_fraction * 4 * np.pi) - 2 * (ref_gq**2)) 
@@ -24,7 +24,7 @@ output_dir = "/home/vinicius/EFT_ToyModel/processFolders/Zp_SLHAs/"
 os.makedirs(output_dir, exist_ok=True)
 
 # ---------------------------------------------------------
-# 2. Rescaling Logic (Inverted Math)
+# Rescaling Logic 
 # ---------------------------------------------------------
 def rescale_slha(ref_slha_path, mass, output_dir):
     try:
@@ -72,21 +72,14 @@ def rescale_slha(ref_slha_path, mass, output_dir):
         S_max_physical = (A * (constraint_val**2)) / 8.0
         max_S_scan = min(max_S_target, S_max_physical) 
         
-        # --- SOLUTION: FOCUS THE GRID AT THE TOP ---
         
-        # Step 1: Divide your "width budget" (60 points) to focus on the top.
-        num_high_points = 20  # 40 points will cover 0.05 pb up to the ceiling
-        num_low_points = 30   # 20 points will cover 1e-5 pb up to 0.05 pb
+        num_high_points = 20  # 20 points will cover 0.05 pb up to the ceiling
+        num_low_points = 50   # 50 points will cover 1e-5 pb up to 0.05 pb
         
-        # Step 2: Generate the dense high-end points (linearly spaced)
         high_points = np.geomspace(0.05, max_S_scan, num_high_points)
-        
-        # Step 3: Generate the background points (geomspace to cover the log floor)
-        # We start at the floor and end just below the linear grid to avoid overlap.
-        # Use an endpoint=False logic to make it merge cleanly.
         low_points = np.geomspace(min_S_target, high_points[0], num_low_points)
         
-        # Step 4: Merge the two grids into the final target list
+        # Merge the two grids into the final target list
         target_S_values = np.concatenate([low_points, high_points])
         
         for S in target_S_values:
@@ -123,7 +116,7 @@ def rescale_slha(ref_slha_path, mass, output_dir):
                 new_total_width = mass * w_frac
                 
                 for line in lines:
-                    # 1. Update the Total Width
+                    # Update the Total Width
                     if line.startswith("DECAY") and "5000001" in line:
                         in_zp_decay = True
                         new_lines.append(f"DECAY 5000001   {new_total_width:.6e} #  wy1\n")
@@ -133,7 +126,7 @@ def rescale_slha(ref_slha_path, mass, output_dir):
                     elif line.startswith("DECAY"):
                         in_zp_decay = False
                         
-                    # 2. Update the Couplings in DMINPUTS
+                    # Update the Couplings in DMINPUTS
                     if "# gvd11" in line or "# gvu11" in line:
                         parts = line.split()
                         if len(parts) >= 2:
@@ -143,7 +136,7 @@ def rescale_slha(ref_slha_path, mass, output_dir):
                         if len(parts) >= 2:
                             line = line.replace(parts[1], f"{gt:.6e}", 1)
                         
-                    # 3. Update Branching Ratios AND Partial Widths
+                    # Update Branching Ratios and Partial Widths
                     if in_zp_decay and not line.strip().startswith("#"):
                         parts = line.split()
                         if len(parts) >= 4:
@@ -162,14 +155,14 @@ def rescale_slha(ref_slha_path, mass, output_dir):
                             except ValueError:
                                 pass 
 
-                    # 4. Update Cross-Section Error
+                    # Update Cross-Section Error
                     elif line.startswith("XSECTION"):
                         parts = line.split()
                         old_err = float(parts[-1]) 
                         new_err = old_err * xsec_scale
                         line = line.replace(parts[-1], f"{new_err:.3e}\n")
 
-                    # 5. Update Nominal Cross-Section
+                    # Update Nominal Cross-Section
                     elif "ufo2slha" in line:
                         line = f"  0  0  0  0  0  0  {new_xsec:.4e} ufo2slha 1.0\n"
                         
@@ -186,7 +179,7 @@ def rescale_slha(ref_slha_path, mass, output_dir):
     return points_generated
 
 # ---------------------------------------------------------
-# 3. Execution 
+# Main Loop
 # ---------------------------------------------------------
 total_points = 0
 for mass in masses:
