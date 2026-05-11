@@ -260,7 +260,7 @@ if __name__ == "__main__":
             help='list of final state PIDs (e.g. -1000011 1000011). If not given, will try to guess from process card.',
             default=[-5000006, 5000006], nargs='+')
             
-    ap.add_argument('--mg5', default='/home/vrocca/MadGraph/MG5_aMC_v3_6_3/',
+    ap.add_argument('--mg5', default='/home/vinicius/MadGraph/MG5_aMC_v3_6_3/',
             help='Path to the MadGraph 5 installation directory.')
     
     args = ap.parse_args()

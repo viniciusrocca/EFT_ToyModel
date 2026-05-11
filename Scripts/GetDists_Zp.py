@@ -424,7 +424,7 @@ def AddInfoToDistributions(distributions, params, info, nlo = False, bias = Fals
     converter_dict = { 'sm':'SM', 'DMsimp_s_spin1': 'Z prime', 'z_prime': 'Z prime',
                       'qq2ttbar_gs2_dmv2': r'$q q \to t \bar{t}$', 'pp2ttbar_gs2_dmv2': r'$p p \to t \bar{t}$',
                       'pp2ttbar_gs4': r'$p p \to t \bar{t}$', 'gs4': r'$g_s^4$', 'gs6': r'$g_s^6$', 'gs2': r'$g_s^4$', 'dmv2': r'$dmv^2$',
-                      'dmv4': r'$dmv^4$', 'qq2ttbar_dmv4': r'$q q \to t \bar{t}$'}
+                      'dmv4': r'$dmv^4$', 'qq2ttbar_dmv4': r'$q q \to t \bar{t}$', 'pp2ttbar_dmv4': r'$p p \to t \bar{t}$'}
 
     #Add new keys with the new information
     distributions['model'] = converter_dict[params['model']]
