@@ -207,12 +207,12 @@ def event_number_normalization(h_ref, h, lum=500.0):
 
 def weighted_hist(x, w, bins):
     """Generates a standard weighted 1D histogram array."""
-    h, _ = np.histogram(x, bins=bins, weights=np.abs(w))
+    h, _ = np.histogram(x, bins=bins, weights=w)
     return h.astype(float)
 
 def build_template(x, w, bins, alpha=1e-12, density=False):
     """Generates a histogram template, applying a safety epsilon and optional PDF normalization."""
-    h, _ = np.histogram(x, bins=bins, weights=np.abs(w))
+    h, _ = np.histogram(x, bins=bins, weights=w)
     h = h.astype(float) + alpha
     if density: h /= h.sum()
     return h
@@ -280,7 +280,7 @@ def calc_variance_hat_delta(h_hyp, h_sm, eps, alpha=1e-12):
     
     return term_same + term_diff
 
-def asimov_signed_Z_rigorous(dA, dB, hA, hB, n_sm, eps, alpha=1e-12):
+def asimov_signed_Z_rigorous(dA, dB, hA, hB, n_sm, eps, mode="avg", alpha=1e-12):
     """
     Calculates the statistical separation significance between two models utilizing 
     the Normalized Falloff Method, rigorously propagating systematic uncertainties.
@@ -288,7 +288,8 @@ def asimov_signed_Z_rigorous(dA, dB, hA, hB, n_sm, eps, alpha=1e-12):
     var_hat_A = calc_variance_hat_delta(hA, n_sm, eps, alpha=alpha)
     var_hat_B = calc_variance_hat_delta(hB, n_sm, eps, alpha=alpha)
     
-    var_n_ref = (1/2)**2 * (var_hat_A + var_hat_B)
+    if mode =="test": var_n_ref = var_hat_B
+    else: var_n_ref = (1/2)**2 * (var_hat_A + var_hat_B)
     num = (dA - dB)**2
     den = var_n_ref + alpha
     
@@ -341,7 +342,7 @@ def format_model_label(model_name):
 # Optimized Mass & Luminosity Scans
 # ============================================================
 
-def run_fast_lumi_scan(sm_data, bsm_data, labels, target_mcut, mcut_max, bin_width, lumi_targets, eps_values, alpha=1e-12, fake_model='FakeData', bin_offset=0.0):
+def run_fast_lumi_scan(sm_data, bsm_data, labels, target_mcut, mcut_max, bin_width, lumi_targets, eps_values, alpha=1e-12, fake_model='FakeData', bin_offset=0.0, sig_norm = True):
     """
     Executes an ultra-fast luminosity scan.
     Explicitly tests every other model against the 'fake_model' acting as the Asimov dataset.
@@ -383,8 +384,12 @@ def run_fast_lumi_scan(sm_data, bsm_data, labels, target_mcut, mcut_max, bin_wid
         if lab not in raw_templates: continue
         
         # Align BSM model yield perfectly to the Fake Data baseline at this cut level
-        aligned_sig = event_number_normalization(ref_template, raw_templates[lab], lum=1e-3)
-        scaled_templates[lab] = aligned_sig + h_sm_raw
+        if sig_norm:
+          aligned_sig = event_number_normalization(ref_template, raw_templates[lab], lum=1e-3)
+          scaled_templates[lab] = aligned_sig + h_sm_raw
+        else:
+          aligned_sig = raw_templates[lab] 
+          scaled_templates[lab] = aligned_sig 
         
         delta = build_signed_delta(scaled_templates[lab], h_sm_raw, alpha=alpha)
         norm_templates[lab] = normalize_signed_template(delta, alpha=alpha)
@@ -409,10 +414,10 @@ def run_fast_lumi_scan(sm_data, bsm_data, labels, target_mcut, mcut_max, bin_wid
             base_row = {"lumi": lum, "pair": f"{a} vs {b}"}
             
             for eps in eps_values:
-                Z_fa, _, _ = asimov_signed_Z_rigorous(dA, dB, hA, hB, n_sm, eps, alpha)
+                Z_fa, _, _ = asimov_signed_Z_rigorous(dA, dB, hA, hB, n_sm, eps, mode = "test", alpha = alpha)
                 base_row[f"Z_fa_eps_{int(100*eps):02d}"] = Z_fa
                 
-                Z_sh, _, _ = asimov_shape_Z_with_syst(hA, hB, frac_syst=eps, mode="avg", eps=alpha)
+                Z_sh, _, _ = asimov_shape_Z_with_syst(hA, hB, frac_syst=eps, mode="test", eps=alpha)
                 base_row[f"Z_sh_eps_{int(100*eps):02d}"] = Z_sh
                 
             rows.append(base_row)
@@ -420,7 +425,7 @@ def run_fast_lumi_scan(sm_data, bsm_data, labels, target_mcut, mcut_max, bin_wid
     return pd.DataFrame(rows)
 
 
-def run_fast_mcut_scan(sm_data, bsm_data, labels, mcuts, mcut_max, bin_width, L_target, eps_values, alpha=1e-12, fake_model='FakeData', bin_offset=0.0):
+def run_fast_mcut_scan(sm_data, bsm_data, labels, mcuts, mcut_max, bin_width, L_target, eps_values, alpha=1e-12, fake_model='FakeData', bin_offset=0.0, sig_norm = True):
     """
     Executes an ultra-fast mass cut scan.
     Explicitly tests every other model against the 'fake_model' acting as the Asimov dataset.
@@ -450,8 +455,12 @@ def run_fast_mcut_scan(sm_data, bsm_data, labels, mcuts, mcut_max, bin_width, L_
     ref_template = raw_templates[fake_model].copy()
     for lab in labels:
         if lab not in raw_templates: continue
-        aligned_sig = event_number_normalization(ref_template, raw_templates[lab], lum=L_target)
-        raw_templates[lab] = aligned_sig + n_sm 
+        if sig_norm:
+          aligned_sig = event_number_normalization(ref_template, raw_templates[lab], lum=L_target)
+          raw_templates[lab] = aligned_sig + n_sm
+        else:
+          aligned_sig =  raw_templates[lab] * L_target * 1000.0
+          raw_templates[lab] = aligned_sig + n_sm
 
     # Array-Slicing Scan Loop
     for mcut in mcuts:
@@ -480,10 +489,10 @@ def run_fast_mcut_scan(sm_data, bsm_data, labels, mcuts, mcut_max, bin_width, L_
             base_row = {"mcut": mcut, "pair": f"{a} vs {b}"}
             
             for eps in eps_values:
-                Z_fa, _, _ = asimov_signed_Z_rigorous(dA, dB, hA, hB, n_sm_cut, eps, alpha)
+                Z_fa, _, _ = asimov_signed_Z_rigorous(dA, dB, hA, hB, n_sm_cut, eps, mode = "test", alpha = alpha)
                 base_row[f"Z_fa_eps_{int(100*eps):02d}"] = Z_fa
                 
-                Z_sh, _, _ = asimov_shape_Z_with_syst(hA, hB, frac_syst=eps, mode="avg", eps=alpha)
+                Z_sh, _, _ = asimov_shape_Z_with_syst(hA, hB, frac_syst=eps, mode="test", eps=alpha)
                 base_row[f"Z_sh_eps_{int(100*eps):02d}"] = Z_sh
                 
             rows.append(base_row)
