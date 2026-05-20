@@ -13,6 +13,8 @@ import pandas as pd
 from tqdm.auto import tqdm
 from matplotlib.ticker import MaxNLocator
 import matplotlib.pyplot as plt
+import tempfile
+import pylhe
 
 SQRT_S = 13000.0  # Center of mass energy in GeV
 
@@ -162,7 +164,16 @@ def read_lhe_features(filepath, label=None, max_events=None, rescale_weight_by=1
     Iterates through a compressed or raw LHE file, feeding events to the parser 
     and compiling the returned variables into an analysis-ready Pandas DataFrame.
     """
-    rows, block, in_event = [], [], False
+    data = {
+        "weight": [], "m_t": [], "m_tbar": [], "m_tt": [],
+        "pt_t": [], "pt_tbar": [], "pt_tt": [],
+        "y_t": [], "y_tbar": [], "y_tt": [],
+        "abs_delta_y": [], "cos_theta_star": [], "abs_cos_theta_star": [], "ptj1": []
+    }
+    if label: data["label"] = []
+
+    block, in_event = [], False
+    event_count = 0
     opener = gzip.open if filepath.endswith(".gz") else open
     
     with opener(filepath, "rt", encoding="utf-8", errors="ignore") as f:
@@ -174,14 +185,149 @@ def read_lhe_features(filepath, label=None, max_events=None, rescale_weight_by=1
             if "</event>" in line:
                 rec = parse_event_block(block, rescale_weight_by)
                 if rec is not None:
-                    if label: rec["label"] = label
-                    rows.append(rec)
-                    if max_events and len(rows) >= max_events: break
+                    for key, val in rec.items():
+                        data[key].append(val)
+                    if label:
+                        data["label"].append(label)
+                        
+                    event_count += 1
+                    if max_events and event_count >= max_events: break
                 in_event = False
                 continue
-            if in_event: block.append(line)
+            if in_event: 
+                block.append(line)
 
-    return pd.DataFrame(rows)
+    return pd.DataFrame(data)
+
+def get_run_metadata(filepath, is_nlo=False):
+    """
+    Extracts the true cross-section, LHE cross-section, and event count.
+    - LO: Truth is strictly the LHE file.
+    - NLO: Truth is strictly the summary.txt file.
+    """
+    run_dir = os.path.dirname(filepath)
+    info = {'nevents': -1, 'xsec_lhe': -1.0, 'xsec_true': -1.0}
+    
+    # --------------------------------------------------------
+    # Parse xsec_lhe and nevents directly from the LHE file
+    # --------------------------------------------------------
+    fd, fixedFile = tempfile.mkstemp(suffix='.lhe')
+    os.close(fd)
+    try:
+        with gzip.open(filepath, 'rt') as f_in, open(fixedFile, 'w') as f_out:
+            for line in f_in:
+                if 'generate' not in line:
+                    f_out.write(line)
+        
+        initBlock = pylhe.read_lhe_init(fixedFile)
+        info['xsec_lhe'] = initBlock['procInfo'][0]['xSection']
+        info['nevents'] = pylhe.read_num_events(fixedFile)
+        
+        # Base assumption: For LO, the LHE *is* the ground truth.
+        info['xsec_true'] = info['xsec_lhe'] 
+        
+    except Exception as e:
+        print(f"Error parsing LHE header from {os.path.basename(filepath)}: {e}")
+    finally:
+        if os.path.exists(fixedFile):
+            os.remove(fixedFile)
+
+    # --------------------------------------------------------
+    # Parse summary.txt for NLO true cross-section
+    # --------------------------------------------------------
+    if is_nlo:
+        summary_path = os.path.join(run_dir, 'summary.txt')
+        if os.path.isfile(summary_path):
+            with open(summary_path, 'r') as f:
+                lines = f.readlines()
+                
+            try:
+                target_idx = [i for i, l in enumerate(lines) if 'Total cross section' in l][0]
+                xsec_line = lines[target_idx]
+                
+                if 'DO NOT USE' in xsec_line:
+                    scale_idx = [i for i, l in enumerate(lines) if 'Scale variation' in l][0]
+                    xsec_line = lines[scale_idx + 2]
+                    
+                if 'Total cross section' in xsec_line:
+                    xsec_line = xsec_line.split(':')[1].strip()
+                    
+                xsec_line = xsec_line.split(' +')[0].strip().replace('pb', '')
+                info['xsec_true'] = float(xsec_line)
+            except Exception:
+                pass
+
+    # --------------------------------------------------------
+    # Fallback for nevents (if pylhe failed to find it)
+    # --------------------------------------------------------
+    if info['nevents'] <= 0:
+        banners = glob.glob(os.path.join(run_dir, '*banner*txt'))
+        if banners:
+            with open(banners[0], 'r') as f:
+                banner_data = f.read()
+            if '<MGGenerationInfo>' in banner_data:
+                gen_info = banner_data.split('<MGGenerationInfo>')[1].split('</MGGenerationInfo>')[0]
+                try:
+                    info['nevents'] = eval(gen_info.split('\n')[1].split(':')[1].strip())
+                except Exception:
+                    pass
+                    
+    return info
+
+
+def load_lhe_with_corrections(file_pattern, label=None, is_nlo=False, custom_rescale=1.0, max_events=None):
+    """
+    Finds LHE files and streams them into a DataFrame. 
+    Guarantees that sum(weights) exactly equals the true cross section.
+    """
+    files = glob.glob(file_pattern)
+    if not files:
+        print(f"Warning: No files found for pattern {file_pattern}")
+        return pd.DataFrame(columns=["weight", "m_t", "m_tbar", "m_tt", "pt_t", "pt_tbar", "pt_tt", "label"])
+        
+    print(f"Loading {label} from {len(files)} LHE files...")
+    df_list = []
+    
+    for f in files:
+        info = get_run_metadata(f, is_nlo=is_nlo)
+        
+        base_rescale = 1.0
+        
+        # --------------------------------------------------------
+        # LO Correction: sum(raw_weights) / N = xsec_true
+        # --------------------------------------------------------
+        if not is_nlo and info['nevents'] > 0:
+            base_rescale = 1.0 / info['nevents']
+            
+        # --------------------------------------------------------
+        # NLO Correction: sum(raw_weights) * Bias_Factor = xsec_true
+        # --------------------------------------------------------
+        elif is_nlo and info['xsec_lhe'] > 0 and info['xsec_true'] > 0:
+            drift = abs(info['xsec_lhe'] - info['xsec_true']) / info['xsec_true']
+            if drift > 0.01:
+                bias_factor = info['xsec_true'] / info['xsec_lhe']
+                base_rescale = bias_factor
+                
+                run_name = os.path.basename(os.path.dirname(f))
+                print(f"  -> [BIAS DETECTED] {run_name}: Rescaled weights by {bias_factor:.5f} "
+                      f"(True: {info['xsec_true']:.5e} pb, LHE: {info['xsec_lhe']:.5e} pb)")
+        
+        total_rescale = custom_rescale * base_rescale
+        
+        # --------------------------------------------------------
+        # Load Events
+        # --------------------------------------------------------
+        df = read_lhe_features(f, label=label, max_events=max_events, rescale_weight_by=total_rescale)
+        
+        if not df.empty:
+            df_list.append(df)
+        else:
+            print(f"  -> Skipping {os.path.basename(f)} (No valid events)")
+            
+    if not df_list:
+        return pd.DataFrame()
+        
+    return pd.concat(df_list, ignore_index=True)
 
 # ============================================================
 # Histogram & Template Operations
