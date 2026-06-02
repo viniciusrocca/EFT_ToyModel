@@ -5,7 +5,7 @@ import glob
 # ---------------------------------------------------------
 # Configuration & Parameters
 # ---------------------------------------------------------
-masses = np.arange(1500.0, 5100.0, 100.0).tolist()
+masses = np.arange(800.0, 5100.0, 100.0).tolist()
 width_fractions = [0.005,0.010, 0.02]
 
 # --- Scan limits ---
