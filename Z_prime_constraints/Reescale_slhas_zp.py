@@ -6,7 +6,7 @@ import glob
 # Configuration & Parameters
 # ---------------------------------------------------------
 masses = np.arange(800.0, 5100.0, 100.0).tolist()
-width_fractions = [0.005,0.010, 0.02]
+width_fractions = [0.005, 0.010, 0.02]
 
 # --- Scan limits ---
 min_S_target = 1e-5 # pb
@@ -72,7 +72,6 @@ def rescale_slha(ref_slha_path, mass, output_dir):
         S_max_physical = (A * (constraint_val**2)) / 8.0
         max_S_scan = min(max_S_target, S_max_physical) 
         
-        
         num_high_points = 20  # 20 points will cover 0.05 pb up to the ceiling
         num_low_points = 50   # 50 points will cover 1e-5 pb up to 0.05 pb
         
@@ -87,15 +86,28 @@ def rescale_slha(ref_slha_path, mass, output_dir):
             if discriminant < 0: 
                 discriminant = 0.0 
             
-            # Calculate the two physical regimes
-            roots = [
-                ("topDom", (2 * S) / (A * constraint_val + np.sqrt(discriminant))),
-                ("jetDom", (A * constraint_val + np.sqrt(discriminant)) / (4 * A))
+            # =========================================================
+            # Calculate roots
+            # =========================================================
+            gq_sq_roots = [
+                (2 * S) / (A * constraint_val + np.sqrt(discriminant)),
+                (A * constraint_val + np.sqrt(discriminant)) / (4 * A)
             ]
             
-            for regime, gq_sq in roots:
+            for idx, gq_sq in enumerate(gq_sq_roots):
                 gq = np.sqrt(gq_sq)
-                gt = np.sqrt(max(0.0, constraint_val - 2 * gq_sq))
+                
+                # Floating point safeguard to handle the exact 0 limit
+                if 2 * gq_sq >= constraint_val:
+                    gt = 0.0
+                else:
+                    gt = np.sqrt(constraint_val - 2 * gq_sq)
+                
+
+                if gt > gq:
+                    regime = "topDom"
+                else:
+                    regime = "jetDom"
                 
                 xsec_scale = (gq**2) / (ref_gq**2)
                 new_xsec = ref_xsec * xsec_scale
@@ -169,7 +181,7 @@ def rescale_slha(ref_slha_path, mass, output_dir):
                     new_lines.append(line)
                     
                 width_pct = int(w_frac * 1000) 
-                out_name = f"Zprime_W{width_pct:02d}_m{int(mass)}_S{S:.2e}_{regime}.slha"
+                out_name = f"Zprime_W{width_pct:02d}_m{int(mass)}_S{S:.2e}_{regime}_R{idx+1}.slha"
                 
                 with open(os.path.join(output_dir, out_name), 'w') as f:
                     f.writelines(new_lines)
