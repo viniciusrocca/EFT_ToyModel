@@ -1,0 +1,191 @@
+(* ****************************************************************** *)
+(* *****                                                        ***** *)
+(* *****  FeynRules model file: Simplified DM models            ***** *)
+(* *****                        s-channel spin-1 mediator       ***** *)
+(* *****  Author: A. Martini, K. Mawatari                       ***** *)
+(* *****          J. Wang, C.Zhang (EW)                         ***** *)
+(* *****          B. Zaldivar (lepton)                          ***** *)
+(* *****          B. Fuks (monotop)                             ***** *)
+(* *****                                                        ***** *)
+(* ****************************************************************** *)
+
+
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "DMsimp_s_spin1";
+
+M$Information = {
+ Authors      -> {"A. Martini, K. Mawatari, J. Wang, C. Zhang, B. Zaldivar, B. Fuks"}, 
+ Institutions -> {"Universite catholique de Louvain, LPSC Grenoble, Johnnas Gutenberg University of Mainz, Brookhaven National Laboratory, LAPTh Annecy, LPTHE / UPMC"},
+ Emails       -> {"kentarou.mawatari@lpsc.in2p3.fr","cenzhang@bnl.gov"},
+ URLs         -> "http://feynrules.irmp.ucl.ac.be/wiki/DMsimp/",  
+ References   -> {"O. Mattelaer et al., arXiv:1508.00564",
+                  "M. Backovic et al., arXiv:1508.05327",
+                  "M. Neubert et al., arXiv:1509.05785",
+                  "J. Andrea et al., arXiv:1106.6199"},
+ Version      -> "2.1",
+ Date         -> "2016.10.27"
+};
+
+(* ************************** *)
+(* *****  Change  log   ***** *)
+(* ************************** *)
+
+(* 2015.08.24 v1.0 - release version.                                    *)
+(* 2016.06.02 v1.1 - changed the PDG numbers for parton-shower programs. *)
+(* 2016.09.23 v2.0 - included the Y1-lepton interactions (B.Zaldivar)    *)
+(* 2016.10.27 v2.1 - included the monotop interactions (B. Fuks)         *)
+
+
+(***** Setting for interaction order (as e.g. used by MadGraph 5)  ******)
+
+M$InteractionOrderLimit = {
+ {DMV, 2}
+};
+
+M$InteractionOrderHierarchy = {
+ {QCD, 1}, {DMV, 2}
+};
+
+
+(* ************************** *)
+(* *****     Fields     ***** *)
+(* ************************** *)
+M$ClassesDescription = {
+
+V[7] == { ClassName -> Y1,
+	  SelfConjugate -> True,
+	  Mass -> {MY1, 1000.},
+          Width -> {WY1, 10.},
+          PDG -> 5000001,
+          TeX -> Subscript[Y,1],
+          FullName -> "spin-1 mediator" }
+
+};
+
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)  
+M$Parameters = {
+  	  
+
+ gVd11 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vd11],
+      Description -> "d-Y1 vector coupling",
+      Value -> 0.25 },     
+
+ gVu11 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vu11],
+      Description -> "u-Y1 vector coupling",
+      Value -> 0.25 },     
+
+ gVd22 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vd22],
+      Description -> "s-Y1 vector coupling",
+      Value -> 0.25 },
+
+ gVu22 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vu22],
+      Description -> "c-Y1 vector coupling",
+      Value -> 0.25 },
+
+ gVd33 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vd33],
+      Description -> "b-Y1 vector coupling",
+      Value -> 0.25 },     
+
+ gVu33 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Vu33],
+      Description -> "t-Y1 vector coupling",
+      Value -> 0.25 },     
+
+
+ gAd11 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Ad11],
+      Description -> "d-Y1 axial-vector coupling",
+      Value -> 0. },     
+
+ gAu11 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Au11],
+      Description -> "u-Y1 axial-vector coupling",
+      Value -> 0. },     
+
+ gAd22 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Ad22],
+      Description -> "s-Y1 axial-vector coupling",
+      Value -> 0. },
+
+ gAu22 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Au22],
+      Description -> "c-Y1 axial-vector coupling",
+      Value -> 0. },
+
+ gAd33 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Ad33],
+      Description -> "b-Y1 axial-vector coupling",
+      Value -> 0. },     
+
+ gAu33 == { 
+      ParameterType -> External,
+      InteractionOrder -> {DMV, 1},
+      BlockName -> DMINPUTS,
+      TeX -> Subscript[g,Au33],
+      Description -> "t-Y1 axial-vector coupling",
+      Value -> 0. }
+	  
+ 
+};
+
+
+(* ************************** *)
+(* ***** Lagrangian   ***** *)
+(* ************************** *)
+
+Y1FS[mu_, nu_] := del[Y1[nu], mu] - del[Y1[mu], nu];
+LkinY1 := -1/4 Y1FS[mu, nu] Y1FS[mu, nu] + 1/2 MY1^2 Y1[mu] Y1[mu];
+      
+L1SM := dbar.Ga[mu].(gVd11 + gAd11 Ga[5]).d Y1[mu] +
+	        ubar.Ga[mu].(gVu11 + gAu11 Ga[5]).u Y1[mu] +
+	        sbar.Ga[mu].(gVd22 + gAd22 Ga[5]).s Y1[mu] +
+	        cbar.Ga[mu].(gVu22 + gAu22 Ga[5]).c Y1[mu] +
+	        bbar.Ga[mu].(gVd33 + gAd33 Ga[5]).b Y1[mu] +
+	        tbar.Ga[mu].(gVu33 + gAu33 Ga[5]).t Y1[mu];
+        
+
+
+L1DM := L1SM + LkinY1;
