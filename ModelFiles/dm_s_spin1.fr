@@ -41,11 +41,11 @@ M$Information = {
 (***** Setting for interaction order (as e.g. used by MadGraph 5)  ******)
 
 M$InteractionOrderLimit = {
- {DMV, 2}
+ {NP, 4}
 };
 
 M$InteractionOrderHierarchy = {
- {QCD, 1}, {DMV, 2}
+ {NP, 1}, {QCD, 2}, {QED,3}
 };
 
 
@@ -60,6 +60,9 @@ V[7] == { ClassName -> Y1,
           Width -> {WY1, 10.},
           PDG -> 5000001,
           TeX -> Subscript[Y,1],
+          PropagatorLabel -> "Y1",
+          PropagatorType -> W,
+          PropagatorArrow -> None,
           FullName -> "spin-1 mediator" }
 
 };
@@ -73,7 +76,7 @@ M$Parameters = {
 
  gVd11 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Vd11],
       Description -> "d-Y1 vector coupling",
@@ -81,7 +84,7 @@ M$Parameters = {
 
  gVu11 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Vu11],
       Description -> "u-Y1 vector coupling",
@@ -89,7 +92,7 @@ M$Parameters = {
 
  gVd22 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Vd22],
       Description -> "s-Y1 vector coupling",
@@ -97,7 +100,7 @@ M$Parameters = {
 
  gVu22 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Vu22],
       Description -> "c-Y1 vector coupling",
@@ -105,7 +108,7 @@ M$Parameters = {
 
  gVd33 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Vd33],
       Description -> "b-Y1 vector coupling",
@@ -113,7 +116,7 @@ M$Parameters = {
 
  gVu33 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Vu33],
       Description -> "t-Y1 vector coupling",
@@ -122,7 +125,7 @@ M$Parameters = {
 
  gAd11 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Ad11],
       Description -> "d-Y1 axial-vector coupling",
@@ -130,7 +133,7 @@ M$Parameters = {
 
  gAu11 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Au11],
       Description -> "u-Y1 axial-vector coupling",
@@ -138,7 +141,7 @@ M$Parameters = {
 
  gAd22 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Ad22],
       Description -> "s-Y1 axial-vector coupling",
@@ -146,7 +149,7 @@ M$Parameters = {
 
  gAu22 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Au22],
       Description -> "c-Y1 axial-vector coupling",
@@ -154,7 +157,7 @@ M$Parameters = {
 
  gAd33 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Ad33],
       Description -> "b-Y1 axial-vector coupling",
@@ -162,7 +165,7 @@ M$Parameters = {
 
  gAu33 == { 
       ParameterType -> External,
-      InteractionOrder -> {DMV, 1},
+      InteractionOrder -> {NP, 1},
       BlockName -> DMINPUTS,
       TeX -> Subscript[g,Au33],
       Description -> "t-Y1 axial-vector coupling",
