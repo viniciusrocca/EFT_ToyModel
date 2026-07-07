@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Mon 22 Jun 2026 19:46:01
+# Date: Fri 3 Jul 2026 18:31:11
 
 
 from object_library import all_lorentz, Lorentz
@@ -18,19 +18,15 @@ FF1 = Lorentz(name = 'FF1',
 
 FF2 = Lorentz(name = 'FF2',
               spins = [ 2, 2 ],
-              structure = 'ProjM(2,1)')
+              structure = 'ProjM(2,1) + ProjP(2,1)')
 
 FF3 = Lorentz(name = 'FF3',
               spins = [ 2, 2 ],
-              structure = 'P(-1,1)*Gamma(-1,2,-2)*ProjM(-2,1)')
+              structure = 'P(-1,1)*Gamma(-1,2,-2)*ProjM(-2,1) + P(-1,1)*Gamma(-1,2,-2)*ProjP(-2,1)')
 
 FF4 = Lorentz(name = 'FF4',
               spins = [ 2, 2 ],
-              structure = 'ProjP(2,1)')
-
-FF5 = Lorentz(name = 'FF5',
-              spins = [ 2, 2 ],
-              structure = 'P(-1,1)*Gamma(-1,2,-2)*ProjP(-2,1)')
+              structure = '-(P(-1,1)*Gamma(-1,2,1)) + P(-1,1)*Gamma(-1,2,-2)*ProjM(-2,1) + P(-1,1)*Gamma(-1,2,-2)*ProjP(-2,1)')
 
 VV1 = Lorentz(name = 'VV1',
               spins = [ 3, 3 ],
@@ -44,6 +40,14 @@ VV3 = Lorentz(name = 'VV3',
               spins = [ 3, 3 ],
               structure = 'P(-1,2)**2*Metric(1,2)')
 
+VV4 = Lorentz(name = 'VV4',
+              spins = [ 3, 3 ],
+              structure = 'P(1,2)*P(2,2) - (3*P(-1,2)**2*Metric(1,2))/2.')
+
+VV5 = Lorentz(name = 'VV5',
+              spins = [ 3, 3 ],
+              structure = 'P(1,2)*P(2,2) - P(-1,2)**2*Metric(1,2)')
+
 UUV1 = Lorentz(name = 'UUV1',
                spins = [ -1, -1, 3 ],
                structure = 'P(3,2) + P(3,3)')
@@ -53,6 +57,10 @@ SSS1 = Lorentz(name = 'SSS1',
                structure = '1')
 
 FFS1 = Lorentz(name = 'FFS1',
+               spins = [ 2, 2, 1 ],
+               structure = 'Identity(2,1)')
+
+FFS2 = Lorentz(name = 'FFS2',
                spins = [ 2, 2, 1 ],
                structure = 'ProjM(2,1) + ProjP(2,1)')
 
@@ -82,7 +90,7 @@ FFV6 = Lorentz(name = 'FFV6',
 
 FFV7 = Lorentz(name = 'FFV7',
                spins = [ 2, 2, 3 ],
-               structure = 'Gamma(3,2,-1)*ProjM(-1,1) + 4*Gamma(3,2,-1)*ProjP(-1,1)')
+               structure = 'Gamma(3,2,-1)*ProjM(-1,1) + 2*Gamma(3,2,-1)*ProjP(-1,1)')
 
 VVS1 = Lorentz(name = 'VVS1',
                spins = [ 3, 3, 1 ],

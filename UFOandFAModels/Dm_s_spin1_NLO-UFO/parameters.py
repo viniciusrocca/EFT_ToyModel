@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Mon 22 Jun 2026 19:46:01
+# Date: Fri 3 Jul 2026 18:31:11
 
 
 

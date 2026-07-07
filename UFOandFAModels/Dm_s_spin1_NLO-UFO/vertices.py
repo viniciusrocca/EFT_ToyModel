@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Mon 22 Jun 2026 19:46:01
+# Date: Fri 3 Jul 2026 18:31:11
 
 
 from object_library import all_vertices, Vertex
@@ -42,19 +42,19 @@ V_5 = Vertex(name = 'V_5',
 V_6 = Vertex(name = 'V_6',
              particles = [ P.b__tilde__, P.b, P.H ],
              color = [ 'Identity(1,2)' ],
-             lorentz = [ L.FFS1 ],
+             lorentz = [ L.FFS2 ],
              couplings = {(0,0):C.GC_48})
 
 V_7 = Vertex(name = 'V_7',
              particles = [ P.ta__plus__, P.ta__minus__, P.H ],
              color = [ '1' ],
-             lorentz = [ L.FFS1 ],
+             lorentz = [ L.FFS2 ],
              couplings = {(0,0):C.GC_50})
 
 V_8 = Vertex(name = 'V_8',
              particles = [ P.t__tilde__, P.t, P.H ],
              color = [ 'Identity(1,2)' ],
-             lorentz = [ L.FFS1 ],
+             lorentz = [ L.FFS2 ],
              couplings = {(0,0):C.GC_49})
 
 V_9 = Vertex(name = 'V_9',
@@ -390,38 +390,38 @@ V_63 = Vertex(name = 'V_63',
 V_64 = Vertex(name = 'V_64',
               particles = [ P.u__tilde__, P.u, P.Z ],
               color = [ 'Identity(1,2)' ],
-              lorentz = [ L.FFV3, L.FFV7 ],
-              couplings = {(0,0):C.GC_35,(0,1):C.GC_38})
+              lorentz = [ L.FFV3, L.FFV4 ],
+              couplings = {(0,0):C.GC_42,(0,1):C.GC_40})
 
 V_65 = Vertex(name = 'V_65',
               particles = [ P.c__tilde__, P.c, P.Z ],
               color = [ 'Identity(1,2)' ],
-              lorentz = [ L.FFV3, L.FFV7 ],
-              couplings = {(0,0):C.GC_35,(0,1):C.GC_38})
+              lorentz = [ L.FFV3, L.FFV4 ],
+              couplings = {(0,0):C.GC_42,(0,1):C.GC_40})
 
 V_66 = Vertex(name = 'V_66',
               particles = [ P.t__tilde__, P.t, P.Z ],
               color = [ 'Identity(1,2)' ],
-              lorentz = [ L.FFV3, L.FFV7 ],
-              couplings = {(0,0):C.GC_35,(0,1):C.GC_38})
+              lorentz = [ L.FFV3, L.FFV4 ],
+              couplings = {(0,0):C.GC_42,(0,1):C.GC_40})
 
 V_67 = Vertex(name = 'V_67',
               particles = [ P.d__tilde__, P.d, P.Z ],
               color = [ 'Identity(1,2)' ],
               lorentz = [ L.FFV3, L.FFV4 ],
-              couplings = {(0,0):C.GC_41,(0,1):C.GC_39})
+              couplings = {(0,0):C.GC_41,(0,1):C.GC_38})
 
 V_68 = Vertex(name = 'V_68',
               particles = [ P.s__tilde__, P.s, P.Z ],
               color = [ 'Identity(1,2)' ],
               lorentz = [ L.FFV3, L.FFV4 ],
-              couplings = {(0,0):C.GC_41,(0,1):C.GC_39})
+              couplings = {(0,0):C.GC_41,(0,1):C.GC_38})
 
 V_69 = Vertex(name = 'V_69',
               particles = [ P.b__tilde__, P.b, P.Z ],
               color = [ 'Identity(1,2)' ],
               lorentz = [ L.FFV3, L.FFV4 ],
-              couplings = {(0,0):C.GC_41,(0,1):C.GC_39})
+              couplings = {(0,0):C.GC_41,(0,1):C.GC_38})
 
 V_70 = Vertex(name = 'V_70',
               particles = [ P.ve__tilde__, P.ve, P.Z ],
@@ -444,18 +444,18 @@ V_72 = Vertex(name = 'V_72',
 V_73 = Vertex(name = 'V_73',
               particles = [ P.e__plus__, P.e__minus__, P.Z ],
               color = [ '1' ],
-              lorentz = [ L.FFV3, L.FFV4 ],
-              couplings = {(0,0):C.GC_42,(0,1):C.GC_40})
+              lorentz = [ L.FFV3, L.FFV7 ],
+              couplings = {(0,0):C.GC_35,(0,1):C.GC_39})
 
 V_74 = Vertex(name = 'V_74',
               particles = [ P.mu__plus__, P.mu__minus__, P.Z ],
               color = [ '1' ],
-              lorentz = [ L.FFV3, L.FFV4 ],
-              couplings = {(0,0):C.GC_42,(0,1):C.GC_40})
+              lorentz = [ L.FFV3, L.FFV7 ],
+              couplings = {(0,0):C.GC_35,(0,1):C.GC_39})
 
 V_75 = Vertex(name = 'V_75',
               particles = [ P.ta__plus__, P.ta__minus__, P.Z ],
               color = [ '1' ],
-              lorentz = [ L.FFV3, L.FFV4 ],
-              couplings = {(0,0):C.GC_42,(0,1):C.GC_40})
+              lorentz = [ L.FFV3, L.FFV7 ],
+              couplings = {(0,0):C.GC_35,(0,1):C.GC_39})
 

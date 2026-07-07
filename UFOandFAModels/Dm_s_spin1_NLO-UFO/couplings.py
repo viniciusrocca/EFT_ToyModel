@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Mon 22 Jun 2026 19:46:01
+# Date: Fri 3 Jul 2026 18:31:11
 
 
 from object_library import all_couplings, Coupling
@@ -15,43 +15,43 @@ GC_1 = Coupling(name = 'GC_1',
 
 GC_10 = Coupling(name = 'GC_10',
                  value = 'complex(0,1)*gAd22',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_11 = Coupling(name = 'GC_11',
                  value = 'complex(0,1)*gAd33',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_12 = Coupling(name = 'GC_12',
                  value = 'complex(0,1)*gAu11',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_13 = Coupling(name = 'GC_13',
                  value = 'complex(0,1)*gAu22',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_14 = Coupling(name = 'GC_14',
                  value = 'complex(0,1)*gAu33',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_15 = Coupling(name = 'GC_15',
                  value = 'complex(0,1)*gVd11',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_16 = Coupling(name = 'GC_16',
                  value = 'complex(0,1)*gVd22',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_17 = Coupling(name = 'GC_17',
                  value = 'complex(0,1)*gVd33',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_18 = Coupling(name = 'GC_18',
                  value = 'complex(0,1)*gVu11',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_19 = Coupling(name = 'GC_19',
                  value = 'complex(0,1)*gVu22',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_2 = Coupling(name = 'GC_2',
                 value = '(2*ee*complex(0,1))/3.',
@@ -59,7 +59,7 @@ GC_2 = Coupling(name = 'GC_2',
 
 GC_20 = Coupling(name = 'GC_20',
                  value = 'complex(0,1)*gVu33',
-                 order = {'DMV':1})
+                 order = {'NP':1})
 
 GC_21 = Coupling(name = 'GC_21',
                  value = '-6*complex(0,1)*lam',
@@ -122,7 +122,7 @@ GC_34 = Coupling(name = 'GC_34',
                  order = {'QED':1})
 
 GC_35 = Coupling(name = 'GC_35',
-                 value = '(cw*ee*complex(0,1))/(2.*sw)',
+                 value = '-0.5*(cw*ee*complex(0,1))/sw',
                  order = {'QED':1})
 
 GC_36 = Coupling(name = 'GC_36',
@@ -134,11 +134,11 @@ GC_37 = Coupling(name = 'GC_37',
                  order = {'QED':2})
 
 GC_38 = Coupling(name = 'GC_38',
-                 value = '-0.16666666666666666*(ee*complex(0,1)*sw)/cw',
+                 value = '(ee*complex(0,1)*sw)/(3.*cw)',
                  order = {'QED':1})
 
 GC_39 = Coupling(name = 'GC_39',
-                 value = '(ee*complex(0,1)*sw)/(3.*cw)',
+                 value = '(ee*complex(0,1)*sw)/(2.*cw)',
                  order = {'QED':1})
 
 GC_4 = Coupling(name = 'GC_4',
@@ -146,7 +146,7 @@ GC_4 = Coupling(name = 'GC_4',
                 order = {'QED':1})
 
 GC_40 = Coupling(name = 'GC_40',
-                 value = '(ee*complex(0,1)*sw)/cw',
+                 value = '(-2*ee*complex(0,1)*sw)/(3.*cw)',
                  order = {'QED':1})
 
 GC_41 = Coupling(name = 'GC_41',
@@ -154,7 +154,7 @@ GC_41 = Coupling(name = 'GC_41',
                  order = {'QED':1})
 
 GC_42 = Coupling(name = 'GC_42',
-                 value = '-0.5*(cw*ee*complex(0,1))/sw + (ee*complex(0,1)*sw)/(2.*cw)',
+                 value = '(cw*ee*complex(0,1))/(2.*sw) - (ee*complex(0,1)*sw)/(6.*cw)',
                  order = {'QED':1})
 
 GC_43 = Coupling(name = 'GC_43',
@@ -243,5 +243,5 @@ GC_8 = Coupling(name = 'GC_8',
 
 GC_9 = Coupling(name = 'GC_9',
                 value = 'complex(0,1)*gAd11',
-                order = {'DMV':1})
+                order = {'NP':1})
 

@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.1.0 for Linux x86 (64-bit) (July 16, 2024)
-# Date: Mon 22 Jun 2026 19:46:01
+# Date: Fri 3 Jul 2026 18:31:11
 
 
 from object_library import all_couplings, Coupling
@@ -9,1227 +9,831 @@ from function_library import complexconjugate, re, im, csc, sec, acsc, asec, cot
 
 
 
-R2GC_100_1 = Coupling(name = 'R2GC_100_1',
-                      value = '(complex(0,1)*gAd11**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd11*gVd11)/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2)/(16.*cmath.pi**2)',
-                      order = {'DMV':2})
-
-R2GC_101_2 = Coupling(name = 'R2GC_101_2',
-                      value = '(complex(0,1)*gAd11**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd11*gVd11)/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2)/(16.*cmath.pi**2)',
-                      order = {'DMV':2})
-
-R2GC_102_3 = Coupling(name = 'R2GC_102_3',
-                      value = '-0.125*(complex(0,1)*G*gAd11**2)/cmath.pi**2 + (complex(0,1)*G*gAd11*gVd11)/(4.*cmath.pi**2) - (complex(0,1)*G*gVd11**2)/(8.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':1})
-
-R2GC_103_4 = Coupling(name = 'R2GC_103_4',
-                      value = '-0.125*(complex(0,1)*G*gAd11**2)/cmath.pi**2 - (complex(0,1)*G*gAd11*gVd11)/(4.*cmath.pi**2) - (complex(0,1)*G*gVd11**2)/(8.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':1})
-
-R2GC_104_5 = Coupling(name = 'R2GC_104_5',
-                      value = '(complex(0,1)*gAd22**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd22*gVd22)/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2)/(16.*cmath.pi**2)',
-                      order = {'DMV':2})
-
-R2GC_105_6 = Coupling(name = 'R2GC_105_6',
-                      value = '(complex(0,1)*gAd22**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd22*gVd22)/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2)/(16.*cmath.pi**2)',
-                      order = {'DMV':2})
-
-R2GC_106_7 = Coupling(name = 'R2GC_106_7',
-                      value = '-0.125*(complex(0,1)*G*gAd22**2)/cmath.pi**2 + (complex(0,1)*G*gAd22*gVd22)/(4.*cmath.pi**2) - (complex(0,1)*G*gVd22**2)/(8.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':1})
-
-R2GC_107_8 = Coupling(name = 'R2GC_107_8',
-                      value = '-0.125*(complex(0,1)*G*gAd22**2)/cmath.pi**2 - (complex(0,1)*G*gAd22*gVd22)/(4.*cmath.pi**2) - (complex(0,1)*G*gVd22**2)/(8.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':1})
-
-R2GC_108_9 = Coupling(name = 'R2GC_108_9',
-                      value = '(complex(0,1)*gAu11**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu11*gVu11)/(8.*cmath.pi**2) + (complex(0,1)*gVu11**2)/(16.*cmath.pi**2)',
-                      order = {'DMV':2})
-
-R2GC_109_10 = Coupling(name = 'R2GC_109_10',
-                       value = '(complex(0,1)*gAu11**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu11*gVu11)/(8.*cmath.pi**2) + (complex(0,1)*gVu11**2)/(16.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_110_11 = Coupling(name = 'R2GC_110_11',
-                       value = '-0.125*(complex(0,1)*G*gAu11**2)/cmath.pi**2 + (complex(0,1)*G*gAu11*gVu11)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu11**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
-
-R2GC_111_12 = Coupling(name = 'R2GC_111_12',
-                       value = '-0.125*(complex(0,1)*G*gAu11**2)/cmath.pi**2 - (complex(0,1)*G*gAu11*gVu11)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu11**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
-
-R2GC_113_13 = Coupling(name = 'R2GC_113_13',
-                       value = '(complex(0,1)*gAd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_113_14 = Coupling(name = 'R2GC_113_14',
-                       value = '(complex(0,1)*gAu22**2)/(8.*cmath.pi**2) + (complex(0,1)*gVu22**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_113_15 = Coupling(name = 'R2GC_113_15',
-                       value = '(complex(0,1)*gAd11**2)/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_113_16 = Coupling(name = 'R2GC_113_16',
-                       value = '(complex(0,1)*gAd22**2)/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_113_17 = Coupling(name = 'R2GC_113_17',
-                       value = '(complex(0,1)*gAu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_113_18 = Coupling(name = 'R2GC_113_18',
-                       value = '(complex(0,1)*gAu11**2)/(8.*cmath.pi**2) + (complex(0,1)*gVu11**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_114_19 = Coupling(name = 'R2GC_114_19',
-                       value = '(complex(0,1)*G**2*gAd11)/(6.*cmath.pi**2)',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_114_20 = Coupling(name = 'R2GC_114_20',
-                       value = '(complex(0,1)*gAd11**3)/(8.*cmath.pi**2) + (3*complex(0,1)*gAd11*gVd11**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_115_21 = Coupling(name = 'R2GC_115_21',
-                       value = '(complex(0,1)*G**2*gAd22)/(6.*cmath.pi**2)',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_115_22 = Coupling(name = 'R2GC_115_22',
-                       value = '(complex(0,1)*gAd22**3)/(8.*cmath.pi**2) + (3*complex(0,1)*gAd22*gVd22**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_116_23 = Coupling(name = 'R2GC_116_23',
-                       value = '(complex(0,1)*G**2*gAu11)/(6.*cmath.pi**2)',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_116_24 = Coupling(name = 'R2GC_116_24',
-                       value = '(complex(0,1)*gAu11**3)/(8.*cmath.pi**2) + (3*complex(0,1)*gAu11*gVu11**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_117_25 = Coupling(name = 'R2GC_117_25',
-                       value = '(complex(0,1)*G**2*gAu22)/(6.*cmath.pi**2)',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_117_26 = Coupling(name = 'R2GC_117_26',
-                       value = '(complex(0,1)*gAu22**3)/(8.*cmath.pi**2) + (3*complex(0,1)*gAu22*gVu22**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_118_27 = Coupling(name = 'R2GC_118_27',
-                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVd11)/cmath.pi**2',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_118_28 = Coupling(name = 'R2GC_118_28',
-                       value = '(-3*complex(0,1)*gAd11**2*gVd11)/(8.*cmath.pi**2) - (complex(0,1)*gVd11**3)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_119_29 = Coupling(name = 'R2GC_119_29',
-                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVd22)/cmath.pi**2',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_119_30 = Coupling(name = 'R2GC_119_30',
-                       value = '(-3*complex(0,1)*gAd22**2*gVd22)/(8.*cmath.pi**2) - (complex(0,1)*gVd22**3)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_120_31 = Coupling(name = 'R2GC_120_31',
-                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVu11)/cmath.pi**2',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_120_32 = Coupling(name = 'R2GC_120_32',
-                       value = '(-3*complex(0,1)*gAu11**2*gVu11)/(8.*cmath.pi**2) - (complex(0,1)*gVu11**3)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_121_33 = Coupling(name = 'R2GC_121_33',
-                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVu22)/cmath.pi**2',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_121_34 = Coupling(name = 'R2GC_121_34',
-                       value = '(-3*complex(0,1)*gAu22**2*gVu22)/(8.*cmath.pi**2) - (complex(0,1)*gVu22**3)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_122_35 = Coupling(name = 'R2GC_122_35',
-                       value = '(-3*complex(0,1)*gAd33**2*MB**2)/(4.*cmath.pi**2) - (3*complex(0,1)*gVd33**2*MB**2)/(4.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_122_36 = Coupling(name = 'R2GC_122_36',
-                       value = '(-3*complex(0,1)*gAu33**2*MT**2)/(4.*cmath.pi**2) - (3*complex(0,1)*gVu33**2*MT**2)/(4.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_123_37 = Coupling(name = 'R2GC_123_37',
-                       value = '(complex(0,1)*gAd33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(16.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_124_38 = Coupling(name = 'R2GC_124_38',
-                       value = '(complex(0,1)*gAd33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(16.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_125_39 = Coupling(name = 'R2GC_125_39',
-                       value = '-0.125*(complex(0,1)*G*gAd33**2)/cmath.pi**2 + (complex(0,1)*G*gAd33*gVd33)/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
-
-R2GC_126_40 = Coupling(name = 'R2GC_126_40',
-                       value = '-0.125*(complex(0,1)*G*gAd33**2)/cmath.pi**2 - (complex(0,1)*G*gAd33*gVd33)/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
-
-R2GC_127_41 = Coupling(name = 'R2GC_127_41',
-                       value = '(complex(0,1)*G**2*gAd33)/(6.*cmath.pi**2)',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_127_42 = Coupling(name = 'R2GC_127_42',
-                       value = '(complex(0,1)*gAd33**3)/(8.*cmath.pi**2) + (3*complex(0,1)*gAd33*gVd33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_128_43 = Coupling(name = 'R2GC_128_43',
-                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVd33)/cmath.pi**2',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_128_44 = Coupling(name = 'R2GC_128_44',
-                       value = '(-3*complex(0,1)*gAd33**2*gVd33)/(8.*cmath.pi**2) - (complex(0,1)*gVd33**3)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_129_45 = Coupling(name = 'R2GC_129_45',
-                       value = '(complex(0,1)*gAu33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(16.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_130_46 = Coupling(name = 'R2GC_130_46',
-                       value = '(complex(0,1)*gAu33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(16.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_131_47 = Coupling(name = 'R2GC_131_47',
-                       value = '-0.125*(complex(0,1)*G*gAu33**2)/cmath.pi**2 + (complex(0,1)*G*gAu33*gVu33)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
-
-R2GC_132_48 = Coupling(name = 'R2GC_132_48',
-                       value = '-0.125*(complex(0,1)*G*gAu33**2)/cmath.pi**2 - (complex(0,1)*G*gAu33*gVu33)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
-
-R2GC_133_49 = Coupling(name = 'R2GC_133_49',
-                       value = '(complex(0,1)*G**2*gAu33)/(6.*cmath.pi**2)',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_133_50 = Coupling(name = 'R2GC_133_50',
-                       value = '(complex(0,1)*gAu33**3)/(8.*cmath.pi**2) + (3*complex(0,1)*gAu33*gVu33**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_134_51 = Coupling(name = 'R2GC_134_51',
-                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVu33)/cmath.pi**2',
-                       order = {'DMV':1,'QCD':2})
-
-R2GC_134_52 = Coupling(name = 'R2GC_134_52',
-                       value = '(-3*complex(0,1)*gAu33**2*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*gVu33**3)/(8.*cmath.pi**2)',
-                       order = {'DMV':3})
-
-R2GC_135_53 = Coupling(name = 'R2GC_135_53',
-                       value = '(complex(0,1)*G**2*MT)/(6.*cmath.pi**2)',
-                       order = {'QCD':2})
-
-R2GC_135_54 = Coupling(name = 'R2GC_135_54',
-                       value = '-0.125*(complex(0,1)*gAu33**2*MT)/cmath.pi**2 + (complex(0,1)*gVu33**2*MT)/(8.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_60_55 = Coupling(name = 'R2GC_60_55',
-                      value = '-0.125*(complex(0,1)*G**2*MB**2)/cmath.pi**2',
-                      order = {'QCD':2})
-
-R2GC_60_56 = Coupling(name = 'R2GC_60_56',
-                      value = '-0.125*(complex(0,1)*G**2*MT**2)/cmath.pi**2',
-                      order = {'QCD':2})
-
-R2GC_61_57 = Coupling(name = 'R2GC_61_57',
-                      value = '(complex(0,1)*G**3*gAd33)/(16.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_61_58 = Coupling(name = 'R2GC_61_58',
-                      value = '(complex(0,1)*G**3*gAu22)/(16.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_61_59 = Coupling(name = 'R2GC_61_59',
-                      value = '(complex(0,1)*G**3*gAd11)/(16.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_61_60 = Coupling(name = 'R2GC_61_60',
-                      value = '(complex(0,1)*G**3*gAd22)/(16.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_61_61 = Coupling(name = 'R2GC_61_61',
-                      value = '(complex(0,1)*G**3*gAu33)/(16.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_61_62 = Coupling(name = 'R2GC_61_62',
-                      value = '(complex(0,1)*G**3*gAu11)/(16.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_62_63 = Coupling(name = 'R2GC_62_63',
-                      value = '(complex(0,1)*G**3*gVd33)/(48.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_62_64 = Coupling(name = 'R2GC_62_64',
-                      value = '(complex(0,1)*G**3*gVu22)/(48.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_62_65 = Coupling(name = 'R2GC_62_65',
-                      value = '(complex(0,1)*G**3*gVd11)/(48.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_62_66 = Coupling(name = 'R2GC_62_66',
-                      value = '(complex(0,1)*G**3*gVd22)/(48.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_62_67 = Coupling(name = 'R2GC_62_67',
-                      value = '(complex(0,1)*G**3*gVu33)/(48.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_62_68 = Coupling(name = 'R2GC_62_68',
-                      value = '(complex(0,1)*G**3*gVu11)/(48.*cmath.pi**2)',
-                      order = {'DMV':1,'QCD':3})
-
-R2GC_63_69 = Coupling(name = 'R2GC_63_69',
-                      value = '(complex(0,1)*G**2*gAd33**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVd33**2)/(24.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':2})
-
-R2GC_63_70 = Coupling(name = 'R2GC_63_70',
-                      value = '(complex(0,1)*G**2*gAu22**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVu22**2)/(24.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':2})
-
-R2GC_63_71 = Coupling(name = 'R2GC_63_71',
-                      value = '(complex(0,1)*G**2*gAd11**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVd11**2)/(24.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':2})
-
-R2GC_63_72 = Coupling(name = 'R2GC_63_72',
-                      value = '(complex(0,1)*G**2*gAd22**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVd22**2)/(24.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':2})
-
-R2GC_63_73 = Coupling(name = 'R2GC_63_73',
-                      value = '(complex(0,1)*G**2*gAu33**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVu33**2)/(24.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':2})
-
-R2GC_63_74 = Coupling(name = 'R2GC_63_74',
-                      value = '(complex(0,1)*G**2*gAu11**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVu11**2)/(24.*cmath.pi**2)',
-                      order = {'DMV':2,'QCD':2})
-
-R2GC_64_75 = Coupling(name = 'R2GC_64_75',
-                      value = '(complex(0,1)*gAd33**4)/(4.*cmath.pi**2) + (3*complex(0,1)*gAd33**2*gVd33**2)/(2.*cmath.pi**2) + (complex(0,1)*gVd33**4)/(4.*cmath.pi**2)',
-                      order = {'DMV':4})
-
-R2GC_64_76 = Coupling(name = 'R2GC_64_76',
-                      value = '(complex(0,1)*gAu22**4)/(4.*cmath.pi**2) + (3*complex(0,1)*gAu22**2*gVu22**2)/(2.*cmath.pi**2) + (complex(0,1)*gVu22**4)/(4.*cmath.pi**2)',
-                      order = {'DMV':4})
-
-R2GC_64_77 = Coupling(name = 'R2GC_64_77',
-                      value = '(complex(0,1)*gAd11**4)/(4.*cmath.pi**2) + (3*complex(0,1)*gAd11**2*gVd11**2)/(2.*cmath.pi**2) + (complex(0,1)*gVd11**4)/(4.*cmath.pi**2)',
-                      order = {'DMV':4})
-
-R2GC_64_78 = Coupling(name = 'R2GC_64_78',
-                      value = '(complex(0,1)*gAd22**4)/(4.*cmath.pi**2) + (3*complex(0,1)*gAd22**2*gVd22**2)/(2.*cmath.pi**2) + (complex(0,1)*gVd22**4)/(4.*cmath.pi**2)',
-                      order = {'DMV':4})
-
-R2GC_64_79 = Coupling(name = 'R2GC_64_79',
-                      value = '(complex(0,1)*gAu33**4)/(4.*cmath.pi**2) + (3*complex(0,1)*gAu33**2*gVu33**2)/(2.*cmath.pi**2) + (complex(0,1)*gVu33**4)/(4.*cmath.pi**2)',
-                      order = {'DMV':4})
-
-R2GC_64_80 = Coupling(name = 'R2GC_64_80',
-                      value = '(complex(0,1)*gAu11**4)/(4.*cmath.pi**2) + (3*complex(0,1)*gAu11**2*gVu11**2)/(2.*cmath.pi**2) + (complex(0,1)*gVu11**4)/(4.*cmath.pi**2)',
-                      order = {'DMV':4})
-
-R2GC_67_81 = Coupling(name = 'R2GC_67_81',
+R2GC_108_1 = Coupling(name = 'R2GC_108_1',
                       value = '-0.005208333333333333*G**4/cmath.pi**2',
                       order = {'QCD':4})
 
-R2GC_67_82 = Coupling(name = 'R2GC_67_82',
+R2GC_108_2 = Coupling(name = 'R2GC_108_2',
                       value = 'G**4/(64.*cmath.pi**2)',
                       order = {'QCD':4})
 
-R2GC_68_83 = Coupling(name = 'R2GC_68_83',
+R2GC_109_3 = Coupling(name = 'R2GC_109_3',
                       value = '-0.005208333333333333*(complex(0,1)*G**4)/cmath.pi**2',
                       order = {'QCD':4})
 
-R2GC_68_84 = Coupling(name = 'R2GC_68_84',
+R2GC_109_4 = Coupling(name = 'R2GC_109_4',
                       value = '(complex(0,1)*G**4)/(64.*cmath.pi**2)',
                       order = {'QCD':4})
 
-R2GC_69_85 = Coupling(name = 'R2GC_69_85',
+R2GC_110_5 = Coupling(name = 'R2GC_110_5',
                       value = '(complex(0,1)*G**4)/(192.*cmath.pi**2)',
                       order = {'QCD':4})
 
-R2GC_69_86 = Coupling(name = 'R2GC_69_86',
+R2GC_110_6 = Coupling(name = 'R2GC_110_6',
                       value = '-0.015625*(complex(0,1)*G**4)/cmath.pi**2',
                       order = {'QCD':4})
 
-R2GC_70_87 = Coupling(name = 'R2GC_70_87',
+R2GC_111_7 = Coupling(name = 'R2GC_111_7',
                       value = '-0.020833333333333332*(complex(0,1)*G**4)/cmath.pi**2',
                       order = {'QCD':4})
 
-R2GC_71_88 = Coupling(name = 'R2GC_71_88',
+R2GC_112_8 = Coupling(name = 'R2GC_112_8',
                       value = '(complex(0,1)*G**4)/(288.*cmath.pi**2)',
                       order = {'QCD':4})
 
-R2GC_71_89 = Coupling(name = 'R2GC_71_89',
+R2GC_112_9 = Coupling(name = 'R2GC_112_9',
                       value = '-0.03125*(complex(0,1)*G**4)/cmath.pi**2',
                       order = {'QCD':4})
 
-R2GC_72_90 = Coupling(name = 'R2GC_72_90',
-                      value = '-0.0625*(complex(0,1)*G**4)/cmath.pi**2',
-                      order = {'QCD':4})
+R2GC_113_10 = Coupling(name = 'R2GC_113_10',
+                       value = '-0.0625*(complex(0,1)*G**4)/cmath.pi**2',
+                       order = {'QCD':4})
 
-R2GC_72_91 = Coupling(name = 'R2GC_72_91',
-                      value = '(complex(0,1)*G**4)/(4.*cmath.pi**2)',
-                      order = {'QCD':4})
+R2GC_113_11 = Coupling(name = 'R2GC_113_11',
+                       value = '(complex(0,1)*G**4)/(4.*cmath.pi**2)',
+                       order = {'QCD':4})
 
-R2GC_73_92 = Coupling(name = 'R2GC_73_92',
-                      value = '(-3*complex(0,1)*G**4)/(64.*cmath.pi**2)',
-                      order = {'QCD':4})
+R2GC_114_12 = Coupling(name = 'R2GC_114_12',
+                       value = '(-3*complex(0,1)*G**4)/(64.*cmath.pi**2)',
+                       order = {'QCD':4})
 
-R2GC_73_93 = Coupling(name = 'R2GC_73_93',
-                      value = '(-23*complex(0,1)*G**4)/(64.*cmath.pi**2)',
-                      order = {'QCD':4})
+R2GC_114_13 = Coupling(name = 'R2GC_114_13',
+                       value = '(-23*complex(0,1)*G**4)/(64.*cmath.pi**2)',
+                       order = {'QCD':4})
 
-R2GC_74_94 = Coupling(name = 'R2GC_74_94',
-                      value = '(complex(0,1)*G**2)/(12.*cmath.pi**2)',
-                      order = {'QCD':2})
+R2GC_115_14 = Coupling(name = 'R2GC_115_14',
+                       value = '(ee*complex(0,1)*G**2)/(18.*cmath.pi**2)',
+                       order = {'QCD':2,'QED':1})
 
-R2GC_75_95 = Coupling(name = 'R2GC_75_95',
-                      value = '-0.16666666666666666*(complex(0,1)*G**3)/cmath.pi**2',
-                      order = {'QCD':3})
+R2GC_116_15 = Coupling(name = 'R2GC_116_15',
+                       value = '-0.16666666666666666*(complex(0,1)*G**3)/cmath.pi**2',
+                       order = {'QCD':3})
 
-R2GC_76_96 = Coupling(name = 'R2GC_76_96',
-                      value = '(complex(0,1)*G**2*MB)/(6.*cmath.pi**2)',
-                      order = {'QCD':2})
+R2GC_117_16 = Coupling(name = 'R2GC_117_16',
+                       value = '-0.1111111111111111*(ee*complex(0,1)*G**2)/cmath.pi**2',
+                       order = {'QCD':2,'QED':1})
 
-R2GC_76_97 = Coupling(name = 'R2GC_76_97',
-                      value = '-0.125*(complex(0,1)*gAd33**2*MB)/cmath.pi**2 + (complex(0,1)*gVd33**2*MB)/(8.*cmath.pi**2)',
-                      order = {'DMV':2})
+R2GC_127_17 = Coupling(name = 'R2GC_127_17',
+                       value = '-0.16666666666666666*(CKM2x1*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
 
-R2GC_87_98 = Coupling(name = 'R2GC_87_98',
-                      value = '(complex(0,1)*G**2)/(48.*cmath.pi**2)',
-                      order = {'QCD':2})
+R2GC_128_18 = Coupling(name = 'R2GC_128_18',
+                       value = '-0.16666666666666666*(ee*complex(0,1)*G**2*complexconjugate(CKM2x1))/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
 
-R2GC_87_99 = Coupling(name = 'R2GC_87_99',
-                      value = '(3*complex(0,1)*G**2)/(32.*cmath.pi**2)',
-                      order = {'QCD':2})
+R2GC_129_19 = Coupling(name = 'R2GC_129_19',
+                       value = '-0.16666666666666666*(CKM2x2*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
 
-R2GC_88_100 = Coupling(name = 'R2GC_88_100',
-                       value = '-0.0625*(complex(0,1)*G**2)/cmath.pi**2',
+R2GC_130_20 = Coupling(name = 'R2GC_130_20',
+                       value = '-0.16666666666666666*(ee*complex(0,1)*G**2*complexconjugate(CKM2x2))/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_131_21 = Coupling(name = 'R2GC_131_21',
+                       value = '-0.16666666666666666*(CKM1x1*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_132_22 = Coupling(name = 'R2GC_132_22',
+                       value = '-0.16666666666666666*(ee*complex(0,1)*G**2*complexconjugate(CKM1x1))/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_133_23 = Coupling(name = 'R2GC_133_23',
+                       value = '-0.16666666666666666*(CKM1x2*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_134_24 = Coupling(name = 'R2GC_134_24',
+                       value = '-0.16666666666666666*(ee*complex(0,1)*G**2*complexconjugate(CKM1x2))/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_135_25 = Coupling(name = 'R2GC_135_25',
+                       value = '(complex(0,1)*G**2)/(12.*cmath.pi**2)',
                        order = {'QCD':2})
 
-R2GC_89_101 = Coupling(name = 'R2GC_89_101',
+R2GC_137_26 = Coupling(name = 'R2GC_137_26',
+                       value = '(complex(0,1)*G**2*gAd33)/(6.*cmath.pi**2)',
+                       order = {'NP':1,'QCD':2})
+
+R2GC_138_27 = Coupling(name = 'R2GC_138_27',
+                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVd33)/cmath.pi**2',
+                       order = {'NP':1,'QCD':2})
+
+R2GC_139_28 = Coupling(name = 'R2GC_139_28',
+                       value = '(complex(0,1)*G**2*MB)/(6.*cmath.pi**2)',
+                       order = {'QCD':2})
+
+R2GC_140_29 = Coupling(name = 'R2GC_140_29',
+                       value = '(cw*ee*complex(0,1)*G**2)/(12.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2)',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_141_30 = Coupling(name = 'R2GC_141_30',
+                       value = '-0.05555555555555555*(ee*complex(0,1)*G**2*sw)/(cw*cmath.pi**2)',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_142_31 = Coupling(name = 'R2GC_142_31',
+                       value = '(complex(0,1)*G**2*yb)/(3.*cmath.pi**2*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_144_32 = Coupling(name = 'R2GC_144_32',
                        value = 'G**3/(24.*cmath.pi**2)',
                        order = {'QCD':3})
 
-R2GC_89_102 = Coupling(name = 'R2GC_89_102',
+R2GC_144_33 = Coupling(name = 'R2GC_144_33',
                        value = '(11*G**3)/(64.*cmath.pi**2)',
                        order = {'QCD':3})
 
-R2GC_90_103 = Coupling(name = 'R2GC_90_103',
+R2GC_150_34 = Coupling(name = 'R2GC_150_34',
                        value = '(5*complex(0,1)*G**4)/(48.*cmath.pi**2)',
                        order = {'QCD':4})
 
-R2GC_90_104 = Coupling(name = 'R2GC_90_104',
+R2GC_150_35 = Coupling(name = 'R2GC_150_35',
                        value = '(19*complex(0,1)*G**4)/(32.*cmath.pi**2)',
                        order = {'QCD':4})
 
-R2GC_91_105 = Coupling(name = 'R2GC_91_105',
+R2GC_151_36 = Coupling(name = 'R2GC_151_36',
                        value = '(23*complex(0,1)*G**4)/(192.*cmath.pi**2)',
                        order = {'QCD':4})
 
-R2GC_92_106 = Coupling(name = 'R2GC_92_106',
+R2GC_152_37 = Coupling(name = 'R2GC_152_37',
                        value = '(31*complex(0,1)*G**4)/(64.*cmath.pi**2)',
                        order = {'QCD':4})
 
-R2GC_93_107 = Coupling(name = 'R2GC_93_107',
+R2GC_153_38 = Coupling(name = 'R2GC_153_38',
                        value = '(-17*complex(0,1)*G**4)/(64.*cmath.pi**2)',
                        order = {'QCD':4})
 
-R2GC_94_108 = Coupling(name = 'R2GC_94_108',
+R2GC_154_39 = Coupling(name = 'R2GC_154_39',
                        value = '(-7*complex(0,1)*G**4)/(32.*cmath.pi**2)',
                        order = {'QCD':4})
 
-R2GC_95_109 = Coupling(name = 'R2GC_95_109',
+R2GC_155_40 = Coupling(name = 'R2GC_155_40',
                        value = '(7*complex(0,1)*G**4)/(64.*cmath.pi**2)',
                        order = {'QCD':4})
 
+R2GC_159_41 = Coupling(name = 'R2GC_159_41',
+                       value = '(complex(0,1)*G**2*gAu33)/(6.*cmath.pi**2)',
+                       order = {'NP':1,'QCD':2})
+
+R2GC_160_42 = Coupling(name = 'R2GC_160_42',
+                       value = '-0.16666666666666666*(complex(0,1)*G**2*gVu33)/cmath.pi**2',
+                       order = {'NP':1,'QCD':2})
+
+R2GC_161_43 = Coupling(name = 'R2GC_161_43',
+                       value = '(complex(0,1)*G**2*MT)/(6.*cmath.pi**2)',
+                       order = {'QCD':2})
+
+R2GC_162_44 = Coupling(name = 'R2GC_162_44',
+                       value = '-0.16666666666666666*(CKM3x3*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_163_45 = Coupling(name = 'R2GC_163_45',
+                       value = '-0.08333333333333333*(cw*ee*complex(0,1)*G**2)/(cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2)',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_164_46 = Coupling(name = 'R2GC_164_46',
+                       value = '(ee*complex(0,1)*G**2*sw)/(9.*cw*cmath.pi**2)',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_165_47 = Coupling(name = 'R2GC_165_47',
+                       value = '(complex(0,1)*G**2*yt)/(3.*cmath.pi**2*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_166_48 = Coupling(name = 'R2GC_166_48',
+                       value = '-0.16666666666666666*(ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(cmath.pi**2*sw*cmath.sqrt(2))',
+                       order = {'QCD':2,'QED':1})
+
+R2GC_60_49 = Coupling(name = 'R2GC_60_49',
+                      value = '-0.0625*(complex(0,1)*G**2)/cmath.pi**2',
+                      order = {'QCD':2})
+
+R2GC_62_50 = Coupling(name = 'R2GC_62_50',
+                      value = '(complex(0,1)*G**2*gAu22)/(6.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_63_51 = Coupling(name = 'R2GC_63_51',
+                      value = '-0.16666666666666666*(complex(0,1)*G**2*gVu22)/cmath.pi**2',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_66_52 = Coupling(name = 'R2GC_66_52',
+                      value = '(complex(0,1)*G**2*gAd11)/(6.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_67_53 = Coupling(name = 'R2GC_67_53',
+                      value = '-0.16666666666666666*(complex(0,1)*G**2*gVd11)/cmath.pi**2',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_70_54 = Coupling(name = 'R2GC_70_54',
+                      value = '(complex(0,1)*G**2*gAd22)/(6.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_71_55 = Coupling(name = 'R2GC_71_55',
+                      value = '-0.16666666666666666*(complex(0,1)*G**2*gVd22)/cmath.pi**2',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_74_56 = Coupling(name = 'R2GC_74_56',
+                      value = '(complex(0,1)*G**2*gAu11)/(6.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_75_57 = Coupling(name = 'R2GC_75_57',
+                      value = '-0.16666666666666666*(complex(0,1)*G**2*gVu11)/cmath.pi**2',
+                      order = {'NP':1,'QCD':2})
+
+R2GC_77_58 = Coupling(name = 'R2GC_77_58',
+                      value = '-0.125*(complex(0,1)*G**2*MB**2)/cmath.pi**2',
+                      order = {'QCD':2})
+
+R2GC_77_59 = Coupling(name = 'R2GC_77_59',
+                      value = '-0.125*(complex(0,1)*G**2*MT**2)/cmath.pi**2',
+                      order = {'QCD':2})
+
+R2GC_78_60 = Coupling(name = 'R2GC_78_60',
+                      value = '-0.125*(complex(0,1)*G**2*MB*yb)/(cmath.pi**2*cmath.sqrt(2))',
+                      order = {'QCD':2,'QED':1})
+
+R2GC_78_61 = Coupling(name = 'R2GC_78_61',
+                      value = '-0.125*(complex(0,1)*G**2*MT*yt)/(cmath.pi**2*cmath.sqrt(2))',
+                      order = {'QCD':2,'QED':1})
+
+R2GC_79_62 = Coupling(name = 'R2GC_79_62',
+                      value = '-0.0625*(complex(0,1)*G**2*yb**2)/cmath.pi**2',
+                      order = {'QCD':2,'QED':2})
+
+R2GC_79_63 = Coupling(name = 'R2GC_79_63',
+                      value = '-0.0625*(complex(0,1)*G**2*yt**2)/cmath.pi**2',
+                      order = {'QCD':2,'QED':2})
+
+R2GC_80_64 = Coupling(name = 'R2GC_80_64',
+                      value = '(complex(0,1)*G**2)/(48.*cmath.pi**2)',
+                      order = {'QCD':2})
+
+R2GC_81_65 = Coupling(name = 'R2GC_81_65',
+                      value = '(ee**2*complex(0,1)*G**2)/(216.*cmath.pi**2)',
+                      order = {'QCD':2,'QED':2})
+
+R2GC_81_66 = Coupling(name = 'R2GC_81_66',
+                      value = '(ee**2*complex(0,1)*G**2)/(54.*cmath.pi**2)',
+                      order = {'QCD':2,'QED':2})
+
+R2GC_82_67 = Coupling(name = 'R2GC_82_67',
+                      value = '-0.006944444444444444*(ee*complex(0,1)*G**3)/cmath.pi**2',
+                      order = {'QCD':3,'QED':1})
+
+R2GC_82_68 = Coupling(name = 'R2GC_82_68',
+                      value = '(ee*complex(0,1)*G**3)/(72.*cmath.pi**2)',
+                      order = {'QCD':3,'QED':1})
+
+R2GC_83_69 = Coupling(name = 'R2GC_83_69',
+                      value = '(complex(0,1)*G**3*gAd33)/(16.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_83_70 = Coupling(name = 'R2GC_83_70',
+                      value = '(complex(0,1)*G**3*gAu22)/(16.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_83_71 = Coupling(name = 'R2GC_83_71',
+                      value = '(complex(0,1)*G**3*gAd11)/(16.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_83_72 = Coupling(name = 'R2GC_83_72',
+                      value = '(complex(0,1)*G**3*gAd22)/(16.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_83_73 = Coupling(name = 'R2GC_83_73',
+                      value = '(complex(0,1)*G**3*gAu33)/(16.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_83_74 = Coupling(name = 'R2GC_83_74',
+                      value = '(complex(0,1)*G**3*gAu11)/(16.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_84_75 = Coupling(name = 'R2GC_84_75',
+                      value = '-0.013888888888888888*(ee*complex(0,1)*G**2*gVd33)/cmath.pi**2',
+                      order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_84_76 = Coupling(name = 'R2GC_84_76',
+                      value = '(ee*complex(0,1)*G**2*gVu22)/(36.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_84_77 = Coupling(name = 'R2GC_84_77',
+                      value = '-0.013888888888888888*(ee*complex(0,1)*G**2*gVd11)/cmath.pi**2',
+                      order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_84_78 = Coupling(name = 'R2GC_84_78',
+                      value = '-0.013888888888888888*(ee*complex(0,1)*G**2*gVd22)/cmath.pi**2',
+                      order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_84_79 = Coupling(name = 'R2GC_84_79',
+                      value = '(ee*complex(0,1)*G**2*gVu33)/(36.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_84_80 = Coupling(name = 'R2GC_84_80',
+                      value = '(ee*complex(0,1)*G**2*gVu11)/(36.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_85_81 = Coupling(name = 'R2GC_85_81',
+                      value = '(complex(0,1)*G**3*gVd33)/(48.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_85_82 = Coupling(name = 'R2GC_85_82',
+                      value = '(complex(0,1)*G**3*gVu22)/(48.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_85_83 = Coupling(name = 'R2GC_85_83',
+                      value = '(complex(0,1)*G**3*gVd11)/(48.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_85_84 = Coupling(name = 'R2GC_85_84',
+                      value = '(complex(0,1)*G**3*gVd22)/(48.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_85_85 = Coupling(name = 'R2GC_85_85',
+                      value = '(complex(0,1)*G**3*gVu33)/(48.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_85_86 = Coupling(name = 'R2GC_85_86',
+                      value = '(complex(0,1)*G**3*gVu11)/(48.*cmath.pi**2)',
+                      order = {'NP':1,'QCD':3})
+
+R2GC_86_87 = Coupling(name = 'R2GC_86_87',
+                      value = '(complex(0,1)*G**2*gAd33**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVd33**2)/(24.*cmath.pi**2)',
+                      order = {'NP':2,'QCD':2})
+
+R2GC_86_88 = Coupling(name = 'R2GC_86_88',
+                      value = '(complex(0,1)*G**2*gAu22**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVu22**2)/(24.*cmath.pi**2)',
+                      order = {'NP':2,'QCD':2})
+
+R2GC_86_89 = Coupling(name = 'R2GC_86_89',
+                      value = '(complex(0,1)*G**2*gAd11**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVd11**2)/(24.*cmath.pi**2)',
+                      order = {'NP':2,'QCD':2})
+
+R2GC_86_90 = Coupling(name = 'R2GC_86_90',
+                      value = '(complex(0,1)*G**2*gAd22**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVd22**2)/(24.*cmath.pi**2)',
+                      order = {'NP':2,'QCD':2})
+
+R2GC_86_91 = Coupling(name = 'R2GC_86_91',
+                      value = '(complex(0,1)*G**2*gAu33**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVu33**2)/(24.*cmath.pi**2)',
+                      order = {'NP':2,'QCD':2})
+
+R2GC_86_92 = Coupling(name = 'R2GC_86_92',
+                      value = '(complex(0,1)*G**2*gAu11**2)/(24.*cmath.pi**2) + (complex(0,1)*G**2*gVu11**2)/(24.*cmath.pi**2)',
+                      order = {'NP':2,'QCD':2})
+
+R2GC_87_93 = Coupling(name = 'R2GC_87_93',
+                      value = '(cw*ee**2*complex(0,1)*G**2)/(288.*cmath.pi**2*sw) - (ee**2*complex(0,1)*G**2*sw)/(864.*cw*cmath.pi**2)',
+                      order = {'QCD':2,'QED':2})
+
+R2GC_87_94 = Coupling(name = 'R2GC_87_94',
+                      value = '(cw*ee**2*complex(0,1)*G**2)/(144.*cmath.pi**2*sw) - (5*ee**2*complex(0,1)*G**2*sw)/(432.*cw*cmath.pi**2)',
+                      order = {'QCD':2,'QED':2})
+
+R2GC_88_95 = Coupling(name = 'R2GC_88_95',
+                      value = '-0.005208333333333333*(cw*ee*complex(0,1)*G**3)/(cmath.pi**2*sw) + (ee*complex(0,1)*G**3*sw)/(576.*cw*cmath.pi**2)',
+                      order = {'QCD':3,'QED':1})
+
+R2GC_88_96 = Coupling(name = 'R2GC_88_96',
+                      value = '(cw*ee*complex(0,1)*G**3)/(192.*cmath.pi**2*sw) - (5*ee*complex(0,1)*G**3*sw)/(576.*cw*cmath.pi**2)',
+                      order = {'QCD':3,'QED':1})
+
+R2GC_89_97 = Coupling(name = 'R2GC_89_97',
+                      value = '(-3*cw*ee*complex(0,1)*G**3)/(64.*cmath.pi**2*sw) - (3*ee*complex(0,1)*G**3*sw)/(64.*cw*cmath.pi**2)',
+                      order = {'QCD':3,'QED':1})
+
+R2GC_89_98 = Coupling(name = 'R2GC_89_98',
+                      value = '(3*cw*ee*complex(0,1)*G**3)/(64.*cmath.pi**2*sw) + (3*ee*complex(0,1)*G**3*sw)/(64.*cw*cmath.pi**2)',
+                      order = {'QCD':3,'QED':1})
+
+R2GC_90_99 = Coupling(name = 'R2GC_90_99',
+                      value = '(cw*ee*complex(0,1)*G**2*gAd33)/(96.*cmath.pi**2*sw) - (cw*ee*complex(0,1)*G**2*gVd33)/(96.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*gAd33*sw)/(96.*cw*cmath.pi**2) + (ee*complex(0,1)*G**2*gVd33*sw)/(288.*cw*cmath.pi**2)',
+                      order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_90_100 = Coupling(name = 'R2GC_90_100',
+                       value = '-0.010416666666666666*(cw*ee*complex(0,1)*G**2*gAu22)/(cmath.pi**2*sw) + (cw*ee*complex(0,1)*G**2*gVu22)/(96.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*gAu22*sw)/(96.*cw*cmath.pi**2) - (5*ee*complex(0,1)*G**2*gVu22*sw)/(288.*cw*cmath.pi**2)',
+                       order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_90_101 = Coupling(name = 'R2GC_90_101',
+                       value = '(cw*ee*complex(0,1)*G**2*gAd11)/(96.*cmath.pi**2*sw) - (cw*ee*complex(0,1)*G**2*gVd11)/(96.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*gAd11*sw)/(96.*cw*cmath.pi**2) + (ee*complex(0,1)*G**2*gVd11*sw)/(288.*cw*cmath.pi**2)',
+                       order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_90_102 = Coupling(name = 'R2GC_90_102',
+                       value = '(cw*ee*complex(0,1)*G**2*gAd22)/(96.*cmath.pi**2*sw) - (cw*ee*complex(0,1)*G**2*gVd22)/(96.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*gAd22*sw)/(96.*cw*cmath.pi**2) + (ee*complex(0,1)*G**2*gVd22*sw)/(288.*cw*cmath.pi**2)',
+                       order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_90_103 = Coupling(name = 'R2GC_90_103',
+                       value = '-0.010416666666666666*(cw*ee*complex(0,1)*G**2*gAu33)/(cmath.pi**2*sw) + (cw*ee*complex(0,1)*G**2*gVu33)/(96.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*gAu33*sw)/(96.*cw*cmath.pi**2) - (5*ee*complex(0,1)*G**2*gVu33*sw)/(288.*cw*cmath.pi**2)',
+                       order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_90_104 = Coupling(name = 'R2GC_90_104',
+                       value = '-0.010416666666666666*(cw*ee*complex(0,1)*G**2*gAu11)/(cmath.pi**2*sw) + (cw*ee*complex(0,1)*G**2*gVu11)/(96.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*gAu11*sw)/(96.*cw*cmath.pi**2) - (5*ee*complex(0,1)*G**2*gVu11*sw)/(288.*cw*cmath.pi**2)',
+                       order = {'NP':1,'QCD':2,'QED':1})
+
+R2GC_91_105 = Coupling(name = 'R2GC_91_105',
+                       value = '(ee**2*complex(0,1)*G**2)/(288.*cmath.pi**2) + (cw**2*ee**2*complex(0,1)*G**2)/(192.*cmath.pi**2*sw**2) + (5*ee**2*complex(0,1)*G**2*sw**2)/(1728.*cw**2*cmath.pi**2)',
+                       order = {'QCD':2,'QED':2})
+
+R2GC_91_106 = Coupling(name = 'R2GC_91_106',
+                       value = '-0.003472222222222222*(ee**2*complex(0,1)*G**2)/cmath.pi**2 + (cw**2*ee**2*complex(0,1)*G**2)/(192.*cmath.pi**2*sw**2) + (17*ee**2*complex(0,1)*G**2*sw**2)/(1728.*cw**2*cmath.pi**2)',
+                       order = {'QCD':2,'QED':2})
+
+R2GC_96_107 = Coupling(name = 'R2GC_96_107',
+                       value = '(CKM3x3*ee**2*complex(0,1)*G**2*complexconjugate(CKM3x3))/(96.*cmath.pi**2*sw**2)',
+                       order = {'QCD':2,'QED':2})
+
+R2GC_96_108 = Coupling(name = 'R2GC_96_108',
+                       value = '(CKM2x1*ee**2*complex(0,1)*G**2*complexconjugate(CKM2x1))/(96.*cmath.pi**2*sw**2)',
+                       order = {'QCD':2,'QED':2})
+
+R2GC_96_109 = Coupling(name = 'R2GC_96_109',
+                       value = '(CKM2x2*ee**2*complex(0,1)*G**2*complexconjugate(CKM2x2))/(96.*cmath.pi**2*sw**2)',
+                       order = {'QCD':2,'QED':2})
+
 R2GC_96_110 = Coupling(name = 'R2GC_96_110',
-                       value = '(complex(0,1)*gAu22**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu22*gVu22)/(8.*cmath.pi**2) + (complex(0,1)*gVu22**2)/(16.*cmath.pi**2)',
-                       order = {'DMV':2})
+                       value = '(CKM1x1*ee**2*complex(0,1)*G**2*complexconjugate(CKM1x1))/(96.*cmath.pi**2*sw**2)',
+                       order = {'QCD':2,'QED':2})
 
-R2GC_97_111 = Coupling(name = 'R2GC_97_111',
-                       value = '(complex(0,1)*gAu22**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu22*gVu22)/(8.*cmath.pi**2) + (complex(0,1)*gVu22**2)/(16.*cmath.pi**2)',
-                       order = {'DMV':2})
-
-R2GC_98_112 = Coupling(name = 'R2GC_98_112',
-                       value = '-0.125*(complex(0,1)*G*gAu22**2)/cmath.pi**2 + (complex(0,1)*G*gAu22*gVu22)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu22**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
-
-R2GC_99_113 = Coupling(name = 'R2GC_99_113',
-                       value = '-0.125*(complex(0,1)*G*gAu22**2)/cmath.pi**2 - (complex(0,1)*G*gAu22*gVu22)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu22**2)/(8.*cmath.pi**2)',
-                       order = {'DMV':2,'QCD':1})
+R2GC_96_111 = Coupling(name = 'R2GC_96_111',
+                       value = '(CKM1x2*ee**2*complex(0,1)*G**2*complexconjugate(CKM1x2))/(96.*cmath.pi**2*sw**2)',
+                       order = {'QCD':2,'QED':2})
 
 UVGC_100_1 = Coupling(name = 'UVGC_100_1',
+                      value = {-1:'(ee*complex(0,1)*G**2)/(18.*cmath.pi**2)'},
+                      order = {'QCD':2,'QED':1})
+
+UVGC_101_2 = Coupling(name = 'UVGC_101_2',
                       value = {-1:'-0.08333333333333333*(complex(0,1)*G**2)/cmath.pi**2'},
                       order = {'QCD':2})
 
-UVGC_100_2 = Coupling(name = 'UVGC_100_2',
-                      value = {-1:'(complex(0,1)*gAd11**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd11*gVd11)/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAd11**2)/cmath.pi**2 - (complex(0,1)*gAd11*gVd11)/(16.*cmath.pi**2) - (complex(0,1)*gVd11**2)/(32.*cmath.pi**2) - (complex(0,1)*gAd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAd11*gVd11*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                      order = {'DMV':2})
-
-UVGC_101_3 = Coupling(name = 'UVGC_101_3',
-                      value = {-1:'(complex(0,1)*gAd11**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd11*gVd11)/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAd11**2)/cmath.pi**2 + (complex(0,1)*gAd11*gVd11)/(16.*cmath.pi**2) - (complex(0,1)*gVd11**2)/(32.*cmath.pi**2) - (complex(0,1)*gAd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAd11*gVd11*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                      order = {'DMV':2})
-
-UVGC_102_4 = Coupling(name = 'UVGC_102_4',
-                      value = {0:'(complex(0,1)*G**3*reglog(MB/MU_R))/(24.*cmath.pi**2)'},
-                      order = {'QCD':3})
-
-UVGC_102_5 = Coupling(name = 'UVGC_102_5',
-                      value = {-1:'(complex(0,1)*G**3)/(48.*cmath.pi**2)'},
-                      order = {'QCD':3})
-
-UVGC_102_6 = Coupling(name = 'UVGC_102_6',
-                      value = {-1:'(-19*complex(0,1)*G**3)/(128.*cmath.pi**2)'},
-                      order = {'QCD':3})
-
-UVGC_102_7 = Coupling(name = 'UVGC_102_7',
-                      value = {-1:'-0.0078125*(complex(0,1)*G**3)/cmath.pi**2'},
-                      order = {'QCD':3})
-
-UVGC_102_8 = Coupling(name = 'UVGC_102_8',
-                      value = {0:'(complex(0,1)*G**3*reglog(MT/MU_R))/(24.*cmath.pi**2)'},
-                      order = {'QCD':3})
-
-UVGC_102_9 = Coupling(name = 'UVGC_102_9',
-                      value = {-1:'(complex(0,1)*G**3)/(12.*cmath.pi**2)'},
-                      order = {'QCD':3})
-
-UVGC_102_10 = Coupling(name = 'UVGC_102_10',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAd11**2)/cmath.pi**2 + (complex(0,1)*G*gAd11*gVd11)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd11**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAd11**2)/(32.*cmath.pi**2) - (complex(0,1)*G*gAd11*gVd11)/(16.*cmath.pi**2) + (complex(0,1)*G*gVd11**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd11*gVd11*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_103_11 = Coupling(name = 'UVGC_103_11',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAd11**2)/cmath.pi**2 - (complex(0,1)*G*gAd11*gVd11)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd11**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAd11**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAd11*gVd11)/(16.*cmath.pi**2) + (complex(0,1)*G*gVd11**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd11*gVd11*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_104_12 = Coupling(name = 'UVGC_104_12',
-                       value = {-1:'(complex(0,1)*gAd22**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd22*gVd22)/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAd22**2)/cmath.pi**2 - (complex(0,1)*gAd22*gVd22)/(16.*cmath.pi**2) - (complex(0,1)*gVd22**2)/(32.*cmath.pi**2) - (complex(0,1)*gAd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAd22*gVd22*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_105_13 = Coupling(name = 'UVGC_105_13',
-                       value = {-1:'(complex(0,1)*gAd22**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd22*gVd22)/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAd22**2)/cmath.pi**2 + (complex(0,1)*gAd22*gVd22)/(16.*cmath.pi**2) - (complex(0,1)*gVd22**2)/(32.*cmath.pi**2) - (complex(0,1)*gAd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAd22*gVd22*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_106_14 = Coupling(name = 'UVGC_106_14',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAd22**2)/cmath.pi**2 + (complex(0,1)*G*gAd22*gVd22)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd22**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAd22**2)/(32.*cmath.pi**2) - (complex(0,1)*G*gAd22*gVd22)/(16.*cmath.pi**2) + (complex(0,1)*G*gVd22**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd22*gVd22*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_107_15 = Coupling(name = 'UVGC_107_15',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAd22**2)/cmath.pi**2 - (complex(0,1)*G*gAd22*gVd22)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd22**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAd22**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAd22*gVd22)/(16.*cmath.pi**2) + (complex(0,1)*G*gVd22**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd22*gVd22*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_108_16 = Coupling(name = 'UVGC_108_16',
-                       value = {-1:'(complex(0,1)*gAu11**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu11*gVu11)/(8.*cmath.pi**2) + (complex(0,1)*gVu11**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAu11**2)/cmath.pi**2 - (complex(0,1)*gAu11*gVu11)/(16.*cmath.pi**2) - (complex(0,1)*gVu11**2)/(32.*cmath.pi**2) - (complex(0,1)*gAu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAu11*gVu11*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_109_17 = Coupling(name = 'UVGC_109_17',
-                       value = {-1:'(complex(0,1)*gAu11**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu11*gVu11)/(8.*cmath.pi**2) + (complex(0,1)*gVu11**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAu11**2)/cmath.pi**2 + (complex(0,1)*gAu11*gVu11)/(16.*cmath.pi**2) - (complex(0,1)*gVu11**2)/(32.*cmath.pi**2) - (complex(0,1)*gAu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu11*gVu11*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_110_18 = Coupling(name = 'UVGC_110_18',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAu11**2)/cmath.pi**2 + (complex(0,1)*G*gAu11*gVu11)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu11**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAu11**2)/(32.*cmath.pi**2) - (complex(0,1)*G*gAu11*gVu11)/(16.*cmath.pi**2) + (complex(0,1)*G*gVu11**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAu11*gVu11*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_111_19 = Coupling(name = 'UVGC_111_19',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAu11**2)/cmath.pi**2 - (complex(0,1)*G*gAu11*gVu11)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu11**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAu11**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAu11*gVu11)/(16.*cmath.pi**2) + (complex(0,1)*G*gVu11**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAu11*gVu11*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_112_20 = Coupling(name = 'UVGC_112_20',
-                       value = {-1:'-0.25*(complex(0,1)*gAd33**2)/cmath.pi**2 - (complex(0,1)*gVd33**2)/(4.*cmath.pi**2)',0:'( (-35*complex(0,1)*gAd33**2)/(12.*cmath.pi**2) - (17*complex(0,1)*gVd33**2)/(12.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*MY1**2)/(4.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd33**2*MY1**2)/(4.*cmath.pi**2*MB**2) + (7*complex(0,1)*gAd33**2)/(4.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*MY1**2)/(cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd33**2*MY1**2)/(cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd33**2*cmath.sqrt(3))/(4.*cmath.pi) + (complex(0,1)*gAd33**2*reglog(MB/MU_R))/(2.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog(MB/MU_R))/(2.*cmath.pi**2) if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (2*complex(0,1)*gAd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (2*complex(0,1)*gAd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -0.25*(MU_R*complex(0,1)*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*cmath.pi**2*MY1) ) + ( (complex(0,1)*gAd33**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33**2*MB**2)/(cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) - (complex(0,1)*gAd33**2)/(6.*cmath.pi**2) - (complex(0,1)*gVd33**2)/(6.*cmath.pi**2) - (complex(0,1)*gAd33**2*MB**2)/(cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gAd33**2*reglog(MB**2/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog(MB**2/MU_R**2))/(4.*cmath.pi**2) )'},
-                       order = {'DMV':2})
-
-UVGC_112_21 = Coupling(name = 'UVGC_112_21',
-                       value = {-1:'-0.25*(complex(0,1)*gAu22**2)/cmath.pi**2 - (complex(0,1)*gVu22**2)/(4.*cmath.pi**2)',0:'-0.16666666666666666*(complex(0,1)*gAu22**2)/cmath.pi**2 - (complex(0,1)*gVu22**2)/(6.*cmath.pi**2) + (complex(0,1)*gAu22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVu22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_112_22 = Coupling(name = 'UVGC_112_22',
-                       value = {-1:'-0.25*(complex(0,1)*gAd11**2)/cmath.pi**2 - (complex(0,1)*gVd11**2)/(4.*cmath.pi**2)',0:'-0.16666666666666666*(complex(0,1)*gAd11**2)/cmath.pi**2 - (complex(0,1)*gVd11**2)/(6.*cmath.pi**2) + (complex(0,1)*gAd11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVd11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_112_23 = Coupling(name = 'UVGC_112_23',
-                       value = {-1:'-0.25*(complex(0,1)*gAd22**2)/cmath.pi**2 - (complex(0,1)*gVd22**2)/(4.*cmath.pi**2)',0:'-0.16666666666666666*(complex(0,1)*gAd22**2)/cmath.pi**2 - (complex(0,1)*gVd22**2)/(6.*cmath.pi**2) + (complex(0,1)*gAd22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVd22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_112_24 = Coupling(name = 'UVGC_112_24',
-                       value = {-1:'-0.25*(complex(0,1)*gAu33**2)/cmath.pi**2 - (complex(0,1)*gVu33**2)/(4.*cmath.pi**2)',0:'( (-35*complex(0,1)*gAu33**2)/(12.*cmath.pi**2) - (17*complex(0,1)*gVu33**2)/(12.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) + (7*complex(0,1)*gAu33**2)/(4.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*MY1**2)/(cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVu33**2*MY1**2)/(cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVu33**2*cmath.sqrt(3))/(4.*cmath.pi) + (complex(0,1)*gAu33**2*reglog(MT/MU_R))/(2.*cmath.pi**2) + (complex(0,1)*gVu33**2*reglog(MT/MU_R))/(2.*cmath.pi**2) if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (2*complex(0,1)*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (2*complex(0,1)*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -0.25*(MU_R*complex(0,1)*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*cmath.pi**2*MY1) ) + ( (complex(0,1)*gAu33**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAu33**2*MT**2)/(cmath.pi**2*MY1**2) + (complex(0,1)*gVu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) - (complex(0,1)*gAu33**2)/(6.*cmath.pi**2) - (complex(0,1)*gVu33**2)/(6.*cmath.pi**2) - (complex(0,1)*gAu33**2*MT**2)/(cmath.pi**2*MY1**2) + (complex(0,1)*gVu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*reglog(MT**2/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2*reglog(MT**2/MU_R**2))/(4.*cmath.pi**2) )'},
-                       order = {'DMV':2})
-
-UVGC_112_25 = Coupling(name = 'UVGC_112_25',
-                       value = {-1:'-0.25*(complex(0,1)*gAu11**2)/cmath.pi**2 - (complex(0,1)*gVu11**2)/(4.*cmath.pi**2)',0:'-0.16666666666666666*(complex(0,1)*gAu11**2)/cmath.pi**2 - (complex(0,1)*gVu11**2)/(6.*cmath.pi**2) + (complex(0,1)*gAu11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVu11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_113_26 = Coupling(name = 'UVGC_113_26',
-                       value = {-1:'(complex(0,1)*gAd33**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(4.*cmath.pi**2)',0:'( (35*complex(0,1)*gAd33**2)/(12.*cmath.pi**2) + (17*complex(0,1)*gVd33**2)/(12.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*MY1**2)/(4.*cmath.pi**2*MB**2) - (7*complex(0,1)*gVd33**2*MY1**2)/(4.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd33**2)/(4.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33**2*MY1**2)/(cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd33**2*MY1**2)/(cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd33**2*cmath.sqrt(3))/(4.*cmath.pi) - (complex(0,1)*gAd33**2*reglog(MB/MU_R))/(2.*cmath.pi**2) - (complex(0,1)*gVd33**2*reglog(MB/MU_R))/(2.*cmath.pi**2) if MB==MY1 else ( -0.25*(complex(0,1)*gAd33**2)/cmath.pi**2 - (complex(0,1)*gVd33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAd33**2*MB**2)/(cmath.pi**2*MY1**2) - (complex(0,1)*gVd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MB**2 else (-2*complex(0,1)*gAd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (-2*complex(0,1)*gAd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else (MU_R*complex(0,1)*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd33**2)/(6.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(6.*cmath.pi**2) + (complex(0,1)*gAd33**2*MB**2)/(cmath.pi**2*MY1**2) - (complex(0,1)*gVd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33**2*reglog(MB**2/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gVd33**2*reglog(MB**2/MU_R**2))/(4.*cmath.pi**2) )'},
-                       order = {'DMV':2})
-
-UVGC_113_27 = Coupling(name = 'UVGC_113_27',
-                       value = {-1:'(complex(0,1)*gAu22**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu22**2)/(4.*cmath.pi**2)',0:'(complex(0,1)*gAu22**2)/(6.*cmath.pi**2) + (complex(0,1)*gVu22**2)/(6.*cmath.pi**2) - (complex(0,1)*gAu22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gVu22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_113_28 = Coupling(name = 'UVGC_113_28',
-                       value = {-1:'(complex(0,1)*gAd11**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd11**2)/(4.*cmath.pi**2)',0:'(complex(0,1)*gAd11**2)/(6.*cmath.pi**2) + (complex(0,1)*gVd11**2)/(6.*cmath.pi**2) - (complex(0,1)*gAd11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gVd11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_113_29 = Coupling(name = 'UVGC_113_29',
-                       value = {-1:'(complex(0,1)*gAd22**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd22**2)/(4.*cmath.pi**2)',0:'(complex(0,1)*gAd22**2)/(6.*cmath.pi**2) + (complex(0,1)*gVd22**2)/(6.*cmath.pi**2) - (complex(0,1)*gAd22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gVd22**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_113_30 = Coupling(name = 'UVGC_113_30',
-                       value = {-1:'(complex(0,1)*gAu33**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(4.*cmath.pi**2)',0:'( (35*complex(0,1)*gAu33**2)/(12.*cmath.pi**2) + (17*complex(0,1)*gVu33**2)/(12.*cmath.pi**2) - (7*complex(0,1)*gAu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) - (7*complex(0,1)*gVu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu33**2)/(4.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAu33**2*MY1**2)/(cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVu33**2*MY1**2)/(cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVu33**2*cmath.sqrt(3))/(4.*cmath.pi) - (complex(0,1)*gAu33**2*reglog(MT/MU_R))/(2.*cmath.pi**2) - (complex(0,1)*gVu33**2*reglog(MT/MU_R))/(2.*cmath.pi**2) if MT==MY1 else ( -0.25*(complex(0,1)*gAu33**2)/cmath.pi**2 - (complex(0,1)*gVu33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MT**2)/(cmath.pi**2*MY1**2) - (complex(0,1)*gVu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MT**2 else (-2*complex(0,1)*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (-2*complex(0,1)*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else (MU_R*complex(0,1)*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*cmath.pi**2*MY1) ) + (complex(0,1)*gAu33**2)/(6.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(6.*cmath.pi**2) + (complex(0,1)*gAu33**2*MT**2)/(cmath.pi**2*MY1**2) - (complex(0,1)*gVu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33**2*reglog(MT**2/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gVu33**2*reglog(MT**2/MU_R**2))/(4.*cmath.pi**2) )'},
-                       order = {'DMV':2})
-
-UVGC_113_31 = Coupling(name = 'UVGC_113_31',
-                       value = {-1:'(complex(0,1)*gAu11**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu11**2)/(4.*cmath.pi**2)',0:'(complex(0,1)*gAu11**2)/(6.*cmath.pi**2) + (complex(0,1)*gVu11**2)/(6.*cmath.pi**2) - (complex(0,1)*gAu11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gVu11**2*reglog(MY1**2/MU_R**2))/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_114_32 = Coupling(name = 'UVGC_114_32',
-                       value = {0:'( (35*complex(0,1)*gAd11*gAd33**2)/(24.*cmath.pi**2) + (17*complex(0,1)*gAd11*gVd33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd11*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd11*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd11*gAd33**2)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd11*gAd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gAd11*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gAd11*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd11*gAd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAd11*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( -0.125*(complex(0,1)*gAd11*gAd33**2)/cmath.pi**2 - (complex(0,1)*gAd11*gVd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd11*gAd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd11*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MB**2 else -((complex(0,1)*gAd11*gAd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd11*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gAd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd11*gAd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd11*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gAd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd11*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd11*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else (MU_R*complex(0,1)*gAd11*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd11*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd11*gAd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gVd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gAd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd11*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd11*gAd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd11*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_114_33 = Coupling(name = 'UVGC_114_33',
-                       value = {0:'(complex(0,1)*gAd11*gAu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gVu22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11*gAu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd11*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_114_34 = Coupling(name = 'UVGC_114_34',
-                       value = {0:'(complex(0,1)*gAd11**3)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gVd11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd11*gVd11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_114_35 = Coupling(name = 'UVGC_114_35',
-                       value = {0:'(complex(0,1)*gAd11*gAd22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gVd22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11*gAd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd11*gVd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_114_36 = Coupling(name = 'UVGC_114_36',
-                       value = {0:'( (35*complex(0,1)*gAd11*gAu33**2)/(24.*cmath.pi**2) + (17*complex(0,1)*gAd11*gVu33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd11*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAd11*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAd11*gAu33**2)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd11*gAu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gAd11*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gAd11*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd11*gAu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAd11*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( -0.125*(complex(0,1)*gAd11*gAu33**2)/cmath.pi**2 - (complex(0,1)*gAd11*gVu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd11*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MT**2 else -((complex(0,1)*gAd11*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd11*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gAu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd11*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd11*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gAu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd11*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd11*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else (MU_R*complex(0,1)*gAd11*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd11*gAu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gVu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd11*gAu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd11*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_114_37 = Coupling(name = 'UVGC_114_37',
-                       value = {0:'(complex(0,1)*gAd11*gAu11**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd11*gVu11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11*gAu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd11*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_114_38 = Coupling(name = 'UVGC_114_38',
-                       value = {-1:'(complex(0,1)*gAd11**3)/(16.*cmath.pi**2) + (3*complex(0,1)*gAd11*gVd11**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAd11**3)/cmath.pi**2 - (3*complex(0,1)*gAd11*gVd11**2)/(32.*cmath.pi**2) - (complex(0,1)*gAd11**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (3*complex(0,1)*gAd11*gVd11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_115_39 = Coupling(name = 'UVGC_115_39',
-                       value = {0:'( (35*complex(0,1)*gAd22*gAd33**2)/(24.*cmath.pi**2) + (17*complex(0,1)*gAd22*gVd33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd22*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd22*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd22*gAd33**2)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd22*gAd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gAd22*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gAd22*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd22*gAd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAd22*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( -0.125*(complex(0,1)*gAd22*gAd33**2)/cmath.pi**2 - (complex(0,1)*gAd22*gVd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd22*gAd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd22*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MB**2 else -((complex(0,1)*gAd22*gAd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd22*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gAd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd22*gAd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd22*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gAd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd22*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd22*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else (MU_R*complex(0,1)*gAd22*gAd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd22*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd22*gAd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gVd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gAd33**2*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd22*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd22*gAd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd22*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_115_40 = Coupling(name = 'UVGC_115_40',
-                       value = {0:'(complex(0,1)*gAd22*gAu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gVu22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd22*gAu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd22*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_115_41 = Coupling(name = 'UVGC_115_41',
-                       value = {0:'(complex(0,1)*gAd11**2*gAd22)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gVd11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11**2*gAd22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd22*gVd11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_115_42 = Coupling(name = 'UVGC_115_42',
-                       value = {0:'(complex(0,1)*gAd22**3)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gVd22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd22**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd22*gVd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_115_43 = Coupling(name = 'UVGC_115_43',
-                       value = {0:'( (35*complex(0,1)*gAd22*gAu33**2)/(24.*cmath.pi**2) + (17*complex(0,1)*gAd22*gVu33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd22*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAd22*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAd22*gAu33**2)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd22*gAu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gAd22*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gAd22*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd22*gAu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAd22*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( -0.125*(complex(0,1)*gAd22*gAu33**2)/cmath.pi**2 - (complex(0,1)*gAd22*gVu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd22*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MT**2 else -((complex(0,1)*gAd22*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd22*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gAu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd22*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd22*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gAu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd22*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd22*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else (MU_R*complex(0,1)*gAd22*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd22*gAu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gVu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd22*gAu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd22*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_115_44 = Coupling(name = 'UVGC_115_44',
-                       value = {0:'(complex(0,1)*gAd22*gAu11**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd22*gVu11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd22*gAu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd22*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_115_45 = Coupling(name = 'UVGC_115_45',
-                       value = {-1:'(complex(0,1)*gAd22**3)/(16.*cmath.pi**2) + (3*complex(0,1)*gAd22*gVd22**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAd22**3)/cmath.pi**2 - (3*complex(0,1)*gAd22*gVd22**2)/(32.*cmath.pi**2) - (complex(0,1)*gAd22**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (3*complex(0,1)*gAd22*gVd22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_116_46 = Coupling(name = 'UVGC_116_46',
-                       value = {0:'( (35*complex(0,1)*gAd33**2*gAu11)/(24.*cmath.pi**2) + (17*complex(0,1)*gAu11*gVd33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*gAu11*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAu11*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd33**2*gAu11)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33**2*gAu11*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gAu11*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gAu11*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd33**2*gAu11*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAu11*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( -0.125*(complex(0,1)*gAd33**2*gAu11)/cmath.pi**2 - (complex(0,1)*gAu11*gVd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd33**2*gAu11*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu11*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MB**2 else -((complex(0,1)*gAd33**2*gAu11*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu11*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*gAu11*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu11*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd33**2*gAu11*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu11*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*gAu11*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu11*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd33**2*gAu11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu11*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else (MU_R*complex(0,1)*gAd33**2*gAu11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu11*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd33**2*gAu11)/(12.*cmath.pi**2) + (complex(0,1)*gAu11*gVd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33**2*gAu11*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu11*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33**2*gAu11*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu11*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_116_47 = Coupling(name = 'UVGC_116_47',
-                       value = {0:'(complex(0,1)*gAu11*gAu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu11*gVu22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu11*gAu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu11*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_116_48 = Coupling(name = 'UVGC_116_48',
-                       value = {0:'(complex(0,1)*gAd11**2*gAu11)/(12.*cmath.pi**2) + (complex(0,1)*gAu11*gVd11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11**2*gAu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu11*gVd11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_116_49 = Coupling(name = 'UVGC_116_49',
-                       value = {0:'(complex(0,1)*gAd22**2*gAu11)/(12.*cmath.pi**2) + (complex(0,1)*gAu11*gVd22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd22**2*gAu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu11*gVd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_116_50 = Coupling(name = 'UVGC_116_50',
-                       value = {0:'( (35*complex(0,1)*gAu11*gAu33**2)/(24.*cmath.pi**2) + (17*complex(0,1)*gAu11*gVu33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAu11*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu11*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu11*gAu33**2)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAu11*gAu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gAu11*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gAu11*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAu11*gAu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAu11*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( -0.125*(complex(0,1)*gAu11*gAu33**2)/cmath.pi**2 - (complex(0,1)*gAu11*gVu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAu11*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MT**2 else -((complex(0,1)*gAu11*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu11*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu11*gAu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu11*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAu11*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu11*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu11*gAu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu11*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAu11*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else (MU_R*complex(0,1)*gAu11*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAu11*gAu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu11*gVu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu11*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu11*gAu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu11*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_116_51 = Coupling(name = 'UVGC_116_51',
-                       value = {0:'(complex(0,1)*gAu11**3)/(12.*cmath.pi**2) + (complex(0,1)*gAu11*gVu11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu11**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu11*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_116_52 = Coupling(name = 'UVGC_116_52',
-                       value = {-1:'(complex(0,1)*gAu11**3)/(16.*cmath.pi**2) + (3*complex(0,1)*gAu11*gVu11**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAu11**3)/cmath.pi**2 - (3*complex(0,1)*gAu11*gVu11**2)/(32.*cmath.pi**2) - (complex(0,1)*gAu11**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (3*complex(0,1)*gAu11*gVu11**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_117_53 = Coupling(name = 'UVGC_117_53',
-                       value = {0:'( (35*complex(0,1)*gAd33**2*gAu22)/(24.*cmath.pi**2) + (17*complex(0,1)*gAu22*gVd33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*gAu22*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAu22*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd33**2*gAu22)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33**2*gAu22*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gAu22*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gAu22*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd33**2*gAu22*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAu22*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( -0.125*(complex(0,1)*gAd33**2*gAu22)/cmath.pi**2 - (complex(0,1)*gAu22*gVd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd33**2*gAu22*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu22*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MB**2 else -((complex(0,1)*gAd33**2*gAu22*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu22*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*gAu22*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu22*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd33**2*gAu22*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu22*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*gAu22*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu22*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd33**2*gAu22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu22*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else (MU_R*complex(0,1)*gAd33**2*gAu22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu22*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd33**2*gAu22)/(12.*cmath.pi**2) + (complex(0,1)*gAu22*gVd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33**2*gAu22*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu22*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33**2*gAu22*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu22*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_117_54 = Coupling(name = 'UVGC_117_54',
-                       value = {0:'(complex(0,1)*gAu22**3)/(12.*cmath.pi**2) + (complex(0,1)*gAu22*gVu22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu22**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu22*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_117_55 = Coupling(name = 'UVGC_117_55',
-                       value = {0:'(complex(0,1)*gAd11**2*gAu22)/(12.*cmath.pi**2) + (complex(0,1)*gAu22*gVd11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11**2*gAu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu22*gVd11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_117_56 = Coupling(name = 'UVGC_117_56',
-                       value = {0:'(complex(0,1)*gAd22**2*gAu22)/(12.*cmath.pi**2) + (complex(0,1)*gAu22*gVd22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd22**2*gAu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu22*gVd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_117_57 = Coupling(name = 'UVGC_117_57',
-                       value = {0:'( (35*complex(0,1)*gAu22*gAu33**2)/(24.*cmath.pi**2) + (17*complex(0,1)*gAu22*gVu33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAu22*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu22*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu22*gAu33**2)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAu22*gAu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gAu22*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gAu22*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAu22*gAu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAu22*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( -0.125*(complex(0,1)*gAu22*gAu33**2)/cmath.pi**2 - (complex(0,1)*gAu22*gVu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAu22*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MT**2 else -((complex(0,1)*gAu22*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu22*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu22*gAu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu22*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAu22*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu22*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu22*gAu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu22*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAu22*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else (MU_R*complex(0,1)*gAu22*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAu22*gAu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu22*gVu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu22*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu22*gAu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu22*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_117_58 = Coupling(name = 'UVGC_117_58',
-                       value = {0:'(complex(0,1)*gAu11**2*gAu22)/(12.*cmath.pi**2) + (complex(0,1)*gAu22*gVu11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu11**2*gAu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu22*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_117_59 = Coupling(name = 'UVGC_117_59',
-                       value = {-1:'(complex(0,1)*gAu22**3)/(16.*cmath.pi**2) + (3*complex(0,1)*gAu22*gVu22**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAu22**3)/cmath.pi**2 - (3*complex(0,1)*gAu22*gVu22**2)/(32.*cmath.pi**2) - (complex(0,1)*gAu22**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (3*complex(0,1)*gAu22*gVu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_118_60 = Coupling(name = 'UVGC_118_60',
-                       value = {0:'( (-35*complex(0,1)*gAd33**2*gVd11)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd11*gVd33**2)/(24.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*gVd11*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd11*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gAd33**2*gVd11)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*gVd11*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd11*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd11*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAd33**2*gVd11*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd11*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (complex(0,1)*gAd33**2*gVd11*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVd11*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAd33**2*gVd11)/(8.*cmath.pi**2) + (complex(0,1)*gVd11*gVd33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVd11*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd11*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( (complex(0,1)*gAd33**2*gVd11*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVd11*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*gVd11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd11*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -0.125*(MU_R*complex(0,1)*gAd33**2*gVd11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd11*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAd33**2*gVd11)/(12.*cmath.pi**2) - (complex(0,1)*gVd11*gVd33**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVd11*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd11*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAd33**2*gVd11*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_118_61 = Coupling(name = 'UVGC_118_61',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu22**2*gVd11)/cmath.pi**2 - (complex(0,1)*gVd11*gVu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu22**2*gVd11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_118_62 = Coupling(name = 'UVGC_118_62',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd11**2*gVd11)/cmath.pi**2 - (complex(0,1)*gVd11**3)/(12.*cmath.pi**2) + (complex(0,1)*gAd11**2*gVd11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_118_63 = Coupling(name = 'UVGC_118_63',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd22**2*gVd11)/cmath.pi**2 - (complex(0,1)*gVd11*gVd22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd22**2*gVd11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11*gVd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_118_64 = Coupling(name = 'UVGC_118_64',
-                       value = {0:'( (-35*complex(0,1)*gAu33**2*gVd11)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd11*gVu33**2)/(24.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*gVd11*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVd11*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gAu33**2*gVd11)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*gVd11*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVd11*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVd11*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAu33**2*gVd11*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd11*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (complex(0,1)*gAu33**2*gVd11*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVd11*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAu33**2*gVd11)/(8.*cmath.pi**2) + (complex(0,1)*gVd11*gVu33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVd11*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( (complex(0,1)*gAu33**2*gVd11*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVd11*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd11*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*gVd11*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -0.125*(MU_R*complex(0,1)*gAu33**2*gVd11*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAu33**2*gVd11)/(12.*cmath.pi**2) - (complex(0,1)*gVd11*gVu33**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVd11*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*gVd11*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_118_65 = Coupling(name = 'UVGC_118_65',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu11**2*gVd11)/cmath.pi**2 - (complex(0,1)*gVd11*gVu11**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu11**2*gVd11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_118_66 = Coupling(name = 'UVGC_118_66',
-                       value = {-1:'(-3*complex(0,1)*gAd11**2*gVd11)/(16.*cmath.pi**2) - (complex(0,1)*gVd11**3)/(16.*cmath.pi**2)',0:'(3*complex(0,1)*gAd11**2*gVd11)/(32.*cmath.pi**2) + (complex(0,1)*gVd11**3)/(32.*cmath.pi**2) + (3*complex(0,1)*gAd11**2*gVd11*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gVd11**3*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_119_67 = Coupling(name = 'UVGC_119_67',
-                       value = {0:'( (-35*complex(0,1)*gAd33**2*gVd22)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd22*gVd33**2)/(24.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*gVd22*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd22*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gAd33**2*gVd22)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*gVd22*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd22*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd22*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAd33**2*gVd22*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd22*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (complex(0,1)*gAd33**2*gVd22*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVd22*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAd33**2*gVd22)/(8.*cmath.pi**2) + (complex(0,1)*gVd22*gVd33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVd22*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd22*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( (complex(0,1)*gAd33**2*gVd22*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVd22*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*gVd22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd22*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -0.125*(MU_R*complex(0,1)*gAd33**2*gVd22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd22*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAd33**2*gVd22)/(12.*cmath.pi**2) - (complex(0,1)*gVd22*gVd33**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVd22*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd22*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAd33**2*gVd22*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_119_68 = Coupling(name = 'UVGC_119_68',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu22**2*gVd22)/cmath.pi**2 - (complex(0,1)*gVd22*gVu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu22**2*gVd22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_119_69 = Coupling(name = 'UVGC_119_69',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd11**2*gVd22)/cmath.pi**2 - (complex(0,1)*gVd11**2*gVd22)/(12.*cmath.pi**2) + (complex(0,1)*gAd11**2*gVd22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2*gVd22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_119_70 = Coupling(name = 'UVGC_119_70',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd22**2*gVd22)/cmath.pi**2 - (complex(0,1)*gVd22**3)/(12.*cmath.pi**2) + (complex(0,1)*gAd22**2*gVd22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_119_71 = Coupling(name = 'UVGC_119_71',
-                       value = {0:'( (-35*complex(0,1)*gAu33**2*gVd22)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd22*gVu33**2)/(24.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*gVd22*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVd22*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gAu33**2*gVd22)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*gVd22*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVd22*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVd22*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAu33**2*gVd22*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd22*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (complex(0,1)*gAu33**2*gVd22*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVd22*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAu33**2*gVd22)/(8.*cmath.pi**2) + (complex(0,1)*gVd22*gVu33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVd22*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( (complex(0,1)*gAu33**2*gVd22*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVd22*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd22*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*gVd22*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -0.125*(MU_R*complex(0,1)*gAu33**2*gVd22*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAu33**2*gVd22)/(12.*cmath.pi**2) - (complex(0,1)*gVd22*gVu33**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVd22*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*gVd22*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_119_72 = Coupling(name = 'UVGC_119_72',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu11**2*gVd22)/cmath.pi**2 - (complex(0,1)*gVd22*gVu11**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu11**2*gVd22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_119_73 = Coupling(name = 'UVGC_119_73',
-                       value = {-1:'(-3*complex(0,1)*gAd22**2*gVd22)/(16.*cmath.pi**2) - (complex(0,1)*gVd22**3)/(16.*cmath.pi**2)',0:'(3*complex(0,1)*gAd22**2*gVd22)/(32.*cmath.pi**2) + (complex(0,1)*gVd22**3)/(32.*cmath.pi**2) + (3*complex(0,1)*gAd22**2*gVd22*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gVd22**3*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_120_74 = Coupling(name = 'UVGC_120_74',
-                       value = {0:'( (-35*complex(0,1)*gAd33**2*gVu11)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd33**2*gVu11)/(24.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*gVu11*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd33**2*gVu11*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gAd33**2*gVu11)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*gVu11*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd33**2*gVu11*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd33**2*gVu11*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAd33**2*gVu11*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu11*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (complex(0,1)*gAd33**2*gVu11*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu11*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVu11*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu11*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAd33**2*gVu11)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu11)/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVu11*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*gVu11*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( (complex(0,1)*gAd33**2*gVu11*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu11*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVu11*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu11*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*gVu11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*gVu11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -0.125*(MU_R*complex(0,1)*gAd33**2*gVu11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*gVu11*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAd33**2*gVu11)/(12.*cmath.pi**2) - (complex(0,1)*gVd33**2*gVu11)/(12.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVu11*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*gVu11*MB**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAd33**2*gVu11*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu11*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_120_75 = Coupling(name = 'UVGC_120_75',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu22**2*gVu11)/cmath.pi**2 - (complex(0,1)*gVu11*gVu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu22**2*gVu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu11*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_120_76 = Coupling(name = 'UVGC_120_76',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd11**2*gVu11)/cmath.pi**2 - (complex(0,1)*gVd11**2*gVu11)/(12.*cmath.pi**2) + (complex(0,1)*gAd11**2*gVu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2*gVu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_120_77 = Coupling(name = 'UVGC_120_77',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd22**2*gVu11)/cmath.pi**2 - (complex(0,1)*gVd22**2*gVu11)/(12.*cmath.pi**2) + (complex(0,1)*gAd22**2*gVu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2*gVu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_120_78 = Coupling(name = 'UVGC_120_78',
-                       value = {0:'( (-35*complex(0,1)*gAu33**2*gVu11)/(24.*cmath.pi**2) - (17*complex(0,1)*gVu11*gVu33**2)/(24.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*gVu11*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVu11*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gAu33**2*gVu11)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*gVu11*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVu11*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVu11*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAu33**2*gVu11*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVu11*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (complex(0,1)*gAu33**2*gVu11*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu11*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVu11*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu11*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAu33**2*gVu11)/(8.*cmath.pi**2) + (complex(0,1)*gVu11*gVu33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu11*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVu11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( (complex(0,1)*gAu33**2*gVu11*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu11*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVu11*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu11*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*gVu11*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -0.125*(MU_R*complex(0,1)*gAu33**2*gVu11*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu11*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAu33**2*gVu11)/(12.*cmath.pi**2) - (complex(0,1)*gVu11*gVu33**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu11*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVu11*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*gVu11*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu11*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_120_79 = Coupling(name = 'UVGC_120_79',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu11**2*gVu11)/cmath.pi**2 - (complex(0,1)*gVu11**3)/(12.*cmath.pi**2) + (complex(0,1)*gAu11**2*gVu11*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu11**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_120_80 = Coupling(name = 'UVGC_120_80',
-                       value = {-1:'(-3*complex(0,1)*gAu11**2*gVu11)/(16.*cmath.pi**2) - (complex(0,1)*gVu11**3)/(16.*cmath.pi**2)',0:'(3*complex(0,1)*gAu11**2*gVu11)/(32.*cmath.pi**2) + (complex(0,1)*gVu11**3)/(32.*cmath.pi**2) + (3*complex(0,1)*gAu11**2*gVu11*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gVu11**3*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_121_81 = Coupling(name = 'UVGC_121_81',
-                       value = {0:'( (-35*complex(0,1)*gAd33**2*gVu22)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd33**2*gVu22)/(24.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*gVu22*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd33**2*gVu22*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gAd33**2*gVu22)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*gVu22*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd33**2*gVu22*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd33**2*gVu22*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAd33**2*gVu22*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu22*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (complex(0,1)*gAd33**2*gVu22*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu22*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVu22*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu22*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAd33**2*gVu22)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu22)/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVu22*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*gVu22*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( (complex(0,1)*gAd33**2*gVu22*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu22*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVu22*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu22*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*gVu22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*gVu22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -0.125*(MU_R*complex(0,1)*gAd33**2*gVu22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*gVu22*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAd33**2*gVu22)/(12.*cmath.pi**2) - (complex(0,1)*gVd33**2*gVu22)/(12.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVu22*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*gVu22*MB**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAd33**2*gVu22*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu22*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_121_82 = Coupling(name = 'UVGC_121_82',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu22**2*gVu22)/cmath.pi**2 - (complex(0,1)*gVu22**3)/(12.*cmath.pi**2) + (complex(0,1)*gAu22**2*gVu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu22**3*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_121_83 = Coupling(name = 'UVGC_121_83',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd11**2*gVu22)/cmath.pi**2 - (complex(0,1)*gVd11**2*gVu22)/(12.*cmath.pi**2) + (complex(0,1)*gAd11**2*gVu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2*gVu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_121_84 = Coupling(name = 'UVGC_121_84',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAd22**2*gVu22)/cmath.pi**2 - (complex(0,1)*gVd22**2*gVu22)/(12.*cmath.pi**2) + (complex(0,1)*gAd22**2*gVu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2*gVu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_121_85 = Coupling(name = 'UVGC_121_85',
-                       value = {0:'( (-35*complex(0,1)*gAu33**2*gVu22)/(24.*cmath.pi**2) - (17*complex(0,1)*gVu22*gVu33**2)/(24.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*gVu22*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVu22*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gAu33**2*gVu22)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*gVu22*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVu22*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVu22*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAu33**2*gVu22*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVu22*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (complex(0,1)*gAu33**2*gVu22*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu22*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVu22*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu22*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAu33**2*gVu22)/(8.*cmath.pi**2) + (complex(0,1)*gVu22*gVu33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu22*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVu22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( (complex(0,1)*gAu33**2*gVu22*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu22*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVu22*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu22*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*gVu22*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -0.125*(MU_R*complex(0,1)*gAu33**2*gVu22*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu22*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAu33**2*gVu22)/(12.*cmath.pi**2) - (complex(0,1)*gVu22*gVu33**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu22*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVu22*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*gVu22*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu22*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                       order = {'DMV':3})
-
-UVGC_121_86 = Coupling(name = 'UVGC_121_86',
-                       value = {0:'-0.08333333333333333*(complex(0,1)*gAu11**2*gVu22)/cmath.pi**2 - (complex(0,1)*gVu11**2*gVu22)/(12.*cmath.pi**2) + (complex(0,1)*gAu11**2*gVu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu11**2*gVu22*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_121_87 = Coupling(name = 'UVGC_121_87',
-                       value = {-1:'(-3*complex(0,1)*gAu22**2*gVu22)/(16.*cmath.pi**2) - (complex(0,1)*gVu22**3)/(16.*cmath.pi**2)',0:'(3*complex(0,1)*gAu22**2*gVu22)/(32.*cmath.pi**2) + (complex(0,1)*gVu22**3)/(32.*cmath.pi**2) + (3*complex(0,1)*gAu22**2*gVu22*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gVu22**3*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':3})
-
-UVGC_122_88 = Coupling(name = 'UVGC_122_88',
-                       value = {-1:'(-3*complex(0,1)*gAd33**2*MB**2)/(2.*cmath.pi**2)',0:'( (-3*complex(0,1)*gAd33**2*MB**2)/cmath.pi**2 - (3*complex(0,1)*gAd33**2*MY1**2)/(2.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*MY1**4)/(4.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd33**2*MY1**4)/(4.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**2*MY1**2)/(cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*MY1**4)/(cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd33**2*MY1**4)/(cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gAd33**2*MB**2*cmath.sqrt(3))/(2.*cmath.pi) + (3*complex(0,1)*gAd33**2*MB**2*reglog(MB/MU_R))/cmath.pi**2 if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (2*complex(0,1)*gAd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*MB**2*MY1*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**2*MY1*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (2*complex(0,1)*gAd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*MB**2*MY1*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*MB**2*MY1*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*MB**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) + (MU_R*complex(0,1)*gVd33**2*MB**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -((MU_R*complex(0,1)*gAd33**2*MB**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1)) + (MU_R*complex(0,1)*gVd33**2*MB**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*cmath.pi**2*MY1) ) + ( -((complex(0,1)*gAd33**2*MB**2)/cmath.pi**2) + (complex(0,1)*gVd33**2*MB**2)/(2.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*MY1**2)/(4.*cmath.pi**2) if 4*MB**2==MY1**2 else 0 ) - (3*complex(0,1)*gAd33**2*MB**2)/cmath.pi**2 + (3*complex(0,1)*gVd33**2*MB**2)/(2.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gAd33**2*MB**2*reglog(MB/MU_R))/cmath.pi**2 + (complex(0,1)*gVd33**2*MB**2*reglog(MB/MU_R))/cmath.pi**2 + (complex(0,1)*gAd33**2*MB**2*reglog(MB**2/MU_R**2))/cmath.pi**2 - (complex(0,1)*gVd33**2*MB**2*reglog(MB**2/MU_R**2))/(2.*cmath.pi**2) )'},
-                       order = {'DMV':2})
-
-UVGC_122_89 = Coupling(name = 'UVGC_122_89',
-                       value = {0:'(complex(0,1)*gAu22**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu22**2*MY1**2)/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_122_90 = Coupling(name = 'UVGC_122_90',
-                       value = {0:'(complex(0,1)*gAd11**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd11**2*MY1**2)/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_122_91 = Coupling(name = 'UVGC_122_91',
-                       value = {0:'(complex(0,1)*gAd22**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVd22**2*MY1**2)/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_122_92 = Coupling(name = 'UVGC_122_92',
-                       value = {-1:'(-3*complex(0,1)*gAu33**2*MT**2)/(2.*cmath.pi**2)',0:'( (-3*complex(0,1)*gAu33**2*MT**2)/cmath.pi**2 - (3*complex(0,1)*gAu33**2*MY1**2)/(2.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*MY1**4)/(4.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVu33**2*MY1**4)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*MY1**2)/(cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*MY1**4)/(cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVu33**2*MY1**4)/(cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gAu33**2*MT**2*cmath.sqrt(3))/(2.*cmath.pi) + (3*complex(0,1)*gAu33**2*MT**2*reglog(MT/MU_R))/cmath.pi**2 if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (2*complex(0,1)*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*MT**2*MY1*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**2*MY1*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (2*complex(0,1)*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*MT**2*MY1*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**2*MT**2*MY1*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*MT**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) + (MU_R*complex(0,1)*gVu33**2*MT**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -((MU_R*complex(0,1)*gAu33**2*MT**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1)) + (MU_R*complex(0,1)*gVu33**2*MT**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*cmath.pi**2*MY1) ) + ( -((complex(0,1)*gAu33**2*MT**2)/cmath.pi**2) + (complex(0,1)*gVu33**2*MT**2)/(2.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2*MY1**2)/(4.*cmath.pi**2) if 4*MT**2==MY1**2 else 0 ) - (3*complex(0,1)*gAu33**2*MT**2)/cmath.pi**2 + (3*complex(0,1)*gVu33**2*MT**2)/(2.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MT**2*reglog(MT/MU_R))/cmath.pi**2 + (complex(0,1)*gVu33**2*MT**2*reglog(MT/MU_R))/cmath.pi**2 + (complex(0,1)*gAu33**2*MT**2*reglog(MT**2/MU_R**2))/cmath.pi**2 - (complex(0,1)*gVu33**2*MT**2*reglog(MT**2/MU_R**2))/(2.*cmath.pi**2) )'},
-                       order = {'DMV':2})
-
-UVGC_122_93 = Coupling(name = 'UVGC_122_93',
-                       value = {0:'(complex(0,1)*gAu11**2*MY1**2)/(4.*cmath.pi**2) + (complex(0,1)*gVu11**2*MY1**2)/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_123_94 = Coupling(name = 'UVGC_123_94',
-                       value = {0:'-0.3333333333333333*(complex(0,1)*G**2)/cmath.pi**2 + (complex(0,1)*G**2*reglog(MB/MU_R))/(2.*cmath.pi**2)'},
-                       order = {'QCD':2})
-
-UVGC_123_95 = Coupling(name = 'UVGC_123_95',
-                       value = {-1:'(complex(0,1)*gAd33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(16.*cmath.pi**2)',0:'( (5*complex(0,1)*gAd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33)/(4.*cmath.pi**2) - (3*complex(0,1)*gVd33**2)/(8.*cmath.pi**2) - (5*complex(0,1)*gAd33**2)/(16.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gVd33**2*cmath.sqrt(3))/(16.*cmath.pi) - (5*complex(0,1)*gAd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (3*complex(0,1)*gVd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MB==MY1 else ( (3*complex(0,1)*gAd33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33)/(2.*cmath.pi**2) - (complex(0,1)*gVd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) - (complex(0,1)*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*gAd33*gVd33*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*gVd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) if MY1>2*MB else (3*complex(0,1)*gAd33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33)/(2.*cmath.pi**2) - (complex(0,1)*gVd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) - (complex(0,1)*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*gAd33*gVd33*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*gVd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) ) - (complex(0,1)*gAd33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) - (complex(0,1)*gVd33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) ) - (3*complex(0,1)*gAd33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(16.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_124_96 = Coupling(name = 'UVGC_124_96',
-                       value = {-1:'(complex(0,1)*gAd33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(16.*cmath.pi**2)',0:'( (5*complex(0,1)*gAd33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33)/(4.*cmath.pi**2) - (3*complex(0,1)*gVd33**2)/(8.*cmath.pi**2) - (5*complex(0,1)*gAd33**2)/(16.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gVd33**2*cmath.sqrt(3))/(16.*cmath.pi) - (5*complex(0,1)*gAd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (3*complex(0,1)*gVd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MB==MY1 else ( (3*complex(0,1)*gAd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33)/(2.*cmath.pi**2) - (complex(0,1)*gVd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) - (complex(0,1)*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*gAd33*gVd33*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*gVd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) if MY1>2*MB else (3*complex(0,1)*gAd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33)/(2.*cmath.pi**2) - (complex(0,1)*gVd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) - (complex(0,1)*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*gAd33*gVd33*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*gVd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) ) - (complex(0,1)*gAd33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) - (complex(0,1)*gVd33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33*gVd33*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) ) - (3*complex(0,1)*gAd33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2)/(16.*cmath.pi**2)'},
-                       order = {'DMV':2})
-
-UVGC_125_97 = Coupling(name = 'UVGC_125_97',
-                       value = {0:'(complex(0,1)*G**3)/(3.*cmath.pi**2) - (complex(0,1)*G**3*reglog(MB/MU_R))/(2.*cmath.pi**2)'},
-                       order = {'QCD':3})
-
-UVGC_125_98 = Coupling(name = 'UVGC_125_98',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAd33**2)/cmath.pi**2 + (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd33**2)/(16.*cmath.pi**2)',0:'( (-5*complex(0,1)*G*gAd33**2)/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33)/(4.*cmath.pi**2) + (3*complex(0,1)*G*gVd33**2)/(8.*cmath.pi**2) + (5*complex(0,1)*G*gAd33**2)/(16.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*G*gVd33**2*cmath.sqrt(3))/(16.*cmath.pi) + (5*complex(0,1)*G*gAd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (3*complex(0,1)*G*gVd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MB==MY1 else ( (-3*complex(0,1)*G*gAd33**2)/(4.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33)/(2.*cmath.pi**2) + (complex(0,1)*G*gVd33**2)/(4.*cmath.pi**2) + (complex(0,1)*G*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (7*complex(0,1)*G*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*G*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*G*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (3*complex(0,1)*G*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*G*gAd33*gVd33*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*G*gVd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) if MY1>2*MB else (-3*complex(0,1)*G*gAd33**2)/(4.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33)/(2.*cmath.pi**2) + (complex(0,1)*G*gVd33**2)/(4.*cmath.pi**2) + (complex(0,1)*G*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (7*complex(0,1)*G*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*G*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*G*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (3*complex(0,1)*G*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*G*gAd33*gVd33*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*G*gVd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) ) + (complex(0,1)*G*gAd33**2)/(16.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*G*gVd33**2)/(16.*cmath.pi**2) - (complex(0,1)*G*gAd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*MY1**2)/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) ) + (3*complex(0,1)*G*gAd33**2)/(16.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd33**2)/(16.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_126_99 = Coupling(name = 'UVGC_126_99',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAd33**2)/cmath.pi**2 - (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd33**2)/(16.*cmath.pi**2)',0:'( (-5*complex(0,1)*G*gAd33**2)/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33)/(4.*cmath.pi**2) + (3*complex(0,1)*G*gVd33**2)/(8.*cmath.pi**2) + (5*complex(0,1)*G*gAd33**2)/(16.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*G*gVd33**2*cmath.sqrt(3))/(16.*cmath.pi) + (5*complex(0,1)*G*gAd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (3*complex(0,1)*G*gVd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MB==MY1 else ( (-3*complex(0,1)*G*gAd33**2)/(4.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33)/(2.*cmath.pi**2) + (complex(0,1)*G*gVd33**2)/(4.*cmath.pi**2) + (complex(0,1)*G*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (7*complex(0,1)*G*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*G*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*G*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*G*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (3*complex(0,1)*G*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*G*gAd33*gVd33*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*G*gVd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) if MY1>2*MB else (-3*complex(0,1)*G*gAd33**2)/(4.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33)/(2.*cmath.pi**2) + (complex(0,1)*G*gVd33**2)/(4.*cmath.pi**2) + (complex(0,1)*G*gAd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*MY1**2)/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33*reglog(MY1/MB))/(4.*cmath.pi**2) + (complex(0,1)*G*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) + (7*complex(0,1)*G*gAd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*G*gAd33*gVd33*MY1**2*reglog(MY1/MB))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*G*gAd33*gVd33*MY1**4*reglog(MY1/MB))/(8.*cmath.pi**2*MB**4) - (complex(0,1)*G*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (3*complex(0,1)*G*gAd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33*reglog((MB*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*G*gAd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*G*gAd33*gVd33*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**4) + (complex(0,1)*G*gVd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) ) + (complex(0,1)*G*gAd33**2)/(16.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*G*gVd33**2)/(16.*cmath.pi**2) - (complex(0,1)*G*gAd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33*gVd33*MY1**2)/(8.*cmath.pi**2*MB**2) - (complex(0,1)*G*gVd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) - (complex(0,1)*G*gAd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAd33*gVd33*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*G*gVd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*G*gAd33*gVd33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MB**2) + (complex(0,1)*G*gVd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) ) + (3*complex(0,1)*G*gAd33**2)/(16.*cmath.pi**2) + (complex(0,1)*G*gAd33*gVd33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVd33**2)/(16.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
-
-UVGC_127_100 = Coupling(name = 'UVGC_127_100',
-                        value = {0:'( (35*complex(0,1)*gAd33**3)/(24.*cmath.pi**2) + (17*complex(0,1)*gAd33*gVd33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd33**3*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd33*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd33**3)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33**3*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gAd33*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gAd33*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd33**3*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( -0.125*(complex(0,1)*gAd33**3)/cmath.pi**2 - (complex(0,1)*gAd33*gVd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd33**3*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MB**2 else -((complex(0,1)*gAd33**3*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd33*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**3*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd33**3*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd33*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**3*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd33**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd33*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else (MU_R*complex(0,1)*gAd33**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd33*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd33**3)/(12.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33**3*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33**3*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_127_101 = Coupling(name = 'UVGC_127_101',
-                        value = {0:'(complex(0,1)*gAd33*gAu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33*gVu22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd33*gAu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_127_102 = Coupling(name = 'UVGC_127_102',
-                        value = {0:'(complex(0,1)*gAd11**2*gAd33)/(12.*cmath.pi**2) + (complex(0,1)*gAd33*gVd11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11**2*gAd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_127_103 = Coupling(name = 'UVGC_127_103',
-                        value = {0:'(complex(0,1)*gAd22**2*gAd33)/(12.*cmath.pi**2) + (complex(0,1)*gAd33*gVd22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd22**2*gAd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_127_104 = Coupling(name = 'UVGC_127_104',
-                        value = {0:'( (35*complex(0,1)*gAd33*gAu33**2)/(24.*cmath.pi**2) + (17*complex(0,1)*gAd33*gVu33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd33*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAd33*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAd33*gAu33**2)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33*gAu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gAd33*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gAd33*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd33*gAu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAd33*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( -0.125*(complex(0,1)*gAd33*gAu33**2)/cmath.pi**2 - (complex(0,1)*gAd33*gVu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MT**2 else -((complex(0,1)*gAd33*gAu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd33*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33*gAu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd33*gAu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAd33*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33*gAu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd33*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd33*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else (MU_R*complex(0,1)*gAd33*gAu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAd33*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd33*gAu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33*gVu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33*gAu33**2*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33*gAu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_127_105 = Coupling(name = 'UVGC_127_105',
-                        value = {0:'(complex(0,1)*gAd33*gAu11**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33*gVu11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd33*gAu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_127_106 = Coupling(name = 'UVGC_127_106',
-                        value = {-1:'(complex(0,1)*G**2*gAd33)/(12.*cmath.pi**2)',0:'-0.3333333333333333*(complex(0,1)*G**2*gAd33)/cmath.pi**2 + (complex(0,1)*G**2*gAd33*reglog(MB/MU_R))/(2.*cmath.pi**2)'},
-                        order = {'DMV':1,'QCD':2})
-
-UVGC_127_107 = Coupling(name = 'UVGC_127_107',
-                        value = {-1:'(complex(0,1)*gAd33**3)/(16.*cmath.pi**2) + (3*complex(0,1)*gAd33*gVd33**2)/(16.*cmath.pi**2)',0:'( (5*complex(0,1)*gAd33**3)/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33**2)/(8.*cmath.pi**2) - (5*complex(0,1)*gAd33**3)/(16.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33*gVd33**2)/(16.*cmath.pi*cmath.sqrt(3)) - (5*complex(0,1)*gAd33**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MB==MY1 else ( (3*complex(0,1)*gAd33**3)/(4.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33**3*MY1**2)/(8.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**3*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (7*complex(0,1)*gAd33**3*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (5*complex(0,1)*gAd33*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**3*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (3*complex(0,1)*gAd33*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33**3*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33**3*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**3*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33**3*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33*gVd33**2*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) if MY1>2*MB else (3*complex(0,1)*gAd33**3)/(4.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAd33**3*MY1**2)/(8.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**3*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*gAd33*gVd33**2*reglog(MY1/MB))/(8.*cmath.pi**2) - (7*complex(0,1)*gAd33**3*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (5*complex(0,1)*gAd33*gVd33**2*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**3*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (3*complex(0,1)*gAd33*gVd33**2*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33**3*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33**2*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gAd33**3*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33*gVd33**2*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**3*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33*gVd33**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) - (complex(0,1)*gAd33**3*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) - (3*complex(0,1)*gAd33*gVd33**2*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) ) - (complex(0,1)*gAd33**3)/(16.*cmath.pi**2) - (3*complex(0,1)*gAd33*gVd33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAd33**3*MY1**2)/(16.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33*gVd33**2*MY1**2)/(16.*cmath.pi**2*MB**2) + (complex(0,1)*gAd33**3*reglog(MB/MU_R))/(8.*cmath.pi**2) + (3*complex(0,1)*gAd33*gVd33**2*reglog(MB/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAd33**3*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33*gVd33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) ) - (3*complex(0,1)*gAd33**3)/(16.*cmath.pi**2) - (complex(0,1)*gAd33*gVd33**2)/(16.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_128_108 = Coupling(name = 'UVGC_128_108',
-                        value = {0:'( (-35*complex(0,1)*gAd33**2*gVd33)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd33**3)/(24.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*gVd33*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd33**3*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gAd33**2*gVd33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*gVd33*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd33**3*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd33**3*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAd33**2*gVd33*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**3*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (complex(0,1)*gAd33**2*gVd33*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**3*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVd33*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**3*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAd33**2*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**3)/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVd33*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**3*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( (complex(0,1)*gAd33**2*gVd33*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**3*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVd33*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**3*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*gVd33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -0.125*(MU_R*complex(0,1)*gAd33**2*gVd33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAd33**2*gVd33)/(12.*cmath.pi**2) - (complex(0,1)*gVd33**3)/(12.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVd33*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**3*MB**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAd33**2*gVd33*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd33**3*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_128_109 = Coupling(name = 'UVGC_128_109',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAu22**2*gVd33)/cmath.pi**2 - (complex(0,1)*gVd33*gVu22**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu22**2*gVd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd33*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_128_110 = Coupling(name = 'UVGC_128_110',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAd11**2*gVd33)/cmath.pi**2 - (complex(0,1)*gVd11**2*gVd33)/(12.*cmath.pi**2) + (complex(0,1)*gAd11**2*gVd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2*gVd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_128_111 = Coupling(name = 'UVGC_128_111',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAd22**2*gVd33)/cmath.pi**2 - (complex(0,1)*gVd22**2*gVd33)/(12.*cmath.pi**2) + (complex(0,1)*gAd22**2*gVd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2*gVd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_128_112 = Coupling(name = 'UVGC_128_112',
-                        value = {0:'( (-35*complex(0,1)*gAu33**2*gVd33)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd33*gVu33**2)/(24.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*gVd33*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVd33*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gAu33**2*gVd33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*gVd33*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVd33*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVd33*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAu33**2*gVd33*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd33*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (complex(0,1)*gAu33**2*gVd33*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVd33*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAu33**2*gVd33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33*gVu33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVd33*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( (complex(0,1)*gAu33**2*gVd33*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVd33*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*gVd33*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -0.125*(MU_R*complex(0,1)*gAu33**2*gVd33*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAu33**2*gVd33)/(12.*cmath.pi**2) - (complex(0,1)*gVd33*gVu33**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVd33*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*gVd33*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd33*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_128_113 = Coupling(name = 'UVGC_128_113',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAu11**2*gVd33)/cmath.pi**2 - (complex(0,1)*gVd33*gVu11**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu11**2*gVd33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd33*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_128_114 = Coupling(name = 'UVGC_128_114',
-                        value = {-1:'-0.08333333333333333*(complex(0,1)*G**2*gVd33)/cmath.pi**2',0:'(complex(0,1)*G**2*gVd33)/(3.*cmath.pi**2) - (complex(0,1)*G**2*gVd33*reglog(MB/MU_R))/(2.*cmath.pi**2)'},
-                        order = {'DMV':1,'QCD':2})
-
-UVGC_128_115 = Coupling(name = 'UVGC_128_115',
-                        value = {-1:'(-3*complex(0,1)*gAd33**2*gVd33)/(16.*cmath.pi**2) - (complex(0,1)*gVd33**3)/(16.*cmath.pi**2)',0:'( (-7*complex(0,1)*gAd33**2*gVd33)/(8.*cmath.pi**2) + (3*complex(0,1)*gVd33**3)/(8.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*gVd33)/(16.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gVd33**3*cmath.sqrt(3))/(16.*cmath.pi) + (7*complex(0,1)*gAd33**2*gVd33*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (3*complex(0,1)*gVd33**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MB==MY1 else ( (-5*complex(0,1)*gAd33**2*gVd33)/(4.*cmath.pi**2) + (complex(0,1)*gVd33**3)/(4.*cmath.pi**2) + (3*complex(0,1)*gAd33**2*gVd33*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**3*MY1**2)/(8.*cmath.pi**2*MB**2) - (5*complex(0,1)*gAd33**2*gVd33*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*gVd33**3*reglog(MY1/MB))/(8.*cmath.pi**2) + (13*complex(0,1)*gAd33**2*gVd33*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**3*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33**2*gVd33*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*gVd33**3*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (5*complex(0,1)*gAd33**2*gVd33*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gVd33**3*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (3*complex(0,1)*gAd33**2*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**3*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (5*complex(0,1)*gAd33**2*gVd33*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**3*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*gVd33*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*gVd33**3*MY1**2*cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1)))/(16.*cmath.pi**2*MB**4) if MY1>2*MB else (-5*complex(0,1)*gAd33**2*gVd33)/(4.*cmath.pi**2) + (complex(0,1)*gVd33**3)/(4.*cmath.pi**2) + (3*complex(0,1)*gAd33**2*gVd33*MY1**2)/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**3*MY1**2)/(8.*cmath.pi**2*MB**2) - (5*complex(0,1)*gAd33**2*gVd33*reglog(MY1/MB))/(8.*cmath.pi**2) + (complex(0,1)*gVd33**3*reglog(MY1/MB))/(8.*cmath.pi**2) + (13*complex(0,1)*gAd33**2*gVd33*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**3*MY1**2*reglog(MY1/MB))/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33**2*gVd33*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) - (complex(0,1)*gVd33**3*MY1**4*reglog(MY1/MB))/(16.*cmath.pi**2*MB**4) + (5*complex(0,1)*gAd33**2*gVd33*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gVd33**3*reglog((MB*MY1)/MU_R**2))/(8.*cmath.pi**2) - (3*complex(0,1)*gAd33**2*gVd33*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**3*MY1**2*reglog((MB*MY1)/MU_R**2))/(16.*cmath.pi**2*MB**2) - (5*complex(0,1)*gAd33**2*gVd33*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**3*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(8.*cmath.pi**2*MB**2) + (3*complex(0,1)*gAd33**2*gVd33*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) + (complex(0,1)*gVd33**3*MY1**2*re(cmath.sqrt(-4*MB**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MB**2*MY1**2 + MY1**4))/(2.*MB*MY1))))/(16.*cmath.pi**2*MB**4) ) + (3*complex(0,1)*gAd33**2*gVd33)/(16.*cmath.pi**2) + (complex(0,1)*gVd33**3)/(16.*cmath.pi**2) - (3*complex(0,1)*gAd33**2*gVd33*MY1**2)/(16.*cmath.pi**2*MB**2) - (complex(0,1)*gVd33**3*MY1**2)/(16.*cmath.pi**2*MB**2) - (3*complex(0,1)*gAd33**2*gVd33*reglog(MB/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gVd33**3*reglog(MB/MU_R))/(8.*cmath.pi**2) + (3*complex(0,1)*gAd33**2*gVd33*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) + (complex(0,1)*gVd33**3*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MB**2) ) + (5*complex(0,1)*gAd33**2*gVd33)/(16.*cmath.pi**2) - (complex(0,1)*gVd33**3)/(16.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_129_116 = Coupling(name = 'UVGC_129_116',
-                        value = {-1:'(complex(0,1)*G**2)/(6.*cmath.pi**2)',0:'(complex(0,1)*G**2)/(3.*cmath.pi**2) - (complex(0,1)*G**2*reglog(MT/MU_R))/(2.*cmath.pi**2)'},
-                        order = {'QCD':2})
-
-UVGC_129_117 = Coupling(name = 'UVGC_129_117',
-                        value = {-1:'(complex(0,1)*gAu33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(16.*cmath.pi**2)',0:'( (complex(0,1)*gAu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33)/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(8.*cmath.pi**2) - (5*complex(0,1)*gAu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) + (3*complex(0,1)*gVu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33**2)/(16.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gVu33**2)/(16.*cmath.pi*cmath.sqrt(3)) + (5*complex(0,1)*gAu33**2*MT**2)/(12.*cmath.pi*MY1**2*cmath.sqrt(3)) - (complex(0,1)*gVu33**2*MT**2)/(4.*cmath.pi*MY1**2*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MT==MY1 else ( (-3*complex(0,1)*gAu33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33)/(2.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) + (15*complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) - (3*complex(0,1)*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (9*complex(0,1)*gAu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (3*complex(0,1)*gVu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (9*complex(0,1)*gAu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gVu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gAu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gVu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gAu33*gVu33*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*gVu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) if MY1>2*MT else (complex(0,1)*gAu33*gVu33)/(2.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*gVu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) - (3*complex(0,1)*gAu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*gVu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) ) + (complex(0,1)*gAu33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) ) - (complex(0,1)*gAu33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*gVu33**2)/(16.*cmath.pi**2)'},
-                        order = {'DMV':2})
-
-UVGC_130_118 = Coupling(name = 'UVGC_130_118',
-                        value = {-1:'(complex(0,1)*gAu33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(16.*cmath.pi**2)',0:'( (complex(0,1)*gAu33**2)/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33)/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(8.*cmath.pi**2) - (5*complex(0,1)*gAu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) + (3*complex(0,1)*gVu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33**2)/(16.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gVu33**2)/(16.*cmath.pi*cmath.sqrt(3)) + (5*complex(0,1)*gAu33**2*MT**2)/(12.*cmath.pi*MY1**2*cmath.sqrt(3)) - (complex(0,1)*gVu33**2*MT**2)/(4.*cmath.pi*MY1**2*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MT==MY1 else ( (-3*complex(0,1)*gAu33**2)/(4.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33)/(2.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) + (15*complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (3*complex(0,1)*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) - (3*complex(0,1)*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (9*complex(0,1)*gAu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (3*complex(0,1)*gVu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (9*complex(0,1)*gAu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gVu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gAu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gVu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gAu33*gVu33*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*gVu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) if MY1>2*MT else -0.5*(complex(0,1)*gAu33*gVu33)/cmath.pi**2 + (complex(0,1)*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (3*complex(0,1)*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*gVu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) - (3*complex(0,1)*gAu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*gVu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) ) + (complex(0,1)*gAu33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) ) - (complex(0,1)*gAu33**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*gVu33**2)/(16.*cmath.pi**2)'},
-                        order = {'DMV':2})
-
-UVGC_131_119 = Coupling(name = 'UVGC_131_119',
-                        value = {-1:'-0.16666666666666666*(complex(0,1)*G**3)/cmath.pi**2',0:'-0.3333333333333333*(complex(0,1)*G**3)/cmath.pi**2 + (complex(0,1)*G**3*reglog(MT/MU_R))/(2.*cmath.pi**2)'},
-                        order = {'QCD':3})
-
-UVGC_131_120 = Coupling(name = 'UVGC_131_120',
-                        value = {-1:'-0.0625*(complex(0,1)*G*gAu33**2)/cmath.pi**2 + (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(16.*cmath.pi**2)',0:'( -0.125*(complex(0,1)*G*gAu33**2)/cmath.pi**2 + (complex(0,1)*G*gAu33*gVu33)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(8.*cmath.pi**2) + (5*complex(0,1)*G*gAu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) - (3*complex(0,1)*G*gVu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) + (complex(0,1)*G*gAu33**2)/(16.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*G*gVu33**2)/(16.*cmath.pi*cmath.sqrt(3)) - (5*complex(0,1)*G*gAu33**2*MT**2)/(12.*cmath.pi*MY1**2*cmath.sqrt(3)) + (complex(0,1)*G*gVu33**2*MT**2)/(4.*cmath.pi*MY1**2*cmath.sqrt(3)) + (complex(0,1)*G*gAu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAu33*gVu33*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MT==MY1 else ( (3*complex(0,1)*G*gAu33**2)/(4.*cmath.pi**2) + (complex(0,1)*G*gAu33*gVu33)/(2.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(4.*cmath.pi**2) - (complex(0,1)*G*gAu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) + (3*complex(0,1)*G*gAu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*G*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) - (complex(0,1)*G*gVu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) - (15*complex(0,1)*G*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (3*complex(0,1)*G*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (3*complex(0,1)*G*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*G*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) + (3*complex(0,1)*G*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*G*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*G*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (9*complex(0,1)*G*gAu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (3*complex(0,1)*G*gVu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (9*complex(0,1)*G*gAu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*G*gVu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*G*gAu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*G*gVu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*G*gAu33*gVu33*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*G*gAu33*gVu33*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*G*gVu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) if MY1>2*MT else (complex(0,1)*G*gAu33*gVu33)/(2.*cmath.pi**2) - (complex(0,1)*G*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) - (complex(0,1)*G*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (3*complex(0,1)*G*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*G*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*G*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*G*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*G*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*G*gAu33*gVu33*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*G*gVu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) + (3*complex(0,1)*G*gAu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*G*gVu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) ) - (complex(0,1)*G*gAu33**2)/(16.*cmath.pi**2) - (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(16.*cmath.pi**2) + (complex(0,1)*G*gAu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*MY1**2)/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAu33*gVu33*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) ) + (complex(0,1)*G*gAu33**2)/(16.*cmath.pi**2) - (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*G*gVu33**2)/(16.*cmath.pi**2)'},
-                        order = {'DMV':2,'QCD':1})
-
-UVGC_132_121 = Coupling(name = 'UVGC_132_121',
-                        value = {-1:'-0.0625*(complex(0,1)*G*gAu33**2)/cmath.pi**2 - (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(16.*cmath.pi**2)',0:'( -0.125*(complex(0,1)*G*gAu33**2)/cmath.pi**2 - (complex(0,1)*G*gAu33*gVu33)/(4.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(8.*cmath.pi**2) + (5*complex(0,1)*G*gAu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) - (3*complex(0,1)*G*gVu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) + (complex(0,1)*G*gAu33**2)/(16.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*G*gVu33**2)/(16.*cmath.pi*cmath.sqrt(3)) - (5*complex(0,1)*G*gAu33**2*MT**2)/(12.*cmath.pi*MY1**2*cmath.sqrt(3)) + (complex(0,1)*G*gVu33**2*MT**2)/(4.*cmath.pi*MY1**2*cmath.sqrt(3)) + (complex(0,1)*G*gAu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAu33*gVu33*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MT==MY1 else ( (3*complex(0,1)*G*gAu33**2)/(4.*cmath.pi**2) - (complex(0,1)*G*gAu33*gVu33)/(2.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(4.*cmath.pi**2) - (complex(0,1)*G*gAu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2)/(4.*cmath.pi**2*MT**2) + (3*complex(0,1)*G*gAu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) - (complex(0,1)*G*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) - (complex(0,1)*G*gVu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) - (15*complex(0,1)*G*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (3*complex(0,1)*G*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (3*complex(0,1)*G*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*G*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) + (3*complex(0,1)*G*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*G*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*G*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (9*complex(0,1)*G*gAu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (3*complex(0,1)*G*gVu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (9*complex(0,1)*G*gAu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*G*gVu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*G*gAu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*G*gVu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*G*gAu33*gVu33*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*G*gAu33*gVu33*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*G*gVu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) if MY1>2*MT else -0.5*(complex(0,1)*G*gAu33*gVu33)/cmath.pi**2 - (complex(0,1)*G*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*MY1**2)/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) - (complex(0,1)*G*gAu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (3*complex(0,1)*G*gAu33*gVu33*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*G*gAu33*gVu33*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*G*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*G*gAu33*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) + (complex(0,1)*G*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*G*gAu33*gVu33*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*G*gVu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) + (3*complex(0,1)*G*gAu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*G*gVu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) ) - (complex(0,1)*G*gAu33**2)/(16.*cmath.pi**2) + (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu33**2)/(16.*cmath.pi**2) + (complex(0,1)*G*gAu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) - (complex(0,1)*G*gAu33*gVu33*MY1**2)/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gVu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAu33*gVu33*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) + (complex(0,1)*G*gAu33*gVu33*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*G*gVu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) ) + (complex(0,1)*G*gAu33**2)/(16.*cmath.pi**2) + (complex(0,1)*G*gAu33*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*G*gVu33**2)/(16.*cmath.pi**2)'},
-                        order = {'DMV':2,'QCD':1})
-
-UVGC_133_122 = Coupling(name = 'UVGC_133_122',
-                        value = {0:'( (35*complex(0,1)*gAd33**2*gAu33)/(24.*cmath.pi**2) + (17*complex(0,1)*gAu33*gVd33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAd33**2*gAu33*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAu33*gVd33**2*MY1**2)/(8.*cmath.pi**2*MB**2) - (7*complex(0,1)*gAd33**2*gAu33)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAd33**2*gAu33*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gAu33*gVd33**2*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gAu33*gVd33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAd33**2*gAu33*reglog(MB/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAu33*gVd33**2*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( -0.125*(complex(0,1)*gAd33**2*gAu33)/cmath.pi**2 - (complex(0,1)*gAu33*gVd33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAd33**2*gAu33*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MB**2 else -((complex(0,1)*gAd33**2*gAu33*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu33*gVd33**2*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*gAu33*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33*gVd33**2*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAd33**2*gAu33*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu33*gVd33**2*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAd33**2*gAu33*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33*gVd33**2*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAd33**2*gAu33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu33*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else (MU_R*complex(0,1)*gAd33**2*gAu33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu33*gVd33**2*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAd33**2*gAu33)/(12.*cmath.pi**2) + (complex(0,1)*gAu33*gVd33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAd33**2*gAu33*MB**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33*gVd33**2*MB**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAd33**2*gAu33*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVd33**2*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_133_123 = Coupling(name = 'UVGC_133_123',
-                        value = {0:'(complex(0,1)*gAu22**2*gAu33)/(12.*cmath.pi**2) + (complex(0,1)*gAu33*gVu22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu22**2*gAu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVu22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_133_124 = Coupling(name = 'UVGC_133_124',
-                        value = {0:'(complex(0,1)*gAd11**2*gAu33)/(12.*cmath.pi**2) + (complex(0,1)*gAu33*gVd11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd11**2*gAu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVd11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_133_125 = Coupling(name = 'UVGC_133_125',
-                        value = {0:'(complex(0,1)*gAd22**2*gAu33)/(12.*cmath.pi**2) + (complex(0,1)*gAu33*gVd22**2)/(12.*cmath.pi**2) - (complex(0,1)*gAd22**2*gAu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVd22**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_133_126 = Coupling(name = 'UVGC_133_126',
-                        value = {0:'( (35*complex(0,1)*gAu33**3)/(24.*cmath.pi**2) + (17*complex(0,1)*gAu33*gVu33**2)/(24.*cmath.pi**2) - (7*complex(0,1)*gAu33**3*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu33*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu33**3)/(8.*cmath.pi*cmath.sqrt(3)) + (complex(0,1)*gAu33**3*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gAu33*gVu33**2*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gAu33*gVu33**2*cmath.sqrt(3))/(8.*cmath.pi) - (complex(0,1)*gAu33**3*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33**2*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( -0.125*(complex(0,1)*gAu33**3)/cmath.pi**2 - (complex(0,1)*gAu33*gVu33**2)/(8.*cmath.pi**2) + (complex(0,1)*gAu33**3*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( 0 if MY1**2<=4*MT**2 else -((complex(0,1)*gAu33**3*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu33*gVu33**2*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33**3*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33*gVu33**2*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( -((complex(0,1)*gAu33**3*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))) + (complex(0,1)*gAu33*gVu33**2*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33**3*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (complex(0,1)*gAu33*gVu33**2*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) + (MU_R*complex(0,1)*gAu33**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu33*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else (MU_R*complex(0,1)*gAu33**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) + (MU_R*complex(0,1)*gAu33*gVu33**2*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) + (complex(0,1)*gAu33**3)/(12.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33**2)/(12.*cmath.pi**2) + (complex(0,1)*gAu33**3*MT**2)/(2.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33*gVu33**2*MT**2)/(4.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33**3*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33**2*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_133_127 = Coupling(name = 'UVGC_133_127',
-                        value = {0:'(complex(0,1)*gAu11**2*gAu33)/(12.*cmath.pi**2) + (complex(0,1)*gAu33*gVu11**2)/(12.*cmath.pi**2) - (complex(0,1)*gAu11**2*gAu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33*gVu11**2*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_133_128 = Coupling(name = 'UVGC_133_128',
-                        value = {-1:'(complex(0,1)*G**2*gAu33)/(4.*cmath.pi**2)',0:'(complex(0,1)*G**2*gAu33)/(3.*cmath.pi**2) - (complex(0,1)*G**2*gAu33*reglog(MT/MU_R))/(2.*cmath.pi**2)'},
-                        order = {'DMV':1,'QCD':2})
-
-UVGC_133_129 = Coupling(name = 'UVGC_133_129',
-                        value = {-1:'(complex(0,1)*gAu33**3)/(16.*cmath.pi**2) + (3*complex(0,1)*gAu33*gVu33**2)/(16.*cmath.pi**2)',0:'( (complex(0,1)*gAu33**3)/(8.*cmath.pi**2) + (3*complex(0,1)*gAu33*gVu33**2)/(8.*cmath.pi**2) - (5*complex(0,1)*gAu33**3*MT**2)/(8.*cmath.pi**2*MY1**2) + (3*complex(0,1)*gAu33*gVu33**2*MT**2)/(8.*cmath.pi**2*MY1**2) - (complex(0,1)*gAu33**3)/(16.*cmath.pi*cmath.sqrt(3)) + (5*complex(0,1)*gAu33**3*MT**2)/(12.*cmath.pi*MY1**2*cmath.sqrt(3)) - (complex(0,1)*gAu33*gVu33**2*MT**2)/(4.*cmath.pi*MY1**2*cmath.sqrt(3)) - (complex(0,1)*gAu33*gVu33**2*cmath.sqrt(3))/(16.*cmath.pi) - (complex(0,1)*gAu33**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (3*complex(0,1)*gAu33*gVu33**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MT==MY1 else ( (-3*complex(0,1)*gAu33**3)/(4.*cmath.pi**2) + (3*complex(0,1)*gAu33*gVu33**2)/(4.*cmath.pi**2) + (complex(0,1)*gAu33**3*MY1**2)/(4.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33**3*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33**2*reglog(MY1/MT))/(2.*cmath.pi**2) + (15*complex(0,1)*gAu33**3*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (7*complex(0,1)*gAu33*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (3*complex(0,1)*gAu33**3*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33**2*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**3*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (9*complex(0,1)*gAu33**3*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (3*complex(0,1)*gAu33*gVu33**2*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (9*complex(0,1)*gAu33**3*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gAu33*gVu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gAu33**3*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gAu33*gVu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gAu33*gVu33**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**3*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) if MY1>2*MT else (complex(0,1)*gAu33*gVu33**2)/(2.*cmath.pi**2) + (complex(0,1)*gAu33**3*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33**2*reglog(MY1/MT))/(4.*cmath.pi**2) + (complex(0,1)*gAu33**3*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (5*complex(0,1)*gAu33*gVu33**2*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**3*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33**2*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33**2*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**3*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**3*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gAu33*gVu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) - (3*complex(0,1)*gAu33**3*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**3*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33*gVu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) ) + (complex(0,1)*gAu33**3)/(16.*cmath.pi**2) - (complex(0,1)*gAu33*gVu33**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu33**3*MY1**2)/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33*gVu33**2*MY1**2)/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**3*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu33*gVu33**2*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu33**3*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33*gVu33**2*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) ) - (complex(0,1)*gAu33**3)/(16.*cmath.pi**2) - (3*complex(0,1)*gAu33*gVu33**2)/(16.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_134_130 = Coupling(name = 'UVGC_134_130',
-                        value = {0:'( (-35*complex(0,1)*gAd33**2*gVu33)/(24.*cmath.pi**2) - (17*complex(0,1)*gVd33**2*gVu33)/(24.*cmath.pi**2) + (7*complex(0,1)*gAd33**2*gVu33*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gVd33**2*gVu33*MY1**2)/(8.*cmath.pi**2*MB**2) + (7*complex(0,1)*gAd33**2*gVu33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAd33**2*gVu33*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) - (complex(0,1)*gVd33**2*gVu33*MY1**2)/(2.*cmath.pi*MB**2*cmath.sqrt(3)) + (complex(0,1)*gVd33**2*gVu33*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAd33**2*gVu33*reglog(MB/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu33*reglog(MB/MU_R))/(4.*cmath.pi**2) if MB==MY1 else ( 0 if MY1**2<=4*MB**2 else (complex(0,1)*gAd33**2*gVu33*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu33*MB**4*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVu33*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu33*MB**2*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAd33**2*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVu33*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*gVu33*MB**2)/(4.*cmath.pi**2*MY1**2) if 4*MB**2==MY1**2 else 0 ) + ( (complex(0,1)*gAd33**2*gVu33*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu33*MB**4*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAd33**2*gVu33*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVd33**2*gVu33*MB**2*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAd33**2*gVu33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*gVu33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MB**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MB**2 else -0.125*(MU_R*complex(0,1)*gAd33**2*gVu33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVd33**2*gVu33*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MB**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MB**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MB**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAd33**2*gVu33)/(12.*cmath.pi**2) - (complex(0,1)*gVd33**2*gVu33)/(12.*cmath.pi**2) - (complex(0,1)*gAd33**2*gVu33*MB**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVd33**2*gVu33*MB**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAd33**2*gVu33*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd33**2*gVu33*reglog(MB**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_134_131 = Coupling(name = 'UVGC_134_131',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAu22**2*gVu33)/cmath.pi**2 - (complex(0,1)*gVu22**2*gVu33)/(12.*cmath.pi**2) + (complex(0,1)*gAu22**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu22**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_134_132 = Coupling(name = 'UVGC_134_132',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAd11**2*gVu33)/cmath.pi**2 - (complex(0,1)*gVd11**2*gVu33)/(12.*cmath.pi**2) + (complex(0,1)*gAd11**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd11**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_134_133 = Coupling(name = 'UVGC_134_133',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAd22**2*gVu33)/cmath.pi**2 - (complex(0,1)*gVd22**2*gVu33)/(12.*cmath.pi**2) + (complex(0,1)*gAd22**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVd22**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_134_134 = Coupling(name = 'UVGC_134_134',
-                        value = {0:'( (-35*complex(0,1)*gAu33**2*gVu33)/(24.*cmath.pi**2) - (17*complex(0,1)*gVu33**3)/(24.*cmath.pi**2) + (7*complex(0,1)*gAu33**2*gVu33*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gVu33**3*MY1**2)/(8.*cmath.pi**2*MT**2) + (7*complex(0,1)*gAu33**2*gVu33)/(8.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gAu33**2*gVu33*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) - (complex(0,1)*gVu33**3*MY1**2)/(2.*cmath.pi*MT**2*cmath.sqrt(3)) + (complex(0,1)*gVu33**3*cmath.sqrt(3))/(8.*cmath.pi) + (complex(0,1)*gAu33**2*gVu33*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gVu33**3*reglog(MT/MU_R))/(4.*cmath.pi**2) if MT==MY1 else ( 0 if MY1**2<=4*MT**2 else (complex(0,1)*gAu33**2*gVu33*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**3*MT**4*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVu33*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**3*MT**2*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) ) + ( (complex(0,1)*gAu33**2*gVu33)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**3)/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu33*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVu33**3*MT**2)/(4.*cmath.pi**2*MY1**2) if 4*MT**2==MY1**2 else 0 ) + ( (complex(0,1)*gAu33**2*gVu33*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**3*MT**4*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(2.*MU_R*cmath.pi**2*MY1**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gAu33**2*gVu33*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (complex(0,1)*gVu33**3*MT**2*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(4.*MU_R*cmath.pi**2*MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)) - (MU_R*complex(0,1)*gAu33**2*gVu33*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu33**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((2*MT**2)/MU_R**2 - MY1**2/MU_R**2 + (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) if MY1**2<4*MT**2 else -0.125*(MU_R*complex(0,1)*gAu33**2*gVu33*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(cmath.pi**2*MY1) - (MU_R*complex(0,1)*gVu33**3*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2)*reglog((MU_R**2*((-2*MT**2)/MU_R**2 + MY1**2/MU_R**2 - (MY1*cmath.sqrt((-4*MT**2)/MU_R**2 + MY1**2/MU_R**2))/MU_R))/(2.*MT**2)))/(8.*cmath.pi**2*MY1) ) - (complex(0,1)*gAu33**2*gVu33)/(12.*cmath.pi**2) - (complex(0,1)*gVu33**3)/(12.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu33*MT**2)/(2.*cmath.pi**2*MY1**2) + (complex(0,1)*gVu33**3*MT**2)/(4.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*gVu33*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu33**3*reglog(MT**2/MU_R**2))/(8.*cmath.pi**2) )'},
-                        order = {'DMV':3})
-
-UVGC_134_135 = Coupling(name = 'UVGC_134_135',
-                        value = {0:'-0.08333333333333333*(complex(0,1)*gAu11**2*gVu33)/cmath.pi**2 - (complex(0,1)*gVu11**2*gVu33)/(12.*cmath.pi**2) + (complex(0,1)*gAu11**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2) + (complex(0,1)*gVu11**2*gVu33*reglog(MY1**2/MU_R**2))/(8.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_134_136 = Coupling(name = 'UVGC_134_136',
-                        value = {-1:'-0.25*(complex(0,1)*G**2*gVu33)/cmath.pi**2',0:'-0.3333333333333333*(complex(0,1)*G**2*gVu33)/cmath.pi**2 + (complex(0,1)*G**2*gVu33*reglog(MT/MU_R))/(2.*cmath.pi**2)'},
-                        order = {'DMV':1,'QCD':2})
-
-UVGC_134_137 = Coupling(name = 'UVGC_134_137',
-                        value = {-1:'(-3*complex(0,1)*gAu33**2*gVu33)/(16.*cmath.pi**2) - (complex(0,1)*gVu33**3)/(16.*cmath.pi**2)',0:'( (-3*complex(0,1)*gAu33**2*gVu33)/(8.*cmath.pi**2) - (complex(0,1)*gVu33**3)/(8.*cmath.pi**2) + (5*complex(0,1)*gAu33**2*gVu33*MT**2)/(8.*cmath.pi**2*MY1**2) - (3*complex(0,1)*gVu33**3*MT**2)/(8.*cmath.pi**2*MY1**2) + (complex(0,1)*gVu33**3)/(16.*cmath.pi*cmath.sqrt(3)) - (5*complex(0,1)*gAu33**2*gVu33*MT**2)/(12.*cmath.pi*MY1**2*cmath.sqrt(3)) + (complex(0,1)*gVu33**3*MT**2)/(4.*cmath.pi*MY1**2*cmath.sqrt(3)) + (complex(0,1)*gAu33**2*gVu33*cmath.sqrt(3))/(16.*cmath.pi) + (3*complex(0,1)*gAu33**2*gVu33*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gVu33**3*reglog(MY1/MU_R))/(8.*cmath.pi**2) if MT==MY1 else ( (complex(0,1)*gAu33**2*gVu33)/(4.*cmath.pi**2) - (complex(0,1)*gVu33**3)/(4.*cmath.pi**2) - (complex(0,1)*gVu33**3*MY1**2)/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*gVu33*reglog(MY1/MT))/(2.*cmath.pi**2) - (complex(0,1)*gVu33**3*reglog(MY1/MT))/(4.*cmath.pi**2) - (9*complex(0,1)*gAu33**2*gVu33*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**3*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*gVu33*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (3*complex(0,1)*gVu33**3*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33**2*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**3*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (9*complex(0,1)*gAu33**2*gVu33*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (3*complex(0,1)*gVu33**3*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (9*complex(0,1)*gAu33**2*gVu33*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gVu33**3*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gAu33**2*gVu33*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gVu33**3*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**4*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gAu33**2*gVu33*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*gVu33*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gVu33**3*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(16.*cmath.pi**2*MT**4) if MY1>2*MT else -0.5*(complex(0,1)*gAu33**2*gVu33)/cmath.pi**2 + (complex(0,1)*gAu33**2*gVu33*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**3*MY1**2)/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*gVu33*reglog(MY1/MT))/(4.*cmath.pi**2) + (5*complex(0,1)*gAu33**2*gVu33*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**3*MY1**2*reglog(MY1/MT))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*gVu33*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gVu33**3*MY1**4*reglog(MY1/MT))/(16.*cmath.pi**2*MT**4) + (complex(0,1)*gAu33**2*gVu33*reglog((MT*MY1)/MU_R**2))/(4.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu33*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**3*MY1**2*reglog((MT*MY1)/MU_R**2))/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*gVu33*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(4.*cmath.pi**2*MT**2) + (complex(0,1)*gAu33**2*gVu33*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) - (complex(0,1)*gVu33**3*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(16.*cmath.pi**2*MT**4) + (3*complex(0,1)*gAu33**2*gVu33*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**3*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*gVu33*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) - (complex(0,1)*gVu33**3*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**4) ) + (complex(0,1)*gAu33**2*gVu33)/(16.*cmath.pi**2) - (complex(0,1)*gVu33**3)/(16.*cmath.pi**2) - (complex(0,1)*gAu33**2*gVu33*MY1**2)/(16.*cmath.pi**2*MT**2) + (complex(0,1)*gVu33**3*MY1**2)/(16.*cmath.pi**2*MT**2) - (complex(0,1)*gAu33**2*gVu33*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gVu33**3*reglog(MT/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu33**2*gVu33*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) - (complex(0,1)*gVu33**3*MY1**2*reglog(MY1/MU_R))/(8.*cmath.pi**2*MT**2) ) + (3*complex(0,1)*gAu33**2*gVu33)/(16.*cmath.pi**2) + (complex(0,1)*gVu33**3)/(16.*cmath.pi**2)'},
-                        order = {'DMV':3})
-
-UVGC_135_138 = Coupling(name = 'UVGC_135_138',
-                        value = {-1:'(complex(0,1)*G**2*MT)/(2.*cmath.pi**2)',0:'(2*complex(0,1)*G**2*MT)/(3.*cmath.pi**2) - (complex(0,1)*G**2*MT*reglog(MT/MU_R))/cmath.pi**2'},
-                        order = {'QCD':2})
-
-UVGC_135_139 = Coupling(name = 'UVGC_135_139',
-                        value = {-1:'-0.25*(complex(0,1)*gAu33**2*MT)/cmath.pi**2 + (complex(0,1)*gVu33**2*MT)/(4.*cmath.pi**2)',0:'( -0.5*(complex(0,1)*gAu33**2*MT)/cmath.pi**2 + (complex(0,1)*gVu33**2*MT)/(2.*cmath.pi**2) - (5*complex(0,1)*gAu33**2*MT**3)/(8.*cmath.pi**2*MY1**2) + (3*complex(0,1)*gVu33**2*MT**3)/(8.*cmath.pi**2*MY1**2) + (complex(0,1)*gAu33**2*MT)/(4.*cmath.pi*cmath.sqrt(3)) - (complex(0,1)*gVu33**2*MT)/(4.*cmath.pi*cmath.sqrt(3)) + (5*complex(0,1)*gAu33**2*MT**3)/(12.*cmath.pi*MY1**2*cmath.sqrt(3)) - (complex(0,1)*gVu33**2*MT**3)/(4.*cmath.pi*MY1**2*cmath.sqrt(3)) + (complex(0,1)*gAu33**2*MT*reglog(MY1/MU_R))/(2.*cmath.pi**2) - (complex(0,1)*gVu33**2*MT*reglog(MY1/MU_R))/(2.*cmath.pi**2) if MT==MY1 else ( (-3*complex(0,1)*gAu33**2*MT)/(2.*cmath.pi**2) + (complex(0,1)*gVu33**2*MT)/(2.*cmath.pi**2) + (3*complex(0,1)*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT) + (3*complex(0,1)*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT) - (9*complex(0,1)*gAu33**2*MT*reglog(MY1/MT))/(8.*cmath.pi**2) + (3*complex(0,1)*gVu33**2*MT*reglog(MY1/MT))/(8.*cmath.pi**2) + (11*complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT) - (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MT))/(8.*cmath.pi**2*MT) - (complex(0,1)*gAu33**2*MY1**4*reglog(MY1/MT))/(4.*cmath.pi**2*MT**3) - (complex(0,1)*gVu33**2*MY1**4*reglog(MY1/MT))/(4.*cmath.pi**2*MT**3) + (3*complex(0,1)*gAu33**2*MT*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gVu33**2*MT*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT) - (complex(0,1)*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT) + (9*complex(0,1)*gAu33**2*MT*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (3*complex(0,1)*gVu33**2*MT*MY1**2*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(4.*cmath.pi**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (9*complex(0,1)*gAu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (complex(0,1)*gVu33**2*MY1**4*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gAu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**3*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) + (complex(0,1)*gVu33**2*MY1**6*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**3*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)) - (3*complex(0,1)*gAu33**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT) + (complex(0,1)*gVu33**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT) + (complex(0,1)*gAu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**3) + (complex(0,1)*gVu33**2*MY1**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/(8.*cmath.pi**2*MT**3) if MY1>2*MT else (-3*complex(0,1)*gAu33**2*MT)/(4.*cmath.pi**2) + (complex(0,1)*gVu33**2*MT)/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2)/(4.*cmath.pi**2*MT) + (complex(0,1)*gVu33**2*MY1**2)/(4.*cmath.pi**2*MT) - (3*complex(0,1)*gAu33**2*MT*reglog(MY1/MT))/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2*MT*reglog(MY1/MT))/(8.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MT))/(2.*cmath.pi**2*MT) - (complex(0,1)*gAu33**2*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**3) - (complex(0,1)*gVu33**2*MY1**4*reglog(MY1/MT))/(8.*cmath.pi**2*MT**3) + (3*complex(0,1)*gAu33**2*MT*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gVu33**2*MT*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT) - (complex(0,1)*gVu33**2*MY1**2*reglog((MT*MY1)/MU_R**2))/(8.*cmath.pi**2*MT) - (3*complex(0,1)*gAu33**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT) + (complex(0,1)*gVu33**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT) + (complex(0,1)*gAu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT**3) + (complex(0,1)*gVu33**2*MY1**2*re(cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1))))/(8.*cmath.pi**2*MT**3) - (3*complex(0,1)*gAu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT) + (complex(0,1)*gVu33**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(4.*cmath.pi**2*MT) + (complex(0,1)*gAu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**3) + (complex(0,1)*gVu33**2*MY1**2*re((MT**2*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4) + (MT**2 - MY1**2)*cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)*reglog(MY1/MT) + (-3*MT**2*MY1**2 + MY1**4)*reglog((MY1**2 + cmath.sqrt(-4*MT**2*MY1**2 + MY1**4))/(2.*MT*MY1)))/cmath.sqrt(-4*MT**2*MY1**2 + MY1**4)))/(8.*cmath.pi**2*MT**3) ) + (complex(0,1)*gAu33**2*MT)/(8.*cmath.pi**2) + (complex(0,1)*gVu33**2*MT)/(8.*cmath.pi**2) - (complex(0,1)*gAu33**2*MY1**2)/(8.*cmath.pi**2*MT) - (complex(0,1)*gVu33**2*MY1**2)/(8.*cmath.pi**2*MT) - (complex(0,1)*gAu33**2*MT*reglog(MT/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu33**2*MT*reglog(MT/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*gAu33**2*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MT) + (complex(0,1)*gVu33**2*MY1**2*reglog(MY1/MU_R))/(4.*cmath.pi**2*MT) ) + (complex(0,1)*gAu33**2*MT)/(8.*cmath.pi**2) - (complex(0,1)*gVu33**2*MT)/(8.*cmath.pi**2)'},
-                        order = {'DMV':2})
-
-UVGC_65_140 = Coupling(name = 'UVGC_65_140',
-                       value = {-1:'(51*G**3)/(128.*cmath.pi**2)'},
-                       order = {'QCD':3})
-
-UVGC_66_141 = Coupling(name = 'UVGC_66_141',
-                       value = {-1:'G**3/(128.*cmath.pi**2)'},
-                       order = {'QCD':3})
-
-UVGC_67_142 = Coupling(name = 'UVGC_67_142',
-                       value = {-1:'(3*G**4)/(512.*cmath.pi**2)'},
-                       order = {'QCD':4})
-
-UVGC_67_143 = Coupling(name = 'UVGC_67_143',
-                       value = {-1:'(-3*G**4)/(512.*cmath.pi**2)'},
-                       order = {'QCD':4})
-
-UVGC_68_144 = Coupling(name = 'UVGC_68_144',
-                       value = {-1:'(3*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
-                       order = {'QCD':4})
-
-UVGC_68_145 = Coupling(name = 'UVGC_68_145',
-                       value = {-1:'(-3*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
-                       order = {'QCD':4})
-
-UVGC_70_146 = Coupling(name = 'UVGC_70_146',
+UVGC_102_3 = Coupling(name = 'UVGC_102_3',
+                      value = {-1:'-0.027777777777777776*(ee*complex(0,1)*G**2)/cmath.pi**2'},
+                      order = {'QCD':2,'QED':1})
+
+UVGC_107_4 = Coupling(name = 'UVGC_107_4',
+                      value = {-1:'(3*complex(0,1)*G**2)/(64.*cmath.pi**2)'},
+                      order = {'QCD':2})
+
+UVGC_107_5 = Coupling(name = 'UVGC_107_5',
+                      value = {-1:'(-3*complex(0,1)*G**2)/(64.*cmath.pi**2)'},
+                      order = {'QCD':2})
+
+UVGC_108_6 = Coupling(name = 'UVGC_108_6',
+                      value = {-1:'(3*G**4)/(512.*cmath.pi**2)'},
+                      order = {'QCD':4})
+
+UVGC_108_7 = Coupling(name = 'UVGC_108_7',
+                      value = {-1:'(-3*G**4)/(512.*cmath.pi**2)'},
+                      order = {'QCD':4})
+
+UVGC_109_8 = Coupling(name = 'UVGC_109_8',
+                      value = {-1:'(3*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
+                      order = {'QCD':4})
+
+UVGC_109_9 = Coupling(name = 'UVGC_109_9',
+                      value = {-1:'(-3*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
+                      order = {'QCD':4})
+
+UVGC_111_10 = Coupling(name = 'UVGC_111_10',
                        value = {-1:'-0.0078125*(complex(0,1)*G**4)/cmath.pi**2'},
                        order = {'QCD':4})
 
-UVGC_70_147 = Coupling(name = 'UVGC_70_147',
+UVGC_111_11 = Coupling(name = 'UVGC_111_11',
                        value = {-1:'(complex(0,1)*G**4)/(128.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_71_148 = Coupling(name = 'UVGC_71_148',
+UVGC_112_12 = Coupling(name = 'UVGC_112_12',
                        value = {-1:'(-3*complex(0,1)*G**4)/(256.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_71_149 = Coupling(name = 'UVGC_71_149',
+UVGC_112_13 = Coupling(name = 'UVGC_112_13',
                        value = {-1:'(3*complex(0,1)*G**4)/(256.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_72_150 = Coupling(name = 'UVGC_72_150',
+UVGC_113_14 = Coupling(name = 'UVGC_113_14',
                        value = {-1:'-0.041666666666666664*(complex(0,1)*G**4)/cmath.pi**2'},
                        order = {'QCD':4})
 
-UVGC_72_151 = Coupling(name = 'UVGC_72_151',
-                       value = {-1:'(23*complex(0,1)*G**4)/(128.*cmath.pi**2)'},
+UVGC_113_15 = Coupling(name = 'UVGC_113_15',
+                       value = {-1:'(47*complex(0,1)*G**4)/(128.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_73_152 = Coupling(name = 'UVGC_73_152',
-                       value = {-1:'(-301*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
+UVGC_114_16 = Coupling(name = 'UVGC_114_16',
+                       value = {-1:'(-253*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_73_153 = Coupling(name = 'UVGC_73_153',
+UVGC_114_17 = Coupling(name = 'UVGC_114_17',
                        value = {-1:'(5*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_74_154 = Coupling(name = 'UVGC_74_154',
-                       value = {-1:'(complex(0,1)*G**2)/(12.*cmath.pi**2)'},
-                       order = {'QCD':2})
+UVGC_115_18 = Coupling(name = 'UVGC_115_18',
+                       value = {-1:'(ee*complex(0,1)*G**2)/(36.*cmath.pi**2)'},
+                       order = {'QCD':2,'QED':1})
 
-UVGC_75_155 = Coupling(name = 'UVGC_75_155',
+UVGC_116_19 = Coupling(name = 'UVGC_116_19',
                        value = {-1:'(-13*complex(0,1)*G**3)/(48.*cmath.pi**2)'},
                        order = {'QCD':3})
 
-UVGC_76_156 = Coupling(name = 'UVGC_76_156',
-                       value = {-1:'(complex(0,1)*G**2*MB)/(3.*cmath.pi**2)'},
+UVGC_117_20 = Coupling(name = 'UVGC_117_20',
+                       value = {-1:'-0.05555555555555555*(ee*complex(0,1)*G**2)/cmath.pi**2'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_127_21 = Coupling(name = 'UVGC_127_21',
+                       value = {-1:'(CKM2x1*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_127_22 = Coupling(name = 'UVGC_127_22',
+                       value = {-1:'-0.08333333333333333*(CKM2x1*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_128_23 = Coupling(name = 'UVGC_128_23',
+                       value = {-1:'(ee*complex(0,1)*G**2*complexconjugate(CKM2x1))/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_128_24 = Coupling(name = 'UVGC_128_24',
+                       value = {-1:'-0.08333333333333333*(ee*complex(0,1)*G**2*complexconjugate(CKM2x1))/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_129_25 = Coupling(name = 'UVGC_129_25',
+                       value = {-1:'(CKM2x2*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_129_26 = Coupling(name = 'UVGC_129_26',
+                       value = {-1:'-0.08333333333333333*(CKM2x2*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_130_27 = Coupling(name = 'UVGC_130_27',
+                       value = {-1:'(ee*complex(0,1)*G**2*complexconjugate(CKM2x2))/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_130_28 = Coupling(name = 'UVGC_130_28',
+                       value = {-1:'-0.08333333333333333*(ee*complex(0,1)*G**2*complexconjugate(CKM2x2))/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_131_29 = Coupling(name = 'UVGC_131_29',
+                       value = {-1:'(CKM1x1*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_131_30 = Coupling(name = 'UVGC_131_30',
+                       value = {-1:'-0.08333333333333333*(CKM1x1*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_132_31 = Coupling(name = 'UVGC_132_31',
+                       value = {-1:'(ee*complex(0,1)*G**2*complexconjugate(CKM1x1))/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_132_32 = Coupling(name = 'UVGC_132_32',
+                       value = {-1:'-0.08333333333333333*(ee*complex(0,1)*G**2*complexconjugate(CKM1x1))/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_133_33 = Coupling(name = 'UVGC_133_33',
+                       value = {-1:'(CKM1x2*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_133_34 = Coupling(name = 'UVGC_133_34',
+                       value = {-1:'-0.08333333333333333*(CKM1x2*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_134_35 = Coupling(name = 'UVGC_134_35',
+                       value = {-1:'(ee*complex(0,1)*G**2*complexconjugate(CKM1x2))/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_134_36 = Coupling(name = 'UVGC_134_36',
+                       value = {-1:'-0.08333333333333333*(ee*complex(0,1)*G**2*complexconjugate(CKM1x2))/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_135_37 = Coupling(name = 'UVGC_135_37',
+                       value = {-1:'( (complex(0,1)*G**2)/(6.*cmath.pi**2) if MB else -0.08333333333333333*(complex(0,1)*G**2)/cmath.pi**2 ) + (complex(0,1)*G**2)/(12.*cmath.pi**2)',0:'( (5*complex(0,1)*G**2)/(12.*cmath.pi**2) - (complex(0,1)*G**2*reglog(MB/MU_R))/(2.*cmath.pi**2) if MB else (complex(0,1)*G**2)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2)/(12.*cmath.pi**2)'},
                        order = {'QCD':2})
 
-UVGC_76_157 = Coupling(name = 'UVGC_76_157',
-                       value = {-1:'-0.25*(complex(0,1)*gAd33**2*MB)/cmath.pi**2 + (complex(0,1)*gVd33**2*MB)/(4.*cmath.pi**2)'},
-                       order = {'DMV':2})
+UVGC_136_38 = Coupling(name = 'UVGC_136_38',
+                       value = {-1:'( (ee*complex(0,1)*G**2)/(18.*cmath.pi**2) if MB else -0.027777777777777776*(ee*complex(0,1)*G**2)/cmath.pi**2 )',0:'( (5*ee*complex(0,1)*G**2)/(36.*cmath.pi**2) - (ee*complex(0,1)*G**2*reglog(MB/MU_R))/(6.*cmath.pi**2) if MB else (ee*complex(0,1)*G**2)/(36.*cmath.pi**2) ) - (ee*complex(0,1)*G**2)/(36.*cmath.pi**2)'},
+                       order = {'QCD':2,'QED':1})
 
-UVGC_87_158 = Coupling(name = 'UVGC_87_158',
-                       value = {-1:'(complex(0,1)*G**2)/(24.*cmath.pi**2)',0:'-0.08333333333333333*(complex(0,1)*G**2*reglog(MB/MU_R))/cmath.pi**2'},
+UVGC_137_39 = Coupling(name = 'UVGC_137_39',
+                       value = {-1:'( (complex(0,1)*G**2*gAd33)/(6.*cmath.pi**2) if MB else -0.08333333333333333*(complex(0,1)*G**2*gAd33)/cmath.pi**2 ) + (complex(0,1)*G**2*gAd33)/(12.*cmath.pi**2)',0:'( (5*complex(0,1)*G**2*gAd33)/(12.*cmath.pi**2) - (complex(0,1)*G**2*gAd33*reglog(MB/MU_R))/(2.*cmath.pi**2) if MB else (complex(0,1)*G**2*gAd33)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2*gAd33)/(12.*cmath.pi**2)'},
+                       order = {'NP':1,'QCD':2})
+
+UVGC_138_40 = Coupling(name = 'UVGC_138_40',
+                       value = {-1:'( -0.16666666666666666*(complex(0,1)*G**2*gVd33)/cmath.pi**2 if MB else (complex(0,1)*G**2*gVd33)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2*gVd33)/(12.*cmath.pi**2)',0:'( (-5*complex(0,1)*G**2*gVd33)/(12.*cmath.pi**2) + (complex(0,1)*G**2*gVd33*reglog(MB/MU_R))/(2.*cmath.pi**2) if MB else -0.08333333333333333*(complex(0,1)*G**2*gVd33)/cmath.pi**2 ) + (complex(0,1)*G**2*gVd33)/(12.*cmath.pi**2)'},
+                       order = {'NP':1,'QCD':2})
+
+UVGC_139_41 = Coupling(name = 'UVGC_139_41',
+                       value = {-1:'( (complex(0,1)*G**2*MB)/(6.*cmath.pi**2) if MB else -0.08333333333333333*(complex(0,1)*G**2*MB)/cmath.pi**2 ) + (complex(0,1)*G**2*MB)/(3.*cmath.pi**2)',0:'( (3*complex(0,1)*G**2*MB)/(4.*cmath.pi**2) - (complex(0,1)*G**2*MB*reglog(MB/MU_R))/cmath.pi**2 if MB else (complex(0,1)*G**2*MB)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2*MB)/(12.*cmath.pi**2)'},
                        order = {'QCD':2})
 
-UVGC_87_159 = Coupling(name = 'UVGC_87_159',
-                       value = {-1:'(complex(0,1)*G**2)/(24.*cmath.pi**2)',0:'-0.08333333333333333*(complex(0,1)*G**2*reglog(MT/MU_R))/cmath.pi**2'},
+UVGC_140_42 = Coupling(name = 'UVGC_140_42',
+                       value = {-1:'( (cw*ee*complex(0,1)*G**2)/(12.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2) if MB else -0.041666666666666664*(cw*ee*complex(0,1)*G**2)/(cmath.pi**2*sw) - (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2) ) + (cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2)',0:'( (5*cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) + (5*ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2) - (cw*ee*complex(0,1)*G**2*reglog(MB/MU_R))/(4.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*sw*reglog(MB/MU_R))/(12.*cw*cmath.pi**2) if MB else (cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2) ) - (cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2)'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_141_43 = Coupling(name = 'UVGC_141_43',
+                       value = {-1:'( -0.05555555555555555*(ee*complex(0,1)*G**2*sw)/(cw*cmath.pi**2) if MB else (ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2) ) - (ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2)',0:'( (-5*ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2) + (ee*complex(0,1)*G**2*sw*reglog(MB/MU_R))/(6.*cw*cmath.pi**2) if MB else -0.027777777777777776*(ee*complex(0,1)*G**2*sw)/(cw*cmath.pi**2) ) + (ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2)'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_142_44 = Coupling(name = 'UVGC_142_44',
+                       value = {-1:'( (complex(0,1)*G**2*yb)/(6.*cmath.pi**2*cmath.sqrt(2)) if MB else -0.08333333333333333*(complex(0,1)*G**2*yb)/(cmath.pi**2*cmath.sqrt(2)) ) + (complex(0,1)*G**2*yb)/(3.*cmath.pi**2*cmath.sqrt(2))',0:'( (3*complex(0,1)*G**2*yb)/(4.*cmath.pi**2*cmath.sqrt(2)) - (complex(0,1)*G**2*yb*reglog(MB/MU_R))/(cmath.pi**2*cmath.sqrt(2)) if MB else (complex(0,1)*G**2*yb)/(12.*cmath.pi**2*cmath.sqrt(2)) ) - (complex(0,1)*G**2*yb)/(12.*cmath.pi**2*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_143_45 = Coupling(name = 'UVGC_143_45',
+                       value = {-1:'( 0 if MB else (complex(0,1)*G**2)/(24.*cmath.pi**2) ) - (complex(0,1)*G**2)/(24.*cmath.pi**2)',0:'( (complex(0,1)*G**2*reglog(MB/MU_R))/(12.*cmath.pi**2) if MB else 0 )'},
                        order = {'QCD':2})
 
-UVGC_88_160 = Coupling(name = 'UVGC_88_160',
-                       value = {-1:'-0.041666666666666664*(complex(0,1)*G**2)/cmath.pi**2',0:'(complex(0,1)*G**2*reglog(MB/MU_R))/(12.*cmath.pi**2)'},
+UVGC_143_46 = Coupling(name = 'UVGC_143_46',
+                       value = {-1:'( 0 if MT else (complex(0,1)*G**2)/(24.*cmath.pi**2) ) - (complex(0,1)*G**2)/(24.*cmath.pi**2)',0:'( (complex(0,1)*G**2*reglog(MT/MU_R))/(12.*cmath.pi**2) if MT else 0 )'},
                        order = {'QCD':2})
 
-UVGC_88_161 = Coupling(name = 'UVGC_88_161',
-                       value = {-1:'(3*complex(0,1)*G**2)/(64.*cmath.pi**2)'},
-                       order = {'QCD':2})
-
-UVGC_88_162 = Coupling(name = 'UVGC_88_162',
-                       value = {-1:'(-3*complex(0,1)*G**2)/(64.*cmath.pi**2)'},
-                       order = {'QCD':2})
-
-UVGC_88_163 = Coupling(name = 'UVGC_88_163',
-                       value = {-1:'-0.041666666666666664*(complex(0,1)*G**2)/cmath.pi**2',0:'(complex(0,1)*G**2*reglog(MT/MU_R))/(12.*cmath.pi**2)'},
-                       order = {'QCD':2})
-
-UVGC_89_164 = Coupling(name = 'UVGC_89_164',
-                       value = {-1:'G**3/(24.*cmath.pi**2)',0:'-0.125*(G**3*reglog(MB/MU_R))/cmath.pi**2'},
+UVGC_144_47 = Coupling(name = 'UVGC_144_47',
+                       value = {-1:'( 0 if MB else -0.0625*G**3/cmath.pi**2 ) + G**3/(24.*cmath.pi**2)',0:'( -0.125*(G**3*reglog(MB/MU_R))/cmath.pi**2 if MB else 0 )'},
                        order = {'QCD':3})
 
-UVGC_89_165 = Coupling(name = 'UVGC_89_165',
+UVGC_144_48 = Coupling(name = 'UVGC_144_48',
                        value = {-1:'-0.020833333333333332*G**3/cmath.pi**2'},
                        order = {'QCD':3})
 
-UVGC_89_166 = Coupling(name = 'UVGC_89_166',
-                       value = {-1:'G**3/(24.*cmath.pi**2)',0:'-0.125*(G**3*reglog(MT/MU_R))/cmath.pi**2'},
+UVGC_144_49 = Coupling(name = 'UVGC_144_49',
+                       value = {-1:'( 0 if MT else -0.0625*G**3/cmath.pi**2 ) + G**3/(24.*cmath.pi**2)',0:'( -0.125*(G**3*reglog(MT/MU_R))/cmath.pi**2 if MT else 0 )'},
                        order = {'QCD':3})
 
-UVGC_90_167 = Coupling(name = 'UVGC_90_167',
-                       value = {-1:'(complex(0,1)*G**4)/(12.*cmath.pi**2)',0:'-0.16666666666666666*(complex(0,1)*G**4*reglog(MB/MU_R))/cmath.pi**2'},
+UVGC_145_50 = Coupling(name = 'UVGC_145_50',
+                       value = {-1:'( 0 if MB else (complex(0,1)*G**3)/(48.*cmath.pi**2) )',0:'( (complex(0,1)*G**3*reglog(MB/MU_R))/(24.*cmath.pi**2) if MB else 0 )'},
+                       order = {'QCD':3})
+
+UVGC_145_51 = Coupling(name = 'UVGC_145_51',
+                       value = {-1:'(complex(0,1)*G**3)/(48.*cmath.pi**2)'},
+                       order = {'QCD':3})
+
+UVGC_145_52 = Coupling(name = 'UVGC_145_52',
+                       value = {-1:'(-19*complex(0,1)*G**3)/(128.*cmath.pi**2)'},
+                       order = {'QCD':3})
+
+UVGC_145_53 = Coupling(name = 'UVGC_145_53',
+                       value = {-1:'-0.0078125*(complex(0,1)*G**3)/cmath.pi**2'},
+                       order = {'QCD':3})
+
+UVGC_145_54 = Coupling(name = 'UVGC_145_54',
+                       value = {-1:'( 0 if MT else (complex(0,1)*G**3)/(48.*cmath.pi**2) )',0:'( (complex(0,1)*G**3*reglog(MT/MU_R))/(24.*cmath.pi**2) if MT else 0 )'},
+                       order = {'QCD':3})
+
+UVGC_145_55 = Coupling(name = 'UVGC_145_55',
+                       value = {-1:'(complex(0,1)*G**3)/(12.*cmath.pi**2)'},
+                       order = {'QCD':3})
+
+UVGC_149_56 = Coupling(name = 'UVGC_149_56',
+                       value = {-1:'( -0.16666666666666666*(complex(0,1)*G**3)/cmath.pi**2 if MB else (complex(0,1)*G**3)/(12.*cmath.pi**2) )',0:'( (-5*complex(0,1)*G**3)/(12.*cmath.pi**2) + (complex(0,1)*G**3*reglog(MB/MU_R))/(2.*cmath.pi**2) if MB else -0.08333333333333333*(complex(0,1)*G**3)/cmath.pi**2 ) + (complex(0,1)*G**3)/(12.*cmath.pi**2)'},
+                       order = {'QCD':3})
+
+UVGC_150_57 = Coupling(name = 'UVGC_150_57',
+                       value = {-1:'( 0 if MB else -0.08333333333333333*(complex(0,1)*G**4)/cmath.pi**2 ) + (complex(0,1)*G**4)/(12.*cmath.pi**2)',0:'( -0.16666666666666666*(complex(0,1)*G**4*reglog(MB/MU_R))/cmath.pi**2 if MB else 0 )'},
                        order = {'QCD':4})
 
-UVGC_90_168 = Coupling(name = 'UVGC_90_168',
-                       value = {-1:'(159*complex(0,1)*G**4)/(128.*cmath.pi**2)'},
+UVGC_150_58 = Coupling(name = 'UVGC_150_58',
+                       value = {-1:'(147*complex(0,1)*G**4)/(128.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_90_169 = Coupling(name = 'UVGC_90_169',
+UVGC_150_59 = Coupling(name = 'UVGC_150_59',
                        value = {-1:'(3*complex(0,1)*G**4)/(128.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_90_170 = Coupling(name = 'UVGC_90_170',
-                       value = {-1:'(complex(0,1)*G**4)/(12.*cmath.pi**2)',0:'-0.16666666666666666*(complex(0,1)*G**4*reglog(MT/MU_R))/cmath.pi**2'},
+UVGC_150_60 = Coupling(name = 'UVGC_150_60',
+                       value = {-1:'( 0 if MT else -0.08333333333333333*(complex(0,1)*G**4)/cmath.pi**2 ) + (complex(0,1)*G**4)/(12.*cmath.pi**2)',0:'( -0.16666666666666666*(complex(0,1)*G**4*reglog(MT/MU_R))/cmath.pi**2 if MT else 0 )'},
                        order = {'QCD':4})
 
-UVGC_91_171 = Coupling(name = 'UVGC_91_171',
-                       value = {-1:'(243*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
+UVGC_151_61 = Coupling(name = 'UVGC_151_61',
+                       value = {-1:'(147*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_91_172 = Coupling(name = 'UVGC_91_172',
+UVGC_151_62 = Coupling(name = 'UVGC_151_62',
                        value = {-1:'(21*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_92_173 = Coupling(name = 'UVGC_92_173',
-                       value = {0:'-0.16666666666666666*(complex(0,1)*G**4*reglog(MB/MU_R))/cmath.pi**2'},
+UVGC_152_63 = Coupling(name = 'UVGC_152_63',
+                       value = {-1:'( 0 if MB else -0.08333333333333333*(complex(0,1)*G**4)/cmath.pi**2 )',0:'( -0.16666666666666666*(complex(0,1)*G**4*reglog(MB/MU_R))/cmath.pi**2 if MB else 0 )'},
                        order = {'QCD':4})
 
-UVGC_92_174 = Coupling(name = 'UVGC_92_174',
+UVGC_152_64 = Coupling(name = 'UVGC_152_64',
                        value = {-1:'-0.08333333333333333*(complex(0,1)*G**4)/cmath.pi**2'},
                        order = {'QCD':4})
 
-UVGC_92_175 = Coupling(name = 'UVGC_92_175',
-                       value = {-1:'(427*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
+UVGC_152_65 = Coupling(name = 'UVGC_152_65',
+                       value = {-1:'(523*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_92_176 = Coupling(name = 'UVGC_92_176',
+UVGC_152_66 = Coupling(name = 'UVGC_152_66',
                        value = {-1:'(13*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_92_177 = Coupling(name = 'UVGC_92_177',
-                       value = {0:'-0.16666666666666666*(complex(0,1)*G**4*reglog(MT/MU_R))/cmath.pi**2'},
+UVGC_152_67 = Coupling(name = 'UVGC_152_67',
+                       value = {-1:'( 0 if MT else -0.08333333333333333*(complex(0,1)*G**4)/cmath.pi**2 )',0:'( -0.16666666666666666*(complex(0,1)*G**4*reglog(MT/MU_R))/cmath.pi**2 if MT else 0 )'},
                        order = {'QCD':4})
 
-UVGC_93_178 = Coupling(name = 'UVGC_93_178',
-                       value = {-1:'-0.041666666666666664*(complex(0,1)*G**4)/cmath.pi**2',0:'(complex(0,1)*G**4*reglog(MB/MU_R))/(6.*cmath.pi**2)'},
+UVGC_153_68 = Coupling(name = 'UVGC_153_68',
+                       value = {-1:'( 0 if MB else (complex(0,1)*G**4)/(12.*cmath.pi**2) ) - (complex(0,1)*G**4)/(24.*cmath.pi**2)',0:'( (complex(0,1)*G**4*reglog(MB/MU_R))/(6.*cmath.pi**2) if MB else 0 )'},
                        order = {'QCD':4})
 
-UVGC_93_179 = Coupling(name = 'UVGC_93_179',
+UVGC_153_69 = Coupling(name = 'UVGC_153_69',
                        value = {-1:'(complex(0,1)*G**4)/(24.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_93_180 = Coupling(name = 'UVGC_93_180',
+UVGC_153_70 = Coupling(name = 'UVGC_153_70',
                        value = {-1:'(-341*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_93_181 = Coupling(name = 'UVGC_93_181',
+UVGC_153_71 = Coupling(name = 'UVGC_153_71',
                        value = {-1:'(-11*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_93_182 = Coupling(name = 'UVGC_93_182',
-                       value = {-1:'-0.041666666666666664*(complex(0,1)*G**4)/cmath.pi**2',0:'(complex(0,1)*G**4*reglog(MT/MU_R))/(6.*cmath.pi**2)'},
+UVGC_153_72 = Coupling(name = 'UVGC_153_72',
+                       value = {-1:'( 0 if MT else (complex(0,1)*G**4)/(12.*cmath.pi**2) ) - (complex(0,1)*G**4)/(24.*cmath.pi**2)',0:'( (complex(0,1)*G**4*reglog(MT/MU_R))/(6.*cmath.pi**2) if MT else 0 )'},
                        order = {'QCD':4})
 
-UVGC_94_183 = Coupling(name = 'UVGC_94_183',
+UVGC_154_73 = Coupling(name = 'UVGC_154_73',
                        value = {-1:'(-83*complex(0,1)*G**4)/(128.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_94_184 = Coupling(name = 'UVGC_94_184',
+UVGC_154_74 = Coupling(name = 'UVGC_154_74',
                        value = {-1:'(-5*complex(0,1)*G**4)/(128.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_95_185 = Coupling(name = 'UVGC_95_185',
-                       value = {0:'(complex(0,1)*G**4*reglog(MB/MU_R))/(6.*cmath.pi**2)'},
+UVGC_155_75 = Coupling(name = 'UVGC_155_75',
+                       value = {-1:'( 0 if MB else (complex(0,1)*G**4)/(12.*cmath.pi**2) )',0:'( (complex(0,1)*G**4*reglog(MB/MU_R))/(6.*cmath.pi**2) if MB else 0 )'},
                        order = {'QCD':4})
 
-UVGC_95_186 = Coupling(name = 'UVGC_95_186',
+UVGC_155_76 = Coupling(name = 'UVGC_155_76',
                        value = {-1:'(complex(0,1)*G**4)/(12.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_95_187 = Coupling(name = 'UVGC_95_187',
-                       value = {-1:'(-37*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
+UVGC_155_77 = Coupling(name = 'UVGC_155_77',
+                       value = {-1:'(-85*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_95_188 = Coupling(name = 'UVGC_95_188',
+UVGC_155_78 = Coupling(name = 'UVGC_155_78',
                        value = {-1:'(-19*complex(0,1)*G**4)/(512.*cmath.pi**2)'},
                        order = {'QCD':4})
 
-UVGC_95_189 = Coupling(name = 'UVGC_95_189',
-                       value = {0:'(complex(0,1)*G**4*reglog(MT/MU_R))/(6.*cmath.pi**2)'},
+UVGC_155_79 = Coupling(name = 'UVGC_155_79',
+                       value = {-1:'( 0 if MT else (complex(0,1)*G**4)/(12.*cmath.pi**2) )',0:'( (complex(0,1)*G**4*reglog(MT/MU_R))/(6.*cmath.pi**2) if MT else 0 )'},
                        order = {'QCD':4})
 
-UVGC_96_190 = Coupling(name = 'UVGC_96_190',
-                       value = {-1:'(complex(0,1)*gAu22**2)/(16.*cmath.pi**2) + (complex(0,1)*gAu22*gVu22)/(8.*cmath.pi**2) + (complex(0,1)*gVu22**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAu22**2)/cmath.pi**2 - (complex(0,1)*gAu22*gVu22)/(16.*cmath.pi**2) - (complex(0,1)*gVu22**2)/(32.*cmath.pi**2) - (complex(0,1)*gAu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*gAu22*gVu22*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2})
+UVGC_156_80 = Coupling(name = 'UVGC_156_80',
+                       value = {-1:'( (complex(0,1)*G**2)/(6.*cmath.pi**2) if MT else -0.08333333333333333*(complex(0,1)*G**2)/cmath.pi**2 ) + (complex(0,1)*G**2)/(12.*cmath.pi**2)',0:'( (5*complex(0,1)*G**2)/(12.*cmath.pi**2) - (complex(0,1)*G**2*reglog(MT/MU_R))/(2.*cmath.pi**2) if MT else (complex(0,1)*G**2)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2)/(12.*cmath.pi**2)'},
+                       order = {'QCD':2})
 
-UVGC_97_191 = Coupling(name = 'UVGC_97_191',
-                       value = {-1:'(complex(0,1)*gAu22**2)/(16.*cmath.pi**2) - (complex(0,1)*gAu22*gVu22)/(8.*cmath.pi**2) + (complex(0,1)*gVu22**2)/(16.*cmath.pi**2)',0:'-0.03125*(complex(0,1)*gAu22**2)/cmath.pi**2 + (complex(0,1)*gAu22*gVu22)/(16.*cmath.pi**2) - (complex(0,1)*gVu22**2)/(32.*cmath.pi**2) - (complex(0,1)*gAu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*gAu22*gVu22*reglog(MY1/MU_R))/(4.*cmath.pi**2) - (complex(0,1)*gVu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2})
+UVGC_157_81 = Coupling(name = 'UVGC_157_81',
+                       value = {-1:'( -0.1111111111111111*(ee*complex(0,1)*G**2)/cmath.pi**2 if MT else (ee*complex(0,1)*G**2)/(18.*cmath.pi**2) )',0:'( (-5*ee*complex(0,1)*G**2)/(18.*cmath.pi**2) + (ee*complex(0,1)*G**2*reglog(MT/MU_R))/(3.*cmath.pi**2) if MT else -0.05555555555555555*(ee*complex(0,1)*G**2)/cmath.pi**2 ) + (ee*complex(0,1)*G**2)/(18.*cmath.pi**2)'},
+                       order = {'QCD':2,'QED':1})
 
-UVGC_98_192 = Coupling(name = 'UVGC_98_192',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAu22**2)/cmath.pi**2 + (complex(0,1)*G*gAu22*gVu22)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu22**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAu22**2)/(32.*cmath.pi**2) - (complex(0,1)*G*gAu22*gVu22)/(16.*cmath.pi**2) + (complex(0,1)*G*gVu22**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) - (complex(0,1)*G*gAu22*gVu22*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
+UVGC_158_82 = Coupling(name = 'UVGC_158_82',
+                       value = {-1:'( -0.16666666666666666*(complex(0,1)*G**3)/cmath.pi**2 if MT else (complex(0,1)*G**3)/(12.*cmath.pi**2) )',0:'( (-5*complex(0,1)*G**3)/(12.*cmath.pi**2) + (complex(0,1)*G**3*reglog(MT/MU_R))/(2.*cmath.pi**2) if MT else -0.08333333333333333*(complex(0,1)*G**3)/cmath.pi**2 ) + (complex(0,1)*G**3)/(12.*cmath.pi**2)'},
+                       order = {'QCD':3})
 
-UVGC_99_193 = Coupling(name = 'UVGC_99_193',
-                       value = {-1:'-0.0625*(complex(0,1)*G*gAu22**2)/cmath.pi**2 - (complex(0,1)*G*gAu22*gVu22)/(8.*cmath.pi**2) - (complex(0,1)*G*gVu22**2)/(16.*cmath.pi**2)',0:'(complex(0,1)*G*gAu22**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAu22*gVu22)/(16.*cmath.pi**2) + (complex(0,1)*G*gVu22**2)/(32.*cmath.pi**2) + (complex(0,1)*G*gAu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2) + (complex(0,1)*G*gAu22*gVu22*reglog(MY1/MU_R))/(4.*cmath.pi**2) + (complex(0,1)*G*gVu22**2*reglog(MY1/MU_R))/(8.*cmath.pi**2)'},
-                       order = {'DMV':2,'QCD':1})
+UVGC_159_83 = Coupling(name = 'UVGC_159_83',
+                       value = {-1:'( (complex(0,1)*G**2*gAu33)/(6.*cmath.pi**2) if MT else -0.08333333333333333*(complex(0,1)*G**2*gAu33)/cmath.pi**2 ) + (complex(0,1)*G**2*gAu33)/(12.*cmath.pi**2)',0:'( (5*complex(0,1)*G**2*gAu33)/(12.*cmath.pi**2) - (complex(0,1)*G**2*gAu33*reglog(MT/MU_R))/(2.*cmath.pi**2) if MT else (complex(0,1)*G**2*gAu33)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2*gAu33)/(12.*cmath.pi**2)'},
+                       order = {'NP':1,'QCD':2})
+
+UVGC_160_84 = Coupling(name = 'UVGC_160_84',
+                       value = {-1:'( -0.16666666666666666*(complex(0,1)*G**2*gVu33)/cmath.pi**2 if MT else (complex(0,1)*G**2*gVu33)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2*gVu33)/(12.*cmath.pi**2)',0:'( (-5*complex(0,1)*G**2*gVu33)/(12.*cmath.pi**2) + (complex(0,1)*G**2*gVu33*reglog(MT/MU_R))/(2.*cmath.pi**2) if MT else -0.08333333333333333*(complex(0,1)*G**2*gVu33)/cmath.pi**2 ) + (complex(0,1)*G**2*gVu33)/(12.*cmath.pi**2)'},
+                       order = {'NP':1,'QCD':2})
+
+UVGC_161_85 = Coupling(name = 'UVGC_161_85',
+                       value = {-1:'( (complex(0,1)*G**2*MT)/(6.*cmath.pi**2) if MT else -0.08333333333333333*(complex(0,1)*G**2*MT)/cmath.pi**2 ) + (complex(0,1)*G**2*MT)/(3.*cmath.pi**2)',0:'( (3*complex(0,1)*G**2*MT)/(4.*cmath.pi**2) - (complex(0,1)*G**2*MT*reglog(MT/MU_R))/cmath.pi**2 if MT else (complex(0,1)*G**2*MT)/(12.*cmath.pi**2) ) - (complex(0,1)*G**2*MT)/(12.*cmath.pi**2)'},
+                       order = {'QCD':2})
+
+UVGC_162_86 = Coupling(name = 'UVGC_162_86',
+                       value = {-1:'( -0.08333333333333333*(CKM3x3*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2)) if MB else (CKM3x3*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2)) )',0:'( (-5*CKM3x3*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2)) + (CKM3x3*ee*complex(0,1)*G**2*reglog(MB/MU_R))/(4.*cmath.pi**2*sw*cmath.sqrt(2)) if MB else -0.041666666666666664*(CKM3x3*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2)) ) + (CKM3x3*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_162_87 = Coupling(name = 'UVGC_162_87',
+                       value = {-1:'( -0.08333333333333333*(CKM3x3*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2)) if MT else (CKM3x3*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2)) )',0:'( (-5*CKM3x3*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2)) + (CKM3x3*ee*complex(0,1)*G**2*reglog(MT/MU_R))/(4.*cmath.pi**2*sw*cmath.sqrt(2)) if MT else -0.041666666666666664*(CKM3x3*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2)) ) + (CKM3x3*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_162_88 = Coupling(name = 'UVGC_162_88',
+                       value = {-1:'-0.08333333333333333*(CKM3x3*ee*complex(0,1)*G**2)/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_163_89 = Coupling(name = 'UVGC_163_89',
+                       value = {-1:'( -0.08333333333333333*(cw*ee*complex(0,1)*G**2)/(cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(36.*cw*cmath.pi**2) if MT else (cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2) ) - (cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2)',0:'( (-5*cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) + (5*ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2) + (cw*ee*complex(0,1)*G**2*reglog(MT/MU_R))/(4.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*sw*reglog(MT/MU_R))/(12.*cw*cmath.pi**2) if MT else -0.041666666666666664*(cw*ee*complex(0,1)*G**2)/(cmath.pi**2*sw) + (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2) ) + (cw*ee*complex(0,1)*G**2)/(24.*cmath.pi**2*sw) - (ee*complex(0,1)*G**2*sw)/(72.*cw*cmath.pi**2)'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_164_90 = Coupling(name = 'UVGC_164_90',
+                       value = {-1:'( (ee*complex(0,1)*G**2*sw)/(9.*cw*cmath.pi**2) if MT else -0.05555555555555555*(ee*complex(0,1)*G**2*sw)/(cw*cmath.pi**2) ) + (ee*complex(0,1)*G**2*sw)/(18.*cw*cmath.pi**2)',0:'( (5*ee*complex(0,1)*G**2*sw)/(18.*cw*cmath.pi**2) - (ee*complex(0,1)*G**2*sw*reglog(MT/MU_R))/(3.*cw*cmath.pi**2) if MT else (ee*complex(0,1)*G**2*sw)/(18.*cw*cmath.pi**2) ) - (ee*complex(0,1)*G**2*sw)/(18.*cw*cmath.pi**2)'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_165_91 = Coupling(name = 'UVGC_165_91',
+                       value = {-1:'( (complex(0,1)*G**2*yt)/(6.*cmath.pi**2*cmath.sqrt(2)) if MT else -0.08333333333333333*(complex(0,1)*G**2*yt)/(cmath.pi**2*cmath.sqrt(2)) ) + (complex(0,1)*G**2*yt)/(3.*cmath.pi**2*cmath.sqrt(2))',0:'( (3*complex(0,1)*G**2*yt)/(4.*cmath.pi**2*cmath.sqrt(2)) - (complex(0,1)*G**2*yt*reglog(MT/MU_R))/(cmath.pi**2*cmath.sqrt(2)) if MT else (complex(0,1)*G**2*yt)/(12.*cmath.pi**2*cmath.sqrt(2)) ) - (complex(0,1)*G**2*yt)/(12.*cmath.pi**2*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_166_92 = Coupling(name = 'UVGC_166_92',
+                       value = {-1:'( -0.08333333333333333*(ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(cmath.pi**2*sw*cmath.sqrt(2)) if MB else (ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(24.*cmath.pi**2*sw*cmath.sqrt(2)) )',0:'( (-5*ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(24.*cmath.pi**2*sw*cmath.sqrt(2)) + (ee*complex(0,1)*G**2*complexconjugate(CKM3x3)*reglog(MB/MU_R))/(4.*cmath.pi**2*sw*cmath.sqrt(2)) if MB else -0.041666666666666664*(ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(cmath.pi**2*sw*cmath.sqrt(2)) ) + (ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_166_93 = Coupling(name = 'UVGC_166_93',
+                       value = {-1:'( -0.08333333333333333*(ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(cmath.pi**2*sw*cmath.sqrt(2)) if MT else (ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(24.*cmath.pi**2*sw*cmath.sqrt(2)) )',0:'( (-5*ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(24.*cmath.pi**2*sw*cmath.sqrt(2)) + (ee*complex(0,1)*G**2*complexconjugate(CKM3x3)*reglog(MT/MU_R))/(4.*cmath.pi**2*sw*cmath.sqrt(2)) if MT else -0.041666666666666664*(ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(cmath.pi**2*sw*cmath.sqrt(2)) ) + (ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(24.*cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_166_94 = Coupling(name = 'UVGC_166_94',
+                       value = {-1:'-0.08333333333333333*(ee*complex(0,1)*G**2*complexconjugate(CKM3x3))/(cmath.pi**2*sw*cmath.sqrt(2))'},
+                       order = {'QCD':2,'QED':1})
+
+UVGC_97_95 = Coupling(name = 'UVGC_97_95',
+                      value = {-1:'(51*G**3)/(128.*cmath.pi**2)'},
+                      order = {'QCD':3})
+
+UVGC_98_96 = Coupling(name = 'UVGC_98_96',
+                      value = {-1:'G**3/(128.*cmath.pi**2)'},
+                      order = {'QCD':3})
 
