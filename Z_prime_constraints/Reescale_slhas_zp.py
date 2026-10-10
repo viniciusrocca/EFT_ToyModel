@@ -6,7 +6,7 @@ import glob
 # Configuration & Parameters
 # ---------------------------------------------------------
 masses = np.arange(800.0, 5100.0, 100.0).tolist()
-width_fractions = [0.005, 0.010, 0.02]
+width_fractions = [0.01]
 
 # --- Scan limits ---
 min_S_target = 1e-5 # pb
@@ -14,13 +14,13 @@ max_S_target = 10.0 # pb
 num_points = 70
 
 # --- Reference run parameters---
-ref_width_fraction = 0.010
+ref_width_fraction = 0.01
 ref_gq = 1.000000e-02
 ref_gt = np.sqrt((ref_width_fraction * 4 * np.pi) - 2 * (ref_gq**2)) 
 
 # Folders
 input_dir = "/home/vinicius/EFT_ToyModel/processFolders/Zp_SLHAs_ref/"
-output_dir = "/home/vinicius/EFT_ToyModel/processFolders/Zp_SLHAs/"
+output_dir = "/home/vinicius/EFT_ToyModel/processFolders/Zp_narrow_SLHAs/"
 os.makedirs(output_dir, exist_ok=True)
 
 # ---------------------------------------------------------

@@ -1,0 +1,332 @@
+Z' DIRECT-SEARCH EXCLUSION SCAN: ORIGIN OF THE ARTIFICIAL OSCILLATIONS
+====================================================================
+
+Purpose
+-------
+This note documents why the original exclusion plots for the narrow Z'
+benchmark (Gamma_Z'/m_Z' = 1%) displayed abrupt, nonphysical jumps between
+neighboring mass points, how the problems were diagnosed, and how the scan
+and plotting procedures were corrected. The limits discussed here are
+OBSERVED 95% CL constraints with an assumed QCD K factor of 1.
+
+Executive summary
+-----------------
+The strange oscillations had TWO INDEPENDENT main causes:
+
+(A) The original SLHA rescaling workflow introduced malformed, oversized,
+    and/or duplicated signal predictions through incorrect reference-file
+    selection, hardcoded reference couplings, and requests for unphysical
+    cross-section targets.
+
+(B) The SModelS 3.1.1 experimental database interpolation intermittently
+    returned no upper limit for two ATLAS analyses when a narrow resonance
+    was queried near Gamma_Z'/m_Z' = 0.01. The affected ttbar and dijet
+    topologies were then omitted from the evaluated results. As a result,
+    the "most constraining analysis" could change abruptly with mass even
+    when the published analyses covered the relevant masses.
+
+Neither effect is evidence for an oscillation in the physical Z' production
+cross section. Some small nonmonotonic variations in OBSERVED experimental
+upper limits are expected from statistical fluctuations; those are distinct
+from an analysis disappearing from the SModelS calculation.
+
+
+1. Problems in the original reference-SLHA rescaling
+----------------------------------------------------
+
+1.1 Reference mass accidentally mismatched
+
+The original generator searched for a reference file with a broad pattern
+such as *800*.slha. This can match Reference_M2800.slha (and other masses)
+when the intended mass is 800 GeV. It then selected the first glob match
+without checking the actual mass stored in BLOCK MASS. The code changed
+the resonance width to 8 GeV but retained the incorrectly selected mass of
+2800 GeV in BLOCK MASS.
+
+The diagnostic scan identified 138 affected records:
+
+  filename mass:                800 GeV
+  mass stored in SLHA:         2800 GeV
+  width stored in SLHA:           8 GeV
+  actual Gamma/m:             8/2800 = 0.00285714 (not 0.01)
+
+This could create a false vertical population at 2800 GeV. The refactored
+rescaler reads the mass from BLOCK MASS and matches references by their
+actual masses; it rejects missing or ambiguous reference masses.
+
+1.2 Reference couplings were hardcoded
+
+The original code assumed the reference light-quark coupling was
+always g_q^ref = 0.01, independently of which MadGraph reference file was
+loaded. But one of the original 3000 GeV references contained
+
+  g_q^ref = 0.05192,     g_t^ref = 0.34609,
+  sigma_ref(pp -> Z') = 0.0026264 pb.
+
+The correct narrow-width production-rate rescaling at a fixed mass is
+
+  sigma_new(pp -> Z') = sigma_ref(pp -> Z') * (g_q/g_q^ref)^2.
+
+Using 0.01 in the denominator for this specific 3000 GeV reference instead
+of 0.05192 artificially enhanced the predicted rate by a factor
+
+  (0.05192/0.01)^2 = 26.956864
+
+for any given g_q. That was a major contributor to the anomalously large
+3000 GeV rates. The corrected code parses g_q^ref, g_t^ref, sigma_ref,
+BRs, and the total width from EACH reference SLHA. After accounting for
+the actual couplings, the normalized sigma_ref/(g_q^ref)^2 varied smoothly
+across the 2900, 3000, and 3100 GeV reference files.
+
+This mismatch does not, by itself, prove the 3000 GeV MadGraph reference
+was wrong: its coupling was different. It was the treatment of that
+reference in the old rescaling script that was inconsistent.
+
+1.3 Unphysical signal targets and duplicate physical predictions
+
+The old code attempted to create a fixed set of target strengths S, with
+
+  S = sigma(pp -> Z') * BR(Z' -> ttbar),
+
+including a nominal split around S = 0.05 pb even when the maximum signal
+strength physically attainable at fixed Gamma/m = 1% was below 0.05 pb.
+
+When the quadratic equation for the couplings had a negative discriminant,
+the code set the discriminant to zero instead of rejecting the impossible
+value. Consequently, many different nominal target strengths produced the
+SAME limiting couplings and the SAME actual cross section. This was seen,
+for example, in repeated entries at 2800 GeV with different S values in
+the filenames but identical sigma*BR(ttbar).
+
+The refactored code derives the mass-dependent width coefficients from the
+reference SLHA, computes the physical S_max, generates targets only in the
+allowed range, and verifies that every output reproduces its requested
+S within numerical precision. It does not silently clamp unphysical
+coupling solutions.
+
+1.4 Filename collisions near the physical maximum
+
+The old/refactored initial filename format used only two digits after the
+decimal in scientific notation (for example, S5.00e-02). At 2500 GeV the
+physical maximum was about 0.0505734 pb, so several distinct targets near
+0.05 pb rounded to the same filename. This caused a FileExistsError and,
+if files had instead been overwritten, could have silently erased points.
+
+The v2 rescaler increases the filename precision as required to make
+all target labels unique and checks for duplicate filenames.
+
+1.5 SLHA integrity and complete branching fractions
+
+The updated code explicitly preserves XSECTION headers, rescales the
+correct numerical production cross-section entries, updates the mass,
+width and branching fractions consistently, and checks the resulting files.
+The corrected scan generated 6020 parseable SLHAs (43 masses x 70 targets
+x 2 coupling branches), with a corresponding rescaling_report.csv.
+
+In downstream data extraction, one additional problem was found: the old
+parser discarded decay modes with BR < 0.01. This incorrectly removed
+small but nonzero BR(Z' -> ttbar) values in jet-dominated points, producing
+NaNs in the inferred ttbar rate. The extraction was corrected to retain
+all branching fractions, or to take the complete rates directly from
+rescaling_report.csv. That CSV must be excluded when looping over SLHA
+files; it is not an SLHA and will give a 'No MASS block found' parser error.
+
+
+2. Independent SModelS upper-limit-grid boundary problem
+--------------------------------------------------------
+
+The three relevant simplified resonance searches were:
+
+  CMS-EXO-19-012     : TRV1jj, dijet
+  ATLAS-EXOT-2019-03: TRV1jj, dijet
+  ATLAS-EXOT-2018-48: TRV1tt, ttbar
+
+In the original SModelS outputs, some masses had an ATLAS result while
+neighboring masses with the same 1% width did not. For example, the
+ATLAS ttbar analysis was evaluated at 2300 GeV but absent at 2500 GeV,
+despite experimental exclusion curves spanning the region.
+
+The SModelS XML output for a missing case identified the ttbar simplified
+model topology as
+
+  PV > (t,t)
+
+under 'topologies outside the grid'. This means that SModelS recognized
+the signal but could not interpolate an applicable experimental upper
+limit for that topology and parameter point. It does NOT imply that the
+experimental analysis had no sensitivity or that the point was allowed.
+
+Direct database queries, using tx.transformPoint([...]) followed by
+TxName.getULFor(sms=None, mass=transformed_point), isolated the problem.
+The observed ATLAS upper limits (in fb) were:
+
+  m_Z' [GeV]    ATLAS ttbar at 1%     ATLAS ttbar at 0.99%
+  ---------------------------------------------------------
+     2300             11.9574               11.9574
+     2400              None                 10.6378
+     2500              None                  8.35983
+     2700              7.09952              7.09952
+     2900              7.07300              7.07300
+     3000              None                  7.51606
+     3100              7.39875              7.39875
+
+The ATLAS dijet analysis showed similar behavior:
+
+  m_Z' [GeV]    ATLAS dijet at 1%     ATLAS dijet at 0.99%
+  ---------------------------------------------------------
+     2300             37.6982               37.6982
+     2400              None                 37.6588
+     2500              None                 37.6194
+     2700             28.7753               28.7753
+     2900             20.2711               20.2711
+     3000              None                 16.4954
+     3100             13.3030               13.3030
+
+By comparison, the CMS dijet lookup returned a finite 1% upper limit at
+all of the tested masses, including 2400, 2500, and 3000 GeV.
+
+An additional precision scan demonstrated that the failing ATLAS lookups
+could return None slightly BELOW 1% at certain masses (for example at
+Gamma/m = 0.00999 for 2500 and 3000 GeV). Thus the evidence points to a
+boundary/coverage issue in the SModelS transformed mass-width interpolation
+domain, not merely a single machine-precision representation of 0.01.
+The precise root cause inside the interpolation implementation was NOT
+proven or patched in the SModelS source code.
+
+For the fixed 1% benchmark, the working treatment was:
+
+  1. Query the observed experimental upper-limit map at exactly 1%.
+  2. If an ATLAS lookup returns None, retry it at 0.99% (interior point).
+  3. Retain the actual MODEL width of 1% and the original LO theoretical
+     cross section. Only the experimental map lookup coordinate changes.
+  4. Record which points used the fallback so that the treatment can be
+     audited, and validate the fallback against the published 1% benchmark.
+
+This 0.99% fallback is a numerical workaround, NOT a general replacement
+for experimental limits at arbitrary widths. Where the signal assumptions
+or benchmark-width interpretation differ from the experimental result,
+additional validation is necessary.
+
+
+3. How intermittent missing limits produced artificial oscillations
+-------------------------------------------------------------------
+
+At fixed resonance mass m and final state X, the observed exclusion ratio is
+
+  r_obs(X, m) = [sigma_LO(pp -> Z') * BR(Z' -> X)]
+                / sigma_95,obs(X, m).
+
+With K=1, an analysis excludes a point when r_obs > 1. A contour for that
+individual analysis lies at r_obs = 1.
+
+Consider two otherwise similar scan points on opposite sides of a missing
+ATLAS map entry. When ATLAS returns a valid ttbar upper limit, it may be
+the strongest constraint and may exclude the point. At a neighboring mass,
+ATLAS may return None; SModelS then reports only a weaker CMS dijet ratio.
+The point can appear allowed even though the ATLAS experimental exclusion
+curve exists at that mass. When ATLAS becomes available again, the
+classification flips back to excluded. Connecting or interpolating these
+partial, analysis-dependent outputs leads to an oscillatory exclusion edge.
+
+A numerical example from the original diagnostic at 2500 GeV:
+
+  sigma_LO * BR(ttbar) approximately 14.81 fb
+  ATLAS ttbar observed upper limit at 0.99%: 8.35983 fb
+  recovered r_ATLAS,ttbar approximately 14.81/8.35983 = 1.77 (> 1)
+
+The original output lacked that ATLAS constraint and reported a much
+weaker CMS dijet r instead. This explains why the exclusion status was
+incorrect at that point. The 14.81 fb number refers to the OLD diagnostic
+scan; it is not a proposed value for every point in the corrected scan.
+
+Another distinction is important: the SModelS summary lists the most
+constraining analysis by the largest OBSERVED r. It lists most sensitive
+ATLAS/CMS analyses using EXPECTED r, where available. A displayed
+'r_expected = N/A' is common if the database does not provide the median
+background-only expected upper limit; it does not invalidate a finite
+observed r. The missing ATLAS ttbar observed constraint was a separate
+problem from missing expected-limit information.
+
+Also, 'outside the grid', 'not evaluated', and 'not excluded' must not be
+conflated. A missing r is not r=0; scan points with no evaluated limit must
+remain distinguishable from points tested and found below the observed
+upper limit.
+
+
+4. Changes to exclusion plotting and final workflow
+---------------------------------------------------
+
+The plotting logic was changed to derive a separate observed r for each
+analysis using its own signal channel and upper limit:
+
+  r_CMS,jj   = sigma_LO * BR(jj)   / sigma_95,CMS,jj
+  r_ATLAS,jj = sigma_LO * BR(jj)   / sigma_95,ATLAS,jj
+  r_ATLAS,tt = sigma_LO * BR(tt)   / sigma_95,ATLAS,tt
+
+The point-by-point 'excluded by at least one available analysis' flag uses
+max(r_CMS,jj, r_ATLAS,jj, r_ATLAS,tt) > 1, WITHOUT interpreting that maximum
+as a statistically combined 95% CL likelihood. Each experimental upper
+limit is obtained from its own database map, instead of interpolating a
+mixed set of the old 'result0.r' values. This also makes it possible to
+keep the three observed exclusion curves labeled independently.
+
+The final simple rate-limit figure plots all three curves together as a
+function of m_Z', with their final states stated in the legend. Its common
+y axis is sigma(pp -> Z' -> f fbar) in pb. This is a comparison of three
+upper limits for different final states; it is NOT a universal combined
+sigma*BR exclusion curve. Each model point must be evaluated with the
+appropriate BR(jj) or BR(ttbar) for the corresponding analysis.
+
+The lines are marker-free; the excluded regions are filled with low
+opacity. The separate dijet and ttbar benchmark rates are shown as points
+at m_Z' = 3000 GeV. The last plotting revision uses the user's explicitly
+supplied benchmark predictions:
+
+  sigma(pp -> Z' -> ttbar) = 1.048e-03 pb,
+  sigma(pp -> Z' -> jj)   = 2.2761794483e-06 pb,
+
+rather than attempting to derive those benchmark rates from the earlier
+reference rescaling. These benchmark markers do not alter the limits.
+
+
+5. Validation and outstanding qualifications
+---------------------------------------------
+
+Validated during the debugging session:
+  - All 138 malformed (800-name, 2800-mass) inputs were identified.
+  - A new 6020-file SLHA scan was generated and parsed successfully;
+    the extra parsing failure was rescaling_report.csv, not an SLHA.
+  - The corrected rescaler reads reference couplings, restricts strengths
+    to S_max, checks cross sections and widths, and avoids name collisions.
+  - The direct database test reproduced a known ATLAS ttbar upper limit at
+    2300 GeV and recovered missing ATLAS limits at 2400, 2500, 3000 GeV
+    by querying slightly inside the narrow-width boundary.
+  - CMS dijet remained evaluable at the tested 1% masses.
+
+Still important for publication-quality interpretation:
+  - Confirm the selected SModelS experimental database version and the
+    applicability of each analysis's narrow-width simplified-model
+    assumptions to the Z' model.
+  - Retain an audit trail of which ATLAS upper limits required the 0.99%
+    lookup workaround. This is a workaround for the observed database
+    behavior, not an established patch to the interpolation algorithm.
+  - Ensure benchmark/event rates and the direct-search upper limits refer
+    to the same collider energy; the uploaded MadGraph benchmark LHE was
+    produced at 13.6 TeV while the reference SLHA limits discussed here
+    were evaluated at 13 TeV.
+  - Differences or small wiggles in the observed experimental upper-limit
+    curves can be genuine; the nonphysical feature was the disappearance
+    and reappearance of entire ATLAS constraints, aggravated by incorrect
+    or duplicated SLHA predictions.
+
+Conclusion
+----------
+The original oscillations resulted primarily from faulty SLHA reference
+matching/rescaling and mass-dependent failures of the ATLAS upper-limit
+lookup near the 1% width boundary. The corrected workflow generates
+physically consistent, uniquely named SLHAs and evaluates the observed
+CMS dijet, ATLAS dijet, and ATLAS ttbar limits independently, with a
+validated interior-grid fallback for missing narrow-width ATLAS entries.
+This removes the identified artificial sources of discontinuity without
+arbitrarily smoothing the published observed limits or regenerating
+unnecessary Monte Carlo samples.y
